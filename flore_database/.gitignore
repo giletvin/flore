@@ -1,0 +1,24 @@
+/ornidroid_database.zip
+/ornidroid.sqlite
+/ornidroid.sqlite.top
+/insert_data_table_bird_description.sql
+/insert_data_table_bird.sql
+/insert_data_table_taxonomy.sql
+/audio.zip
+/ornidroid.sqlite.properties
+/images.zip
+/ornidroid.jpg
+/ornidroid.jpg.size
+/insert_data_table_category.sql
+/insert_data_table_scientific_order_and_family.sql
+/insert_data_table_habitat.sql
+/insert_data_table_remarkable_sign.sql
+/generate_insert_data_bird_country.sql
+/generate_insert_data_traductions.sql
+/fiches.xml
+/generate_update_oiseaux_net_links.sql
+<<<<<<< HEAD
+/wikipedia.zip
+/ornidroid.jpg-journal
+=======
+>>>>>>> 2abce93c54ae86258446ba182f03c5808c0f480a

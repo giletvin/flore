@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+	<string-array name="credits">
+		<!-- Every item contains 4 fields, separed by "|"  : Title|Author|URL|Licence -->
+		<item>Welcome Image|Florent
+			Chavouet|http://florentchavouet.blogspot.com/|With his kind authorization
+		</item>
+		<item>Birds names translations|Avibase|http://avibase.bsc-eoc.org/|</item>
+		<item>Birds records|Xeno-Canto|http://www.xeno-canto.org|Creative Commons
+		</item>
+		<item>Birds pictures|The source of each picture is available by clicking on the "info" button.||Creative Commons
+		</item>
+		<item>Icons|Christian
+			Burprich|http://chrfb.deviantart.com/|Creative
+			Commons 3.0 Share
+			Alike license
+		</item>
+		<item>Icons|MazeNL77|http://mazenl77.deviantart.com/gallery/|
+		</item>
+	</string-array>
+</resources>

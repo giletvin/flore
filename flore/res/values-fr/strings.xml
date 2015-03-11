@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     /* ** Copyright 2010, The Android Open Source Project ** ** Licensed 
+	under the Apache License, Version 2.0 (the "License"); ** you may not use 
+	this file except in compliance with the License. ** You may obtain a copy 
+	of the License at ** ** http://www.apache.org/licenses/LICENSE-2.0 ** ** 
+	Unless required by applicable law or agreed to in writing, software ** distributed 
+	under the License is distributed on an "AS IS" BASIS, ** WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. ** See the License 
+	for the specific language governing permissions and ** limitations under 
+	the License. */
+-->
+<resources>
+
+    <!-- The name of the application. -->
+    <string name="app_name">Flore de poche</string>
+
+    <!-- The hint text that appears in the search box. -->
+    <string name="search_hint">Recherche dans la base</string>
+
+    <!-- The menu entry that invokes search. -->
+    <string name="menu_search">Recherche par nom</string>
+    <string name="menu_search_multi">Recherche multicritères</string>
+    <string name="menu_about">A propos</string>
+    <string name="home">Accueil</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="warning">Attention</string>
+
+    <!-- activity titles -->
+    <string name="preferences">Préférences</string>
+    <string name="about">A propos</string>
+    <string name="help">Aide</string>
+    <string name="sounds">Sons</string>
+    <string name="bird_info">Fiche oiseau</string>
+    <string name="bird_image">Images</string>
+    <string name="bird_image_big">Photo zoomée</string>
+    <string name="bird_names">Taxonomie</string>
+    <string name="add_custom_media_title">Ajout de fichiers personnalisés</string>
+
+    <!-- labels used in preferences -->
+    <string name="preferences_lang_key">OrnidroidSearchLang</string>
+    <string name="preferences_lang_title">Langues utilisées pour la recherche</string>
+    <string name="preferences_lang_summary">26 langues disponibles. Recherche sur plusieurs langues différentes possible.</string>
+    <string name="preferences_ornidroid_home_key">OrnidroidHome</string>
+    <string name="preferences_ornidroid_home_title">Répertoire des données d\'Ornidroid</string>
+    <string name="preferences_ornidroid_home_summary">Choisir le répertoire où Ornidroid doit placer ses données. Pour les utilisateurs avertis seulement !</string>
+    <string name="preferences_ornidroid_home_copying_files">Copie de fichiers en cours</string>
+    <string name="preferences_ornidroid_home_saved">Modification du répertoire de données réussie</string>
+    <string name="preferences_automatic_update_check_key">AutomaticUpdateCheck</string>
+    <string name="preferences_automatic_update_check_title">Vérification automatique de mise à jour</string>
+    <string name="preferences_automatic_update_check_summary">Effectuer une vérification automatique pour savoir si de nouvelles images ou sons sont disponibles.</string>
+    <string name="help_change_ornidroid_home_title">Modification du répertoire de données</string>
+    <string name="help_change_ornidroid_home_content">A partir d\'Android 4.4, l\'accès à la mémoire est strictement limité à certains répertoires.\nStockage interne par défaut :\n%1$s\n\nStockage externe (SD CARD) :\n %2$s\n\nSi vous modifiez ce paramètre, toutes les données de l\'ancien répertoire vont être déplacées dans le nouveau et l\'ancien répertoire sera ensuite supprimé. Cette opération peut prendre environ 10 minutes.</string>
+
+    <!-- labels for add custom media -->
+    <string name="add_custom_media_error">L\'opération a échoué</string>
+    <string name="add_custom_media_success">Le fichier a été correctement ajouté</string>
+    <string name="remove_custom_media_success">Le fichier a été correctement supprimé</string>
+    <string name="add_custom_media_go_back">Retour vers l\'oiseau</string>
+
+    <!-- pictures info dialog box -->
+    <string name="dialog_picture_title">Informations sur l\'image</string>
+    <string name="dialog_picture_description">Description</string>
+    <string name="dialog_picture_author">Auteur</string>
+    <string name="dialog_picture_source">Source</string>
+    <string name="dialog_picture_licence">Licence</string>
+
+    <!-- alert dialogs from the home activity -->
+    <string name="dialog_alert_ornidroid_home_not_found">Le répertoire d\'installation des données
+		d\'ornidroid est
+		inexistant ou incohérent ! Veuillez le renseigner dans
+		les préférences de
+		l\'application</string>
+    <string name="dialog_alert_ornidroid_database_not_found">La base de données d\'ornidroid est introuvable
+		dans le répertoire d\'installation. Ornidroid ne peut pas fonctionner.</string>
+    <string name="dialog_alert_download_error">La base de données d\'ornidroid est introuvable
+		dans le répertoire d\'installation et le téléchargement depuis
+		Internet a échoué. Ornidroid ne peut pas fonctionner.</string>
+    <string name="dialog_alert_database_not_found_online">Impossible de télécharger le fichier de base de données depuis le site web. Ornidroid ne peut pas fonctionner.</string>
+    <string name="dialog_alert_connection_problem">Problème de connexion. Merci de vérifier vos paramètres réseau.</string>
+
+    <!-- autres labels -->
+    <string name="scientific_name">Nom scientifique</string>
+    <string name="description">Description</string>
+    <string name="distribution">Habitat et comportement</string>
+    <string name="geographic_distribution">Distribution géographique</string>
+    <string name="scientific_order">Ordre</string>
+    <string name="scientific_family">Famille</string>
+    <string name="credits">Crédits</string>
+    <string name="no_records">Pas d\'enregistrement. Vérifier et télécharger
+		depuis
+		Internet ?</string>
+    <string name="no_pictures">Pas de photo. Vérifier et télécharger depuis
+		Internet ?</string>
+    <string name="no_wiki">La fiche wikipedia n\'est pas sur votre appareil. Voulez-vous la télécharger ?</string>
+    <string name="about_ornidroid">Cette application est sous
+		licence Creative Commons BY
+		NC\nhttp://creativecommons.org/licenses/by-nc/3.0/deed.fr</string>
+    <string name="download_in_progress">Téléchargement en cours</string>
+    <string name="download_please_wait">Veuillez patienter pendant le téléchargement.
+		L\'écran va se rafraîchir automatiquement.</string>
+    <string name="no_resources_online">Désolé, pas de fichier à télécharger depuis
+		Internet.</string>
+    <string name="unknown_error">Désolé, une erreur inattendue est survenue.</string>
+    <!-- Help content -->
+    <string name="help_text">Contact : ornidroid@free.fr\n\nGuide d\'utilisation : https://github.com/giletvin/ornidroid/wiki/Utilisation\n\nComment installer les packages complets d\'images et de sons : https://github.com/giletvin/ornidroid/wiki/Installation\n\nPour changer la langue du moteur de recherche : aller dans les préférences (accessibles par le menu) et modifier la valeur de OrnidroidSearchLang</string>
+    <!-- strings of the multi search -->
+    <string name="search_please_wait">Recherche en cours.</string>
+    <string name="search_category_choose">Choisir une catégorie</string>
+    <string name="search_category">Catégorie</string>
+    <string name="search_category_help">Exemples\nPassereaux : moineaux, hirondelles,&#8230;\nRapaces: aigles\nGrands échassiers: cigognes, hérons,&#8230;\nLimicoles: bécasses, pluviers, &#8230;</string>
+    <string name="search_country">Pays</string>
+    <string name="search_country_choose">Choisir un pays</string>
+    <string name="search_habitat_choose">Choisir un habitat</string>
+    <string name="search_habitat">Habitat</string>
+    <string name="search_habitat_help">Un oiseau peut avoir deux types d\'habitats.\nExemple : le merle est dans "Villes, villages, jardins" et dans "Forêts et landes"</string>
+    <string name="search_beak_form_choose">Choisir un type de bec</string>
+    <string name="search_beak_form">Type de bec</string>
+    <string name="search_all">Tous </string>
+    <string name="reset_form">Réinitialiser</string>
+    <string name="search_size_choose">Choisir une taille</string>
+    <string name="search_size">Taille</string>
+    <string name="search_colour_choose">Choisir une couleur</string>
+    <string name="search_feather_colour">Couleur du plumage</string>
+    <string name="search_feather_colour_help">Un oiseau peut avoir deux couleurs. Il s\'agit soit de la couleur principale du plumage, ou alors d\'une couleur remarquable.\nExemples :\nmartin-pêcheur: orange et bleu\nAvocette: blanc et noir\nChardonneret élégant : marron et rouge</string>
+    <string name="search_beak_colour">Couleur du bec</string>
+    <string name="search_paw_colour">Couleur des pattes</string>
+    <string name="search_show_results">Afficher</string>
+    <string name="search_results">résultats</string>
+    <string name="expand_collapse_form">Ouvrir/Fermer le formulaire</string>
+    <string name="search_remarkable_sign_choose">Choisir un signe distinctif</string>
+    <string name="search_remarkable_sign">Signe distinctif</string>
+    <string name="xeno_canto_map">Carte de distribution (Xeno Canto)</string>
+    <!-- labels for the updates -->
+    <string name="updates_available">Mises à jour disponibles.\nTélécharger ?</string>
+    <string name="updates_check_error">Echec de la vérification des mises à jour.\nMerci de vérifier votre connexion internet.</string>
+    <string name="updates_none">Aucune mise à jour disponible.</string>
+    <string name="download_birds_file">Télécharger uniquement\npour cet oiseau</string>
+    <string name="download_zip_package">Télécharger le package complet\npour tous les oiseaux</string>
+    <string name="download_package_in_progress">Téléchargement en cours</string>
+    <string name="install_package_in_progress">Installation en cours</string>
+    <string name="download_zip_package_warn_detail">Connexion Wifi recommandée. Le téchargement et l\'installation peuvent durer 5 à 10 min (en fonction de votre accès internet)</string>
+    <string name="download_zip_package_error">Problème dans le téléchargement.</string>
+    <string name="download_zip_package_error_detail">Merci de vérifier vos paramètres de connexion.</string>
+    <string name="download_manual">Il est aussi possible de télécharger et installer les packages depuis un ordinateur : https://github.com/giletvin/ornidroid/wiki/Installation</string>
+    <string name="download_zip_not_enough_space">Espace insuffisant sur la mémoire de l\'appareil.\nAudio : 700 Mo nécessaires pendant l\'installation. \nImages : 120 Mo\nPages Wikipedia : 60 Mo.</string>
+
+</resources>

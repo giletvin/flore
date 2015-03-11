@@ -1,0 +1,442 @@
+lieu de photo|photos manquantes|Nom 1|Nom3|Nom 2|Nom latin|Nom latin2|Nom anglais|Ordre:famille|Fleur en groupe/Fleur isolée|Inflorescence|Fleur/sans fleur|Couleur de la fleur|Couleur 2|Aspect de la fleur|Particularité|Aspect réformé|Nombre de pétales, tépales ou lobes|Forme de la fleur Régulière/Irrégulière|Type de feuille|disposition des feuilles|Tige pubescente/glabre/épine|Feuille pubescente 1/ Feuille pubescente 2/Feuille glabre|FIN
+||xxx|||xxx||xxx||*isolée
+*épi
+*grappe, panicule
+*ombelle
+*corymbe
+*couronne
+*tête
+*spadice
+*autre
+* verticille, couronne|||||* tube
+* cloche, grelot
+* composée
+* sous forme d'écailles
+* papillon
+* présence d'éperon
+* sans corolle
+* entonnoir
+* autre
+* orchidée
+* PSER : pétales séparés égaux rayonnants|* éperon
+* cloche, grelot
+* orchidée
+* papillon
+* tachetée
+* spathe|* PSER : pétales séparés égaux rayonnants (également réparties)
+* PSI : pétales séparés inégaux
+* PSLE : pétales soudés lobes égaux (campanule)
+* PSLI : pétales soudés lobes inégaux (type tube à 2 lèvres)
+* CTL : composée avec des fleurs tubulées et ligulées
+* CLOT : composées uniquement de fleurs ligulées ou tubulées
+* autre|* 1-3
+* 4
+* 5
+* 6
+* 7-10
+>10
+* 0| * régulière
+ * irrégulière
+
+| * composée
+ * divisée
+ * simple entière
+ * simple dentée
+* autre (filet, écaille)|* opposées
+ * alternes
+ * verticillées
+ * groupées
+ * à la base
+* autre|||FIN
+||Ache faux cresson||Ache nodiflore|Helosciadium nodiflorum||Fool's-water-cress|Apiaceae|ombelle|groupe|avec|blanc||5 pétales||PSER|5|régulière|composée|alternes|glabre|glabre|
+||Achillée millefeuille|||Achillea millefolium||common yarrow|Asteraceae|ombelle|groupe|avec|blanc|rose|composée||CTL|>10|irrégulière|divisée|alternes|pubescente|pubescente2|
+||Achillée sternutatoire||Herbe à éternuer|Achillea ptarmica||sneezewort|Asteraceae|ombelle|groupe|avec|blanc||composée||CTL|>10|régulière|simple dentée|alternes|glabre, pubescente|glabre|
+||Aconit napel|Casque de Jupiter|Napel|Aconitum napellus||monkshood|Ranunculaceae|grappe|groupe|avec|violet||5 pétales||PSI|5|irrégulière|divisée|alternes|glabre, pubescente|glabre|
+||Agripaume faux Marrube|||Leonorus marrubiastrum||False Motherwort|Lamiaceae|couronne|groupe|avec|mauve||tube||PSLI|4|irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Aigremoine eupatoire|||Agrimonia eupatoria||common agrimony|Rosaceae|épi|groupe|avec|jaune||5 pétales||PSER|5|régulière|composée|alternes|pubescente|pubescente1|
+||Ail des champs|Ail potager|Ail des jardins|Allium oleraceum||field garlic|Liliaceae|ombelle|groupe|avec|rose|marron|6 pétales||PSER|6|régulière|simple entière|alternes|glabre|glabre|
+||Ail des ours||Ail des bois|Allium ursinum||wild garlic|Liliaceae|ombelle|groupe|avec|blanc||6 pétales||PSER|6|régulière|simple entière|alternes|glabre|glabre|
+||Ail des vignes|||Allium vineale||crow Garlic|Liliaceae|tête|groupe|avec|rose|blanc|6 pétales|cloche|PSER|6|régulière|simple entière|alternes|glabre|glabre|
+||Alliaire|Herbe à ail|Alliaire officinale|Alliaria petiolata||Garlic mustard|Brassicaceae|grappe|groupe|avec|blanc||PSER||PSER|4|régulière|simple dentée|alternes|glabre, pubescente|glabre|
+||Alysson à calice persistant|Passerage à calices persistants|Passerage faux alysson|Alyssum alyssoides||pale madwort|Brassicaceae|grappe|groupe|avec|jaune||PSER||PSER|4|régulière|simple entière|alternes|pubescente|pubescente2|
+||Alysson blanc||Bertéroa blanchâtre|Berteroa incana||hoary alyssum|Brassicaceae|grappe|groupe|avec|blanc||PSER||PSER|4|régulière|simple entière|alternes|pubescente|pubescente2|
+||Ambroisie à feuilles d'Armoise||Ambroisie élevée|Ambrosia artemisiifolia||Common Ragweed|Asteraceae|épi|groupe|avec|vert|jaune|composée||CL|>10||divisée|alternes|pubescente|pubescente2|
+||Ancolie commune|||Aquilegia vulgaris||Common columbine|Ranunculaceae|isolée|solitaire|avec|violet|rose||éperon|PSER|5|régulière|composée|alternes|pubescente|pubescente1|
+||Andryale à feuilles entières||Andryale sinueuse|Andryala integrifolia||Common Andryala|Asteraceae|grappe, corymbe, épi|groupe|avec|jaune||composée||CL|>10|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Anémone des bois||Anémone sylvie|Anemone nemorosa||Wood anemone| Ranunculaceae|isolée|solitaire|avec|blanc||5 pétales, 6 pétales, 7 pétales, 8 pétales||PSER|5,6, 7-10|régulière|composée|verticillées|pubescente|pubescente2|
+||Angélique des bois||Angélique sauvage|Angelica sylvestris||wild angelica|Apiaceae|ombelle|groupe|avec|blanc||5 pétales||PSER|5|irrégulière|composée|alternes|glabre|pubescente1|
+||Anthémis bicolore|Camomille mixte|Anthémis panaché|Anthemis mixta|| simple-leaved chamomile|Asteraceae|isolée|solitaire|avec|blanc|jaune|composée||CTL|>10|régulière|divisée|alternes|pubescente|pubescente2|
+||Anthémis des champs|Fausse Camomille|Camomille sauvage|Anthemis arvensis||corn chamomile|Asteraceae|isolée|solitaire|avec|blanc|jaune|composée||CTL|>10|régulière|divisée|alternes|pubescente|pubescente2|
+||Arabette de Thalius||Arabette des dames|Arabidopsis thaliana||thale cress|Brassicaceae|grappe|groupe|avec|blanc||PSER||PSER|4|régulière|simple dentée|alternes|pubescente, glabre|pubescente2|
+||Arabette glabre|Tourette glabre|Tourelle|Arabis glabra||tower mustard|Brassicaceae|grappe|groupe|avec|blanc||PSER||PSER|4|régulière|simple entière|alternes|glabre|glabre, pubescente2|
+||Arabette hirsute|Arabette poilue|Arabette hérissée|Arabis hirsuta||hairy rockcress |Brassicaceae|grappe|groupe|avec|blanc||PSER||PSER|4|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Aristoloche clématite|||Aristolochia clematitis||birthwort |Aristolochiaceae|autre groupe|groupe|avec|jaune||tube||PSLI|1-3|irrégulière|simple entière|alternes|glabre|glabre|
+||Armérie des sables||Armérie faux plantain|Armeria arenaria||Armeria arenaria|Plumbaginaceae|isolée|groupe|avec|mauve||5 pétales||PSLE|5|régulière|simple entière|à la base|glabre|glabre|
+||Armoise commune|Artémise|Armoise citronnelle|Artemisia vulgaris||mugwort|Asteraceae|épi|groupe|avec|jaune|vert|composée||CTL, CLOT|>10|irrégulière|divisée, composée|alternes|glabre|pubescente1|
+||Arum d'Italie||Gouet d'Italie|Arum italicum|| Italian arum|Araceae|spadice|solitaire|avec|jaune|blanc|sans corolle|spathe|autre|0|irrégulière, régulière|simple entière|à la base|glabre|glabre|
+||Arum tacheté||Gouet tacheté|Arum maculatum||wild arum|Araceae|spadice|solitaire|avec|brun|rouge|sans corolle|spathe|autre|0|irrégulière, régulière|simple entière|à la base|glabre|glabre|
+||Asperge||Asperge officinale|Asparagus officinalis||asparagus|Asparagaceae|isolée|solitaire|avec|vert|jaune|tube||PSER|6|régulière|simple entière|groupées|glabre|glabre|
+||Aster lancéolé||Aster à feuilles lancéolées|Aster lanceolatus||panicled aster|Asteraceae|grappe|groupe|avec|blanc|jaune|composée||CTL|>10|régulière|simple dentée|alternes|glabre|glabre|
+||Astragale à feuilles de réglisse|Astragale réglisse|Réglisse sauvage|Astragalus glycyphyllos||Liquorice milkvetch|Fabaceae|grappe|groupe|avec|blanc|vert|papillon|papillon|PSI|5|irrégulière|composée|alternes|glabre|pubescente1|
+||Ballote noire|Ballote fétide|Marrube noire|Ballota nigra||black horehound|Lamiaceae|couronne|groupe|avec|mauve|blanc|tube|tachetée|PSLI|5|irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Barbarée commune||Herbe de Sainte Barbe|Barbarea vulgaris||bittercress|Brassicaceae|grappe|groupe|avec|jaune||PSER||PSER|4|régulière|divisée|alternes|glabre|glabre|
+||Barbarée intermédiaire||Barbarée précoce|Barbarea intermedia||Medium-flowered Winter-cress|Brassicaceae|grappe|groupe|avec|jaune||PSER||PSER|4|régulière|divisée|alternes|glabre|glabre|
+||Barbarée printanière|||Barbarea verna||American Winter-cress|Brassicaceae|grappe|groupe|avec|jaune||PSER||PSER|4|régulière|divisée|alternes|glabre|glabre|
+||Bardane à petites têtes||Petite bardane|Arctium minus||lesser burdock|Asteraceae|grappe|groupe|avec|mauve||composée||CLOT|>10|irrégulière, régulière|simple entière|alternes|pubescente|pubescente1|
+||Bardane commune|Bardane officinale|Grande bardane|Arctium lappa||greater burdock|Asteraceae|grappe|groupe|avec|mauve||composée||CLOT|>10|irrégulière, régulière|simple entière|alternes|pubescente|pubescente1|
+||Benoîte urbaine|Herbe de Saint Benoît|Benoîte commune|Geum urbanum||wood avens|Rosaceae|isolée|solitaire|avec|jaune||5 pétales||PSER|5|régulière|composée|alternes|pubescente|pubescente1|
+||Berce des prés|Grande berce|Berce commune|Heracleum sphondylium||hogweed|Apiaceae|ombelle|groupe|avec|blanc||5 pétales||PSER, PSI|5|régulière|composée|alternes|pubescente|pubescente2|
+||Bident feuillé||Bident à fruits noirs|Bidens frondosa||devil's beggarticks|Asteraceae|cyme|groupe|avec|jaune||composée||CLOT|>10|irrégulière, régulière|composée|opposées|pubescente|glabre|
+||Bident penché|||Bidens cernua||Nodding Bur-marigold|Asteraceae|cyme|groupe|avec|jaune||composée||CLOT|>10|irrégulière, régulière|simple dentée|opposées|pubescente|pubescente2, glabre|
+||Bident rayonnant|||Bidens radiata||Bidens radiata|Asteraceae|cyme|groupe|avec|jaune||composée||CLOT|>10|irrégulière, régulière|divisée|opposées|pubescente, glabre|pubescente2, glabre|
+||Bident trifoliolé|Bident à feuilles tripartites|Bident tripartite|Bidens tripartita||Trifid Bur-marigold|Asteraceae|cyme|groupe|avec|jaune||composée||CLOT|>10|irrégulière, régulière|divisée|opposées|pubescente, glabre|pubescente2, pubescente1|
+||Blackstonie perfoliée|Chlorette|Chlore perfoliée|Blackstonia perfoliata||yellow-wort|Gentianaceae|corymbe|groupe|avec|jaune||8 pétales||PSLE|7-10|régulière|simple entière|opposées|glabre|glabre|
+||Bleuet|||Centaurea cyanus||cornflower|Asteraceae|isolée|solitaire|avec|bleu||composée||CLOT|>10|régulière|divisée|alternes|pubescente|pubescente2|
+||Bourrache officinale|||Borago officinalis||starflower|Boraginaceae|grappe|groupe|avec|bleu||5 pétales||PSLE|5|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Brunelle blanche|||Prunella laciniata||Cut-leaf Self-heal|Lamiaceae|épi|groupe|avec|blanc||tube||PSLI|4|irrégulière|simple entière|opposées|pubescente|pubescente2|
+||Brunelle commune|||Prunella vulgaris|| common self-heal|Lamiaceae|épi|groupe|avec|violet|mauve|tube||PSLI|4|irrégulière|simple dentée|opposées|pubescente, glabre|pubescente2|
+||Brunelle à grandes feuilles|||Prunella grandiflora||Large Self-heal|Lamiaceae||groupe||violet|mauve|tube||PSLI|4||simple dentée|opposées|pubescente|pubescente2|
+||Bruyère cendrée|||Erica cinerea||bell heather|Ericaceae|grappe|groupe|avec|rose||cloche||PSLE|4|régulière|simple entière|verticillées|pubescente|glabre|
+||Bryone dioïque|||Bryonia dioica||red bryony|Cucurbitaceae|ombelle|groupe|avec|blanc|vert|5 pétales||PSLE|5|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Bugle de Genève|||Ajuga genevensis||blue bugle|Lamiaceae|épi|groupe|avec|bleu||tube||PSLI|5|irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Bugle petit pin||Ivette|Ajuga chamaepitys||Yellow bugle|Lamiaceae|isolée|solitaire|avec|jaune||tube||PSLI|5|irrégulière|divisée|opposées|pubescente|pubescente2|
+||Bugle rampante|||Ajuga reptans||common bugle|Lamiaceae|épi|groupe|avec|bleu||tube|tachetée|PSLI|5|irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Buglosse des champs||Petit buglosse|Anchusa arvensis||small bugloss|Boraginaceae|grappe|groupe|avec|bleu||tube||PSLE|5|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Bugrane rampante||Arrête-boeuf|Ononis spinosa var. procurrens||common rest-harrow|Fabaceae|isolée|solitaire|avec|rose||papillon|papillon|PSI|5|irrégulière|composée|alternes|pubescente|pubescente2|
+||Buplèvre en faux|||Bupleurum falcatum||Chinese Thoroughwax|Apiaceae|ombelle|groupe|avec|jaune||5 pétales||PSER|5|irrégulière, régulière|simple entière|alternes|glabre|glabre|
+||Butome en ombelle||Jonc fleuri|Butomus umbellatus||flowering rush|Butomaceae|ombelle|groupe|avec|rose||6 pétales||PSI|6|régulière|simple entière|à la base|glabre|glabre|
+||Calament des bois|Sarriette à feuilles de menthe|Calament à feuilles de menthe|Calamintha menthifolia|Calamintha officinalis subsp. sylvatica|Wood calamint|Lamiaceae|grappe|groupe|avec|rose||tube|||||simple dentée|opposées|pubescente|pubescente2|
+||Callune||Bruyère commune|Calluna vulgaris||common heather|Ericaceae|grappe|groupe|avec|rose||cloche||PSER|4|régulière|simple entière|opposées|pubescente|glabre|
+||Campanule à feuilles de pêcher|||Campanula persicifolia||Peach-leaved bellflower|Campanulaceae|grappe|groupe|avec|bleu||cloche||PSLE|5|régulière|simple entière, simple dentée|alternes|glabre|glabre|
+||Campanule gantelée||Campanule à feuilles d'ortie|Campanula trachelium||nettle-leaved bellflower|Campanulaceae|grappe|groupe|avec|rose|violet|cloche||PSLE|5|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Campanule raiponce|||Campanula rapunculus||rampion bellflower|Campanulaceae|grappe|groupe|avec|rose|bleu|cloche||PSLE|5|régulière|simple entière|alternes|pubescente|pubescente2, pubescente1|
+||Capselle bourse à pasteur||Bourse à pasteur|Capsella bursa-pastoris||shepherd's-purse|Brassicaceae|grappe|groupe|avec|blanc||PSER|cloche|PSER|4|régulière|simple dentée, divisée|alternes|glabre|pubescente2|
+||Cardamine des prés||Cressonnette|Cardamine pratensis||cuckoo flower|Brassicaceae|grappe|groupe|avec|rose||PSER||PSER|4|régulière|divisée|alternes|glabre|glabre|
+||Cardamine hirsute||Cardamine hérissée|Cardamine hirsuta||Hairy bittercress|Brassicaceae|grappe|groupe|avec|blanc||PSER||PSER|4|régulière|divisée|alternes|glabre|glabre|
+||Cardamine impatiente|Herbe au Diable|Cardamine irritable|Cardamine impatiens||narrow-leaved bittercress|Brassicaceae|grappe|groupe|avec|blanc|vert|PSER||PSER|4|régulière|composée|alternes|glabre|glabre|
+||Cardère sauvage||Cabaret des oiseaux|Dipsacus fullonum||Fuller's teasel|Dipsacaceae|isolée|solitaire|avec|mauve||composée||||régulière, irrégulière|simple dentée|opposées|épine|glabre|
+||Carotte sauvage|||Daucus carota||wild carrot|Apiaceae|ombelle|groupe|avec|blanc||5 pétales|||5|régulière|composée|alternes|pubescente|pubescente1|
+||Centaurée jacée||Tête de moineau|Centaurea jacea||Brown Knapweed|Asteraceae|isolée|solitaire|avec|mauve||composée||||irrégulière|simple dentée|alternes|pubescente|pubescente2|
+||Céphalanthère blanche|Céphalanthère à grandes fleurs|Céphalanthère de Damas|Cephalanthera damasonium||White Helleborine|Orchidaceae|épi|groupe|avec|blanc||orchidée||||irrégulière|simple entière|alternes|glabre|glabre|
+||Céphalanthère rouge|||Cephalanthera rubra||Red Helleborine|Orchidaceae|épi|groupe|avec|rose||orchidée||||irrégulière|simple entière|alternes|pubescente|glabre|
+||Ceraiste aggloméré|||Cerastium glomeratum||sticky mouse-ear chickweed|Caryophyllaceae|cyme|groupe|avec|blanc||5 pétales|||5|régulière|simple entière|opposées|pubescente|pubescente2|
+||Céraiste commun||céraiste des fontaines|Cerastium fontanum||Mouse-ear chickweed|Caryophyllaceae|cyme|groupe|avec|blanc||5 pétales|||5|régulière|simple entière|opposées|pubescente|pubescente2|
+||Céraiste des champs|||Cerastium arvense||field chickweed|Caryophyllaceae|cyme|groupe|avec|blanc||5 pétales|||5|régulière|simple entière|opposées|pubescente|pubescente2|
+||Cerfeuil des bois|Cerfeuil des prés|Cerfeuil sauvage|Anthriscus sylvestris||cow parsley|Apiaceae|ombelle|groupe|avec|blanc||5 pétales|||5|régulière, irrégulière|composée|alternes|pubescente|pubescente2|
+||Cerfeuil penché||Cerfeuil enivrant|Chaerophyllum temulum||rough chervil|Apiaceae|ombelle|groupe|avec|blanc||5 pétales|||5|régulière, irrégulière|composée|alternes|pubescente|pubescente2|
+||Chanvre cultivé||Cannabis|Cannabis sativa||marijuana|Cannabaceae|grappe|groupe|avec|vert||sans corolle|||0|régulière, irrégulière|composée|opposées|pubescente|pubescente2|
+||Chardon crépu|||Carduus crispus|| Welted thistle|Asteraceae|grappe|groupe|avec|mauve||composée||||régulière|divisée|alternes|épine|pubescente2|
+||Chardon penché|||Carduus nutans||Musk thistle|Asteraceae|grappe, isolée|solitaire|avec|mauve||composée||||régulière|divisée|alternes|épine, pubescente|pubescente1|
+||Chélidoine|Grande Éclaire|Herbe aux verrues|Chelidonium majus||greater celandine|Papaveraceae|isolée|solitaire|avec|jaune||PSER||PSER|4|régulière|divisée|alternes|pubescente|glabre|
+||Chénopode blanc||Ansérine blanche|Chenopodium album|| lamb's quarters|Chenopodiaceae|autre|groupe|avec|vert||sans corolle|||0|régulière, irrégulière|simple dentée|alternes|glabre|glabre|
+||Chèvrefeuille des bois|||Lonicera periclymenum||honeysuckle|Caprifoliaceae|tête|groupe|avec|blanc|rose|tube||||irrégulière|simple entière|opposées|glabre|glabre|
+||Chicorée sauvage|||Cichorium intybus||Common chicory|Asteraceae|isolée|solitaire|avec|bleu||composée||||régulière|simple dentée|alternes|pubescente|glabre|
+||Chondrille à tiges de jonc||Chondrille effilée|Chondrilla juncea||rush skeletonweed|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|divisée|alternes|pubescente, glabre|glabre|
+||Cicendie naine|Cicendie fluette|Gentiane fluette|Exaculum pusillum||Guernsey Centaury|Gentianaceae|cyme|groupe|avec|blanc|rose|tube||PSLE|4|régulière|simple entière|opposées|glabre|glabre|
+||Ciguë tachetée||Grande ciguë|Conium maculatum||Hemlock|Apiaceae|ombelle|groupe|avec|blanc||5 pétales|||5|régulière, irrégulière|composée|alternes|glabre|glabre|
+||Cirse commun|Chardon vulgaire| Cirse lancéolé|Cirsium vulgare||Spear Thistle|Asteraceae|grappe|groupe|avec|mauve||composée||||régulière|divisée|alternes|épine, pubescente|pubescente2|
+||Cirse découpé||Cirse anglais|Cirsium dissectum||Meadow Thistle|Asteraceae|isolée, grappe|solitaire|avec|mauve||composée||||régulière|simple dentée, divisée|alternes|pubescente|pubescente2|
+||Cirse des champs||Chardon des champs|Cirsium arvense||Creeping Thistle|Asteraceae|grappe|groupe|avec|rose||composée||||régulière|simple dentée|alternes|glabre|glabre|
+||Cirse maraîcher||Cirse faux-épinard|Cirsium oleraceum||Cabbage thistle|Asteraceae|grappe|groupe|avec|blanc||composée||||régulière|divisée|alternes|glabre|pubescente2|
+||Cirse tubéreux|||Cirsium tuberosum||Tuberous Thistle|Asteraceae|grappe, isolée|solitaire|avec|rose||composée||||régulière|divisée|alternes|pubescente|pubescente2|
+||Clématite vigne-blanche||Clématite des haies|Clematis vitalba||Old man's beard|Ranunculaceae|cyme, grappe|groupe|avec|blanc||PSER||PSER|4,5|régulière|composée|opposées|pubescente|glabre|
+||Clinopode commun|Calament clinopode|Grand basilic|Clinopodium vulgare||Wild Basil|Lamiaceae|couronne|groupe|avec|rose||tube||||irrégulière|simple entière|opposées|pubescente|pubescente2|
+||Colza|||Brassica napus||Rapeseed|Brassicaceae|grappe|groupe|avec|jaune||PSER||PSER|4|régulière|simple dentée|alternes|glabre|glabre|
+||Consoude officinale||Grande consoude|Symphytum officinale||Common comfrey|Boraginaceae|grappe|groupe|avec|blanc|rose|tube||||régulière|simple entière|alternes|pubescente|pubescente2|
+||Coquelicot|||Papaver rhoeas||Red poppy|Papaveraceae|isolée|solitaire|avec|rouge||PSER||PSER|4|régulière|divisée|alternes|pubescente|pubescente2|
+||Coquelicot douteux||Petit Coquelicot|Papaver dubium|| Long-headed Poppy|Papaveraceae|isolée|solitaire|avec|rouge||PSER||PSER|4|régulière|divisée|alternes|pubescente|pubescente2|
+||Coronille bigarrée|Coronille changeante|Coronille variée|Securigera varia||crown vetch|Fabaceae|ombelle|groupe|avec|rose|blanc|papillon||||irrégulière|composée|alternes|glabre|glabre|
+||Crépis bisannuel|Crépide des prés|Crépis des prés|Crepis biennis||rough hawksbeard|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|divisée|alternes|pubescente|pubescente2|
+||Crépis capillaire|Crépide capillaire|Crépis verdâtre|Crepis capillaris||smooth hawksbeard|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|simple dentée|alternes|pubescente|glabre|
+||Crépis de Nîmes|||Crepis sancta subsp. nemausensis||french hawksbeard|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|divisée|à la base|pubescente|pubescente2|
+||Crépis fétide||Crépide fétide|Crepis foetida||stinking hawksbeard|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|divisée|alternes|pubescente|pubescente2|
+||Crépis hérissé||Crépide hérissée|Crepis setosa||bristly hawksbeard|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|divisée|alternes|pubescente|pubescente2|
+||Cucubale à baies|Coulichon|Cucubale couchée|Cucubalus baccifer||Berry Catchfly|Caryophyllaceae|cyme|groupe|avec|blanc||PSER||PSER|5|régulière|simple entière|opposées|pubescente|pubescente2|
+||Datura officinal|Herbe aux taupes|Stramoine commune|Datura stramonium||Jimson weed|Solanaceae|isolée|solitaire|avec|blanc|mauve|tube||||régulière|simple dentée|alternes|pubescente, glabre|glabre|
+||Dauphinelle des jardins|Pied d'alouette des jardins|Dauphinelle cultivée|Consolida ajacis||doubtful knight's spur|Ranunculaceae|grappe|groupe|avec|mauve|violet|5 pétales|autre||5|irrégulière|divisée|alternes|glabre|pubescente2|
+||Digitale jaune|||Digitalis lutea||yellow foxglove|Scrofulariaceae|grappe|groupe|avec|jaune|blanc|tube||PSLI|5|irrégulière|simple entière|alternes|glabre|glabre|
+||Digitale pourpre|||Digitalis purpurea||common foxglove|Scrofulariaceae|grappe|groupe|avec|rose||tube||PSLI|4|irrégulière|simple dentée|alternes|pubescente|pubescente2|
+||Drave printanière|||Erophila verna||common whitlowgrass|Brassicaceae|grappe|groupe|avec|blanc||PSER||PSER|4|régulière|simple entière|à la base|pubescente|pubescente2|
+||Epervière piloselle||Piloselle|Hieracium pilosella|| mouse-ear hawkweed|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|simple entière|à la base|pubescente|pubescente2|
+||Epiaire annuelle|||Stachys annua||annual woundwort|Lamiaceae|couronne|groupe|avec|blanc||tube||||irrégulière|simple dentée|opposées|pubescente|glabre|
+||Epiaire des marais|||Stachys palustris||Marsh woundwort|Lamiaceae|épi|groupe|avec|rose||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Epiaire droite|||Stachys recta||yellow woundwort|Lamiaceae|couronne|groupe|avec|blanc||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Epiaire officinale|Bétoine officinale|Epiaire bétoine|Stachys officinalis||Betony|Lamiaceae|couronne|groupe|avec|rose||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Epilobe à petites fleurs||Epilobe mollet|Epilobium parviflorum||Smallflower Hairy Willowherb|Onagraceae|grappe|groupe|avec|rose||PSER||PSER|4|régulière|simple entière|alternes|pubescente|pubescente2|
+||Epilobe à quatre angles|||Epilobium tetragonum||square-stemmed willowherb|Onagraceae|grappe|groupe|avec|rose||PSER||PSER|4|régulière|simple dentée|alternes|pubescente, glabre|glabre|
+||Epilobe cilié||Epilobe à tige glanduleuse|Epilobium ciliatum||fringed willowherb|Onagraceae|grappe|groupe|avec|rose||PSER||PSER|4|régulière|simple dentée|opposées|pubescente, glabre|glabre|
+||Epilobe d'automne||Epilobe à fruits courts|Epilobium brachycarpum||tall willowherb|Onagraceae|grappe|groupe|avec|rose|blanc|PSER||PSER|4|régulière|simple dentée|alternes|glabre|glabre|
+||Epilobe des montagnes|||Epilobium montanum||broad-leaved willowherb|Onagraceae|grappe|groupe|avec|rose||PSER||PSER|4|régulière|simple dentée|opposées|pubescente|pubescente2|
+||Epilobe lancéolé|||Epilobium lanceolatum||spear-leaved willowherb|Onagraceae|grappe|groupe|avec|rose||PSER||PSER|4|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Epilobe velu|Epilobe à grandes fleurs|Epilobe hérissé|Epilobium hirsutum|| great willowherb |Onagraceae|grappe|groupe|avec|rose||PSER||PSER|4|régulière|simple dentée|opposées|pubescente|pubescente1|
+||Epipactis helléborine|Helléborine|Epipactis à larges feuilles|Epipactis helleborine||Broad-leaved Helleborine|Orchidaceae|grappe|groupe|avec|vert||orchidée||||irrégulière|simple entière|alternes|pubescente, glabre|glabre|
+||Erodium à feuilles de ciguë|Érodium commun|Bec-de-grue  à feuilles de ciguë|Erodium cicutarium||redstem filaree|Geraniaceae|ombelle|groupe|avec|rose||5 pétales|||5|régulière|composée|alternes, opposées|pubescente|pubescente2|
+||Eupatoire chanvrine|||Eupatorium cannabinum||Hemp-agrimony| Asteraceae|ombelle|groupe|avec|rose||composée|tube|||régulière|composée|opposées|pubescente|pubescente2|
+||Euphorbe péplus|Ésule ronde|Euphorbe des jardins|Euphorbia peplus||petty spurge|Euphorbiaceae|ombelle|groupe|avec|vert||sans corolle|||0|irrégulière, régulière|simple entière|alternes|glabre|glabre|
+||Euphorbe réveil-matin||Petite Éclaire|Euphorbia helioscopia||Sun Spurge|Euphorbiaceae|ombelle|groupe|avec|vert|jaune|sans corolle|||0|irrégulière, régulière|simple dentée|alternes|pubescente, glabre|glabre|
+||Euphraise raide||Euphraise dressée|Euphrasia stricta||drug eyebright|Scrofulariaceae|grappe|groupe|avec|mauve|blanc|tube||||irrégulière|simple dentée|alternes|pubescente|glabre|
+||Falcaire commune||Falcaire de Rivin|Falcaria vulgaris||longleaf|Apiaceae|ombelle|groupe|avec|blanc||5 pétales|tube||5|régulière|composée|alternes|pubescente|glabre|
+||Fenouil commun|||Foeniculum vulgare||Fennel|Apiaceae|ombelle|groupe|avec|jaune||5 pétales|||5|régulière|composée|alternes|glabre|glabre|
+||Ficaire|Renoncule ficaire|Ficaire fausse-renoncule|Ranunculus ficaria||Lesser celandine|Ranunculaceae|isolée|solitaire|avec|jaune||6 pétales, 7 pétales, 8 pétales, 9 pétales, 10 pétales, 11 pétales, 12 pétales|||6, 7-10, >10|régulière|simple entière|alternes, opposées|glabre|glabre|
+||Filipendule ulmaire|Fausse spirée|Reine des prés|Filipendula ulmaria||meadowsweet|Rosaceae|grappe|groupe|avec|blanc||5 pétales|||5|régulière|composée|alternes|glabre|pubescente1|
+||Flûteau fausse renoncule|Plantain d'eau fausse renoncule|Alisma fausse renoncule|Baldellia ranunculoides|| lesser water-plantain|Alismataceae|ombelle|groupe|avec|blanc|rose|PSER||PSER|1-3|régulière|simple entière|à la base|glabre|glabre|
+||Fraisier des bois|||Fragaria vesca||wild strawberry|Rosaceae|cyme|groupe|avec|blanc||5 pétales|||5|régulière|composée|à la base|pubescente|pubescente2|
+||Fritillaire damier||Fritillaire oeuf de pintade|Fritillaria meleagris||snake's head fritillary|Liliaceae|isolée|solitaire|avec|violet|rose|cloche||PSER|6|régulière|simple entière|alternes|glabre|glabre|
+||Fumeterre des murs|||Fumaria muralis||common ramping-fumitory|Fumariaceae|grappe|groupe|avec|rose||présence d'éperon||||irrégulière|composée|alternes|glabre|glabre|
+||Fumeterre grimpante||Fumeterre blanche|Fumaria capreolata||white fumitory|Fumariaceae|grappe|groupe|avec|blanc|rose|présence d'éperon||||irrégulière|composée|alternes|glabre|glabre|
+||Fumeterre officinale||Pied de Céline|Fumaria officinalis||common fumitory|Fumariaceae|grappe|groupe|avec|rose||présence d'éperon||||irrégulière|composée|alternes|glabre|glabre|
+||Gaillet croisette|Croisette commune|Croisette velue|Cruciata laevipes||crosswort|Rubiaceae|cyme|groupe|avec|jaune||PSER||PSLE|4|régulière|simple entière|verticillées|pubescente|pubescente2|
+||Gaillet gratteron|Gratteron|Gaillet accrochant|Galium aparine||Cleavers|Rubiaceae|cyme|groupe|avec|blanc||PSER||PSLE|4|régulière|simple entière, simple dentée|verticillées|pubescente|pubescente2|
+||Gaillet mollugine|Caille-lait blanc|Gaillet mou|Galium mollugo||white bedstraw|Rubiaceae|grappe|groupe|avec|blanc||PSER||PSLE|4|régulière|simple entière, simple dentée|verticillées|pubescente|glabre|
+||Gaillet odorant|Aspérule odorante|Petit Muguet|Galium odoratum||Sweetscented Bedstraw|Rubiaceae|ombelle|groupe|avec|blanc||PSLE||PSLE|4|régulière|simple entière, simple dentée|verticillées|glabre|glabre|
+||Gaillet vrai|Caille-lait jaune|Gaillet jaune|Galium verum||Yellow Bedstraw|Rubiaceae|grappe|groupe|avec|jaune||PSER||PSLE|4|régulière|simple entière, simple dentée|verticillées|pubescente|pubescente2|
+||Galéopsis des moissons|Galéopsis des champs|Galéopsis douteux|Galeopsis ladanum||red hempnettle |Lamiaceae|couronne|groupe|avec|blanc||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Galéopsis tétrahit|||Galeopsis tetrahit ||brittlestem hempnettle |Lamiaceae|couronne|groupe|avec|rose|blanc|tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Galinsoga cilié|||Galinsoga quadriradiata||shaggy soldier|Asteraceae|cyme|groupe|avec|blanc|jaune|composée||||irrégulière, régulière|simple dentée|opposées|pubescente|glabre|
+||Géranium à compléter|||||||||||||||||||||
+||Géranium à feuilles rondes|||Geranium rotundifolium||round-leave crane's-bill|Geraniaceae|grappe|groupe|avec|rose||5 pétales|||5|régulière|divisée|opposées|pubescente|pubescente2|
+||Géranium colombin|||Geranium columbinum||Long-stalked crane's-bill|Geraniaceae|grappe|groupe|avec|rose||5 pétales|||5|régulière|divisée|opposées|pubescente|pubescente2|
+||Géranium découpé||Géranium à feuilles découpées|Geranium dissectum||Cut-leave crane's-bill|Geraniaceae|grappe|groupe|avec|rose||5 pétales|||5|régulière|divisée|opposées|pubescente|glabre, pubescente2|
+||Géranium herbe à Robert|||Geranium robertianum||Herb Robert|Geraniaceae|grappe|groupe|avec|rose||5 pétales|||5|régulière|divisée|opposées|pubescente|glabre|
+||Géranium luisant|||Geranium lucidum||Shiny crane's-bill|Geraniaceae|grappe|groupe|avec|rose||5 pétales|||5|régulière|divisée|opposées|glabre|pubescente1|
+||Géranium mou|||Geranium molle||dove's foot crane's-bill|Geraniaceae|grappe|groupe|avec|rose||5 pétales|||5|régulière|divisée|opposées|pubescente|pubescente2|
+||Germandrée des marais|||Teucrium scordium||Water Germander|Lamiaceae|couronne|groupe|avec|rose||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Germandrée scorodoine|Germandrée des bois|Sauge des bois|Teucrium scorodonia||wood sage|Lamiaceae|grappe|groupe|avec|blanc||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente1|
+||Gesse à larges feuilles||Pois vivace|Lathyrus latifolius||perennial peavine|Fabaceae|grappe|groupe|avec|rose||papillon||||irrégulière|simple entière|alternes|glabre, pubescente|glabre|
+||Gesse des prés|||Lathyrus pratensis||meadow vetchling|Fabaceae|grappe|groupe|avec|jaune||papillon||||irrégulière|composée|alternes|pubescente|pubescente1|
+||Gesse hérissée|Gesse velue|Gesse hirsute|Lathyrus hirsutus||hairy vetchling|Fabaceae|grappe|groupe|avec|violet|rose|papillon||||irrégulière|composée|alternes|pubescente|glabre|
+||Gesse sans feuille|||Lathyrus aphaca||yellow pea|Fabaceae|grappe|groupe|avec|jaune||papillon||||irrégulière|autre|autre|glabre|glabre|
+||Gléchoma faux lierre|Lierre terrestre|Gléchome lierre terrestre|Glechoma hederacea||ground-ivy|Lamiaceae|cyme|groupe|avec|violet||tube||||irrégulière|simple dentée|alternes|pubescente|pubescente2|
+||Gnaphale jaunâtre|Cotonnière blanc-jaunâtre|Immortelle des marais|Laphangium luteoalbum|||Asteraceae|corymbe|groupe|avec|jaune|blanc|composée||||irrégulière, régulière|simple dentée, simple entière|alternes|pubescente|pubescente2|
+||Grémil bleu-pourpre|||Lithospermum purpurocaeruleum||Purple Gromwell|Boraginaceae|grappe|groupe|avec|violet||5 pétales|||5|régulière|simple entière|alternes|pubescente|pubescente2|
+||Guimauve|Guimauve officinale|Mauve blanche|Althaea officinalisa||marshmallow|Malvaceae|grappe|groupe|avec|blanc||5 pétales|||5|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Hélianthème commun|Hélianthème jaune|Hélianthème nummulaire|Helianthemum nummularium||Common Rock-rose|Cistaceae|grappe|groupe|avec|jaune||5 pétales|||5|régulière|simple entière|opposées|glabre|pubescente2|
+||Hélianthème tacheté|Hélianthème à gouttes|Hélianthème taché|Tuberaria guttata||spotted rockrose|Cistaceae|grappe|groupe|avec|jaune||5 pétales|||5|régulière|simple entière|opposées, alternes|pubescente|pubescente2|
+||Héliotrope d'Europe|Héliotrope commun|Herbe de la Saint-Fiacre|Heliotropium europaeum||European Heliotrope|Boraginaceae|grappe|groupe|avec|blanc||5 pétales|||5|régulière|simple entière|alternes|pubescente|pubescente2|
+||http://www.yourprojectinfo.fr/SITEYOURPROJECT_WEB/FR/PAGE_ENV_FB_PlantePhoto_choix.awp|||||||||||||||||||||
+||Inule à feuilles de saule|||Inula salicina||willowleaf yellowhead|Asteraceae|isolée|solitaire|avec|jaune||composée||||régulière|simple entière|alternes|glabre, pubescente|pubescente2|
+||Inule britannique|||Inula britannica||British yellowhead|Asteraceae|isolée|solitaire|avec|jaune||composée||||régulière|simple dentée|alternes|pubescente|pubescente2|
+||Inule conyze||Herbe aux mouches|Inula conyza||plougman's-spikenard|Asteraceae|corymbe|groupe|avec|jaune||composée||||régulière, irrégulière|simple dentée|alternes|pubescente|pubescente1|
+||Inule odorante||Inule fétide|Dittrichia graveolens||stinkwort|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|simple entière|alternes|pubescente|pubescente2|
+||Iris des marais|Iris jaune|Iris faux acore|Iris pseudacorus||yellow iris|Iridaceae|cyme|groupe|avec|jaune||6 pétales|autre||6|régulière|simple entière|alternes|glabre|glabre|
+||Iris fétide||Iris gigot|Iris foetidissima||Stinking iris|Iridaceae|cyme|groupe|avec|mauve|marron|6 pétales|autre||6|régulière|simple entière|alternes|glabre|glabre|
+||Jacinthe des bois|Endymion penché|Jacinthe sauvage|Hyacinthoides non-scripta||common bluebell|Hyacinthaceae|grappe|groupe|avec|violet||cloche||PSER|6|régulière|simple entière|à la base|glabre|glabre|
+||Jonquille|Narcisse janne|Narcisse trompette|Narcissus pseudonarcissus||wild daffodil|Amaryllidaceae|isolée|solitaire|avec|jaune||cloche||PSLE|6|régulière|simple entière|à la base|glabre|glabre|
+||Julienne des dames|giroflée des dames|violette de Damas|Hesperis matronalis||dame's rocket|Brassicaceae|grappe|groupe|avec|mauve|blanc|PSER||PSER|4|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Jussie à grandes fleurs||Ludwigie à grandes fleurs. |Ludwigia grandiflora||large-flower primrose-willow|Onagraceae|isolée|solitaire|avec|jaune||5 pétales|||5|régulière|simple entière|alternes|pubescente|glabre|
+||Knautie des champs||Scabieuse des champs|Knautia arvensis||Field Scabious|Dipsacaceae|cyme|groupe|avec|mauve||composée||||régulière, irrégulière|simple entière, simple dentée|opposées|pubescente|pubescente2|
+||Laiteron âpre|Laiteron piquant|Laiteron rude|Sonchus asper||sharp-fringed sow thistle|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|simple dentée|alternes|glabre|glabre|
+||Laiteron des champs|||Sonchus arvensis||field sow thistle|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|divisée|alternes|glabre|glabre|
+||Laiteron maraîcher||Laiteron potager|Sonchus oleraceus||common sow thistle|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|divisée|alternes|glabre|glabre|
+||Laitue des murs||Laitue des murailles|Mycelis muralis||wall lettuce|Asteraceae|grappe|groupe|avec|jaune||composée|5 pétales|||régulière, irrégulière|divisée|alternes|glabre|glabre|
+||Laitue scariole||Laitue sauvage|Lactuca serriola||prickly lettuce|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|simple dentée|alternes|glabre|glabre|
+||Lamier amplexicaule|||Lamium amplexicaule||henbit deadnettle|Lamiaceae|couronne|groupe|avec|mauve||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Lamier blanc||Ortie blanche|Lamium album||white deadnettle|Lamiaceae|couronne|groupe|avec|blanc||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Lamier jaune||Ortie jaune|Lamium galeobdolon||yellow archangel|Lamiaceae|couronne|groupe|avec|jaune||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Lamier pourpre|Pain de poulet|Ortie rouge|Lamium purpureum||red deadnettle|Lamiaceae|couronne|groupe|avec|rose|blanc|tube||||irrégulière|simple dentée|alternes|glabre|pubescente2|
+||Lamier tacheté||Lamier maculé|Lamium maculatum||spotted white deadnettle|Lamiaceae|couronne|groupe|avec|rose||tube||||irrégulière|simple dentée|opposées|pubescente|pubescente2|
+||Lampsane commune|||Lapsana communis||common nipplewort|Asteraceae|grappe|groupe|avec|jaune||composée||||régulière, irrégulière|divisée, simple dentée|alternes|glabre, pubescente|pubescente2|
+||Lierre||Lierre grimpant|Hedera helix||English ivy |Araliaceae|ombelle|groupe|avec|vert|jaune|5 pétales|||5|régulière|simple entière|alternes|glabre|glabre|
+||Limodore à feuilles avortées||Limodore sans feuille|Limodorum abortivum||Violet Limodore|Orchidaceae|épi|groupe|avec|violet|blanc|présence d'éperon|orchidée|||irrégulière|autre|alternes|glabre|glabre|
+||Lin bisannuel||Lin à feuilles étroites|Linum bienne||pale flax |Linaceae|grappe|groupe|avec|mauve||5 pétales|||5|régulière|simple entière|alternes|glabre|glabre|
+||Lin purgatif|||Linum catharticum||fairy flax|Linaceae|cyme|groupe|avec|blanc||5 pétales|||5|régulière|simple entière|opposées|glabre|glabre|
+||Linaire bâtarde||Fausse velvote|Kickxia spuria||roundleaf cancerwort |Scrofulariaceae|isolée|solitaire|avec|jaune|marron|tube|présence d'éperon|||irrégulière|simple dentée|alternes, opposées|pubescente|pubescente2|
+||Linaire commune|||Linaria vulgaris||Common Toadflax|Scrofulariaceae|grappe|groupe|avec|jaune||tube|présence d'éperon|||irrégulière|simple entière|alternes|glabre|glabre|
+||Linaire couchée||Linaire étalée|Linaria supina||lesser butter and eggs |Scrofulariaceae|grappe|groupe|avec|jaune||tube|présence d'éperon|||irrégulière|simple entière|verticillées|glabre|glabre|
+||Linaire cymbalaire|Cymbalaire des murs|Linaire des murs|Cymbalaria muralis||ivy-leaved toadflax|Scrofulariaceae|isolée|solitaire|avec|mauve|blanc|tube|présence d'éperon|||irrégulière|simple entière|alternes, opposées|glabre|glabre|
+||Linaire élatine||Velvote|Kickxia elatine||sharpleaf cancerwort|Scrofulariaceae|isolée|solitaire|avec|jaune|violet|tube|présence d'éperon|||irrégulière|simple dentée, simple entière|alternes|pubescente|pubescente2|
+||Linaire petite||Petite linaire|Chaenorrhinum minus||Small Toadflax|Scrofulariaceae|grappe|groupe|avec|mauve|blanc|tube|présence d'éperon|||irrégulière|simple entière|alternes, opposées|pubescente|pubescente2|
+||Linaire striée||Linaire rampante|Linaria repens||Pale toadflax|Scrofulariaceae|grappe|groupe|avec|mauve|blanc|tube|présence d'éperon|||irrégulière|simple entière|alternes, verticillées|glabre|glabre|
+||Liseron des champs|Vrillée|Petit liseron|Convolvulus arvensis||field bindweed|Convolvulaceae|isolée|solitaire|avec|rose|blanc|entonnoir||||régulière|simple entière|alternes|glabre, pubescente|glabre|
+||Liseron des haies|Grande vrille|Grand liseron|Calystegia sepium||hedge false bindweed|Convolvulaceae|isolée|solitaire|avec|blanc||entonnoir||||régulière|simple entière|alternes|glabre|glabre|
+||Listère à feuilles ovales|||Listera ovata||eggleaf twayblade |Orchidaceae|grappe|groupe|avec|vert||orchidée||||irrégulière|simple entière|opposées|pubescente|glabre|
+||Lobélie brûlante||Cardinale des marais|Lobelia urens||heath lobelia|Campanulaceae|grappe|groupe|avec|mauve||tube||||irrégulière|simple dentée|alternes|pubescente|glabre|
+||Lotier corniculé||Lotier commun|Lotus corniculatus||bird's-foot trefoil|Fabaceae|ombelle|groupe|avec|jaune||papillon||||irrégulière|composée|alternes|glabre, pubescente|pubescente1|
+||Luzerne commune||Luzerne cultivée|Medicago sativa||alfalfa|Fabaceae|grappe|groupe|avec|violet||papillon||||irrégulière|composée|alternes|glabre, pubescente|glabre, pubescente2|
+||Luzerne lupuline||Minette|Medicago lupulina||black medick|Fabaceae|grappe|groupe|avec|jaune||papillon||||irrégulière|composée|alternes|pubescente|pubescente2|
+||Luzerne naine||Petite luzerne|Medicago minima||little bur-clover|Fabaceae|grappe|groupe|avec|jaune||papillon||||irrégulière|composée|alternes|pubescente|pubescente2|
+||Luzerne tachée||Luzerne d'Arabie|Medicago arabica||spotted medick|Fabaceae|grappe|groupe|avec|jaune||papillon||||irrégulière|composée|alternes|glabre, pubescente|glabre, pubescente1|
+||Lysimaque commune|Chasse-bosse|Grande lysimaque|Lysimachia vulgaris||garden yellow loosestrife|Primulaceae|grappe|groupe|avec|jaune||5 pétales|||5|régulière|simple entière|verticillées|pubescente|pubescente2, pubescente1|
+||Lysimaque des bois|||Lysimachia nemorum||yellow pimpernel|Primulaceae|isolée|solitaire|avec|jaune||5 pétales|||5|régulière|simple entière|opposées|glabre|glabre|
+||Lysimaque nummulaire|Monnoyère|Herbe aux écus|Lysimachia nummularia||creeping jenny |Primulaceae|isolée|solitaire|avec|jaune||5 pétales|||5|régulière|simple entière|opposées|glabre|glabre|
+||Lysimaque ponctuée|||Lysimachia punctata||large yellow loosestrife |Primulaceae|couronne|groupe|avec|jaune||5 pétales|||5|régulière|simple entière|verticillées, opposées|pubescente|pubescente2|
+||Lythrum salicaire|Salicaire officinale|Lysimaque rouge|Lythrum salicaria||purple loosestrife|Lythraceae|couronne|groupe|avec|mauve||PSER||PSER|4,5,6|régulière|simple entière|verticillées, opposées|glabre, pubescente|glabre, pubescente1|
+||Mâche carénée||Doucette carénée|Valerianella locusta f. carinata||European Corn Salad|Caprifoliaceae|tête|groupe|avec|blanc|bleu|tube||||régulière|simple entière, simple dentée|opposées|pubescente|glabre|
+||Mâche potagère||Doucette|Valerianella locusta||Corn Salad|Valerianaceae|tête|groupe|avec|blanc|bleu|tube||||régulière|simple entière, simple dentée|opposées|pubescente|pubescente2|
+||Marguerite commune||Grande marguerite|Leucanthemum vulgare||oxeye daisy|Asteraceae|isolée|solitaire|avec|blanc||composée||||régulière, irrégulière|simple dentée|alternes|pubescente|pubescente2|
+||Matricaire camomille||Camomille sauvage|Matricaria recutita||chamomile|Asteraceae|grappe|groupe|avec|blanc||composée||||régulière, irrégulière|divisée|alternes|pubescente, glabre|glabre, pubescente2|
+||Matricaire discoïde|Matricaire sans ligules|Matricaire odorante|Matricaria discoidea||pineappleweed|Asteraceae|grappe|groupe|avec|vert||composée|sans corolle|||régulière, irrégulière|divisée|alternes|glabre|glabre|
+||Matricaire inodore|Camomille inodore| Matricaire perforée|Matricaria perforata||scentless mayweed|Asteraceae|grappe|groupe|avec|blanc||composée||||régulière, irrégulière|divisée|alternes|glabre|pubescente2|
+||Mauve à feuilles rondes|Petite mauve|Mauve commune|Malva neglecta||Common mallow|Malvaceae|grappe|groupe|avec|blanc|mauve|5 pétales|||5|régulière|simple dentée|alternes|pubescente|pubescente2|
+||Mauve musquée|||Malva moschata||musk-mallow|Malvaceae|grappe|groupe|avec|rose||5 pétales|||5|régulière|divisée|alternes|pubescente|pubescente1|
+||Mauve sylvestre|Mauve des bois|Grande mauve|Malva sylvestris||High Mallow|Malvaceae|grappe|groupe|avec|rose||5 pétales|||5|régulière|simple dentée|alternes|pubescente|glabre|
+||Mélampyre des champs||Rougeotte|Melampyrum arvense||field cow-wheat|Scrofulariaceae|épi|groupe|avec|rose||tube||||irrégulière|simple entière, divisée|opposées|pubescente|pubescente2|
+||Mélampyre des prés|||Melampyrum pratense||common cow-wheat|Scrofulariaceae|grappe|groupe|avec|blanc||tube||||irrégulière|simple entière|opposées|pubescente, glabre|pubescente2|
+||Mélilot blanc|||Melilotus albus||sweet clover|Fabaceae|grappe|groupe|avec|blanc||papillon||||irrégulière|composée|alternes|pubescente, glabre|pubescente1|
+||Mélilot officinal||Mélilot des prés|Melilotus officinalis||yellow sweet clover|Fabaceae|grappe|groupe|avec|jaune||papillon||||irrégulière|composée|alternes|pubescente|pubescente1|
+||Menthe aquatique|||Mentha aquatica ||water mint|Lamiaceae|tête|groupe|avec|blanc|mauve|tube||||irrégulière|simple dentée|opposées|pubescente|pubescente1|
+||Millepertuis perforé|Herbe à mille trous|Millepertuis commun|Hypericum perforatum||St John's wort|Hypericaceae|grappe|groupe|avec|jaune||5 pétales|||5|régulière|simple entière|alternes|glabre|glabre|
+||Molène à fleurs denses|||Verbascum densiflorum||dense-flowered mullein|Scrofulariaceae|épi simple|groupe|avec|jaune||5 pétales|||5|régulière|simple entière, simple dentée|alternes|pubescente|pubescente2|
+||Molène blattaire|||Verbascum blattaria||Moth mullein|Scrofulariaceae|grappe|groupe|avec|jaune||5 pétales|||5|régulière|simple dentée|alternes|pubescente, glabre|glabre|
+||Molène bouillon-blanc||Bouillon blanc|Verbascum thapsus||Common mullein|Scrofulariaceae|épi simple|groupe|avec|jaune||5 pétales|||5|régulière|simple entière, simple dentée|alternes|pubescente|pubescente2|
+||Molène en baguette|Molène effilée|Molène stricte|Verbascum virgatum||Twiggy mullein|Scrofulariaceae|épi simple|groupe|avec|jaune||5 pétales|||5|régulière|simple dentée|alternes|pubescente, glabre|pubescente2|
+||Molène floconneuse|||Verbascum pulverulentum||Hoary mullein|Scrofulariaceae|grappe|groupe|avec|jaune||5 pétales|||5|régulière|simple entière|alternes|pubescente|pubescente2|
+||Morelle douce-amère||Douce-amère|Solanum dulcamara||bittersweet nightshade|Solanaceae|cyme|groupe|avec|violet||5 pétales|||5|régulière|simple entière|alternes|pubescente|pubescente2, glabre|
+||Morelle noire|||Solanum nigrum||European black nightshade|Solanaceae|cyme|groupe|avec|blanc||5 pétales|||5|régulière|simple entière, simple dentée|alternes|pubescente, glabre|pubescente2|
+||Mouron bleu||Mouron femelle|Lysimachia foemina||Poorman's Weatherglass|Primulaceae|grappe|groupe|avec|bleu||5 pétales|||5|régulière|simple entière|opposées|glabre|glabre|
+||Mouron rouge|Morgeline|Mouron des champs|Lysimachia arvensis||Scarlet pimpernel|Primulaceae|grappe|groupe|avec|rouge||5 pétales|||5|régulière|simple entière|opposées|glabre|glabre|
+||Moutarde blanche|||Sinapis alba||White mustard|Brassicaceae|grappe|groupe|avec|jaune||PSER||PSER|4|régulière|divisée|alternes|pubescente|pubescente2|
+||Moutarde des champs|||Sinapis arvensis||Field mustard|Brassicaceae|grappe|groupe|avec|jaune||PSER||PSER|4|régulière|divisée|alternes|pubescente|pubescente2|
+||Moutarde noire|||Sinapis nigra|Brassica nigra|black mustard|Brassicaceae|grappe|groupe|avec|jaune||PSER||PSER|4|régulière|divisée|alternes|pubescente|pubescente2|
+||Muguet|||Convallaria majalis||Lily of the valley|Convallariaceae|grappe|groupe|avec|blanc||cloche||PSLE|6|régulière|simple entière|à la base|glabre|glabre|
+||Muscari à toupet|||||||||||||||||||||
+||Muscari négligé|||||||||||||||||||||
+||Myosotis bicolore|||||||||||||||||||||
+||Myosotis des champs|||||||||||||||||||||
+||Myosotis des marais|||||||||||||||||||||
+||Myosotis hérissé|||||||||||||||||||||
+||Néottie nid d'oiseau|||||||||||||||||||||
+||Odontite tardif|||||||||||||||||||||
+||Oeillet arméria|||||||||||||||||||||
+||Oeillet des Chartreux|||||||||||||||||||||
+||Oeillet prolifère|||||||||||||||||||||
+||Onagre à petites fleurs|||||||||||||||||||||
+||Onagre bisannuelle|||||||||||||||||||||
+||Onagre de Glaziou|||||||||||||||||||||
+||Ophrys abeille|||||||||||||||||||||
+||Ophrys araignée|||||||||||||||||||||
+||Ophrys mouche|||||||||||||||||||||
+||Orchis bouc|||||||||||||||||||||
+||Orchis bouffon|||||||||||||||||||||
+||Orchis brûlé|||||||||||||||||||||
+||Orchis de Fuchs|||||||||||||||||||||
+||Orchis homme pendu|||||||||||||||||||||
+||Orchis mâle|||||||||||||||||||||
+||Orchis militaire|||||||||||||||||||||
+||Orchis moucheron|||||||||||||||||||||
+||Orchis pourpre|||||||||||||||||||||
+||Orchis pyramidal|||||||||||||||||||||
+||Orchis singe|||||||||||||||||||||
+||Orchis tacheté|||||||||||||||||||||
+||Orchis vert|||||||||||||||||||||
+||Ornithogale en ombelle|||||||||||||||||||||
+||Orobanche du lierre|||||||||||||||||||||
+||Orpin âcre|||||||||||||||||||||
+||Orpin blanc|||||||||||||||||||||
+||Orpin rupestre|||||||||||||||||||||
+||Oseille commune|||||||||||||||||||||
+||Oxalis corniculée|||||||||||||||||||||
+||Oxalis droite|||||||||||||||||||||
+||Pâquerette|||||||||||||||||||||
+||Passerage drave|||||||||||||||||||||
+||Pavot|||||||||||||||||||||
+||Pédiculaire des bois|||||||||||||||||||||
+||Pensée sauvage|||||||||||||||||||||
+||Perce-neige|||||||||||||||||||||
+||Pétasite odorant|||||||||||||||||||||
+||Petite centaurée|||||||||||||||||||||
+||Petite centaurée rouge|||||||||||||||||||||
+||Petite Pervenche|||||||||||||||||||||
+||Petite Pimprenelle|||||||||||||||||||||
+||Phalangère à feuilles planes|||||||||||||||||||||
+||Picris fausse vipérine|||||||||||||||||||||
+||Picris fausse-épervière|||||||||||||||||||||
+||Pissenlit|||||||||||||||||||||
+||Plantain lancéolé|||||||||||||||||||||
+||Platanthère à deux feuilles|||||||||||||||||||||
+||Platanthère verdâtre|||||||||||||||||||||
+||Polygala commun|||||||||||||||||||||
+||Populage des marais|||||||||||||||||||||
+||Porcelle enracinée|||||||||||||||||||||
+||Potentille argentée|||||||||||||||||||||
+||Potentille faux fraisier|||||||||||||||||||||
+||Potentille printanière|||||||||||||||||||||
+||Potentille rampante|||||||||||||||||||||
+||Potentille tormentille|||||||||||||||||||||
+||Primevère acaule|||||||||||||||||||||
+||Primevère élevée|||||||||||||||||||||
+||Primevère officinale|||||||||||||||||||||
+||Pulicaire commune|||||||||||||||||||||
+||Pulicaire dysentérique|||||||||||||||||||||
+||Pulmonaire à feuilles longues|||||||||||||||||||||
+||Radis ravenelle|||||||||||||||||||||
+||Renoncule à feuilles d'ophioglosse|||||||||||||||||||||
+||Renoncule âcre|||||||||||||||||||||
+||Renoncule bulbeuse|||||||||||||||||||||
+||Renoncule flammette|||||||||||||||||||||
+||Renoncule rampante|||||||||||||||||||||
+||Renoncule sarde|||||||||||||||||||||
+||Renoncule tête d'or|||||||||||||||||||||
+||Renouée des oiseaux|||||||||||||||||||||
+||Renouée du Japon|||||||||||||||||||||
+||Renouée persicaire|||||||||||||||||||||
+||Réséda jaunâtre|||||||||||||||||||||
+||Réséda jaune|||||||||||||||||||||
+||Rhinanthe à petites fleurs|||||||||||||||||||||
+||Rhinanthe velu|||||||||||||||||||||
+||Rorippe amphibie|||||||||||||||||||||
+||Rorippe des bois|||||||||||||||||||||
+||Rorippe des marais|||||||||||||||||||||
+||Rorippe des Pyrénées|||||||||||||||||||||
+||Sainfoin|||||||||||||||||||||
+||Salsifis des prés|||||||||||||||||||||
+||Saponaire officinale|||||||||||||||||||||
+||Sauge des prés|||||||||||||||||||||
+||Saxifrage à trois doigts|||||||||||||||||||||
+||Saxifrage granulée|||||||||||||||||||||
+||Scabieuse colombaire|||||||||||||||||||||
+||Sceau de Salomon commun|||||||||||||||||||||
+||Scrofulaire aquatique|||||||||||||||||||||
+||Scrofulaire des chiens|||||||||||||||||||||
+||Scrofulaire noueuse|||||||||||||||||||||
+||Scutellaire toque|||||||||||||||||||||
+||Séneçon commun|||||||||||||||||||||
+||Séneçon du Cap|||||||||||||||||||||
+||Séneçon jacobée|||||||||||||||||||||
+||Silène blanc|||||||||||||||||||||
+||Silène conique|||||||||||||||||||||
+||Silène dioïque|||||||||||||||||||||
+||Silène enflé|||||||||||||||||||||
+||Silène fleur de coucou|||||||||||||||||||||
+||Silène oreille|||||||||||||||||||||
+||Silène penché|||||||||||||||||||||
+||Silène visqueux|||||||||||||||||||||
+||Sisymbre officinal|||||||||||||||||||||
+||Solidage du Canada|||||||||||||||||||||
+||Solidage verge-d'or|||||||||||||||||||||
+||Spéculaire miroir-de-Vénus|||||||||||||||||||||
+||Spergulaire rouge|||||||||||||||||||||
+||Stellaire holostée|||||||||||||||||||||
+||Stellaire intermédiaire|||||||||||||||||||||
+||Succise des prés|||||||||||||||||||||
+||Tabouret perfolié|||||||||||||||||||||
+||Thym serpolet|||||||||||||||||||||
+||Trèfle blanc|||||||||||||||||||||
+||Trèfle des champs|||||||||||||||||||||
+||Trèfle des prés|||||||||||||||||||||
+||Trèfle enterreur|||||||||||||||||||||
+||Trèfle fraise|||||||||||||||||||||
+||Trèfle incarnat|||||||||||||||||||||
+||Tussilage|||||||||||||||||||||
+||Valériane officinale|||||||||||||||||||||
+||Véronique à écusson|||||||||||||||||||||
+||Véronique à feuille de lierre|||||||||||||||||||||
+||Véronique à feuilles de serpolet|||||||||||||||||||||
+||Véronique agreste|||||||||||||||||||||
+||Véronique beccabunga|||||||||||||||||||||
+||Véronique couchée|||||||||||||||||||||
+||Véronique de Perse|||||||||||||||||||||
+||Véronique des champs|||||||||||||||||||||
+||Véronique germandrée|||||||||||||||||||||
+||Véronique mouron d'eau|||||||||||||||||||||
+||Véronique officinale|||||||||||||||||||||
+||Véronique petit-chêne|||||||||||||||||||||
+||Véronique voyageuse|||||||||||||||||||||
+||Vesce cracca|||||||||||||||||||||
+||Vesce cultivée|||||||||||||||||||||
+||Vesce de Hongrie|||||||||||||||||||||
+||Violette blanche|||||||||||||||||||||
+||Violette de Rivin|||||||||||||||||||||
+||Violette odorante|||||||||||||||||||||
+||Vipérine commune|||||||||||||||||||||
+||Vulnéraire|||||||||||||||||||||
