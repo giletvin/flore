@@ -13,8 +13,8 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Environment;
 import android.support.v4.content.ContextCompat;
 import fr.flore.R;
-import fr.ornidroid.bo.Bird;
-import fr.ornidroid.bo.OrnidroidFileType;
+import fr.ornidroid.bo.Subject;
+import fr.ornidroid.bo.MediaFileType;
 import fr.ornidroid.ui.preferences.ListPreferenceMultiSelect;
 
 /**
@@ -74,14 +74,11 @@ public class Constants extends BasicConstants {
 	 *            the file type
 	 * @return the ornidroid home media
 	 */
-	public static final String getOrnidroidBirdHomeMedia(final Bird bird,
-			final OrnidroidFileType fileType) {
+	public static final String getOrnidroidBirdHomeMedia(final Subject bird,
+			final MediaFileType fileType) {
 		String mediaHome = null;
 		switch (fileType) {
-		case AUDIO:
-			mediaHome = Constants.getOrnidroidHomeAudio() + File.separator
-					+ bird.getBirdDirectoryName();
-			break;
+
 		case PICTURE:
 			mediaHome = Constants.getOrnidroidHomeImages() + File.separator
 					+ bird.getBirdDirectoryName();
@@ -126,15 +123,6 @@ public class Constants extends BasicConstants {
 	}
 
 	/**
-	 * Gets the ornidroid home audio.
-	 * 
-	 * @return the ornidroid home audio
-	 */
-	public static final String getOrnidroidHomeAudio() {
-		return Constants.getOrnidroidHome() + File.separator + AUDIO_DIRECTORY;
-	}
-
-	/**
 	 * Gets the ornidroid images directory.
 	 * 
 	 * @return the ornidroid images directory
@@ -150,12 +138,10 @@ public class Constants extends BasicConstants {
 	 *            the file type
 	 * @return the ornidroid home media
 	 */
-	public static final String getOrnidroidHomeMedia(OrnidroidFileType fileType) {
+	public static final String getOrnidroidHomeMedia(MediaFileType fileType) {
 		String path = null;
 		switch (fileType) {
-		case AUDIO:
-			path = getOrnidroidHomeAudio();
-			break;
+
 		case PICTURE:
 			path = getOrnidroidHomeImages();
 			break;

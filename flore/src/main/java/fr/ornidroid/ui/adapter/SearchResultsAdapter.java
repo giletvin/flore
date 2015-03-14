@@ -16,8 +16,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import fr.flore.R;
-import fr.ornidroid.bo.OrnidroidFileType;
-import fr.ornidroid.bo.SimpleBird;
+import fr.ornidroid.bo.MediaFileType;
+import fr.ornidroid.bo.SimpleSubject;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
 
@@ -27,7 +27,7 @@ import fr.ornidroid.helper.Constants;
 public class SearchResultsAdapter extends BaseAdapter {
 
 	/** The objects. */
-	private List<SimpleBird> objects;
+	private List<SimpleSubject> objects;
 
 	/** The context. */
 	private Context context;
@@ -40,7 +40,7 @@ public class SearchResultsAdapter extends BaseAdapter {
 	 * @param birds
 	 *            the birds
 	 */
-	public SearchResultsAdapter(Context context, List<SimpleBird> birds) {
+	public SearchResultsAdapter(Context context, List<SimpleSubject> birds) {
 		this.context = context;
 		this.objects = birds;
 	}
@@ -61,7 +61,7 @@ public class SearchResultsAdapter extends BaseAdapter {
 	 * @see android.widget.Adapter#getItem(int)
 	 */
 	@Override
-	public SimpleBird getItem(int position) {
+	public SimpleSubject getItem(int position) {
 		return objects.get(position);
 	}
 
@@ -117,7 +117,7 @@ public class SearchResultsAdapter extends BaseAdapter {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
 
-		SimpleBird bird = getItem(position);
+		SimpleSubject bird = getItem(position);
 
 		viewHolder.birdName.setText(bird.getTaxon());
 		viewHolder.birdScientificName.setText(bird.getScientificName());
@@ -128,7 +128,7 @@ public class SearchResultsAdapter extends BaseAdapter {
 		try {
 			ins = assetManager.open(BasicConstants.BIRD_ICONS_DIRECTORY
 					+ File.separator + bird.getBirdDirectoryName()
-					+ OrnidroidFileType.PICTURE_EXTENSION);
+					+ MediaFileType.PICTURE_EXTENSION);
 			bMap = BitmapFactory.decodeStream(ins);
 
 		} catch (final IOException e) {

@@ -13,12 +13,12 @@ import fr.ornidroid.helper.Constants;
  */
 @EActivity
 @OptionsMenu(R.menu.options_menu)
-public abstract class AbstractOrnidroidActivity extends Activity {
+public abstract class AbstractActivity extends Activity {
 
 	/**
 	 * Instantiates a new abstract ornidroid activity.
 	 */
-	public AbstractOrnidroidActivity() {
+	public AbstractActivity() {
 		super();
 		Constants.initializeConstants(this);
 	}
@@ -44,7 +44,7 @@ public abstract class AbstractOrnidroidActivity extends Activity {
 	 */
 	@OptionsItem(R.id.preferences)
 	void preferencesMenuClicked() {
-		OrnidroidPreferenceActivity_.intent(this).start();
+		ApplicationPreferenceActivity_.intent(this).start();
 	}
 
 	/**

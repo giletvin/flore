@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.util.Log;
-import fr.ornidroid.bo.OrnidroidFile;
-import fr.ornidroid.bo.OrnidroidFileType;
+import fr.ornidroid.bo.MediaFile;
+import fr.ornidroid.bo.MediaFileType;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.FileHelper;
-import fr.ornidroid.helper.OrnidroidError;
-import fr.ornidroid.helper.OrnidroidException;
+import fr.ornidroid.helper.ApplicationError;
+import fr.ornidroid.helper.ApplicationException;
 
 /**
  * The Class DownloadHelperImpl.
@@ -30,7 +30,7 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 	 * fr.ornidroid.download.MimeType)
 	 */
 	public File downloadFile(final String baseUrl, final String fileName,
-			final String destinationPath) throws OrnidroidException {
+			final String destinationPath) throws ApplicationException {
 		URL url;
 		File downloadedFile = null;
 		try {
@@ -43,7 +43,7 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 			// since its presence is used to control the validity of the
 			// downloading
 			url = new URL(baseUrl + File.separator + fileName
-					+ OrnidroidFile.PROPERTIES_SUFFIX);
+					+ MediaFile.PROPERTIES_SUFFIX);
 			final DefaultDownloadable propertiesFileDownloadable = new DefaultDownloadable(
 					url, destinationPath);
 			propertiesFileDownloadable.download();
@@ -55,8 +55,8 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 			}
 		} catch (final MalformedURLException e) {
 			Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-			throw new OrnidroidException(
-					OrnidroidError.ORNIDROID_DOWNLOAD_ERROR, e);
+			throw new ApplicationException(
+					ApplicationError.ORNIDROID_DOWNLOAD_ERROR, e);
 		}
 		return downloadedFile;
 	}
@@ -68,8 +68,8 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 	 * java.lang.String, java.lang.String, fr.ornidroid.bo.OrnidroidFileType)
 	 */
 	public List<File> downloadFiles(final String ornidroidMediaHome,
-			final String directoryName, final OrnidroidFileType fileType)
-			throws OrnidroidException {
+			final String directoryName, final MediaFileType fileType)
+			throws ApplicationException {
 		final String destinationPath = ornidroidMediaHome + File.separator
 				+ directoryName;
 		final String baseUrl = getBaseUrl(directoryName, fileType);
@@ -98,7 +98,7 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 	 * , fr.ornidroid.bo.OrnidroidFileType)
 	 */
 	public String getBaseUrl(final String directoryName,
-			final OrnidroidFileType fileType) {
+			final MediaFileType fileType) {
 		String baseUrl = null;
 
 		switch (fileType) {
@@ -107,10 +107,7 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 					+ File.separator + directoryName;
 
 			break;
-		case AUDIO:
-			baseUrl = DownloadConstants.getOrnidroidWebSiteAudio()
-					+ File.separator + directoryName;
-			break;
+
 		case WIKIPEDIA_PAGE:
 			baseUrl = DownloadConstants.getOrnidroidWebSiteWikipedia()
 					+ File.separator + directoryName;
@@ -127,7 +124,7 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 	 * (java.lang.String, java.lang.String)
 	 */
 	public String[] readContentFile(final String baseUrl,
-			final String destinationPath) throws OrnidroidException {
+			final String destinationPath) throws ApplicationException {
 		URL url;
 		String[] filesToDownload = null;
 		FileInputStream fis = null;
@@ -144,24 +141,24 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 			}
 		} catch (final MalformedURLException e) {
 			Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-			throw new OrnidroidException(
-					OrnidroidError.ORNIDROID_DOWNLOAD_ERROR, e);
+			throw new ApplicationException(
+					ApplicationError.ORNIDROID_DOWNLOAD_ERROR, e);
 		} catch (final FileNotFoundException e) {
 			Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-			throw new OrnidroidException(
-					OrnidroidError.ORNIDROID_DOWNLOAD_ERROR, e);
+			throw new ApplicationException(
+					ApplicationError.ORNIDROID_DOWNLOAD_ERROR, e);
 		} catch (final IOException e) {
 			Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-			throw new OrnidroidException(
-					OrnidroidError.ORNIDROID_DOWNLOAD_ERROR, e);
+			throw new ApplicationException(
+					ApplicationError.ORNIDROID_DOWNLOAD_ERROR, e);
 		} finally {
 			if (null != fis) {
 				try {
 					fis.close();
 					fis = null;
 				} catch (final IOException e) {
-					throw new OrnidroidException(
-							OrnidroidError.ORNIDROID_DOWNLOAD_ERROR, e);
+					throw new ApplicationException(
+							ApplicationError.ORNIDROID_DOWNLOAD_ERROR, e);
 				}
 			}
 
@@ -174,18 +171,18 @@ public class DownloadHelperImpl implements DownloadHelperInterface {
 	 * 
 	 * @param downloadableFile
 	 *            the downloadable file
-	 * @throws OrnidroidException
+	 * @throws ApplicationException
 	 *             the ornidroid exception if the status is an error.
 	 */
 	private void checkDownloadErrors(final Downloadable downloadableFile)
-			throws OrnidroidException {
+			throws ApplicationException {
 		switch (downloadableFile.getStatus()) {
 		case CONNECTION_PROBLEM:
-			throw new OrnidroidException(
-					OrnidroidError.ORNIDROID_CONNECTION_PROBLEM, null);
+			throw new ApplicationException(
+					ApplicationError.ORNIDROID_CONNECTION_PROBLEM, null);
 		case BROKEN:
-			throw new OrnidroidException(
-					OrnidroidError.ORNIDROID_DOWNLOAD_ERROR_MEDIA_DOES_NOT_EXIST,
+			throw new ApplicationException(
+					ApplicationError.ORNIDROID_DOWNLOAD_ERROR_MEDIA_DOES_NOT_EXIST,
 					null);
 
 		}

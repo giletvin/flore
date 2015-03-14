@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.Window;
 import android.widget.ProgressBar;
 import fr.flore.R;
-import fr.ornidroid.bo.OrnidroidFileType;
+import fr.ornidroid.bo.MediaFileType;
 import fr.ornidroid.helper.BasicConstants;
 
 /**
@@ -27,7 +27,7 @@ public class DoubleProgressBarDialog extends Dialog {
 	 *            the context
 	 */
 	public DoubleProgressBarDialog(final Context context,
-			OrnidroidFileType fileType) {
+			MediaFileType fileType) {
 		super(context);
 
 		requestWindowFeature(Window.FEATURE_NO_TITLE);

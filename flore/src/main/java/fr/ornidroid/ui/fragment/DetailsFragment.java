@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import fr.flore.R;
-import fr.ornidroid.bo.Bird;
+import fr.ornidroid.bo.Subject;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.StringHelper;
 import fr.ornidroid.service.IService;
@@ -126,7 +126,7 @@ public class DetailsFragment extends Fragment {
 	 * @param currentBird
 	 *            the current bird
 	 */
-	private void printBirdCategory(final Bird currentBird) {
+	private void printBirdCategory(final Subject currentBird) {
 		this.category.setText(getActivity().getText(R.string.search_category)
 				+ BasicConstants.COLUMN_STRING + currentBird.getCategory());
 	}
@@ -137,7 +137,7 @@ public class DetailsFragment extends Fragment {
 	 * @param bird
 	 *            the bird
 	 */
-	private void printBirdDescription(final Bird bird) {
+	private void printBirdDescription(final Subject bird) {
 		if (StringHelper.isNotBlank(bird.getDescription())) {
 			this.description.setText(getActivity()
 					.getText(R.string.description)
@@ -154,7 +154,7 @@ public class DetailsFragment extends Fragment {
 	 * @param bird
 	 *            the bird
 	 */
-	private void printBirdDistributionAndBehaviour(final Bird bird) {
+	private void printBirdDistributionAndBehaviour(final Subject bird) {
 		final StringBuilder distributionAndBehaviour = new StringBuilder();
 		distributionAndBehaviour.append(getActivity().getText(
 				R.string.distribution));
@@ -176,7 +176,7 @@ public class DetailsFragment extends Fragment {
 	 * @param bird
 	 *            the bird
 	 */
-	private void printBirdOrderAndFamily(final Bird bird) {
+	private void printBirdOrderAndFamily(final Subject bird) {
 		if (StringHelper.isNotBlank(bird.getScientificFamily())
 				&& StringHelper.isNotBlank(bird.getScientificOrder())) {
 			this.orderAndFamily
@@ -197,7 +197,7 @@ public class DetailsFragment extends Fragment {
 	 * @param currentBird
 	 *            the current bird
 	 */
-	private void printBirdSize(final Bird currentBird) {
+	private void printBirdSize(final Subject currentBird) {
 
 		this.size.setText(getActivity().getText(R.string.search_size)
 				+ BasicConstants.COLUMN_STRING + currentBird.getSize()

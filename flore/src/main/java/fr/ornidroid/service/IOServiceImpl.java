@@ -10,11 +10,11 @@ import java.util.List;
 
 import android.os.StatFs;
 import android.util.Log;
-import fr.ornidroid.bo.Bird;
-import fr.ornidroid.bo.OrnidroidFile;
-import fr.ornidroid.bo.OrnidroidFileFactoryImpl;
-import fr.ornidroid.bo.OrnidroidFileType;
-import fr.ornidroid.bo.PictureOrnidroidFile;
+import fr.ornidroid.bo.Subject;
+import fr.ornidroid.bo.MediaFile;
+import fr.ornidroid.bo.MediaFileFactoryImpl;
+import fr.ornidroid.bo.MediaFileType;
+import fr.ornidroid.bo.PictureFile;
 import fr.ornidroid.download.DefaultDownloadable;
 import fr.ornidroid.download.DownloadConstants;
 import fr.ornidroid.download.DownloadHelperImpl;
@@ -23,8 +23,8 @@ import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.helper.FileHelper;
 import fr.ornidroid.helper.I18nHelper;
-import fr.ornidroid.helper.OrnidroidError;
-import fr.ornidroid.helper.OrnidroidException;
+import fr.ornidroid.helper.ApplicationError;
+import fr.ornidroid.helper.ApplicationException;
 import fr.ornidroid.helper.StringHelper;
 import fr.ornidroid.helper.SupportedLanguage;
 
@@ -34,10 +34,8 @@ import fr.ornidroid.helper.SupportedLanguage;
 public class IOServiceImpl implements IIOService {
 
 	/** The Constant MIN_SIZE_REQUIRED_TO_DOWNLOAD_ZIP_PACKAGES. */
+	// TODO : a mettre à jour ulterieurement
 	private static final int MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE = 120;
-
-	/** The Constant MIN_SPACE_TO_DOWNLOAD_AUDIO_PACKAGE. */
-	private static final int MIN_SPACE_TO_DOWNLOAD_AUDIO_PACKAGE = 700;
 
 	/** The Constant MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE. */
 	private static final int MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE = 40;
@@ -48,7 +46,7 @@ public class IOServiceImpl implements IIOService {
 	private class OrnidroidFileFilter implements FileFilter {
 
 		/** The file type. */
-		private final OrnidroidFileType fileType;
+		private final MediaFileType fileType;
 
 		/**
 		 * Instantiates a new ornidroid file filter.
@@ -56,7 +54,7 @@ public class IOServiceImpl implements IIOService {
 		 * @param fileType
 		 *            the file type
 		 */
-		OrnidroidFileFilter(final OrnidroidFileType fileType) {
+		OrnidroidFileFilter(final MediaFileType fileType) {
 			this.fileType = fileType;
 		}
 
@@ -68,7 +66,7 @@ public class IOServiceImpl implements IIOService {
 		public boolean accept(final File pathname) {
 
 			if (pathname.getAbsolutePath().endsWith(
-					OrnidroidFileType.getExtension(this.fileType))) {
+					MediaFileType.getExtension(this.fileType))) {
 				return true;
 			}
 			return false;
@@ -95,15 +93,12 @@ public class IOServiceImpl implements IIOService {
 	 * java.io.File, java.lang.String)
 	 */
 	public void addCustomMediaFile(final String birdDirectory,
-			final OrnidroidFileType fileType, final String selectedFileName,
+			final MediaFileType fileType, final String selectedFileName,
 			final File selectedFile, final String comment)
-			throws OrnidroidException {
+			throws ApplicationException {
 		String destinationDirectory;
 		switch (fileType) {
-		case AUDIO:
-			destinationDirectory = Constants.getOrnidroidHomeAudio()
-					+ File.separator + birdDirectory;
-			break;
+
 		case PICTURE:
 			destinationDirectory = Constants.getOrnidroidHomeImages()
 					+ File.separator + birdDirectory;
@@ -116,7 +111,7 @@ public class IOServiceImpl implements IIOService {
 		final File destFile = new File(destinationDirectory + File.separator
 				+ destFileName);
 		final File propertiesFile = new File(destFile.getAbsolutePath()
-				+ OrnidroidFile.PROPERTIES_SUFFIX);
+				+ MediaFile.PROPERTIES_SUFFIX);
 		doAddCustomMediaFiles(fileType, selectedFile, destFile, propertiesFile,
 				comment);
 
@@ -129,7 +124,7 @@ public class IOServiceImpl implements IIOService {
 	 * (java.io.File)
 	 */
 	public void checkAndCreateDirectory(final File fileDirectory)
-			throws OrnidroidException {
+			throws ApplicationException {
 		try {
 			if (!fileDirectory.exists()) {
 				FileHelper.forceMkdir(fileDirectory);
@@ -139,11 +134,9 @@ public class IOServiceImpl implements IIOService {
 					BasicConstants.NO_MEDIA_FILENAME);
 			FileHelper.createEmptyFile(noMediaFile);
 		} catch (final IOException e) {
-			if (!BasicConstants.isJunitContext()) {
-				Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-			}
-			throw new OrnidroidException(
-					OrnidroidError.ORNIDROID_HOME_NOT_FOUND, e);
+
+			throw new ApplicationException(
+					ApplicationError.ORNIDROID_HOME_NOT_FOUND, e);
 		}
 	}
 
@@ -154,15 +147,14 @@ public class IOServiceImpl implements IIOService {
 	 * java.lang.String)
 	 */
 	public void checkOrnidroidHome(final String ornidroidHome)
-			throws OrnidroidException {
+			throws ApplicationException {
 		final File fileOrnidroidHome = new File(ornidroidHome);
 		if (!fileOrnidroidHome.exists()) {
 			checkAndCreateDirectory(fileOrnidroidHome);
 		}
 		checkAndCreateDirectory(new File(ornidroidHome + File.separator
 				+ BasicConstants.IMAGES_DIRECTORY));
-		checkAndCreateDirectory(new File(ornidroidHome + File.separator
-				+ BasicConstants.AUDIO_DIRECTORY));
+
 	}
 
 	/*
@@ -173,19 +165,15 @@ public class IOServiceImpl implements IIOService {
 	 * fr.ornidroid.bo.OrnidroidFileType)
 	 */
 	public void downloadMediaFiles(final String mediaHomeDirectory,
-			final Bird bird, final OrnidroidFileType fileType)
-			throws OrnidroidException {
+			final Subject bird, final MediaFileType fileType)
+			throws ApplicationException {
 		switch (fileType) {
 		case PICTURE:
 			bird.setPictures(lookForOrnidroidFiles(mediaHomeDirectory,
-					bird.getBirdDirectoryName(), OrnidroidFileType.PICTURE,
+					bird.getBirdDirectoryName(), MediaFileType.PICTURE,
 					true));
 			break;
 
-		case AUDIO:
-			bird.setSounds(lookForOrnidroidFiles(mediaHomeDirectory,
-					bird.getBirdDirectoryName(), OrnidroidFileType.AUDIO, true));
-			break;
 		case WIKIPEDIA_PAGE:
 			bird.setWikipediaPage(downloadWikipediaPage(bird));
 
@@ -201,20 +189,20 @@ public class IOServiceImpl implements IIOService {
 	 *            the bird
 	 * @return the local wikipedia page or download it
 	 */
-	private OrnidroidFile downloadWikipediaPage(Bird bird) {
+	private MediaFile downloadWikipediaPage(Subject bird) {
 		// cherche s'il existe une page wiki locale
 
 		try {
 			downloadHelper.downloadFile(
 					downloadHelper.getBaseUrl(I18nHelper.getLang().getCode(),
-							OrnidroidFileType.WIKIPEDIA_PAGE),
+							MediaFileType.WIKIPEDIA_PAGE),
 					bird.getScientificName().replace(
 							BasicConstants.BLANK_STRING,
 							BasicConstants.UNDERSCORE_STRING),
 					Constants.getOrnidroidHomeWikipedia() + File.separator
 							+ I18nHelper.getLang().getCode());
 			return getLocalWikipediaPage(bird);
-		} catch (OrnidroidException e) {
+		} catch (ApplicationException e) {
 			return null;
 		}
 	}
@@ -226,17 +214,17 @@ public class IOServiceImpl implements IIOService {
 	 *            the bird
 	 * @return the local wikipedia page
 	 */
-	private OrnidroidFile getLocalWikipediaPage(Bird bird) {
+	private MediaFile getLocalWikipediaPage(Subject bird) {
 		// cherche s'il existe une page wiki locale
 		try {
 			File wikipediaFile = new File(getWikipediaPage(bird));
 			if (wikipediaFile.exists()) {
-				OrnidroidFile wikipediaOrnidroidFile;
+				MediaFile wikipediaOrnidroidFile;
 				try {
-					wikipediaOrnidroidFile = OrnidroidFileFactoryImpl
+					wikipediaOrnidroidFile = MediaFileFactoryImpl
 							.getFactory().createOrnidroidFile(
 									wikipediaFile.getAbsolutePath(),
-									OrnidroidFileType.WIKIPEDIA_PAGE,
+									MediaFileType.WIKIPEDIA_PAGE,
 									I18nHelper.getLang().getCode());
 					return wikipediaOrnidroidFile;
 				} catch (FileNotFoundException e) {
@@ -258,8 +246,8 @@ public class IOServiceImpl implements IIOService {
 	 * , fr.ornidroid.bo.Bird, fr.ornidroid.bo.OrnidroidFileType)
 	 */
 	public List<String> filesToUpdate(final String mediaHomeDirectory,
-			final Bird bird, final OrnidroidFileType fileType)
-			throws OrnidroidException {
+			final Subject bird, final MediaFileType fileType)
+			throws ApplicationException {
 		final List<String> filesToUpdate = new ArrayList<String>();
 
 		final List<String> localFilesList = loadContentFile(true,
@@ -281,18 +269,13 @@ public class IOServiceImpl implements IIOService {
 	 * @see fr.ornidroid.service.IOrnidroidIOService#loadMediaFiles(java
 	 * .io.File, fr.ornidroid.bo.Bird)
 	 */
-	public void loadMediaFiles(final String fileDirectory, final Bird bird,
-			final OrnidroidFileType fileType) throws OrnidroidException {
+	public void loadMediaFiles(final String fileDirectory, final Subject bird,
+			final MediaFileType fileType) throws ApplicationException {
 		switch (fileType) {
 		case PICTURE:
 			bird.setPictures(lookForOrnidroidFiles(fileDirectory,
-					bird.getBirdDirectoryName(), OrnidroidFileType.PICTURE,
+					bird.getBirdDirectoryName(), MediaFileType.PICTURE,
 					false));
-			break;
-
-		case AUDIO:
-			bird.setSounds(lookForOrnidroidFiles(fileDirectory,
-					bird.getBirdDirectoryName(), OrnidroidFileType.AUDIO, false));
 			break;
 
 		case WIKIPEDIA_PAGE:
@@ -308,19 +291,19 @@ public class IOServiceImpl implements IIOService {
 	 * fr.ornidroid.service.IOrnidroidIOService#removeCustomMediaFile(fr.ornidroid
 	 * .bo.AbstractOrnidroidFile)
 	 */
-	public void removeCustomMediaFile(final OrnidroidFile ornidroidFile)
-			throws OrnidroidException {
+	public void removeCustomMediaFile(final MediaFile ornidroidFile)
+			throws ApplicationException {
 		if (ornidroidFile.isCustomMediaFile()) {
 			final File mediaFile = new File(ornidroidFile.getPath());
 			final File mediaPropertiesFile = new File(ornidroidFile.getPath()
-					+ OrnidroidFile.PROPERTIES_SUFFIX);
+					+ MediaFile.PROPERTIES_SUFFIX);
 			try {
 				FileHelper.forceDelete(mediaFile);
 				FileHelper.forceDelete(mediaPropertiesFile);
 			} catch (final IOException e) {
 				Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-				throw new OrnidroidException(
-						OrnidroidError.ADD_CUSTOM_MEDIA_ERROR, e);
+				throw new ApplicationException(
+						ApplicationError.ADD_CUSTOM_MEDIA_ERROR, e);
 			}
 		}
 	}
@@ -338,13 +321,13 @@ public class IOServiceImpl implements IIOService {
 	 *            the properties file
 	 * @param comment
 	 *            the comment
-	 * @throws OrnidroidException
+	 * @throws ApplicationException
 	 *             the ornidroid exception
 	 */
-	protected void doAddCustomMediaFiles(final OrnidroidFileType fileType,
+	protected void doAddCustomMediaFiles(final MediaFileType fileType,
 			final File selectedFile, final File destFile,
 			final File propertiesFile, final String comment)
-			throws OrnidroidException {
+			throws ApplicationException {
 		try {
 			FileHelper.doCopyFile(selectedFile, destFile);
 
@@ -356,10 +339,8 @@ public class IOServiceImpl implements IIOService {
 				FileHelper.forceDelete(propertiesFile);
 			} catch (final IOException e1) {
 			}
-			if (!BasicConstants.isJunitContext()) {
-				Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-			}
-			throw new OrnidroidException(OrnidroidError.ADD_CUSTOM_MEDIA_ERROR,
+
+			throw new ApplicationException(ApplicationError.ADD_CUSTOM_MEDIA_ERROR,
 					e);
 
 		}
@@ -375,22 +356,19 @@ public class IOServiceImpl implements IIOService {
 	 *            the comment
 	 * @return the custom properties string
 	 */
-	private String getCustomPropertiesString(final OrnidroidFileType fileType,
+	private String getCustomPropertiesString(final MediaFileType fileType,
 			final String comment) {
 		String data = null;
 		switch (fileType) {
-		case AUDIO:
-			data = OrnidroidFile.AUDIO_TITLE_PROPERTY
-					+ BasicConstants.EQUALS_STRING + comment;
-			break;
+
 		case PICTURE:
-			data = PictureOrnidroidFile.IMAGE_DESCRIPTION_PROPERTY
-					+ OrnidroidFile.LANGUAGE_SEPARATOR
+			data = PictureFile.IMAGE_DESCRIPTION_PROPERTY
+					+ MediaFile.LANGUAGE_SEPARATOR
 					+ SupportedLanguage.FRENCH.getCode()
 					+ BasicConstants.EQUALS_STRING + comment
 					+ BasicConstants.CARRIAGE_RETURN
-					+ PictureOrnidroidFile.IMAGE_DESCRIPTION_PROPERTY
-					+ OrnidroidFile.LANGUAGE_SEPARATOR
+					+ PictureFile.IMAGE_DESCRIPTION_PROPERTY
+					+ MediaFile.LANGUAGE_SEPARATOR
 					+ SupportedLanguage.ENGLISH.getCode()
 					+ BasicConstants.EQUALS_STRING + comment;
 			break;
@@ -416,8 +394,8 @@ public class IOServiceImpl implements IIOService {
 	 * @return the list of files parsed from contents.properties file
 	 */
 	private List<String> loadContentFile(final boolean localContent,
-			final String mediaHomeDirectory, final Bird bird,
-			final OrnidroidFileType fileType) {
+			final String mediaHomeDirectory, final Subject bird,
+			final MediaFileType fileType) {
 		String[] filesFromContentFile = null;
 		if ((!localContent)) {
 			// from web site
@@ -428,7 +406,7 @@ public class IOServiceImpl implements IIOService {
 			try {
 				filesFromContentFile = this.downloadHelper.readContentFile(
 						birdDirectoryUrl, destinationPath);
-			} catch (final OrnidroidException e) {
+			} catch (final ApplicationException e) {
 				// no problemo
 			}
 		} else {
@@ -452,8 +430,7 @@ public class IOServiceImpl implements IIOService {
 	 * Look for OrnidroidFiles.
 	 * 
 	 * @param ornidroidMediaHome
-	 *            root path of the media (picture or audio) : ornidroidHome +
-	 *            images or audio
+	 *            root path of the media (picture) : ornidroidHome + images
 	 * @param directoryName
 	 *            the directory name of the bird
 	 * @param fileType
@@ -465,14 +442,14 @@ public class IOServiceImpl implements IIOService {
 	 *         its properties file, the entire bird media directory is deleted
 	 *         and the returned list is empty : the user will be given the
 	 *         choice to try a download from the web site
-	 * @throws OrnidroidException
+	 * @throws ApplicationException
 	 *             the ornidroid exception
 	 */
-	private List<OrnidroidFile> lookForOrnidroidFiles(
+	private List<MediaFile> lookForOrnidroidFiles(
 			final String ornidroidMediaHome, final String directoryName,
-			final OrnidroidFileType fileType, final boolean downloadFromInternet)
-			throws OrnidroidException {
-		final List<OrnidroidFile> files = new ArrayList<OrnidroidFile>();
+			final MediaFileType fileType, final boolean downloadFromInternet)
+			throws ApplicationException {
+		final List<MediaFile> files = new ArrayList<MediaFile>();
 		if (StringHelper.isNotBlank(directoryName)) {
 			final File filesDirectory = new File(ornidroidMediaHome
 					+ File.separator + directoryName);
@@ -481,8 +458,8 @@ public class IOServiceImpl implements IIOService {
 					FileHelper.forceMkdir(filesDirectory);
 				} catch (final IOException e) {
 					Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-					throw new OrnidroidException(
-							OrnidroidError.ORNIDROID_HOME_NOT_FOUND, e);
+					throw new ApplicationException(
+							ApplicationError.ORNIDROID_HOME_NOT_FOUND, e);
 				}
 			}
 			if (filesDirectory.isDirectory()) {
@@ -495,7 +472,7 @@ public class IOServiceImpl implements IIOService {
 				}
 				try {
 					for (final File file : filesList) {
-						final OrnidroidFile ornidroidFile = OrnidroidFileFactoryImpl
+						final MediaFile ornidroidFile = MediaFileFactoryImpl
 								.getFactory().createOrnidroidFile(
 										file.getAbsolutePath(), fileType,
 										I18nHelper.getLang().getCode());
@@ -533,7 +510,7 @@ public class IOServiceImpl implements IIOService {
 	 *            the current bird
 	 * @return the local path of the wikipedia page
 	 */
-	private String getWikipediaPage(Bird currentBird) {
+	private String getWikipediaPage(Subject currentBird) {
 		return Constants.getOrnidroidHomeWikipedia()
 				+ File.separator
 				+ I18nHelper.getLang().getCode()
@@ -551,8 +528,8 @@ public class IOServiceImpl implements IIOService {
 	 * .String, java.lang.String)
 	 */
 	public void downloadZipPackage(String zipname, String mediaHomeDirectory)
-			throws OrnidroidException {
-		OrnidroidException exception = null;
+			throws ApplicationException {
+		ApplicationException exception = null;
 
 		deleteTempFiles(mediaHomeDirectory, zipname);
 
@@ -565,8 +542,8 @@ public class IOServiceImpl implements IIOService {
 							+ BasicConstants.BLANK_STRING + mediaHomeDirectory);
 			Log.e(BasicConstants.LOG_TAG, runtimeException.getMessage(),
 					runtimeException);
-			throw new OrnidroidException(
-					OrnidroidError.ORNIDROID_DOWNLOAD_ERROR, runtimeException);
+			throw new ApplicationException(
+					ApplicationError.ORNIDROID_DOWNLOAD_ERROR, runtimeException);
 		}
 		boolean success = FileHelper.unzipFile(zipPackageFile.getName(),
 				mediaHomeDirectory);
@@ -575,11 +552,11 @@ public class IOServiceImpl implements IIOService {
 			FileHelper.forceDelete(zipPackageFile);
 		} catch (IOException e) {
 			Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-			exception = new OrnidroidException(OrnidroidError.UNZIP_PACKAGE, e);
+			exception = new ApplicationException(ApplicationError.UNZIP_PACKAGE, e);
 		}
 
 		if (!success) {
-			exception = new OrnidroidException(OrnidroidError.UNZIP_PACKAGE,
+			exception = new ApplicationException(ApplicationError.UNZIP_PACKAGE,
 					null);
 		}
 		if (exception != null) {
@@ -627,7 +604,7 @@ public class IOServiceImpl implements IIOService {
 	 * http://stackoverflow.com/questions/3394765/how-to-check-available
 	 * -space-on-android-device-on-mini-sd-card
 	 */
-	public boolean isEnoughFreeSpace(OrnidroidFileType fileType) {
+	public boolean isEnoughFreeSpace(MediaFileType fileType) {
 		int requiredSpace = getRequiredSpaceToDownloadZip(fileType);
 		File ornidroidHome = new File(Constants.getOrnidroidHome());
 		StatFs stat = new StatFs(ornidroidHome.getPath());
@@ -647,15 +624,13 @@ public class IOServiceImpl implements IIOService {
 	 *            the file type
 	 * @return the required space to download zip
 	 */
-	private int getRequiredSpaceToDownloadZip(OrnidroidFileType fileType) {
+	private int getRequiredSpaceToDownloadZip(MediaFileType fileType) {
 		int requiredSpace = 0;
 		switch (fileType) {
 		case WIKIPEDIA_PAGE:
 			requiredSpace = MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE;
 			break;
-		case AUDIO:
-			requiredSpace = MIN_SPACE_TO_DOWNLOAD_AUDIO_PACKAGE;
-			break;
+
 		case PICTURE:
 			requiredSpace = MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE;
 			break;
@@ -669,12 +644,10 @@ public class IOServiceImpl implements IIOService {
 	 * @see fr.ornidroid.service.IOrnidroidIOService#getZipname(fr.ornidroid.bo.
 	 * OrnidroidFileType)
 	 */
-	public String getZipname(OrnidroidFileType fileType) {
+	public String getZipname(MediaFileType fileType) {
 		String zipname = null;
 		switch (fileType) {
-		case AUDIO:
-			zipname = "audio.zip";
-			break;
+
 		case PICTURE:
 			zipname = "images.zip";
 			break;
@@ -693,7 +666,7 @@ public class IOServiceImpl implements IIOService {
 	 *            the file type
 	 * @return the zip download progress percent
 	 */
-	public int getZipDownloadProgressPercent(OrnidroidFileType fileType) {
+	public int getZipDownloadProgressPercent(MediaFileType fileType) {
 		File downloadedFile = new File(Constants.getOrnidroidHome()
 				+ File.separator + getZipname(fileType)
 				+ DefaultDownloadable.SUFFIX_DOWNLOAD);
@@ -720,7 +693,7 @@ public class IOServiceImpl implements IIOService {
 	 * fr.ornidroid.service.IOrnidroidIOService#getInstallProgressPercent(fr
 	 * .ornidroid.bo.OrnidroidFileType)
 	 */
-	public int getInstallProgressPercent(OrnidroidFileType fileType) {
+	public int getInstallProgressPercent(MediaFileType fileType) {
 		File mediaHome = new File(Constants.getOrnidroidHomeMedia(fileType));
 		return FileHelper.getCountFiles(mediaHome);
 

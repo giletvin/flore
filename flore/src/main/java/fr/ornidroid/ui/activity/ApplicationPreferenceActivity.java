@@ -24,19 +24,19 @@ import android.util.Log;
 import android.view.Window;
 import de.greenrobot.event.EventBus;
 import fr.flore.R;
-import fr.ornidroid.ui.preferences.MyPrefs_;
 import fr.ornidroid.event.EventType;
 import fr.ornidroid.event.GenericEvent;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.helper.FileHelper;
 import fr.ornidroid.ui.components.HelpDialog;
+import fr.ornidroid.ui.preferences.MyPrefs_;
 
 /**
  * The Class OrnidroidPreferenceActivity.
  */
 @EActivity
 @OptionsMenu(R.menu.options_menu)
-public class OrnidroidPreferenceActivity extends PreferenceActivity implements
+public class ApplicationPreferenceActivity extends PreferenceActivity implements
 		OnPreferenceClickListener, OnSharedPreferenceChangeListener {
 
 	/** The is changing ornidroid home. */
@@ -52,7 +52,7 @@ public class OrnidroidPreferenceActivity extends PreferenceActivity implements
 	/**
 	 * Instantiates a new ornidroid preference activity.
 	 */
-	public OrnidroidPreferenceActivity() {
+	public ApplicationPreferenceActivity() {
 		super();
 		Constants.initializeConstants(this);
 
@@ -240,7 +240,7 @@ public class OrnidroidPreferenceActivity extends PreferenceActivity implements
 	 */
 	@OptionsItem(R.id.preferences)
 	void preferencesMenuClicked() {
-		startActivity(new Intent(this, OrnidroidPreferenceActivity_.class));
+		startActivity(new Intent(this, ApplicationPreferenceActivity_.class));
 	}
 
 	/**

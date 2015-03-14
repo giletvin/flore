@@ -9,7 +9,7 @@ import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
 import fr.flore.R;
-import fr.ornidroid.bo.OrnidroidFile;
+import fr.ornidroid.bo.MediaFile;
 
 /**
  * The Class PictureHelper.
@@ -28,7 +28,7 @@ public class PictureHelper {
 	 *            the resources
 	 * @return the bitmap
 	 */
-	public static Bitmap loadBitmap(final OrnidroidFile picture,
+	public static Bitmap loadBitmap(final MediaFile picture,
 			final Resources resources) {
 		// try to load the bitmap from cache first
 		Bitmap bMap = LOADED_BITMAPS.get(picture.getPath());

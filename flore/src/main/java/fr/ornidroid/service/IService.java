@@ -2,11 +2,11 @@ package fr.ornidroid.service;
 
 import java.util.List;
 
-import fr.ornidroid.bo.Bird;
+import fr.ornidroid.bo.Subject;
 import fr.ornidroid.bo.MultiCriteriaSearchFormBean;
-import fr.ornidroid.bo.SimpleBird;
+import fr.ornidroid.bo.SimpleSubject;
 import fr.ornidroid.bo.Taxon;
-import fr.ornidroid.helper.OrnidroidException;
+import fr.ornidroid.helper.ApplicationException;
 
 /**
  * The Interface IOrnidroidService.
@@ -16,10 +16,10 @@ public interface IService {
 	/**
 	 * Creates the db if necessary.
 	 * 
-	 * @throws OrnidroidException
+	 * @throws ApplicationException
 	 *             the ornidroid exception
 	 */
-	void createDbIfNecessary() throws OrnidroidException;
+	void createDbIfNecessary() throws ApplicationException;
 
 	/**
 	 * Gets the beak form id.
@@ -44,7 +44,7 @@ public interface IService {
 	 *            the query
 	 * @return the matching birds
 	 */
-	List<SimpleBird> getMatchingBirds(String query);
+	List<SimpleSubject> getMatchingBirds(String query);
 
 	/**
 	 * Gets the bird matches from the multi criteria search and store the
@@ -111,7 +111,7 @@ public interface IService {
 	 * 
 	 * @return the current bird
 	 */
-	Bird getCurrentBird();
+	Subject getCurrentBird();
 
 	/**
 	 * Gets the habitat id.
@@ -163,7 +163,7 @@ public interface IService {
 	 *            the current bird
 	 * @return the oiseaux net link
 	 */
-	String getOiseauxNetLink(Bird currentBird);
+	String getOiseauxNetLink(Subject currentBird);
 
 	/**
 	 * Gets the remarkable sign id.
@@ -205,7 +205,7 @@ public interface IService {
 	 *            the current bird
 	 * @return the wikipedia link
 	 */
-	String getWikipediaLink(Bird currentBird);
+	String getWikipediaLink(Subject currentBird);
 
 	/**
 	 * Checks for history.
@@ -230,14 +230,14 @@ public interface IService {
 	 *            the current bird
 	 * @return the xeno canto map url
 	 */
-	String getXenoCantoMapUrl(Bird currentBird);
+	String getXenoCantoMapUrl(Subject currentBird);
 
 	/**
 	 * Gets the query result.
 	 * 
 	 * @return the query result
 	 */
-	List<SimpleBird> getQueryResult();
+	List<SimpleSubject> getQueryResult();
 
 	/**
 	 * Gets the release notes.

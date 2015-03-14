@@ -15,8 +15,8 @@ import android.util.Log;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.helper.IOHelper;
-import fr.ornidroid.helper.OrnidroidError;
-import fr.ornidroid.helper.OrnidroidException;
+import fr.ornidroid.helper.ApplicationError;
+import fr.ornidroid.helper.ApplicationException;
 
 /**
  * Pompé sur
@@ -50,10 +50,10 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
 	/**
 	 * Creates the db if necessary.
 	 * 
-	 * @throws OrnidroidException
+	 * @throws ApplicationException
 	 *             the ornidroid exception
 	 */
-	public void createDbIfNecessary() throws OrnidroidException {
+	public void createDbIfNecessary() throws ApplicationException {
 		if (!this.alreadyChecked) {
 			try {
 				final boolean dbUptodate = checkDataBase();
@@ -73,11 +73,11 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
 				}
 			} catch (final IOException e) {
 				Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-				throw new OrnidroidException(OrnidroidError.DATABASE_NOT_FOUND,
+				throw new ApplicationException(ApplicationError.DATABASE_NOT_FOUND,
 						e);
 			} catch (final SQLiteException e) {
 				Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-				throw new OrnidroidException(OrnidroidError.DATABASE_NOT_FOUND,
+				throw new ApplicationException(ApplicationError.DATABASE_NOT_FOUND,
 						e);
 			} finally {
 				this.alreadyChecked = true;

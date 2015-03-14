@@ -1,7 +1,7 @@
 package fr.ornidroid.event;
 
 import fr.ornidroid.helper.BasicConstants;
-import fr.ornidroid.helper.OrnidroidException;
+import fr.ornidroid.helper.ApplicationException;
 
 public class GenericEvent {
 	/** The exception. */
@@ -20,8 +20,8 @@ public class GenericEvent {
 
 	public String getExceptionMessage() {
 		if (null != exception) {
-			if (OrnidroidException.class.isInstance(exception)) {
-				OrnidroidException oe = (OrnidroidException) exception;
+			if (ApplicationException.class.isInstance(exception)) {
+				ApplicationException oe = (ApplicationException) exception;
 				return oe.getSourceExceptionMessage();
 			} else {
 				return exception.toString();

@@ -14,20 +14,20 @@ import android.content.Intent;
 import android.os.Environment;
 import android.widget.TextView;
 import fr.flore.R;
-import fr.ornidroid.ui.preferences.MyPrefs_;
+import fr.ornidroid.helper.ApplicationException;
 import fr.ornidroid.helper.BasicConstants;
-import fr.ornidroid.helper.OrnidroidException;
 import fr.ornidroid.helper.StringHelper;
 import fr.ornidroid.service.IIOService;
-import fr.ornidroid.service.IService;
 import fr.ornidroid.service.IOServiceImpl;
+import fr.ornidroid.service.IService;
 import fr.ornidroid.service.ServiceFactory;
+import fr.ornidroid.ui.preferences.MyPrefs_;
 
 /**
  * The Class HomeActivity. Start screen of the application
  */
 @EActivity(R.layout.home)
-public class HomeActivity extends AbstractOrnidroidActivity {
+public class HomeActivity extends AbstractActivity {
 
 	/** The my prefs. */
 	@Pref
@@ -106,7 +106,7 @@ public class HomeActivity extends AbstractOrnidroidActivity {
 	 */
 	@Click(R.id.menu_preferences)
 	void clickPreferencesLink() {
-		launchActivity(OrnidroidPreferenceActivity_.class);
+		launchActivity(ApplicationPreferenceActivity_.class);
 	}
 
 	/*
@@ -148,7 +148,7 @@ public class HomeActivity extends AbstractOrnidroidActivity {
 			// check the ornidroid.sqlite file.
 			this.ornidroidService.createDbIfNecessary();
 
-		} catch (final OrnidroidException e) {
+		} catch (final ApplicationException e) {
 			StringBuffer sbuf = new StringBuffer();
 			if (e.getSourceExceptionMessage() != null) {
 				sbuf.append(BasicConstants.CARRIAGE_RETURN);

@@ -12,7 +12,7 @@ import android.provider.BaseColumns;
 import android.util.Log;
 import fr.ornidroid.bo.BirdFactoryImpl;
 import fr.ornidroid.bo.MultiCriteriaSearchFormBean;
-import fr.ornidroid.bo.SimpleBird;
+import fr.ornidroid.bo.SimpleSubject;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.helper.I18nHelper;
@@ -186,7 +186,7 @@ public class DAOImpl implements IDAO {
 	 * fr.ornidroid.data.IOrnidroidDAO#getBirdMatchesFromMultiSearchCriteria
 	 * (fr.ornidroid.bo.MultiCriteriaSearchFormBean)
 	 */
-	public List<SimpleBird> getBirdMatchesFromMultiSearchCriteria(
+	public List<SimpleSubject> getBirdMatchesFromMultiSearchCriteria(
 			final MultiCriteriaSearchFormBean formBean) {
 
 		final Cursor cursor = query(getSqlDynamicFragments(formBean, true),
@@ -203,8 +203,8 @@ public class DAOImpl implements IDAO {
 	 *            the cursor
 	 * @return the bird list from cursor
 	 */
-	private List<SimpleBird> getBirdListFromCursor(final Cursor cursor) {
-		List<SimpleBird> results = new ArrayList<SimpleBird>();
+	private List<SimpleSubject> getBirdListFromCursor(final Cursor cursor) {
+		List<SimpleSubject> results = new ArrayList<SimpleSubject>();
 		if (null == cursor) {
 			return results;
 		}
@@ -221,7 +221,7 @@ public class DAOImpl implements IDAO {
 			final String scientificName = cursor.getString(cursor
 					.getColumnIndex(SearchManager.SUGGEST_COLUMN_TEXT_2));
 
-			final SimpleBird bird = this.birdFactory.createSimpleBird(
+			final SimpleSubject bird = this.birdFactory.createSimpleBird(
 					cursor.getInt(idIndex), taxon, directoryName,
 					scientificName);
 			results.add(bird);
@@ -689,8 +689,8 @@ public class DAOImpl implements IDAO {
 	 * 
 	 * @see fr.ornidroid.data.IOrnidroidDAO#getMatchingBirds(java.lang.String)
 	 */
-	public List<SimpleBird> getMatchingBirds(String pQuery) {
-		List<SimpleBird> results = new ArrayList<SimpleBird>();
+	public List<SimpleSubject> getMatchingBirds(String pQuery) {
+		List<SimpleSubject> results = new ArrayList<SimpleSubject>();
 		final StringBuffer whereClause = new StringBuffer().append(WHERE)
 				.append(SEARCHED_TAXON).append(" MATCH ?");
 		final String[] selectionArgs = new String[] { prepareSearchedString(pQuery) };

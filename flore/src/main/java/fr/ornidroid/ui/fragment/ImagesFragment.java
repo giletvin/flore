@@ -13,9 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import fr.flore.R;
 import fr.ornidroid.ui.activity.ScrollableImageActivity_;
-import fr.ornidroid.bo.OrnidroidFile;
-import fr.ornidroid.bo.OrnidroidFileType;
-import fr.ornidroid.bo.PictureOrnidroidFile;
+import fr.ornidroid.bo.MediaFile;
+import fr.ornidroid.bo.MediaFileType;
+import fr.ornidroid.bo.PictureFile;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.ui.activity.ScrollableImageActivity;
 import fr.ornidroid.ui.components.PictureInfoDialog;
@@ -79,12 +79,12 @@ public class ImagesFragment extends AbstractFragment {
 				.getNumberOfPictures()) {
 			imagePosition = 0;
 		}
-		OrnidroidFile pictureFile = ornidroidService.getCurrentBird()
+		MediaFile pictureFile = ornidroidService.getCurrentBird()
 				.getPicture(imagePosition);
 		if (pictureFile != null) {
 			this.mPictureDescription
 					.setText(pictureFile
-							.getProperty(PictureOrnidroidFile.IMAGE_DESCRIPTION_PROPERTY));
+							.getProperty(PictureFile.IMAGE_DESCRIPTION_PROPERTY));
 
 			Bitmap bMap = PictureHelper.loadBitmap(pictureFile, getActivity()
 					.getResources());
@@ -102,8 +102,8 @@ public class ImagesFragment extends AbstractFragment {
 	 * @see fr.ornidroid.ui.components.AbstractFragment#getFileType()
 	 */
 	@Override
-	public OrnidroidFileType getFileType() {
-		return OrnidroidFileType.PICTURE;
+	public MediaFileType getFileType() {
+		return MediaFileType.PICTURE;
 	}
 
 	@AfterViews
@@ -138,7 +138,7 @@ public class ImagesFragment extends AbstractFragment {
 	 */
 	public void setCurrentMediaFilePosition(int currentItem) {
 		this.displayedPictureId = currentItem;
-		final OrnidroidFile picture = this.ornidroidService.getCurrentBird()
+		final MediaFile picture = this.ornidroidService.getCurrentBird()
 				.getPicture(currentItem);
 		setCurrentMediaFile(picture);
 		updateNumberOfPicturesText();

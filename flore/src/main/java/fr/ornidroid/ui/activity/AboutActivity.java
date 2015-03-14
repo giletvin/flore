@@ -20,7 +20,7 @@ import fr.ornidroid.helper.Constants;
  * The Class AboutActivity.
  */
 @EActivity(R.layout.about)
-public class AboutActivity extends AbstractOrnidroidActivity {
+public class AboutActivity extends AbstractActivity {
 
 	/** The about text. */
 	@ViewById(R.id.about_ornidroid_version)

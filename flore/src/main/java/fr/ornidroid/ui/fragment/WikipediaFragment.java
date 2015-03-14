@@ -6,8 +6,8 @@ import org.androidannotations.annotations.ViewById;
 
 import android.webkit.WebView;
 import fr.flore.R;
-import fr.ornidroid.bo.OrnidroidFile;
-import fr.ornidroid.bo.OrnidroidFileType;
+import fr.ornidroid.bo.MediaFile;
+import fr.ornidroid.bo.MediaFileType;
 
 /**
  * The Class WikipediaFragment.
@@ -22,7 +22,7 @@ public class WikipediaFragment extends AbstractFragment {
 	void afterViews() {
 
 		if (commonAfterViews()) {
-			OrnidroidFile wikipediaPage = ornidroidService.getCurrentBird()
+			MediaFile wikipediaPage = ornidroidService.getCurrentBird()
 					.getWikipediaPage();
 			wikipediaWebView.loadUrl("file:///" + wikipediaPage.getPath());
 		}
@@ -34,8 +34,8 @@ public class WikipediaFragment extends AbstractFragment {
 	 * @see fr.ornidroid.ui.components.AbstractFragment#getFileType()
 	 */
 	@Override
-	public OrnidroidFileType getFileType() {
-		return OrnidroidFileType.WIKIPEDIA_PAGE;
+	public MediaFileType getFileType() {
+		return MediaFileType.WIKIPEDIA_PAGE;
 	}
 
 }

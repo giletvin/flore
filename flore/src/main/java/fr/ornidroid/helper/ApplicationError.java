@@ -3,7 +3,7 @@ package fr.ornidroid.helper;
 /**
  * The Enum OrnidroidErrors.
  */
-public enum OrnidroidError {
+public enum ApplicationError {
 
 	/** The add custom media error. */
 	ADD_CUSTOM_MEDIA_ERROR,
@@ -37,7 +37,7 @@ public enum OrnidroidError {
 	 *            the error
 	 * @return the error code
 	 */
-	public static int getErrorCode(final OrnidroidError error) {
+	public static int getErrorCode(final ApplicationError error) {
 		int code = 0;
 		switch (error) {
 		case NO_ERROR:
@@ -75,8 +75,8 @@ public enum OrnidroidError {
 	 *            the code
 	 * @return the ornidroid error
 	 */
-	public static OrnidroidError getOrnidroidError(final int code) {
-		OrnidroidError error = NO_ERROR;
+	public static ApplicationError getOrnidroidError(final int code) {
+		ApplicationError error = NO_ERROR;
 		switch (code) {
 		case 0:
 			error = NO_ERROR;

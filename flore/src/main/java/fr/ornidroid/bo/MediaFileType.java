@@ -5,18 +5,13 @@ import fr.ornidroid.helper.BasicConstants;
 /**
  * The Enum OrnidroidFileType.
  */
-public enum OrnidroidFileType {
+public enum MediaFileType {
 
-	/** The SOUND. */
-	AUDIO,
 	/** The PICTURE. */
 	PICTURE,
 
 	/** The wikipedia page. */
 	WIKIPEDIA_PAGE;
-
-	/** The Constant AUDIO_EXTENSION. */
-	public final static String AUDIO_EXTENSION = ".mp3";
 
 	/** The Constant FILE_TYPE_PARAM_NAME. */
 	public final static String FILE_TYPE_INTENT_PARAM_NAME = "FILE_TYPE";
@@ -30,16 +25,14 @@ public enum OrnidroidFileType {
 	 *            the type
 	 * @return the code
 	 */
-	public static int getCode(final OrnidroidFileType type) {
+	public static int getCode(final MediaFileType type) {
 		int code = 0;
 		if (null != type) {
 			switch (type) {
 			case PICTURE:
 				code = 0;
 				break;
-			case AUDIO:
-				code = 1;
-				break;
+
 			case WIKIPEDIA_PAGE:
 				code = 3;
 				break;
@@ -56,15 +49,13 @@ public enum OrnidroidFileType {
 	 *            the type
 	 * @return the extension
 	 */
-	public static String getExtension(final OrnidroidFileType type) {
+	public static String getExtension(final MediaFileType type) {
 		String extension = null;
 		switch (type) {
 		case PICTURE:
 			extension = PICTURE_EXTENSION;
 			break;
-		case AUDIO:
-			extension = AUDIO_EXTENSION;
-			break;
+
 		case WIKIPEDIA_PAGE:
 			extension = BasicConstants.EMPTY_STRING;
 		}

@@ -1,13 +1,11 @@
 package fr.ornidroid.bo;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * The Class Bird.
  */
-public class Bird extends SimpleBird {
+public class Subject extends SimpleSubject {
 
 	/** The category. */
 	private String category;
@@ -25,17 +23,17 @@ public class Bird extends SimpleBird {
 	private String oiseauxNetUrl;
 
 	/** The pictures. */
-	private List<OrnidroidFile> pictures;
+	private List<MediaFile> pictures;
 
 	/** The wikipedia page. */
-	private OrnidroidFile wikipediaPage;
+	private MediaFile wikipediaPage;
 
 	/**
 	 * Gets the wikipedia page.
 	 * 
 	 * @return the wikipedia page
 	 */
-	public OrnidroidFile getWikipediaPage() {
+	public MediaFile getWikipediaPage() {
 		return wikipediaPage;
 	}
 
@@ -45,7 +43,7 @@ public class Bird extends SimpleBird {
 	 * @param wikipediaPage
 	 *            the new wikipedia page
 	 */
-	public void setWikipediaPage(OrnidroidFile wikipediaPage) {
+	public void setWikipediaPage(MediaFile wikipediaPage) {
 		this.wikipediaPage = wikipediaPage;
 	}
 
@@ -62,12 +60,12 @@ public class Bird extends SimpleBird {
 	private String size;
 
 	/** The sounds. */
-	private List<OrnidroidFile> sounds;
+	private List<MediaFile> sounds;
 
 	/**
 	 * Instantiates a new bird.
 	 */
-	protected Bird() {
+	protected Subject() {
 		super();
 	}
 
@@ -108,26 +106,6 @@ public class Bird extends SimpleBird {
 	}
 
 	/**
-	 * Gets the list of the properties of the audio files. This is to be
-	 * displayed in the screen.
-	 * 
-	 * @return the list containing maps of properties of the audio file. One map
-	 *         per audio file.
-	 * @see AudioOrnidroidFile AudioOrnidroidFile the keys of the map are
-	 *      defined in this class
-	 */
-	public List<Map<String, String>> getListAudioFiles() {
-		final List<Map<String, String>> list = new ArrayList<Map<String, String>>();
-		if (null != this.sounds) {
-			for (final OrnidroidFile audioFile : this.sounds) {
-				final AudioOrnidroidFile ornidroidAudioFile = (AudioOrnidroidFile) audioFile;
-				list.add(ornidroidAudioFile.getPropertiesForScreen());
-			}
-		}
-		return list;
-	}
-
-	/**
 	 * Gets the number of pictures.
 	 * 
 	 * @return the number of pictures, 0 if list of pictures is null
@@ -135,18 +113,6 @@ public class Bird extends SimpleBird {
 	public int getNumberOfPictures() {
 		if (this.pictures != null) {
 			return this.pictures.size();
-		}
-		return 0;
-	}
-
-	/**
-	 * Gets the number of sounds.
-	 * 
-	 * @return the number of sounds
-	 */
-	public int getNumberOfSounds() {
-		if (this.sounds != null) {
-			return this.sounds.size();
 		}
 		return 0;
 	}
@@ -167,7 +133,7 @@ public class Bird extends SimpleBird {
 	 *            the picture number
 	 * @return the picture
 	 */
-	public OrnidroidFile getPicture(final int pictureNumber) {
+	public MediaFile getPicture(final int pictureNumber) {
 		if ((this.pictures != null) && (this.pictures.size() > pictureNumber)) {
 			return this.pictures.get(pictureNumber);
 		} else {
@@ -180,7 +146,7 @@ public class Bird extends SimpleBird {
 	 * 
 	 * @return the pictures.
 	 */
-	public List<OrnidroidFile> getPictures() {
+	public List<MediaFile> getPictures() {
 		// if (pictures == null) {
 		// setPictures(new ArrayList<AbstractOrnidroidFile>());
 		// }
@@ -230,7 +196,7 @@ public class Bird extends SimpleBird {
 	 *            the sound number
 	 * @return the sound, can be null if soundNumber is not valid
 	 */
-	public OrnidroidFile getSound(final int soundNumber) {
+	public MediaFile getSound(final int soundNumber) {
 		if ((this.sounds != null) && (this.sounds.size() > soundNumber)) {
 			return this.sounds.get(soundNumber);
 		} else {
@@ -243,7 +209,7 @@ public class Bird extends SimpleBird {
 	 * 
 	 * @return the sounds
 	 */
-	public List<OrnidroidFile> getSounds() {
+	public List<MediaFile> getSounds() {
 		return this.sounds;
 	}
 
@@ -273,7 +239,7 @@ public class Bird extends SimpleBird {
 	 * @param pictures
 	 *            the new pictures
 	 */
-	public void setPictures(final List<OrnidroidFile> pictures) {
+	public void setPictures(final List<MediaFile> pictures) {
 		this.pictures = pictures;
 	}
 
@@ -313,7 +279,7 @@ public class Bird extends SimpleBird {
 	 * @param sounds
 	 *            the new sounds
 	 */
-	public void setSounds(final List<OrnidroidFile> sounds) {
+	public void setSounds(final List<MediaFile> sounds) {
 		this.sounds = sounds;
 	}
 

@@ -25,7 +25,7 @@ import fr.ornidroid.ui.adapter.BirdActivityTabsPagerAdapter;
  */
 @EActivity(R.layout.new_bird_activity)
 @OptionsMenu(R.menu.options_menu)
-public class NewBirdActivity extends FragmentActivity implements
+public class SubjectInfoActivity extends FragmentActivity implements
 		ActionBar.TabListener {
 
 	/** The Constant INTENT_ACTIVITY_TO_OPEN. */
@@ -40,8 +40,7 @@ public class NewBirdActivity extends FragmentActivity implements
 	@Extra(MainActivity.BIRD_ID_ITENT_PRM)
 	int birdId = 0;
 	/** The ornidroid service. */
-	private final IService ornidroidService = ServiceFactory
-			.getService(this);
+	private final IService ornidroidService = ServiceFactory.getService(this);
 
 	/** The view pager. */
 	@ViewById(R.id.pager)
@@ -196,7 +195,7 @@ public class NewBirdActivity extends FragmentActivity implements
 	 */
 	@OptionsItem(R.id.preferences)
 	void preferencesMenuClicked() {
-		startActivity(new Intent(this, OrnidroidPreferenceActivity_.class));
+		startActivity(new Intent(this, ApplicationPreferenceActivity_.class));
 	}
 
 	/**

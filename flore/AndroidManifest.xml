@@ -38,7 +38,7 @@
 
         <!-- Preferences activity -->
         <activity
-            android:name="fr.ornidroid.ui.activity.OrnidroidPreferenceActivity_"
+            android:name="fr.ornidroid.ui.activity.ApplicationPreferenceActivity_"
             android:label="@string/preferences"
             android:noHistory="true" />
         <!-- about activity -->
@@ -49,7 +49,7 @@
             android:name="fr.ornidroid.ui.activity.HelpActivity_"
             android:label="@string/help" />
         <activity
-            android:name="fr.ornidroid.ui.activity.NewBirdActivity_"
+            android:name="fr.ornidroid.ui.activity.SubjectInfoActivity_"
             android:label="@string/bird_info" />
 
         <!-- full size image activity -->

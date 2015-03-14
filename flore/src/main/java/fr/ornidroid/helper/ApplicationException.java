@@ -3,13 +3,13 @@ package fr.ornidroid.helper;
 /**
  * The Class OrnidroidException.
  */
-public class OrnidroidException extends Exception {
+public class ApplicationException extends Exception {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 2330116343182553820L;
 
 	/** The error type. */
-	private final OrnidroidError errorType;
+	private final ApplicationError errorType;
 
 	/** The source exception. */
 	private final Exception sourceException;
@@ -22,7 +22,7 @@ public class OrnidroidException extends Exception {
 	 * @param pSourceException
 	 *            the source exception
 	 */
-	public OrnidroidException(final OrnidroidError pErrorType,
+	public ApplicationException(final ApplicationError pErrorType,
 			final Exception pSourceException) {
 		super();
 		this.errorType = pErrorType;
@@ -34,7 +34,7 @@ public class OrnidroidException extends Exception {
 	 * 
 	 * @return the error type
 	 */
-	public OrnidroidError getErrorType() {
+	public ApplicationError getErrorType() {
 		return this.errorType;
 	}
 

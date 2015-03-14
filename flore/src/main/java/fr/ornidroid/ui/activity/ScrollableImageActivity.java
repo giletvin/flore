@@ -11,8 +11,8 @@ import android.graphics.Bitmap;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import fr.flore.R;
-import fr.ornidroid.bo.Bird;
-import fr.ornidroid.bo.OrnidroidFile;
+import fr.ornidroid.bo.Subject;
+import fr.ornidroid.bo.MediaFile;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.service.IService;
 import fr.ornidroid.service.ServiceFactory;
@@ -49,11 +49,11 @@ public class ScrollableImageActivity extends Activity {
 	public void afterViews() {
 		Constants.initializeConstants(this);
 
-		final Bird bird = this.ornidroidService.getCurrentBird();
+		final Subject bird = this.ornidroidService.getCurrentBird();
 		if (bird == null) {
 			finish();
 		}
-		final OrnidroidFile picture = bird.getPicture(this.displayedPictureId);
+		final MediaFile picture = bird.getPicture(this.displayedPictureId);
 		if (null != picture) {
 			this.bmLargeImage = PictureHelper.loadBitmap(picture,
 					getResources());

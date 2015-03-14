@@ -36,17 +36,6 @@ public class DownloadConstants {
 	}
 
 	/**
-	 * Gets the ornidroid web site audio.
-	 * 
-	 * @return the ornidroid web site audio
-	 */
-	public static String getOrnidroidWebSiteAudio() {
-		loadWebSiteRoot();
-		return ORNIDROID_WEB_SITE_ROOT + File.separator
-				+ BasicConstants.AUDIO_DIRECTORY;
-	}
-
-	/**
 	 * Gets the ornidroid web site wikipedia.
 	 * 
 	 * @return the ornidroid web site wikipedia

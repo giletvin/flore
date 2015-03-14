@@ -5,15 +5,15 @@ import java.util.List;
 import android.content.Context;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
-import fr.ornidroid.bo.SimpleBird;
+import fr.ornidroid.bo.SimpleSubject;
 
 /**
  * The Class OrnidroidAutoCompleteAdapter.
  */
-public class OrnidroidAutoCompleteAdapter extends ArrayAdapter<SimpleBird> {
+public class ApplicationAutoCompleteAdapter extends ArrayAdapter<SimpleSubject> {
 
 	/** The m birds list. */
-	private List<SimpleBird> mBirdsList;
+	private List<SimpleSubject> mBirdsList;
 
 	/**
 	 * Instantiates a new ornidroid auto complete adapter.
@@ -25,8 +25,8 @@ public class OrnidroidAutoCompleteAdapter extends ArrayAdapter<SimpleBird> {
 	 * @param birdsList
 	 *            the birds list
 	 */
-	public OrnidroidAutoCompleteAdapter(Context context, int resource,
-			List<SimpleBird> birdsList) {
+	public ApplicationAutoCompleteAdapter(Context context, int resource,
+			List<SimpleSubject> birdsList) {
 		super(context, resource, birdsList);
 		this.mBirdsList = birdsList;
 	}
@@ -59,7 +59,7 @@ public class OrnidroidAutoCompleteAdapter extends ArrayAdapter<SimpleBird> {
 				if (results.count == 0)
 					notifyDataSetInvalidated();
 				else {
-					mBirdsList = (List<SimpleBird>) results.values;
+					mBirdsList = (List<SimpleSubject>) results.values;
 					notifyDataSetChanged();
 				}
 

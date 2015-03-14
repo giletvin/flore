@@ -10,10 +10,10 @@ import android.app.SearchManager;
 import android.database.Cursor;
 import android.provider.BaseColumns;
 import fr.flore.R;
-import fr.ornidroid.bo.Bird;
+import fr.ornidroid.bo.Subject;
 import fr.ornidroid.bo.BirdFactoryImpl;
 import fr.ornidroid.bo.MultiCriteriaSearchFormBean;
-import fr.ornidroid.bo.SimpleBird;
+import fr.ornidroid.bo.SimpleSubject;
 import fr.ornidroid.bo.Taxon;
 import fr.ornidroid.data.IDAO;
 import fr.ornidroid.data.DAOImpl;
@@ -21,7 +21,7 @@ import fr.ornidroid.data.DatabaseOpenHelper;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.helper.I18nHelper;
-import fr.ornidroid.helper.OrnidroidException;
+import fr.ornidroid.helper.ApplicationException;
 import fr.ornidroid.helper.StringHelper;
 import fr.ornidroid.helper.SupportedLanguage;
 import fr.ornidroid.ui.picture.PictureHelper;
@@ -135,7 +135,7 @@ public class ServiceImpl implements IService {
 	private Map<String, String> countriesMap;
 
 	/** The current bird. */
-	private Bird currentBird;
+	private Subject currentBird;
 
 	/** The data base open helper. */
 	private final DatabaseOpenHelper dataBaseOpenHelper;
@@ -162,7 +162,7 @@ public class ServiceImpl implements IService {
 	private Map<String, Integer> sizesMap;
 
 	/** The query result. */
-	private List<SimpleBird> queryResult;
+	private List<SimpleSubject> queryResult;
 
 	/**
 	 * Instantiates a new ornidroid service impl.
@@ -182,7 +182,7 @@ public class ServiceImpl implements IService {
 	 * 
 	 * @see fr.ornidroid.service.IOrnidroidService#createDbIfNecessary()
 	 */
-	public void createDbIfNecessary() throws OrnidroidException {
+	public void createDbIfNecessary() throws ApplicationException {
 		this.dataBaseOpenHelper.createDbIfNecessary();
 	}
 
@@ -317,7 +317,7 @@ public class ServiceImpl implements IService {
 	 * 
 	 * @see fr.ornidroid.service.IOrnidroidService#getCurrentBird()
 	 */
-	public Bird getCurrentBird() {
+	public Subject getCurrentBird() {
 		return this.currentBird;
 	}
 
@@ -392,7 +392,7 @@ public class ServiceImpl implements IService {
 	 * fr.ornidroid.service.IOrnidroidService#getOiseauxNetLink(fr.ornidroid
 	 * .bo.Bird)
 	 */
-	public String getOiseauxNetLink(final Bird currentBird) {
+	public String getOiseauxNetLink(final Subject currentBird) {
 		if (StringHelper.isNotBlank(currentBird.getOiseauxNetUrl())) {
 			final StringBuffer sbuf = new StringBuffer();
 			sbuf.append("<a href=\"");
@@ -471,7 +471,7 @@ public class ServiceImpl implements IService {
 	 * fr.ornidroid.service.IOrnidroidService#getWikipediaLink(fr.ornidroid.
 	 * bo.Bird)
 	 */
-	public String getWikipediaLink(final Bird currentBird) {
+	public String getWikipediaLink(final Subject currentBird) {
 		final SupportedLanguage lang = I18nHelper.getLang();
 		final StringBuffer sbuf = new StringBuffer();
 		sbuf.append("<a href=\"http://");
@@ -676,7 +676,7 @@ public class ServiceImpl implements IService {
 	 * fr.ornidroid.service.IOrnidroidService#getXenoCantoMapUrl(fr.ornidroid
 	 * .bo.Bird)
 	 */
-	public String getXenoCantoMapUrl(Bird currentBird) {
+	public String getXenoCantoMapUrl(Subject currentBird) {
 
 		final StringBuffer sbuf = new StringBuffer();
 		sbuf.append("<a href=\"http://www.xeno-canto.org/species/");
@@ -696,7 +696,7 @@ public class ServiceImpl implements IService {
 	 * @see
 	 * fr.ornidroid.service.IOrnidroidService#getMatchingBirds(java.lang.String)
 	 */
-	public List<SimpleBird> getMatchingBirds(String query) {
+	public List<SimpleSubject> getMatchingBirds(String query) {
 		queryResult = this.ornidroidDAO.getMatchingBirds(query);
 		return queryResult;
 	}
@@ -706,8 +706,8 @@ public class ServiceImpl implements IService {
 	 * 
 	 * @see fr.ornidroid.service.IOrnidroidService#getQueryResult()
 	 */
-	public List<SimpleBird> getQueryResult() {
-		return queryResult == null ? new ArrayList<SimpleBird>() : queryResult;
+	public List<SimpleSubject> getQueryResult() {
+		return queryResult == null ? new ArrayList<SimpleSubject>() : queryResult;
 	}
 
 	/*

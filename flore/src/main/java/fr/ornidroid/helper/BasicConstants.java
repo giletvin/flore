@@ -1,16 +1,16 @@
 package fr.ornidroid.helper;
 
-import fr.ornidroid.bo.OrnidroidFileType;
+import fr.ornidroid.bo.MediaFileType;
 
 /**
  * The Class BasicConstants.
  */
 public class BasicConstants {
+	// TODO : a mettre à jour ulterieuement
 	private static final int FILES_COUNT_WIKIPEDIA_PACKAGE = 1332;
+	// TODO : a mettre à jour ulterieuement
 	private static final int FILES_COUNT_PICTURE_PACKAGE = 1856;
-	private static final int FILES_COUNT_AUDIO_PACKAGE = 3040;
-	/** The Constant AUDIO Directory. */
-	public static final String AUDIO_DIRECTORY = "audio";
+
 	/** The Constant BIRD_PARAMETER_NAME. */
 	public static final String BIRD_DIRECTORY_PARAMETER_NAME = "BIRD_DIRECTORY";
 	/** The Constant BIRD_ICONS_DIRECTORY. */
@@ -70,42 +70,15 @@ public class BasicConstants {
 	public static final String STAR_STRING = "*";
 
 	/**
-	 * The junit context. Always false, except when running junit tests. This is
-	 * to avoid the "Stub" Runtime Error when calling android SDK methods
-	 */
-	private static boolean JUNIT_CONTEXT = false;
-
-	/**
-	 * Checks if is junit context.
-	 * 
-	 * @return true, if is junit context
-	 */
-	public static boolean isJunitContext() {
-		return JUNIT_CONTEXT;
-	}
-
-	/**
-	 * Sets the junit context. This method is only to be used from the Junit
-	 * tests
-	 * 
-	 * @param junitContext
-	 *            the new junit context
-	 */
-	public static void setJunitContext(final boolean junitContext) {
-		JUNIT_CONTEXT = junitContext;
-	}
-
-	/**
 	 * Gets the nb of files in package.
 	 * 
 	 * @param fileType
 	 *            the file type
 	 * @return the nb of files in package
 	 */
-	public static int getNbOfFilesInPackage(OrnidroidFileType fileType) {
+	public static int getNbOfFilesInPackage(MediaFileType fileType) {
 		switch (fileType) {
-		case AUDIO:
-			return FILES_COUNT_AUDIO_PACKAGE;
+
 		case PICTURE:
 			return FILES_COUNT_PICTURE_PACKAGE;
 		case WIKIPEDIA_PAGE:

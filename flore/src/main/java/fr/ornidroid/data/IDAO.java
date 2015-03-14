@@ -4,7 +4,7 @@ import java.util.List;
 
 import android.database.Cursor;
 import fr.ornidroid.bo.MultiCriteriaSearchFormBean;
-import fr.ornidroid.bo.SimpleBird;
+import fr.ornidroid.bo.SimpleSubject;
 
 /**
  * The Interface IOrnidroidDAO.
@@ -95,7 +95,7 @@ public interface IDAO {
 	 *            the form bean
 	 * @return the bird matches from multi search criteria
 	 */
-	List<SimpleBird> getBirdMatchesFromMultiSearchCriteria(
+	List<SimpleSubject> getBirdMatchesFromMultiSearchCriteria(
 			MultiCriteriaSearchFormBean formBean);
 
 	/**
@@ -176,7 +176,7 @@ public interface IDAO {
 	 *            the query
 	 * @return the matching birds
 	 */
-	List<SimpleBird> getMatchingBirds(String query);
+	List<SimpleSubject> getMatchingBirds(String query);
 
 	/**
 	 * Gets the release notes.

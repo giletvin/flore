@@ -3,11 +3,11 @@ package fr.ornidroid.bo;
 /**
  * The Class SimpleBird.
  */
-public class SimpleBird {
+public class SimpleSubject {
 	/**
 	 * Instantiates a new SimpleBird.
 	 */
-	protected SimpleBird() {
+	protected SimpleSubject() {
 	}
 
 	/**

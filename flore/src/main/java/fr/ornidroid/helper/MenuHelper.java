@@ -6,11 +6,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import fr.flore.R;
+import fr.ornidroid.ui.activity.ApplicationPreferenceActivity_;
 import fr.ornidroid.ui.activity.HelpActivity_;
 import fr.ornidroid.ui.activity.HomeActivity_;
 import fr.ornidroid.ui.activity.MainActivity_;
 import fr.ornidroid.ui.activity.MultiCriteriaSearchActivity_;
-import fr.ornidroid.ui.activity.OrnidroidPreferenceActivity_;
 
 /**
  * The Class MenuHelper.
@@ -53,7 +53,7 @@ public class MenuHelper {
 			return (true);
 		case R.id.preferences:
 			activity.startActivity(new Intent(activity,
-					OrnidroidPreferenceActivity_.class));
+					ApplicationPreferenceActivity_.class));
 			return (true);
 		case R.id.help:
 			activity.startActivity(new Intent(activity, HelpActivity_.class));

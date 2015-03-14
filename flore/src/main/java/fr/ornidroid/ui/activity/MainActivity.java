@@ -19,10 +19,10 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ListView;
 import fr.flore.R;
-import fr.ornidroid.bo.SimpleBird;
+import fr.ornidroid.bo.SimpleSubject;
 import fr.ornidroid.service.ServiceFactory;
 import fr.ornidroid.ui.adapter.SearchResultsAdapter;
-import fr.ornidroid.ui.components.OrnidroidAutoCompleteAdapter;
+import fr.ornidroid.ui.components.ApplicationAutoCompleteAdapter;
 
 /**
  * The main activity for the dictionary. Displays search results triggered by
@@ -57,7 +57,7 @@ public class MainActivity extends ListActivity {
 	AutoCompleteTextView searchField;
 
 	/** The adapter autocomplete text view. */
-	private ArrayAdapter<SimpleBird> adapterAutocompleteTextView;
+	private ArrayAdapter<SimpleSubject> adapterAutocompleteTextView;
 
 	/**
 	 * After views.
@@ -79,7 +79,7 @@ public class MainActivity extends ListActivity {
 	 */
 	private Intent buildIntentBirdInfoActivity(final Integer birdId) {
 		final Intent birdIntent = new Intent(getApplicationContext(),
-				NewBirdActivity_.class);
+				SubjectInfoActivity_.class);
 		birdIntent.putExtra(BIRD_ID_ITENT_PRM, birdId);
 		return birdIntent;
 	}
@@ -94,9 +94,9 @@ public class MainActivity extends ListActivity {
 			this.searchField.setVisibility(View.GONE);
 		}
 		// set our adapter
-		adapterAutocompleteTextView = new ArrayAdapter<SimpleBird>(this,
-				android.R.layout.simple_dropdown_item_1line,
-				ServiceFactory.getService(this).getQueryResult());
+		adapterAutocompleteTextView = new ArrayAdapter<SimpleSubject>(this,
+				android.R.layout.simple_dropdown_item_1line, ServiceFactory
+						.getService(this).getQueryResult());
 		searchField.setAdapter(adapterAutocompleteTextView);
 	}
 
@@ -109,12 +109,12 @@ public class MainActivity extends ListActivity {
 	@TextChange(R.id.home_search_field)
 	void onTextChangesOnSearchField(CharSequence userInput) {
 		// query the database based on the user input
-		List<SimpleBird> queryResult = ServiceFactory.getService(this)
+		List<SimpleSubject> queryResult = ServiceFactory.getService(this)
 				.getMatchingBirds(userInput.toString());
 
 		// update the adapater
 		adapterAutocompleteTextView.notifyDataSetChanged();
-		adapterAutocompleteTextView = new OrnidroidAutoCompleteAdapter(
+		adapterAutocompleteTextView = new ApplicationAutoCompleteAdapter(
 				MainActivity.this, android.R.layout.simple_dropdown_item_1line,
 				queryResult);
 
@@ -136,7 +136,7 @@ public class MainActivity extends ListActivity {
 	 *            the bird
 	 */
 	@ItemClick(android.R.id.list)
-	void birdClicked(SimpleBird bird) {
+	void birdClicked(SimpleSubject bird) {
 		startActivity(buildIntentBirdInfoActivity(bird.getId()));
 	}
 
@@ -146,7 +146,7 @@ public class MainActivity extends ListActivity {
 	@ItemClick(R.id.home_search_field)
 	void autocompleteSuggestionClicked() {
 		if (ServiceFactory.getService(this).getQueryResult().size() == 1) {
-			SimpleBird clickedBird = ServiceFactory.getService(this)
+			SimpleSubject clickedBird = ServiceFactory.getService(this)
 					.getQueryResult().get(0);
 			printQueryResults();
 			startActivity(buildIntentBirdInfoActivity(clickedBird.getId()));
@@ -183,7 +183,7 @@ public class MainActivity extends ListActivity {
 	 */
 	@OptionsItem(R.id.preferences)
 	void preferencesMenuClicked() {
-		startActivity(new Intent(this, OrnidroidPreferenceActivity_.class));
+		startActivity(new Intent(this, ApplicationPreferenceActivity_.class));
 	}
 
 	/**

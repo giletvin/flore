@@ -25,23 +25,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 import de.greenrobot.event.EventBus;
 import fr.flore.R;
-import fr.ornidroid.bo.OrnidroidFile;
-import fr.ornidroid.bo.OrnidroidFileType;
+import fr.ornidroid.bo.MediaFile;
+import fr.ornidroid.bo.MediaFileType;
 import fr.ornidroid.event.CheckForUpdateEvent;
 import fr.ornidroid.event.DownloadEvent;
 import fr.ornidroid.event.EventType;
+import fr.ornidroid.helper.ApplicationError;
+import fr.ornidroid.helper.ApplicationException;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
-import fr.ornidroid.helper.OrnidroidError;
-import fr.ornidroid.helper.OrnidroidException;
 import fr.ornidroid.service.IIOService;
-import fr.ornidroid.service.IService;
 import fr.ornidroid.service.IOServiceImpl;
+import fr.ornidroid.service.IService;
 import fr.ornidroid.service.ServiceFactory;
 import fr.ornidroid.ui.activity.AddCustomMediaActivity_;
 import fr.ornidroid.ui.activity.HomeActivity_;
-import fr.ornidroid.ui.activity.NewBirdActivity;
-import fr.ornidroid.ui.activity.NewBirdActivity_;
+import fr.ornidroid.ui.activity.SubjectInfoActivity;
+import fr.ornidroid.ui.activity.SubjectInfoActivity_;
 
 /**
  * The Class AbstractFragment.
@@ -59,7 +59,7 @@ public abstract class AbstractFragment extends Fragment {
 	 * Gets the current (selected) media file if picture : the displayed image,
 	 * if sound, the played mp3.
 	 */
-	private OrnidroidFile currentMediaFile;
+	private MediaFile currentMediaFile;
 
 	/** The pb download in progress. */
 	@ViewById(R.id.pb_download_in_progress)
@@ -70,8 +70,7 @@ public abstract class AbstractFragment extends Fragment {
 	ProgressBar pbDownloadAllInProgress;
 
 	/** The ornidroid service. */
-	IService ornidroidService = ServiceFactory
-			.getService(getActivity());
+	IService ornidroidService = ServiceFactory.getService(getActivity());
 
 	/** The ornidroid io service. */
 	IIOService ornidroidIOService = new IOServiceImpl();
@@ -112,7 +111,7 @@ public abstract class AbstractFragment extends Fragment {
 	 * 
 	 * @return the file type
 	 */
-	public abstract OrnidroidFileType getFileType();
+	public abstract MediaFileType getFileType();
 
 	/**
 	 * Gets the media home directory.
@@ -122,9 +121,7 @@ public abstract class AbstractFragment extends Fragment {
 	public String getMediaHomeDirectory() {
 		String mediaHomeDirectory = null;
 		switch (getFileType()) {
-		case AUDIO:
-			mediaHomeDirectory = Constants.getOrnidroidHomeAudio();
-			break;
+
 		case PICTURE:
 			mediaHomeDirectory = Constants.getOrnidroidHomeImages();
 			break;
@@ -137,10 +134,10 @@ public abstract class AbstractFragment extends Fragment {
 	/**
 	 * Load media files locally.
 	 * 
-	 * @throws OrnidroidException
+	 * @throws ApplicationException
 	 *             the ornidroid exception
 	 */
-	public void loadMediaFilesLocally() throws OrnidroidException {
+	public void loadMediaFilesLocally() throws ApplicationException {
 		if (this.ornidroidService.getCurrentBird() != null) {
 			final File fileDirectory = new File(
 					Constants.getOrnidroidBirdHomeMedia(
@@ -195,7 +192,7 @@ public abstract class AbstractFragment extends Fragment {
 	void addCustomPictureClicked() {
 		final Intent intent = new Intent(getActivity(),
 				AddCustomMediaActivity_.class);
-		intent.putExtra(OrnidroidFileType.FILE_TYPE_INTENT_PARAM_NAME,
+		intent.putExtra(MediaFileType.FILE_TYPE_INTENT_PARAM_NAME,
 				getFileType());
 		intent.putExtra(Constants.BIRD_DIRECTORY_PARAMETER_NAME,
 				this.ornidroidService.getCurrentBird().getBirdDirectoryName());
@@ -216,17 +213,17 @@ public abstract class AbstractFragment extends Fragment {
 							R.string.remove_custom_media_success),
 					Toast.LENGTH_LONG).show();
 			final Intent intent = new Intent(getActivity(),
-					NewBirdActivity_.class);
+					SubjectInfoActivity_.class);
 			// put the uri so that the BirdInfoActivity reloads correctly
 			// the bird
 			intent.setData(getActivity().getIntent().getData());
 			// put an extra info to let the BirdInfoActivity know which tab
 			// to open
-			intent.putExtra(NewBirdActivity.INTENT_TAB_TO_OPEN,
-					OrnidroidFileType.getCode(getFileType()));
+			intent.putExtra(SubjectInfoActivity.INTENT_TAB_TO_OPEN,
+					MediaFileType.getCode(getFileType()));
 			startActivity(intent);
 			getActivity().finish();
-		} catch (final OrnidroidException e) {
+		} catch (final ApplicationException e) {
 			Toast.makeText(
 					getActivity(),
 					this.getResources().getString(
@@ -258,7 +255,7 @@ public abstract class AbstractFragment extends Fragment {
 						.downloadMediaFiles(getMediaHomeDirectory(),
 								AbstractFragment.this.ornidroidService
 										.getCurrentBird(), getFileType());
-			} catch (final OrnidroidException e) {
+			} catch (final ApplicationException e) {
 				exception = e;
 			} finally {
 				// post the event in the EventBus
@@ -383,7 +380,7 @@ public abstract class AbstractFragment extends Fragment {
 						try {
 							this.ornidroidIOService.downloadZipPackage(zipname,
 									Constants.getOrnidroidHome());
-						} catch (OrnidroidException e) {
+						} catch (ApplicationException e) {
 							exception = e;
 						}
 					} finally {
@@ -540,7 +537,7 @@ public abstract class AbstractFragment extends Fragment {
 	}
 
 	void errorDialogDownloadOne(Exception exception) {
-		String downloadErrorText = getErrorMessage((OrnidroidException) exception);
+		String downloadErrorText = getErrorMessage((ApplicationException) exception);
 		Dialog dialog = new AlertDialog.Builder(this.getActivity())
 				.setIcon(android.R.drawable.ic_dialog_alert)
 				.setTitle(R.string.download_birds_file)
@@ -563,9 +560,9 @@ public abstract class AbstractFragment extends Fragment {
 	private void reloadActivity() {
 		if (this.getActivity() != null) {
 			final Intent intentBirdInfo = new Intent(this.getActivity(),
-					NewBirdActivity_.class);
-			intentBirdInfo.putExtra(NewBirdActivity.INTENT_TAB_TO_OPEN,
-					OrnidroidFileType.getCode(this.getFileType()));
+					SubjectInfoActivity_.class);
+			intentBirdInfo.putExtra(SubjectInfoActivity.INTENT_TAB_TO_OPEN,
+					MediaFileType.getCode(this.getFileType()));
 			startActivity(intentBirdInfo
 					.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 		}
@@ -578,7 +575,7 @@ public abstract class AbstractFragment extends Fragment {
 	 * @param selectedFile
 	 *            the new selected file
 	 */
-	public void setCurrentMediaFile(final OrnidroidFile selectedFile) {
+	public void setCurrentMediaFile(final MediaFile selectedFile) {
 		this.currentMediaFile = selectedFile;
 		if (this.currentMediaFile != null) {
 			if (this.currentMediaFile.isCustomMediaFile()) {
@@ -596,7 +593,7 @@ public abstract class AbstractFragment extends Fragment {
 	 * 
 	 * @return the current media file
 	 */
-	public OrnidroidFile getCurrentMediaFile() {
+	public MediaFile getCurrentMediaFile() {
 		return currentMediaFile;
 	}
 
@@ -607,8 +604,8 @@ public abstract class AbstractFragment extends Fragment {
 	 *            the ornidroid exception
 	 * @return the error message
 	 */
-	public String getErrorMessage(OrnidroidException ornidroidException) {
-		OrnidroidError ornidroidError = ornidroidException.getErrorType();
+	public String getErrorMessage(ApplicationException ornidroidException) {
+		ApplicationError ornidroidError = ornidroidException.getErrorType();
 		String msg = null;
 		switch (ornidroidError) {
 		case ORNIDROID_CONNECTION_PROBLEM:
@@ -622,11 +619,7 @@ public abstract class AbstractFragment extends Fragment {
 			break;
 		case NO_ERROR:
 			switch (getFileType()) {
-			case AUDIO:
-				msg = getActivity().getResources().getString(
-						R.string.no_records);
 
-				break;
 			case PICTURE:
 				msg = getActivity().getResources().getString(
 						R.string.no_pictures);
@@ -707,10 +700,7 @@ public abstract class AbstractFragment extends Fragment {
 						success = (ornidroidService.getCurrentBird()
 								.getNumberOfPictures() > 0);
 						break;
-					case AUDIO:
-						success = (ornidroidService.getCurrentBird()
-								.getNumberOfSounds() > 0);
-						break;
+
 					case WIKIPEDIA_PAGE:
 						success = (ornidroidService.getCurrentBird()
 								.getWikipediaPage() != null);
@@ -725,7 +715,7 @@ public abstract class AbstractFragment extends Fragment {
 						downloadBanner.setVisibility(View.GONE);
 
 					}
-				} catch (final OrnidroidException e) {
+				} catch (final ApplicationException e) {
 					success = false;
 					Toast.makeText(
 							getActivity(),

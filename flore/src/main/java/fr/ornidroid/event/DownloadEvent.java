@@ -1,13 +1,13 @@
 package fr.ornidroid.event;
 
-import fr.ornidroid.bo.OrnidroidFileType;
+import fr.ornidroid.bo.MediaFileType;
 
 public class DownloadEvent extends GenericEvent {
 
-	public final OrnidroidFileType fileType;
+	public final MediaFileType fileType;
 
 	public DownloadEvent(EventType eventType, Exception pException,
-			OrnidroidFileType pFileType) {
+			MediaFileType pFileType) {
 		super(eventType, pException);
 		fileType = pFileType;
 	}

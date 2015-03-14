@@ -42,13 +42,13 @@ public class BirdFactoryImpl {
 	 *            the oiseaux net url
 	 * @return the bird
 	 */
-	public Bird createBird(final Integer id, final String taxon,
+	public Subject createBird(final Integer id, final String taxon,
 			final String scientificName, final String birdDirectoryName,
 			final String description, final String distribution,
 			final String scientificFamily, final String habitat,
 			final String size, final String category,
 			final String pOiseauxNetUrl) {
-		final Bird bird = new Bird();
+		final Subject bird = new Subject();
 		bird.setId(id);
 		bird.setTaxon(taxon);
 		bird.setDescription(description);
@@ -76,9 +76,9 @@ public class BirdFactoryImpl {
 	 *            the scientific name
 	 * @return the bird
 	 */
-	public SimpleBird createSimpleBird(final Integer id, final String taxon,
+	public SimpleSubject createSimpleBird(final Integer id, final String taxon,
 			final String birdDirectoryName, final String scientificName) {
-		final SimpleBird bird = new SimpleBird();
+		final SimpleSubject bird = new SimpleSubject();
 		bird.setId(id);
 		bird.setTaxon(taxon);
 		bird.setScientificName(scientificName);
@@ -98,9 +98,9 @@ public class BirdFactoryImpl {
 	 * @return the bird
 	 * @deprecated
 	 */
-	public SimpleBird createSimpleBird(final Integer id, final String taxon,
+	public SimpleSubject createSimpleBird(final Integer id, final String taxon,
 			final String birdDirectoryName) {
-		final SimpleBird bird = new SimpleBird();
+		final SimpleSubject bird = new SimpleSubject();
 		bird.setId(id);
 		bird.setTaxon(taxon);
 

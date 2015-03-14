@@ -26,10 +26,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import fr.flore.R;
-import fr.ornidroid.bo.OrnidroidFileType;
+import fr.ornidroid.bo.MediaFileType;
+import fr.ornidroid.helper.ApplicationException;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
-import fr.ornidroid.helper.OrnidroidException;
 import fr.ornidroid.service.IIOService;
 import fr.ornidroid.service.IOServiceImpl;
 
@@ -47,8 +47,8 @@ public class AddCustomMediaActivity extends ListActivity {
 	String birdDirectory;
 
 	/** The file type. */
-	@Extra(OrnidroidFileType.FILE_TYPE_INTENT_PARAM_NAME)
-	OrnidroidFileType fileType;
+	@Extra(MediaFileType.FILE_TYPE_INTENT_PARAM_NAME)
+	MediaFileType fileType;
 
 	/** The item. */
 	private List<String> item = null;
@@ -159,7 +159,7 @@ public class AddCustomMediaActivity extends ListActivity {
 														.getString(
 																R.string.add_custom_media_success),
 												Toast.LENGTH_LONG).show();
-									} catch (final OrnidroidException e) {
+									} catch (final ApplicationException e) {
 
 										Toast.makeText(
 												AddCustomMediaActivity.this,
@@ -197,7 +197,7 @@ public class AddCustomMediaActivity extends ListActivity {
 						&& !pathName
 								.getAbsolutePath()
 								.endsWith(
-										OrnidroidFileType
+										MediaFileType
 												.getExtension(AddCustomMediaActivity.this.fileType))) {
 					return false;
 				}
@@ -238,7 +238,7 @@ public class AddCustomMediaActivity extends ListActivity {
 	@Click(R.id.cancel_add_custom_media)
 	public void goBackToBirdActivity() {
 		final Intent intentBirdInfo = new Intent(getApplicationContext(),
-				NewBirdActivity_.class);
+				SubjectInfoActivity_.class);
 
 		// put the uri so that the BirdInfoActivity
 		// reloads correctly the
@@ -247,8 +247,8 @@ public class AddCustomMediaActivity extends ListActivity {
 		// put an extra info to let the
 		// BirdInfoActivity know which tab to
 		// open.
-		intentBirdInfo.putExtra(NewBirdActivity.INTENT_TAB_TO_OPEN,
-				OrnidroidFileType.getCode(this.fileType));
+		intentBirdInfo.putExtra(SubjectInfoActivity.INTENT_TAB_TO_OPEN,
+				MediaFileType.getCode(this.fileType));
 		startActivity(intentBirdInfo.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
 	}

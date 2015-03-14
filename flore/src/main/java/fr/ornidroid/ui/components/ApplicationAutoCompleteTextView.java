@@ -16,7 +16,7 @@ import fr.ornidroid.helper.BasicConstants;
  * -on-a-drawable-within-an-edittext
  * 
  */
-public class OrnidroidAutoCompleteTextView extends AutoCompleteTextView {
+public class ApplicationAutoCompleteTextView extends AutoCompleteTextView {
 
 	/** The d right. */
 	private Drawable dRight;
@@ -34,7 +34,7 @@ public class OrnidroidAutoCompleteTextView extends AutoCompleteTextView {
 	 * @param defStyle
 	 *            the def style
 	 */
-	public OrnidroidAutoCompleteTextView(Context context, AttributeSet attrs,
+	public ApplicationAutoCompleteTextView(Context context, AttributeSet attrs,
 			int defStyle) {
 		super(context, attrs, defStyle);
 	}
@@ -47,7 +47,7 @@ public class OrnidroidAutoCompleteTextView extends AutoCompleteTextView {
 	 * @param attrs
 	 *            the attrs
 	 */
-	public OrnidroidAutoCompleteTextView(Context context, AttributeSet attrs) {
+	public ApplicationAutoCompleteTextView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 
@@ -57,7 +57,7 @@ public class OrnidroidAutoCompleteTextView extends AutoCompleteTextView {
 	 * @param context
 	 *            the context
 	 */
-	public OrnidroidAutoCompleteTextView(Context context) {
+	public ApplicationAutoCompleteTextView(Context context) {
 		super(context);
 	}
 

@@ -7,19 +7,7 @@ import fr.ornidroid.helper.BasicConstants;
 /**
  * The Class OrnidroidFile.
  */
-public class OrnidroidFile {
-	/** The Constant AUDIO_DURATION_PROPERTY. */
-	public static final String AUDIO_DURATION_PROPERTY = "audio_duration";
-	/** The Constant AUDIO_RECORDIST_PROPERTY. */
-	public static final String AUDIO_RECORDIST_PROPERTY = "audio_recordist";
-	/** The Constant AUDIO_REF_PROPERTY. */
-	public static final String AUDIO_REF_PROPERTY = "audio_ref";
-
-	/** The Constant AUDIO_REMARKS_PROPERTY. */
-	public static final String AUDIO_REMARKS_PROPERTY = "audio_remarks";
-
-	/** The Constant AUDIO_TITLE_PROPERTY. */
-	public static final String AUDIO_TITLE_PROPERTY = "audio_title";
+public class MediaFile {
 
 	/** The LANGUAG e_ separator. Ex image_description_fr */
 	public static String LANGUAGE_SEPARATOR = "_";
@@ -40,12 +28,12 @@ public class OrnidroidFile {
 	private Map<String, String> properties;
 
 	/** The type. */
-	private OrnidroidFileType type;
+	private MediaFileType type;
 
 	/**
 	 * Instantiates a new ornidroid file.
 	 */
-	protected OrnidroidFile() {
+	protected MediaFile() {
 
 	}
 
@@ -90,7 +78,7 @@ public class OrnidroidFile {
 	 * 
 	 * @return the type
 	 */
-	public OrnidroidFileType getType() {
+	public MediaFileType getType() {
 		return this.type;
 	}
 
@@ -130,7 +118,7 @@ public class OrnidroidFile {
 	 * @param type
 	 *            the new type
 	 */
-	public void setType(final OrnidroidFileType type) {
+	public void setType(final MediaFileType type) {
 		this.type = type;
 	}
 

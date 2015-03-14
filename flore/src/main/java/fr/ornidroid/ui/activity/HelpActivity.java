@@ -12,7 +12,7 @@ import fr.flore.R;
  * The Class HelpActivity.
  */
 @EActivity(R.layout.help)
-public class HelpActivity extends AbstractOrnidroidActivity {
+public class HelpActivity extends AbstractActivity {
 
 	/** The help text. */
 	@ViewById(R.id.help_text)

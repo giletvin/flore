@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import fr.flore.R;
-import fr.ornidroid.bo.OrnidroidFile;
-import fr.ornidroid.bo.PictureOrnidroidFile;
+import fr.ornidroid.bo.MediaFile;
+import fr.ornidroid.bo.PictureFile;
 
 /**
  * The Class PictureInfoDialog.
@@ -29,7 +29,7 @@ public class PictureInfoDialog extends DialogFragment {
 	private TextView licence;
 
 	/** The ornidroid file. */
-	private OrnidroidFile ornidroidFile;
+	private MediaFile ornidroidFile;
 
 	/**
 	 * Instantiates a new picture info dialog.
@@ -59,13 +59,13 @@ public class PictureInfoDialog extends DialogFragment {
 		if (ornidroidFile != null) {
 			description
 					.setText(ornidroidFile
-							.getProperty(PictureOrnidroidFile.IMAGE_DESCRIPTION_PROPERTY));
+							.getProperty(PictureFile.IMAGE_DESCRIPTION_PROPERTY));
 			author.setText(ornidroidFile
-					.getProperty(PictureOrnidroidFile.IMAGE_AUTHOR_PROPERTY));
+					.getProperty(PictureFile.IMAGE_AUTHOR_PROPERTY));
 			source.setText(ornidroidFile
-					.getProperty(PictureOrnidroidFile.IMAGE_SOURCE_PROPERTY));
+					.getProperty(PictureFile.IMAGE_SOURCE_PROPERTY));
 			licence.setText(ornidroidFile
-					.getProperty(PictureOrnidroidFile.IMAGE_LICENCE_PROPERTY));
+					.getProperty(PictureFile.IMAGE_LICENCE_PROPERTY));
 		}
 		getDialog().setTitle(R.string.dialog_picture_title);
 
@@ -85,7 +85,7 @@ public class PictureInfoDialog extends DialogFragment {
 	 * @param currentMediaFile
 	 *            the new ornidroid file
 	 */
-	public void setOrnidroidFile(OrnidroidFile currentMediaFile) {
+	public void setOrnidroidFile(MediaFile currentMediaFile) {
 		this.ornidroidFile = currentMediaFile;
 
 	}

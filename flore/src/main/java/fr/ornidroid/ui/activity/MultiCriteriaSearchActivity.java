@@ -35,7 +35,7 @@ import fr.ornidroid.ui.multicriteriasearch.OnSpinnersItemSelected;
  * The Class MultiCriteriaSearchActivity.
  */
 @EActivity(R.layout.multicriteriasearch)
-public class MultiCriteriaSearchActivity extends AbstractOrnidroidActivity {
+public class MultiCriteriaSearchActivity extends AbstractActivity {
 	/** The field list. */
 	private final List<MultiCriteriaSelectField> fieldList = new ArrayList<MultiCriteriaSelectField>();
 
