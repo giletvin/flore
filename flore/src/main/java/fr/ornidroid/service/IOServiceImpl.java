@@ -31,7 +31,7 @@ import fr.ornidroid.helper.SupportedLanguage;
 /**
  * The Class OrnidroidIOServiceImpl.
  */
-public class OrnidroidIOServiceImpl implements IOrnidroidIOService {
+public class IOServiceImpl implements IIOService {
 
 	/** The Constant MIN_SIZE_REQUIRED_TO_DOWNLOAD_ZIP_PACKAGES. */
 	private static final int MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE = 120;
@@ -81,7 +81,7 @@ public class OrnidroidIOServiceImpl implements IOrnidroidIOService {
 	/**
 	 * Instantiates a new ornidroid io service impl.
 	 */
-	public OrnidroidIOServiceImpl() {
+	public IOServiceImpl() {
 
 		this.downloadHelper = new DownloadHelperImpl();
 	}

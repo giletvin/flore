@@ -14,8 +14,8 @@ import fr.flore.R;
 import fr.ornidroid.bo.Bird;
 import fr.ornidroid.bo.OrnidroidFile;
 import fr.ornidroid.helper.Constants;
-import fr.ornidroid.service.IOrnidroidService;
-import fr.ornidroid.service.OrnidroidServiceFactory;
+import fr.ornidroid.service.IService;
+import fr.ornidroid.service.ServiceFactory;
 import fr.ornidroid.ui.picture.PictureHelper;
 
 /**
@@ -35,7 +35,7 @@ public class ScrollableImageActivity extends Activity {
 	/** The bm large image. */
 	private Bitmap bmLargeImage;
 	/** The ornidroid service. */
-	private final IOrnidroidService ornidroidService = OrnidroidServiceFactory
+	private final IService ornidroidService = ServiceFactory
 			.getService(this);;
 
 	/** The displayed picture id. */

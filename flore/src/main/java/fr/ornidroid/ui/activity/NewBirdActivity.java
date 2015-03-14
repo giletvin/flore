@@ -16,8 +16,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import fr.flore.R;
 import fr.ornidroid.helper.Constants;
-import fr.ornidroid.service.IOrnidroidService;
-import fr.ornidroid.service.OrnidroidServiceFactory;
+import fr.ornidroid.service.IService;
+import fr.ornidroid.service.ServiceFactory;
 import fr.ornidroid.ui.adapter.BirdActivityTabsPagerAdapter;
 
 /**
@@ -40,7 +40,7 @@ public class NewBirdActivity extends FragmentActivity implements
 	@Extra(MainActivity.BIRD_ID_ITENT_PRM)
 	int birdId = 0;
 	/** The ornidroid service. */
-	private final IOrnidroidService ornidroidService = OrnidroidServiceFactory
+	private final IService ornidroidService = ServiceFactory
 			.getService(this);
 
 	/** The view pager. */

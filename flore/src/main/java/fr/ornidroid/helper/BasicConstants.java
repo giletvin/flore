@@ -40,7 +40,7 @@ public class BasicConstants {
 	/**
 	 * The D b_ name. It ends with a .jpg extension although it is a sqlite file
 	 */
-	public final static String DB_NAME = "ornidroid.jpg";
+	public final static String DB_NAME = "flore.jpg";
 
 	/** The Constant EMPTY_STRING. */
 	public static final String EMPTY_STRING = "";

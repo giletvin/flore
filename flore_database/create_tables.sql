@@ -5,6 +5,7 @@
 create table fleur(
 	id integer,
 	directory_name,
+	scientific_name,
 	scientific_family_fk,
 	PRIMARY KEY(id)
 );

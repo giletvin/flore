@@ -18,8 +18,8 @@ import fr.flore.R;
 import fr.ornidroid.bo.Bird;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.StringHelper;
-import fr.ornidroid.service.IOrnidroidService;
-import fr.ornidroid.service.OrnidroidServiceFactory;
+import fr.ornidroid.service.IService;
+import fr.ornidroid.service.ServiceFactory;
 
 /**
  * The Class DetailsFragment.
@@ -28,7 +28,7 @@ import fr.ornidroid.service.OrnidroidServiceFactory;
 public class DetailsFragment extends Fragment {
 
 	/** The m ornidroid service. */
-	private IOrnidroidService mOrnidroidService = OrnidroidServiceFactory
+	private IService mOrnidroidService = ServiceFactory
 			.getService(getActivity());
 
 	/** The category. */

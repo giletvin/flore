@@ -30,8 +30,8 @@ import fr.ornidroid.bo.OrnidroidFileType;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.helper.OrnidroidException;
-import fr.ornidroid.service.IOrnidroidIOService;
-import fr.ornidroid.service.OrnidroidIOServiceImpl;
+import fr.ornidroid.service.IIOService;
+import fr.ornidroid.service.IOServiceImpl;
 
 /**
  * The Class AddCustomMediaActivity allows to add a custom mp3 or jpg file to
@@ -58,7 +58,7 @@ public class AddCustomMediaActivity extends ListActivity {
 	TextView myPath;
 
 	/** The ornidroid io service. */
-	private final IOrnidroidIOService ornidroidIOService = new OrnidroidIOServiceImpl();
+	private final IIOService ornidroidIOService = new IOServiceImpl();
 
 	/** The path. */
 	private List<String> path = null;

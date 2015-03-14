@@ -11,7 +11,7 @@ import fr.ornidroid.helper.OrnidroidException;
 /**
  * The Interface IOrnidroidIOService.
  */
-public interface IOrnidroidIOService {
+public interface IIOService {
 
 	/**
 	 * Adds the custom media file.

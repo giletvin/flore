@@ -22,16 +22,14 @@ public class BirdFactoryImpl {
 	 *            the taxon
 	 * @param scientificName
 	 *            the scientific name
-	 * @param scientificName2
-	 *            the scientific name 2
+	 * 
 	 * @param birdDirectoryName
 	 *            the directory name
 	 * @param description
 	 *            the description
 	 * @param distribution
 	 *            the distribution
-	 * @param scientificOrder
-	 *            the scientific order
+	 * 
 	 * @param scientificFamily
 	 *            the scientific family
 	 * @param habitat
@@ -45,9 +43,8 @@ public class BirdFactoryImpl {
 	 * @return the bird
 	 */
 	public Bird createBird(final Integer id, final String taxon,
-			final String scientificName, final String scientificName2,
-			final String birdDirectoryName, final String description,
-			final String distribution, final String scientificOrder,
+			final String scientificName, final String birdDirectoryName,
+			final String description, final String distribution,
 			final String scientificFamily, final String habitat,
 			final String size, final String category,
 			final String pOiseauxNetUrl) {
@@ -57,8 +54,6 @@ public class BirdFactoryImpl {
 		bird.setDescription(description);
 		bird.setDistribution(distribution);
 		bird.setScientificName(scientificName);
-		bird.setScientificName2(scientificName2);
-		bird.setScientificOrder(scientificOrder);
 		bird.setScientificFamily(scientificFamily);
 		bird.setBirdDirectoryName(birdDirectoryName);
 		bird.setHabitat(habitat);

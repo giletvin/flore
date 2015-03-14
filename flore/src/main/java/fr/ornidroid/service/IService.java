@@ -11,7 +11,7 @@ import fr.ornidroid.helper.OrnidroidException;
 /**
  * The Interface IOrnidroidService.
  */
-public interface IOrnidroidService {
+public interface IService {
 
 	/**
 	 * Creates the db if necessary.

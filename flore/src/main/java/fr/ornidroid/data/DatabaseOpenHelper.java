@@ -26,7 +26,7 @@ import fr.ornidroid.helper.OrnidroidException;
  * @author hamlet
  * 
  */
-public class OrnidroidDatabaseOpenHelper extends SQLiteOpenHelper {
+public class DatabaseOpenHelper extends SQLiteOpenHelper {
 
 	/** The already checked. */
 	private boolean alreadyChecked = false;
@@ -41,7 +41,7 @@ public class OrnidroidDatabaseOpenHelper extends SQLiteOpenHelper {
 	 * @param context
 	 *            the context
 	 */
-	public OrnidroidDatabaseOpenHelper(final Context context) {
+	public DatabaseOpenHelper(final Context context) {
 
 		super(context, Constants.DB_NAME, null, 1);
 		this.myContext = context;

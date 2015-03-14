@@ -25,9 +25,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import de.greenrobot.event.EventBus;
 import fr.flore.R;
-import fr.ornidroid.ui.activity.AddCustomMediaActivity_;
-import fr.ornidroid.ui.activity.HomeActivity_;
-import fr.ornidroid.ui.activity.NewBirdActivity_;
 import fr.ornidroid.bo.OrnidroidFile;
 import fr.ornidroid.bo.OrnidroidFileType;
 import fr.ornidroid.event.CheckForUpdateEvent;
@@ -37,11 +34,14 @@ import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.helper.OrnidroidError;
 import fr.ornidroid.helper.OrnidroidException;
-import fr.ornidroid.service.IOrnidroidIOService;
-import fr.ornidroid.service.IOrnidroidService;
-import fr.ornidroid.service.OrnidroidIOServiceImpl;
-import fr.ornidroid.service.OrnidroidServiceFactory;
+import fr.ornidroid.service.IIOService;
+import fr.ornidroid.service.IService;
+import fr.ornidroid.service.IOServiceImpl;
+import fr.ornidroid.service.ServiceFactory;
+import fr.ornidroid.ui.activity.AddCustomMediaActivity_;
+import fr.ornidroid.ui.activity.HomeActivity_;
 import fr.ornidroid.ui.activity.NewBirdActivity;
+import fr.ornidroid.ui.activity.NewBirdActivity_;
 
 /**
  * The Class AbstractFragment.
@@ -70,11 +70,11 @@ public abstract class AbstractFragment extends Fragment {
 	ProgressBar pbDownloadAllInProgress;
 
 	/** The ornidroid service. */
-	IOrnidroidService ornidroidService = OrnidroidServiceFactory
+	IService ornidroidService = ServiceFactory
 			.getService(getActivity());
 
 	/** The ornidroid io service. */
-	IOrnidroidIOService ornidroidIOService = new OrnidroidIOServiceImpl();
+	IIOService ornidroidIOService = new IOServiceImpl();
 
 	/** Layouts. */
 	@ViewById(R.id.fragment_main_content)
@@ -693,48 +693,50 @@ public abstract class AbstractFragment extends Fragment {
 				final Intent intent = new Intent(getActivity(),
 						HomeActivity_.class);
 				startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-			}
-			if (Constants.getAutomaticUpdateCheckPreference()
-					&& updateFilesButton != null) {
-				updateFilesButton.setVisibility(View.GONE);
-				checkForUpdates(false);
-			}
-			try {
-				loadMediaFilesLocally();
-
-				switch (getFileType()) {
-				case PICTURE:
-					success = (ornidroidService.getCurrentBird()
-							.getNumberOfPictures() > 0);
-					break;
-				case AUDIO:
-					success = (ornidroidService.getCurrentBird()
-							.getNumberOfSounds() > 0);
-					break;
-				case WIKIPEDIA_PAGE:
-					success = (ornidroidService.getCurrentBird()
-							.getWikipediaPage() != null);
-					break;
+			} else {
+				if (Constants.getAutomaticUpdateCheckPreference()
+						&& updateFilesButton != null) {
+					updateFilesButton.setVisibility(View.GONE);
+					checkForUpdates(false);
 				}
+				try {
+					loadMediaFilesLocally();
 
-				if (!success) {
-					fragmentMainContent.setVisibility(View.GONE);
-					downloadBanner.setVisibility(View.VISIBLE);
-				} else {
-					fragmentMainContent.setVisibility(View.VISIBLE);
-					downloadBanner.setVisibility(View.GONE);
+					switch (getFileType()) {
+					case PICTURE:
+						success = (ornidroidService.getCurrentBird()
+								.getNumberOfPictures() > 0);
+						break;
+					case AUDIO:
+						success = (ornidroidService.getCurrentBird()
+								.getNumberOfSounds() > 0);
+						break;
+					case WIKIPEDIA_PAGE:
+						success = (ornidroidService.getCurrentBird()
+								.getWikipediaPage() != null);
+						break;
+					}
 
+					if (!success) {
+						fragmentMainContent.setVisibility(View.GONE);
+						downloadBanner.setVisibility(View.VISIBLE);
+					} else {
+						fragmentMainContent.setVisibility(View.VISIBLE);
+						downloadBanner.setVisibility(View.GONE);
+
+					}
+				} catch (final OrnidroidException e) {
+					success = false;
+					Toast.makeText(
+							getActivity(),
+							"Error reading media files of bird "
+									+ this.ornidroidService.getCurrentBird()
+											.getTaxon() + " e",
+							Toast.LENGTH_LONG).show();
 				}
-			} catch (final OrnidroidException e) {
-				success = false;
-				Toast.makeText(
-						getActivity(),
-						"Error reading media files of bird "
-								+ this.ornidroidService.getCurrentBird()
-										.getTaxon() + " e", Toast.LENGTH_LONG)
-						.show();
 			}
 			return success;
+
 		}
 	}
 

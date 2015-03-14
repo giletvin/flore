@@ -24,8 +24,8 @@ import fr.ornidroid.bo.MultiCriteriaSearchFormBean;
 import fr.ornidroid.event.EventType;
 import fr.ornidroid.event.GenericEvent;
 import fr.ornidroid.helper.Constants;
-import fr.ornidroid.service.IOrnidroidService;
-import fr.ornidroid.service.OrnidroidServiceFactory;
+import fr.ornidroid.service.IService;
+import fr.ornidroid.service.ServiceFactory;
 import fr.ornidroid.ui.adapter.MyCustomAdapter;
 import fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSearchFieldType;
 import fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField;
@@ -47,7 +47,7 @@ public class MultiCriteriaSearchActivity extends AbstractOrnidroidActivity {
 	TextView nbResultsTextView;
 
 	/** The ornidroid service. */
-	private final IOrnidroidService ornidroidService = OrnidroidServiceFactory
+	private final IService ornidroidService = ServiceFactory
 			.getService(this);
 	@InstanceState
 	boolean queryRunning = false;
@@ -109,7 +109,7 @@ public class MultiCriteriaSearchActivity extends AbstractOrnidroidActivity {
 	 * 
 	 * @return the ornidroid service
 	 */
-	public IOrnidroidService getOrnidroidService() {
+	public IService getOrnidroidService() {
 		return this.ornidroidService;
 	}
 

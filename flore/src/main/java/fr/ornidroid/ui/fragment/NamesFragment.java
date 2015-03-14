@@ -17,8 +17,8 @@ import fr.flore.R;
 import fr.ornidroid.bo.Taxon;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.StringHelper;
-import fr.ornidroid.service.IOrnidroidService;
-import fr.ornidroid.service.OrnidroidServiceFactory;
+import fr.ornidroid.service.IService;
+import fr.ornidroid.service.ServiceFactory;
 
 /**
  * The Class NamesFragment.
@@ -27,7 +27,7 @@ import fr.ornidroid.service.OrnidroidServiceFactory;
 public class NamesFragment extends ListFragment {
 
 	/** The m ornidroid service. */
-	private IOrnidroidService mOrnidroidService = OrnidroidServiceFactory
+	private IService mOrnidroidService = ServiceFactory
 			.getService(getActivity());
 
 	/** The scientific name. */

@@ -9,7 +9,7 @@ import fr.ornidroid.bo.SimpleBird;
 /**
  * The Interface IOrnidroidDAO.
  */
-public interface IOrnidroidDAO {
+public interface IDAO {
 
 	/** The Constant BEAK_FORM_TABLE. */
 	public static final String BEAK_FORM_TABLE = "beak_form";
@@ -17,7 +17,7 @@ public interface IOrnidroidDAO {
 	/** The Constant BIRD_COUNTRY_TABLE. */
 	public static final String BIRD_COUNTRY_TABLE = "bird_country";
 	/** The Constant BIRD_TABLE. */
-	public static final String BIRD_TABLE = "bird";
+	public static final String BIRD_TABLE = "fleur";
 
 	/** The Constant CATEGORY_COLUMN. */
 	public static final String CATEGORY_COLUMN = "category";
@@ -55,15 +55,6 @@ public interface IOrnidroidDAO {
 
 	/** The Constant SCIENTIFIC_NAME. */
 	public static final String SCIENTIFIC_NAME = "scientific_name";
-
-	/** The Constant SCIENTIFIC_NAME_2_COLUMN. */
-	public static final String SCIENTIFIC_NAME_2_COLUMN = "scientific_name2";
-
-	/** The Constant SCIENTIFIC_ORDER_NAME_COLUMN. */
-	public static final String SCIENTIFIC_ORDER_NAME_COLUMN = "scientific_order";
-
-	/** The Constant SCIENTIFIC_ORDER_TABLE. */
-	public static final String SCIENTIFIC_ORDER_TABLE = "scientific_order";
 
 	/**
 	 * The Constant SEARCHED_TAXON. The taxon where diacritics are removed. Ex

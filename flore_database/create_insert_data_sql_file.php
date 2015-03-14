@@ -225,7 +225,7 @@ if (($handle = fopen("Fleurs.csv", "r")) !== FALSE) {
 			/*id integer,
 			directory_name,
 			scientific_family_fk*/
-			array_push($sql_queries,"insert into fleur (id,directory_name,scientific_family_fk) values (".$idFleur.",\"".nettoie_nom($data[$nom_scientifique_1_index])."\",".$indexes_scientific_family[0].");");
+			array_push($sql_queries,"insert into fleur (id,directory_name,scientific_name,scientific_family_fk) values (".$idFleur.",\"".nettoie_nom($data[$nom_scientifique_1_index])."\",\"".$data[$nom_scientifique_1_index]."\",".$indexes_scientific_family[0].");");
 			//langues
 			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values (\"fr\",\"".$data[$nom_fr_1_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_1_index]))."\",".$idFleur.");");
 			if ($data[$nom_fr_2_index]!=''){

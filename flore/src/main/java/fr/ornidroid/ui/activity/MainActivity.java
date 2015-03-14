@@ -20,7 +20,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ListView;
 import fr.flore.R;
 import fr.ornidroid.bo.SimpleBird;
-import fr.ornidroid.service.OrnidroidServiceFactory;
+import fr.ornidroid.service.ServiceFactory;
 import fr.ornidroid.ui.adapter.SearchResultsAdapter;
 import fr.ornidroid.ui.components.OrnidroidAutoCompleteAdapter;
 
@@ -64,7 +64,7 @@ public class MainActivity extends ListActivity {
 	 */
 	@AfterViews
 	void afterViews() {
-		if (OrnidroidServiceFactory.getService(this).hasHistory()) {
+		if (ServiceFactory.getService(this).hasHistory()) {
 			printQueryResults();
 			this.mListView.setSelection(this.clickedPositionInTheList);
 		}
@@ -96,7 +96,7 @@ public class MainActivity extends ListActivity {
 		// set our adapter
 		adapterAutocompleteTextView = new ArrayAdapter<SimpleBird>(this,
 				android.R.layout.simple_dropdown_item_1line,
-				OrnidroidServiceFactory.getService(this).getQueryResult());
+				ServiceFactory.getService(this).getQueryResult());
 		searchField.setAdapter(adapterAutocompleteTextView);
 	}
 
@@ -109,7 +109,7 @@ public class MainActivity extends ListActivity {
 	@TextChange(R.id.home_search_field)
 	void onTextChangesOnSearchField(CharSequence userInput) {
 		// query the database based on the user input
-		List<SimpleBird> queryResult = OrnidroidServiceFactory.getService(this)
+		List<SimpleBird> queryResult = ServiceFactory.getService(this)
 				.getMatchingBirds(userInput.toString());
 
 		// update the adapater
@@ -145,8 +145,8 @@ public class MainActivity extends ListActivity {
 	 */
 	@ItemClick(R.id.home_search_field)
 	void autocompleteSuggestionClicked() {
-		if (OrnidroidServiceFactory.getService(this).getQueryResult().size() == 1) {
-			SimpleBird clickedBird = OrnidroidServiceFactory.getService(this)
+		if (ServiceFactory.getService(this).getQueryResult().size() == 1) {
+			SimpleBird clickedBird = ServiceFactory.getService(this)
 					.getQueryResult().get(0);
 			printQueryResults();
 			startActivity(buildIntentBirdInfoActivity(clickedBird.getId()));
@@ -157,7 +157,7 @@ public class MainActivity extends ListActivity {
 	 * Print query results in the list view.
 	 */
 	private final void printQueryResults() {
-		setListAdapter(new SearchResultsAdapter(this, OrnidroidServiceFactory
+		setListAdapter(new SearchResultsAdapter(this, ServiceFactory
 				.getService(this).getQueryResult()));
 		searchField.dismissDropDown();
 	}

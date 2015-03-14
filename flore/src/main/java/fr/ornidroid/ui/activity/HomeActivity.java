@@ -18,10 +18,10 @@ import fr.ornidroid.ui.preferences.MyPrefs_;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.OrnidroidException;
 import fr.ornidroid.helper.StringHelper;
-import fr.ornidroid.service.IOrnidroidIOService;
-import fr.ornidroid.service.IOrnidroidService;
-import fr.ornidroid.service.OrnidroidIOServiceImpl;
-import fr.ornidroid.service.OrnidroidServiceFactory;
+import fr.ornidroid.service.IIOService;
+import fr.ornidroid.service.IService;
+import fr.ornidroid.service.IOServiceImpl;
+import fr.ornidroid.service.ServiceFactory;
 
 /**
  * The Class HomeActivity. Start screen of the application
@@ -46,10 +46,10 @@ public class HomeActivity extends AbstractOrnidroidActivity {
 	TextView multiCriteriaSearchLink;
 
 	/** The ornidroid io service. */
-	private final IOrnidroidIOService ornidroidIOService;
+	private final IIOService ornidroidIOService;
 
 	/** The ornidroid service. */
-	private final IOrnidroidService ornidroidService;
+	private final IService ornidroidService;
 
 	/** The preferences link. */
 	@ViewById(R.id.menu_preferences)
@@ -64,8 +64,8 @@ public class HomeActivity extends AbstractOrnidroidActivity {
 	 */
 	public HomeActivity() {
 		super();
-		this.ornidroidIOService = new OrnidroidIOServiceImpl();
-		this.ornidroidService = OrnidroidServiceFactory.getService(this);
+		this.ornidroidIOService = new IOServiceImpl();
+		this.ornidroidService = ServiceFactory.getService(this);
 	}
 
 	/**

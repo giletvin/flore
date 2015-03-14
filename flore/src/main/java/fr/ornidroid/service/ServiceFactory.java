@@ -5,7 +5,7 @@ import android.app.Activity;
 /**
  * A factory for creating OrnidroidService objects.
  */
-public class OrnidroidServiceFactory {
+public class ServiceFactory {
 
 	/**
 	 * Gets the service.
@@ -14,7 +14,7 @@ public class OrnidroidServiceFactory {
 	 *            the activity
 	 * @return the service
 	 */
-	public static IOrnidroidService getService(Activity activity) {
-		return OrnidroidServiceImpl.getInstance(activity);
+	public static IService getService(Activity activity) {
+		return ServiceImpl.getInstance(activity);
 	}
 }

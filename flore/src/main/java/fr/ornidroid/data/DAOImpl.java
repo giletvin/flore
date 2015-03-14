@@ -22,7 +22,7 @@ import fr.ornidroid.helper.SupportedLanguage;
 /**
  * Contains sql queries to search for birds in the database.
  */
-public class OrnidroidDAOImpl implements IOrnidroidDAO {
+public class DAOImpl implements IDAO {
 	/** The bird factory. */
 	private final BirdFactoryImpl birdFactory;
 
@@ -109,7 +109,7 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 	private static final String AND = " and ";
 
 	/** The singleton. */
-	private static IOrnidroidDAO singleton;
+	private static IDAO singleton;
 
 	/** The Constant WHERE. */
 	private static final String WHERE = " where ";
@@ -119,7 +119,7 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 	 * 
 	 * @return single instance of OrnidroidDAOImpl
 	 */
-	public static IOrnidroidDAO getInstance() {
+	public static IDAO getInstance() {
 
 		return singleton;
 	}
@@ -132,16 +132,16 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 	 *            the data base open helper
 	 * @return single instance of OrnidroidDAOImpl
 	 */
-	public static IOrnidroidDAO getInstance(
-			final OrnidroidDatabaseOpenHelper dataBaseOpenHelper) {
+	public static IDAO getInstance(
+			final DatabaseOpenHelper dataBaseOpenHelper) {
 		if (null == singleton) {
-			singleton = new OrnidroidDAOImpl(dataBaseOpenHelper);
+			singleton = new DAOImpl(dataBaseOpenHelper);
 		}
 		return singleton;
 	}
 
 	/** The data base open helper. */
-	private final OrnidroidDatabaseOpenHelper dataBaseOpenHelper;
+	private final DatabaseOpenHelper dataBaseOpenHelper;
 
 	/**
 	 * Constructor.
@@ -149,8 +149,8 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 	 * @param pDataBaseOpenHelper
 	 *            the data base open helper
 	 */
-	private OrnidroidDAOImpl(
-			final OrnidroidDatabaseOpenHelper pDataBaseOpenHelper) {
+	private DAOImpl(
+			final DatabaseOpenHelper pDataBaseOpenHelper) {
 		this.dataBaseOpenHelper = pDataBaseOpenHelper;
 
 		this.birdFactory = new BirdFactoryImpl();
@@ -217,7 +217,7 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 			final String taxon = cursor.getString(cursor
 					.getColumnIndex(SearchManager.SUGGEST_COLUMN_TEXT_1));
 			final String directoryName = cursor.getString(cursor
-					.getColumnIndex(IOrnidroidDAO.DIRECTORY_NAME_COLUMN));
+					.getColumnIndex(IDAO.DIRECTORY_NAME_COLUMN));
 			final String scientificName = cursor.getString(cursor
 					.getColumnIndex(SearchManager.SUGGEST_COLUMN_TEXT_2));
 
@@ -246,7 +246,7 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 			query.append(LANG_COLUMN_NAME);
 			query.append(Constants.COMMA_STRING);
 			query.append(TAXON);
-			query.append(" from taxonomy where bird_fk=");
+			query.append(" from taxonomy where fleur_fk=");
 			query.append(id);
 			query.append(ORDER_BY);
 			query.append(LANG_COLUMN_NAME);
@@ -534,42 +534,42 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 			final SQLiteDatabase db = this.dataBaseOpenHelper
 					.getReadableDatabase();
 			final StringBuilder query = new StringBuilder();
-			query.append("select bird.id as ");
+			query.append("select fleur.id as ");
 			query.append(BaseColumns._ID);
 			query.append(",scientific_name as ");
 			query.append(SearchManager.SUGGEST_COLUMN_TEXT_2);
 			query.append(",taxon as ");
 			query.append(SearchManager.SUGGEST_COLUMN_TEXT_1);
-			query.append(", bird.id as ");
+			query.append(", fleur.id as ");
 			query.append(SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID);
 			query.append(Constants.COMMA_STRING);
 			query.append(DIRECTORY_NAME_COLUMN);
 			if (fullBirdInfo) {
-				query.append(Constants.COMMA_STRING);
-				query.append(DESCRIPTION_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append(DISTRIBUTION_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append("scientific_order.name as ");
-				query.append(SCIENTIFIC_ORDER_NAME_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append("scientific_family.name as ");
-				query.append(SCIENTIFIC_FAMILY_NAME_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append("h1.name as ");
-				query.append(HABITAT_1_NAME_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append("h2.name as ");
-				query.append(HABITAT_2_NAME_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append(SIZE_VALUE_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append("category.name as ");
-				query.append(CATEGORY_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append(IOrnidroidDAO.SCIENTIFIC_NAME_2_COLUMN);
-				query.append(Constants.COMMA_STRING);
-				query.append(IOrnidroidDAO.OISEAUX_NET_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append(DESCRIPTION_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append(DISTRIBUTION_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append("scientific_order.name as ");
+				// query.append(SCIENTIFIC_ORDER_NAME_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append("scientific_family.name as ");
+				// query.append(SCIENTIFIC_FAMILY_NAME_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append("h1.name as ");
+				// query.append(HABITAT_1_NAME_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append("h2.name as ");
+				// query.append(HABITAT_2_NAME_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append(SIZE_VALUE_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append("category.name as ");
+				// query.append(CATEGORY_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append(IOrnidroidDAO.SCIENTIFIC_NAME_2_COLUMN);
+				// query.append(Constants.COMMA_STRING);
+				// query.append(IOrnidroidDAO.OISEAUX_NET_COLUMN);
 			}
 			query.append(FROM);
 			query.append(FTS_VIRTUAL_TABLE_TAXONOMY);
@@ -577,27 +577,7 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 			query.append(BIRD_TABLE);
 			query.append(sqlDynamicFragments.getFromClause());
 			if (fullBirdInfo) {
-				query.append(LEFT_OUTER_JOIN);
-				query.append(DESCRIPTION_TABLE);
-				query.append(" on bird.id=");
-				query.append(DESCRIPTION_TABLE);
-				query.append(".bird_fk and ");
-				query.append(DESCRIPTION_TABLE);
-				query.append(".lang=\"");
-				query.append(I18nHelper.getLang().getCode());
-				query.append("\"");
-				// join on scientific order table
-				query.append(LEFT_OUTER_JOIN);
-				query.append(SCIENTIFIC_ORDER_TABLE);
-				query.append(" on ");
-				query.append(BIRD_TABLE);
-				query.append(".scientific_order_fk=");
-				query.append(SCIENTIFIC_ORDER_TABLE);
-				query.append(".id and ");
-				query.append(SCIENTIFIC_ORDER_TABLE);
-				query.append(".lang=\"");
-				query.append(I18nHelper.getLang().getCode());
-				query.append("\"");
+
 				// join on scientific family table
 				query.append(LEFT_OUTER_JOIN);
 				query.append(SCIENTIFIC_FAMILY_TABLE);
@@ -610,37 +590,10 @@ public class OrnidroidDAOImpl implements IOrnidroidDAO {
 				query.append(".lang=\"");
 				query.append(I18nHelper.getLang().getCode());
 				query.append("\"");
-				// join on habitat table
-				query.append(LEFT_OUTER_JOIN);
-				query.append(HABITAT_TABLE_NAME);
-				query.append(" h1 on ");
-				query.append(BIRD_TABLE);
-				query.append(".habitat1_fk=h1.id and h1.lang=\"");
-				query.append(I18nHelper.getLang().getCode());
-				query.append("\"");
-				// habitat 2
-				query.append(LEFT_OUTER_JOIN);
-				query.append(HABITAT_TABLE_NAME);
-				query.append(" h2 on ");
-				query.append(BIRD_TABLE);
-				query.append(".habitat2_fk=h2.id and h2.lang=\"");
-				query.append(I18nHelper.getLang().getCode());
-				query.append("\"");
-				// join on category table
-				query.append(LEFT_OUTER_JOIN);
-				query.append(CATEGORY_TABLE_NAME);
-				query.append(" on ");
-				query.append(BIRD_TABLE);
-				query.append(".category_fk=");
-				query.append(CATEGORY_TABLE_NAME);
-				query.append(".id and ");
-				query.append(CATEGORY_TABLE_NAME);
-				query.append(".lang=\"");
-				query.append(I18nHelper.getLang().getCode());
-				query.append("\"");
+
 			}
 			query.append(sqlDynamicFragments.getWhereClause());
-			query.append(" and bird.id=taxonomy.bird_fk");
+			query.append(" and fleur.id=taxonomy.fleur_fk");
 			query.append(handleSetOfLanguagesinSqlQuery(Constants
 					.getOrnidroidSearchLanguages()));
 			// query.append(" and taxonomy.lang=\"");

@@ -15,9 +15,9 @@ import fr.ornidroid.bo.BirdFactoryImpl;
 import fr.ornidroid.bo.MultiCriteriaSearchFormBean;
 import fr.ornidroid.bo.SimpleBird;
 import fr.ornidroid.bo.Taxon;
-import fr.ornidroid.data.IOrnidroidDAO;
-import fr.ornidroid.data.OrnidroidDAOImpl;
-import fr.ornidroid.data.OrnidroidDatabaseOpenHelper;
+import fr.ornidroid.data.IDAO;
+import fr.ornidroid.data.DAOImpl;
+import fr.ornidroid.data.DatabaseOpenHelper;
 import fr.ornidroid.helper.BasicConstants;
 import fr.ornidroid.helper.Constants;
 import fr.ornidroid.helper.I18nHelper;
@@ -29,7 +29,7 @@ import fr.ornidroid.ui.picture.PictureHelper;
 /**
  * The Class OrnidroidServiceImpl.
  */
-public class OrnidroidServiceImpl implements IOrnidroidService {
+public class ServiceImpl implements IService {
 
 	/**
 	 * The Class SelectFieldsValue : dto object to embed the map and the list of
@@ -92,7 +92,7 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 	}
 
 	/** The service instance. */
-	private static IOrnidroidService serviceInstance;
+	private static IService serviceInstance;
 
 	/**
 	 * Gets the single instance of OrnidroidServiceImpl.
@@ -101,9 +101,9 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 	 *            the activity
 	 * @return single instance of OrnidroidServiceImpl
 	 */
-	protected static IOrnidroidService getInstance(final Activity pActivity) {
+	protected static IService getInstance(final Activity pActivity) {
 		if (null == serviceInstance) {
-			serviceInstance = new OrnidroidServiceImpl(pActivity);
+			serviceInstance = new ServiceImpl(pActivity);
 		}
 		return serviceInstance;
 	}
@@ -138,7 +138,7 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 	private Bird currentBird;
 
 	/** The data base open helper. */
-	private final OrnidroidDatabaseOpenHelper dataBaseOpenHelper;
+	private final DatabaseOpenHelper dataBaseOpenHelper;
 
 	/** The habitats list. */
 	private List<String> habitatsList;
@@ -147,7 +147,7 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 	private Map<String, Integer> habitatsMap;
 
 	/** The ornidroid dao. */
-	private final IOrnidroidDAO ornidroidDAO;
+	private final IDAO ornidroidDAO;
 
 	/** The remarkable signs list. */
 	private List<String> remarkableSignsList;
@@ -170,10 +170,10 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 	 * @param pActivity
 	 *            the activity
 	 */
-	private OrnidroidServiceImpl(final Activity pActivity) {
+	private ServiceImpl(final Activity pActivity) {
 		this.activity = pActivity;
-		this.dataBaseOpenHelper = new OrnidroidDatabaseOpenHelper(pActivity);
-		this.ornidroidDAO = OrnidroidDAOImpl
+		this.dataBaseOpenHelper = new DatabaseOpenHelper(pActivity);
+		this.ornidroidDAO = DAOImpl
 				.getInstance(this.dataBaseOpenHelper);
 	}
 
@@ -373,9 +373,9 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 			for (int i = 0; i < nbResults; i++) {
 				cursor.moveToPosition(i);
 				final int langIndex = cursor
-						.getColumnIndexOrThrow(IOrnidroidDAO.LANG_COLUMN_NAME);
+						.getColumnIndexOrThrow(IDAO.LANG_COLUMN_NAME);
 				final int taxonIndex = cursor
-						.getColumnIndexOrThrow(IOrnidroidDAO.TAXON);
+						.getColumnIndexOrThrow(IDAO.TAXON);
 				final Taxon taxon = new Taxon(cursor.getString(langIndex),
 						cursor.getString(taxonIndex));
 				result.add(taxon);
@@ -517,9 +517,9 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 	 */
 	private String getHabitatFromCursor(final Cursor cursor) {
 		final int habitat1Index = cursor
-				.getColumnIndex(IOrnidroidDAO.HABITAT_1_NAME_COLUMN);
+				.getColumnIndex(IDAO.HABITAT_1_NAME_COLUMN);
 		final int habitat2Index = cursor
-				.getColumnIndex(IOrnidroidDAO.HABITAT_2_NAME_COLUMN);
+				.getColumnIndex(IDAO.HABITAT_2_NAME_COLUMN);
 		final StringBuilder habitat = new StringBuilder(
 				(habitat1Index == -1)
 						|| (cursor.getString(habitat1Index) == null) ? BasicConstants.EMPTY_STRING
@@ -548,31 +548,28 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 					.getColumnIndexOrThrow(SearchManager.SUGGEST_COLUMN_TEXT_1);
 			final int scientificNameIndex = cursor
 					.getColumnIndexOrThrow(SearchManager.SUGGEST_COLUMN_TEXT_2);
-			final int scientificName2Index = cursor
-					.getColumnIndexOrThrow(IOrnidroidDAO.SCIENTIFIC_NAME_2_COLUMN);
+
 			final int directoryNameIndex = cursor
-					.getColumnIndexOrThrow(IOrnidroidDAO.DIRECTORY_NAME_COLUMN);
+					.getColumnIndexOrThrow(IDAO.DIRECTORY_NAME_COLUMN);
 			final int descriptionIndex = cursor
-					.getColumnIndex(IOrnidroidDAO.DESCRIPTION_COLUMN);
+					.getColumnIndex(IDAO.DESCRIPTION_COLUMN);
 			final int distributionIndex = cursor
-					.getColumnIndex(IOrnidroidDAO.DISTRIBUTION_COLUMN);
-			final int scientificOrderIndex = cursor
-					.getColumnIndex(IOrnidroidDAO.SCIENTIFIC_ORDER_NAME_COLUMN);
+					.getColumnIndex(IDAO.DISTRIBUTION_COLUMN);
+
 			final int scientificFamilyIndex = cursor
-					.getColumnIndex(IOrnidroidDAO.SCIENTIFIC_FAMILY_NAME_COLUMN);
+					.getColumnIndex(IDAO.SCIENTIFIC_FAMILY_NAME_COLUMN);
 			final int categoryIndex = cursor
-					.getColumnIndex(IOrnidroidDAO.CATEGORY_COLUMN);
+					.getColumnIndex(IDAO.CATEGORY_COLUMN);
 			final int sizeIndex = cursor
-					.getColumnIndex(IOrnidroidDAO.SIZE_VALUE_COLUMN);
+					.getColumnIndex(IDAO.SIZE_VALUE_COLUMN);
 			final int oiseauxNetIndex = cursor
-					.getColumnIndex(IOrnidroidDAO.OISEAUX_NET_COLUMN);
+					.getColumnIndex(IDAO.OISEAUX_NET_COLUMN);
 
 			final String description = (descriptionIndex == -1) ? BasicConstants.EMPTY_STRING
 					: cursor.getString(descriptionIndex);
 			final String distribution = (distributionIndex == -1) ? BasicConstants.EMPTY_STRING
 					: cursor.getString(distributionIndex);
-			final String scientificOrder = (scientificOrderIndex == -1) ? BasicConstants.EMPTY_STRING
-					: cursor.getString(scientificOrderIndex);
+
 			final String scientificFamily = (scientificFamilyIndex == -1) ? BasicConstants.EMPTY_STRING
 					: cursor.getString(scientificFamilyIndex);
 			final String size = (sizeIndex == -1) ? BasicConstants.EMPTY_STRING
@@ -587,9 +584,9 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 					.createBird(cursor.getInt(idIndex),
 							cursor.getString(taxonIndex),
 							cursor.getString(scientificNameIndex),
-							cursor.getString(scientificName2Index),
+
 							cursor.getString(directoryNameIndex), description,
-							distribution, scientificOrder, scientificFamily,
+							distribution, scientificFamily,
 							getHabitatFromCursor(cursor), size, category,
 							oiseauxNetUrl);
 			// when a new bird arrives, clear the hashmap of stored bitmaps
@@ -628,9 +625,9 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 			for (int i = 0; i < nbResults; i++) {
 				cursor.moveToPosition(i);
 				final int idIndex = cursor
-						.getColumnIndexOrThrow(IOrnidroidDAO.ID);
+						.getColumnIndexOrThrow(IDAO.ID);
 				final int nameIndex = cursor
-						.getColumnIndexOrThrow(IOrnidroidDAO.NAME_COLUMN_NAME);
+						.getColumnIndexOrThrow(IDAO.NAME_COLUMN_NAME);
 
 				if (intId) {
 					mapNameId.put(cursor.getString(nameIndex),
@@ -663,7 +660,7 @@ public class OrnidroidServiceImpl implements IOrnidroidService {
 			for (int i = 0; i < nbResults; i++) {
 				cursor.moveToPosition(i);
 				final int countryNameIndex = cursor
-						.getColumnIndexOrThrow(IOrnidroidDAO.NAME_COLUMN_NAME);
+						.getColumnIndexOrThrow(IDAO.NAME_COLUMN_NAME);
 				final String country = cursor.getString(countryNameIndex);
 				result.add(country);
 			}
