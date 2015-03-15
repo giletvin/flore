@@ -126,7 +126,7 @@ public class SearchResultsAdapter extends BaseAdapter {
 		InputStream ins;
 		Bitmap bMap;
 		try {
-			ins = assetManager.open(BasicConstants.BIRD_ICONS_DIRECTORY
+			ins = assetManager.open(BasicConstants.SUBJECT_ICONS_DIRECTORY
 					+ File.separator + bird.getDirectoryName()
 					+ MediaFileType.PICTURE_EXTENSION);
 			bMap = BitmapFactory.decodeStream(ins);

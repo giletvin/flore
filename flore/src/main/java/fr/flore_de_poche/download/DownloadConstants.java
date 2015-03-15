@@ -15,13 +15,11 @@ import fr.flore_de_poche.helper.StringHelper;
 public class DownloadConstants {
 
 	/** The Constant DEFAULT_DOWNLOAD_SITE. */
-	private static final String DEFAULT_DOWNLOAD_SITE = "http://ornidroid.free.fr/ornidroid";
+	private static final String DEFAULT_DOWNLOAD_SITE = "http://ornidroid.free.fr/flore";
 
 	/** The Constant DOWNLOAD_SITE_PROPERTY_KEY. */
 	private static final String DOWNLOAD_SITE_PROPERTY_KEY = "ornidroid_download_site";
 
-	/** The Constant JUNIT_DOWNLOAD_SITE. */
-	private static final String JUNIT_DOWNLOAD_SITE = "http://ornidroid.free.fr/tests";
 	/** The Constant ORNIDROID_WEB_SITE_ROOT. */
 	private static String ORNIDROID_WEB_SITE_ROOT;
 
@@ -70,8 +68,7 @@ public class DownloadConstants {
 				ORNIDROID_WEB_SITE_ROOT = properties.getProperty(
 						DOWNLOAD_SITE_PROPERTY_KEY, DEFAULT_DOWNLOAD_SITE);
 			} catch (final Exception e) {
-				// only for junit : exception android stub
-				ORNIDROID_WEB_SITE_ROOT = JUNIT_DOWNLOAD_SITE;
+
 			} finally {
 				if (StringHelper.isBlank(ORNIDROID_WEB_SITE_ROOT)) {
 					ORNIDROID_WEB_SITE_ROOT = DEFAULT_DOWNLOAD_SITE;

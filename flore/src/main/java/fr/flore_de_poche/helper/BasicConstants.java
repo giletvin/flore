@@ -14,7 +14,7 @@ public class BasicConstants {
 	/** The Constant BIRD_PARAMETER_NAME. */
 	public static final String BIRD_DIRECTORY_PARAMETER_NAME = "BIRD_DIRECTORY";
 	/** The Constant BIRD_ICONS_DIRECTORY. */
-	public static final String BIRD_ICONS_DIRECTORY = "bird_icons";
+	public static final String SUBJECT_ICONS_DIRECTORY = "subject_icons";
 	/** The Constant BIRD_ID_PARAMETER_NAME. */
 	public static final String BIRD_ID_PARAMETER_NAME = "BIRD_ID";
 
