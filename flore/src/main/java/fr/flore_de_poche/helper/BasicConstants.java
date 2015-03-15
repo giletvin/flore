@@ -51,10 +51,12 @@ public class BasicConstants {
 	/** The Constant IMAGES_DIRECTORY. */
 	public static final String IMAGES_DIRECTORY = "images";
 
+	public static final String APPLICATION_DIRECTORY = "flore";
+
 	/** The Constant WIKIPEDIA_DIRECTORY. */
 	public static final String WIKIPEDIA_DIRECTORY = "wikipedia";
 	/** The Constant LOG_TAG. */
-	public static final String LOG_TAG = "Ornidroid";
+	public static final String LOG_TAG = "Flore";
 
 	/** The Constant MP3_PATH. */
 	public static final String MP3_PATH = "MP3_PATH";

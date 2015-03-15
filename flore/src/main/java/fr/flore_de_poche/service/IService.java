@@ -156,26 +156,6 @@ public interface IService {
 	List<Taxon> getNames(int id);
 
 	/**
-	 * Gets the countries where the bird can be seen
-	 * 
-	 * @param id
-	 *            : bird id
-	 * @return List of countries (String)
-	 * @deprecated
-	 */
-	List<String> getGeographicDistribution(int id);
-
-	/**
-	 * Gets the oiseaux net link.
-	 * 
-	 * @param currentBird
-	 *            the current bird
-	 * @return the oiseaux net link
-	 * @deprecated
-	 */
-	String getOiseauxNetLink(Subject currentBird);
-
-	/**
 	 * Gets the remarkable sign id.
 	 * 
 	 * @param remarkableSignName
@@ -212,13 +192,13 @@ public interface IService {
 	List<String> getSizes();
 
 	/**
-	 * Gets the wikipedia link of the bird, using the gui language en, fr or de
-	 * .wikipedia.org
+	 * Gets the wikipedia link of the subject, using the gui language en, fr or
+	 * de .wikipedia.org
 	 * 
 	 * @param currentBird
 	 *            the current bird
 	 * @return the wikipedia link
-	 * @deprecated
+	 * 
 	 */
 	String getWikipediaLink(Subject currentBird);
 
@@ -236,18 +216,6 @@ public interface IService {
 	 *            the subjectId id
 	 */
 	void loadSubjectDetails(Integer subjectId);
-
-	/**
-	 * Gets the xeno canto map url. Something like :
-	 * http://www.xeno-canto.org/species/Grus-grus
-	 * 
-	 * @param currentBird
-	 *            the current bird
-	 * @return the xeno canto map url
-	 * 
-	 * @deprecated
-	 */
-	String getXenoCantoMapUrl(Subject currentBird);
 
 	/**
 	 * Gets the query result.

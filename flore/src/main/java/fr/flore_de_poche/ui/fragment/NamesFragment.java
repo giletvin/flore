@@ -15,8 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import fr.flore.R;
 import fr.flore_de_poche.bo.Taxon;
-import fr.flore_de_poche.helper.BasicConstants;
-import fr.flore_de_poche.helper.StringHelper;
 import fr.flore_de_poche.service.IService;
 import fr.flore_de_poche.service.ServiceFactory;
 
@@ -56,16 +54,9 @@ public class NamesFragment extends ListFragment {
 	void afterViews() {
 		if (null != mOrnidroidService.getCurrentSubject()) {
 			final StringBuilder sb = new StringBuilder();
-			final String scientificName2 = StringHelper
-					.isBlank(mOrnidroidService.getCurrentSubject()
-							.getScientificName2()) ? BasicConstants.EMPTY_STRING
-					: " - "
-							+ mOrnidroidService.getCurrentSubject()
-									.getScientificName2();
-			sb.append(getActivity().getText(R.string.scientific_name))
-					.append(BasicConstants.COLUMN_STRING)
-					.append(mOrnidroidService.getCurrentSubject()
-							.getScientificName()).append(scientificName2);
+
+			sb.append(getActivity().getText(R.string.scientific_name));
+
 			this.scientificName.setText(sb.toString());
 			printBirdNames();
 		}

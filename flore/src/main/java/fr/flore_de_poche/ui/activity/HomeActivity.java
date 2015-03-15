@@ -46,10 +46,10 @@ public class HomeActivity extends AbstractActivity {
 	TextView multiCriteriaSearchLink;
 
 	/** The ornidroid io service. */
-	private final IIOService ornidroidIOService;
+	private final IIOService iOService;
 
 	/** The ornidroid service. */
-	private final IService ornidroidService;
+	private final IService service;
 
 	/** The preferences link. */
 	@ViewById(R.id.menu_preferences)
@@ -64,8 +64,8 @@ public class HomeActivity extends AbstractActivity {
 	 */
 	public HomeActivity() {
 		super();
-		this.ornidroidIOService = new IOServiceImpl();
-		this.ornidroidService = ServiceFactory.getService(this);
+		this.iOService = new IOServiceImpl();
+		this.service = ServiceFactory.getService(this);
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class HomeActivity extends AbstractActivity {
 	protected void onStart() {
 		super.onStart();
 		checkOrnidroidHomeDirectory();
-		String releaseNotes = ornidroidService.getReleaseNotes();
+		String releaseNotes = service.getReleaseNotes();
 		if (StringHelper.isNotBlank(releaseNotes)) {
 			Dialog dialog = new AlertDialog.Builder(this)
 					.setIcon(android.R.drawable.ic_dialog_alert)
@@ -141,12 +141,14 @@ public class HomeActivity extends AbstractActivity {
 	 */
 	private void checkOrnidroidHomeDirectory() {
 		try {
-			this.ornidroidIOService.checkOrnidroidHome(myPrefs.ornidroidHome()
+			this.iOService.checkOrnidroidHome(myPrefs.ornidroidHome()
 					.getOr(Environment.getExternalStorageDirectory()
-							.getAbsolutePath() + File.separator + "ornidroid"));
+							.getAbsolutePath()
+							+ File.separator
+							+ BasicConstants.APPLICATION_DIRECTORY));
 
 			// check the ornidroid.sqlite file.
-			this.ornidroidService.createDbIfNecessary();
+			this.service.createDbIfNecessary();
 
 		} catch (final ApplicationException e) {
 			StringBuffer sbuf = new StringBuffer();

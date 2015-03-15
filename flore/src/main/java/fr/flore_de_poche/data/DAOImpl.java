@@ -170,7 +170,7 @@ public class DAOImpl implements IDAO {
 	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getBird(java.lang.String)
 	 */
 	public Cursor getSubject(final String rowId) {
-		final String whereClause = WHERE + "bird.id = ?";
+		final String whereClause = WHERE + SUBJECT_TABLE + ".id = ?";
 		final String[] selectionArgs = new String[] { rowId };
 
 		return query(new SqlDynamicFragments(whereClause,
@@ -564,8 +564,6 @@ public class DAOImpl implements IDAO {
 				// query.append(Constants.COMMA_STRING);
 				// query.append("category.name as ");
 				// query.append(CATEGORY_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append(IOrnidroidDAO.SCIENTIFIC_NAME_2_COLUMN);
 				// query.append(Constants.COMMA_STRING);
 				// query.append(IOrnidroidDAO.OISEAUX_NET_COLUMN);
 			}

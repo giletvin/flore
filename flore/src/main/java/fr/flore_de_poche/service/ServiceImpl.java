@@ -22,7 +22,6 @@ import fr.flore_de_poche.helper.ApplicationException;
 import fr.flore_de_poche.helper.BasicConstants;
 import fr.flore_de_poche.helper.Constants;
 import fr.flore_de_poche.helper.I18nHelper;
-import fr.flore_de_poche.helper.StringHelper;
 import fr.flore_de_poche.helper.SupportedLanguage;
 import fr.flore_de_poche.ui.picture.PictureHelper;
 
@@ -392,29 +391,6 @@ public class ServiceImpl implements IService {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getOiseauxNetLink(fr.ornidroid
-	 * .bo.Bird)
-	 */
-	public String getOiseauxNetLink(final Subject currentBird) {
-		if (StringHelper.isNotBlank(currentBird.getOiseauxNetUrl())) {
-			final StringBuffer sbuf = new StringBuffer();
-			sbuf.append("<a href=\"");
-			sbuf.append(currentBird.getOiseauxNetUrl());
-			sbuf.append("\">");
-			sbuf.append(Constants.getCONTEXT().getResources()
-					.getString(R.string.oiseaux_net));
-			sbuf.append(currentBird.getTaxon());
-			sbuf.append("</a>");
-			return sbuf.toString();
-		} else {
-			return BasicConstants.EMPTY_STRING;
-		}
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
 	 * fr.flore_de_poche.service.IOrnidroidService#getRemarkableSignId(java.
 	 * lang. String)
 	 */
@@ -474,17 +450,17 @@ public class ServiceImpl implements IService {
 	 * @see fr.flore_de_poche.service.IOrnidroidService#getWikipediaLink(fr.
 	 * flore_de_poche. bo.Bird)
 	 */
-	public String getWikipediaLink(final Subject currentBird) {
+	public String getWikipediaLink(final Subject currentSubject) {
 		final SupportedLanguage lang = I18nHelper.getLang();
 		final StringBuffer sbuf = new StringBuffer();
 		sbuf.append("<a href=\"http://");
 		sbuf.append(lang.getCode());
 		sbuf.append(".wikipedia.org/wiki/");
-		sbuf.append(currentBird.getScientificName().replaceAll(" ", "%20"));
+		sbuf.append(currentSubject.getScientificName().replaceAll(" ", "%20"));
 		sbuf.append("\">");
 		sbuf.append(Constants.getCONTEXT().getResources()
 				.getString(R.string.wikipedia));
-		sbuf.append(currentBird.getTaxon());
+		sbuf.append(currentSubject.getTaxon());
 		sbuf.append("</a>");
 		return sbuf.toString();
 	}
@@ -501,39 +477,15 @@ public class ServiceImpl implements IService {
 	/**
 	 * Load bird details.
 	 * 
-	 * @param birdId
+	 * @param subjectId
 	 *            the bird id
 	 */
-	public void loadSubjectDetails(final Integer birdId) {
-		final Cursor cursor = this.ornidroidDAO.getSubject(birdId.toString());
+	public void loadSubjectDetails(final Integer subjectId) {
+		final Cursor cursor = this.ornidroidDAO
+				.getSubject(subjectId.toString());
 
 		loadDetailsFromCursor(cursor);
 
-	}
-
-	/**
-	 * Gets the habitat from cursor. Concatenates habitat 1 and habitat 2
-	 * 
-	 * @param cursor
-	 *            the cursor
-	 * @return the habitat from cursor
-	 */
-	private String getHabitatFromCursor(final Cursor cursor) {
-		final int habitat1Index = cursor
-				.getColumnIndex(IDAO.HABITAT_1_NAME_COLUMN);
-		final int habitat2Index = cursor
-				.getColumnIndex(IDAO.HABITAT_2_NAME_COLUMN);
-		final StringBuilder habitat = new StringBuilder(
-				(habitat1Index == -1)
-						|| (cursor.getString(habitat1Index) == null) ? BasicConstants.EMPTY_STRING
-						: cursor.getString(habitat1Index));
-		final String habitat2 = (habitat2Index == -1) ? BasicConstants.EMPTY_STRING
-				: cursor.getString(habitat2Index);
-		if (StringHelper.isNotBlank(habitat2)) {
-			habitat.append(BasicConstants.SLASH_STRING);
-			habitat.append(habitat2);
-		}
-		return habitat.toString();
 	}
 
 	/**
@@ -554,43 +506,13 @@ public class ServiceImpl implements IService {
 
 			final int directoryNameIndex = cursor
 					.getColumnIndexOrThrow(IDAO.DIRECTORY_NAME_COLUMN);
-			final int descriptionIndex = cursor
-					.getColumnIndex(IDAO.DESCRIPTION_COLUMN);
-			final int distributionIndex = cursor
-					.getColumnIndex(IDAO.DISTRIBUTION_COLUMN);
-
-			final int scientificFamilyIndex = cursor
-					.getColumnIndex(IDAO.SCIENTIFIC_FAMILY_NAME_COLUMN);
-			final int categoryIndex = cursor
-					.getColumnIndex(IDAO.CATEGORY_COLUMN);
-			final int sizeIndex = cursor.getColumnIndex(IDAO.SIZE_VALUE_COLUMN);
-			final int oiseauxNetIndex = cursor
-					.getColumnIndex(IDAO.OISEAUX_NET_COLUMN);
-
-			final String description = (descriptionIndex == -1) ? BasicConstants.EMPTY_STRING
-					: cursor.getString(descriptionIndex);
-			final String distribution = (distributionIndex == -1) ? BasicConstants.EMPTY_STRING
-					: cursor.getString(distributionIndex);
-
-			final String scientificFamily = (scientificFamilyIndex == -1) ? BasicConstants.EMPTY_STRING
-					: cursor.getString(scientificFamilyIndex);
-			final String size = (sizeIndex == -1) ? BasicConstants.EMPTY_STRING
-					: cursor.getString(sizeIndex);
-			final String category = (categoryIndex == -1) ? BasicConstants.EMPTY_STRING
-					: cursor.getString(categoryIndex);
-			final String oiseauxNetUrl = (oiseauxNetIndex == -1) ? BasicConstants.EMPTY_STRING
-					: cursor.getString(oiseauxNetIndex);
 
 			final SubjectFactoryImpl subjectFactory = new SubjectFactoryImpl();
-			this.currentSubject = subjectFactory
-					.createSubject(cursor.getInt(idIndex),
-							cursor.getString(taxonIndex),
-							cursor.getString(scientificNameIndex),
+			this.currentSubject = subjectFactory.createSubject(
+					cursor.getInt(idIndex), cursor.getString(taxonIndex),
+					cursor.getString(scientificNameIndex),
 
-							cursor.getString(directoryNameIndex), description,
-							distribution, scientificFamily,
-							getHabitatFromCursor(cursor), size, category,
-							oiseauxNetUrl);
+					cursor.getString(directoryNameIndex));
 			// when a new subject arrives, clear the hashmap of stored bitmaps
 			PictureHelper.resetLoadedBitmaps();
 			cursor.close();
@@ -645,51 +567,6 @@ public class ServiceImpl implements IService {
 		final SelectFieldsValue sfv = new SelectFieldsValue(mapNameId,
 				mapNameCode, fieldsValues);
 		return sfv;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getGeographicDistribution
-	 * (int)
-	 */
-	public List<String> getGeographicDistribution(int id) {
-		final Cursor cursor = this.ornidroidDAO.getGeographicDistribution(id);
-		final List<String> result = new ArrayList<String>();
-		if (cursor != null) {
-			final int nbResults = cursor.getCount();
-			for (int i = 0; i < nbResults; i++) {
-				cursor.moveToPosition(i);
-				final int countryNameIndex = cursor
-						.getColumnIndexOrThrow(IDAO.NAME_COLUMN_NAME);
-				final String country = cursor.getString(countryNameIndex);
-				result.add(country);
-			}
-			cursor.close();
-		}
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getXenoCantoMapUrl(fr.ornidroid
-	 * .bo.Bird)
-	 */
-	public String getXenoCantoMapUrl(Subject currentBird) {
-
-		final StringBuffer sbuf = new StringBuffer();
-		sbuf.append("<a href=\"http://www.xeno-canto.org/species/");
-
-		sbuf.append(currentBird.getScientificName().replaceAll(
-				BasicConstants.BLANK_STRING, BasicConstants.DASH_STRING));
-		sbuf.append("\">");
-		sbuf.append(Constants.getCONTEXT().getResources()
-				.getString(R.string.xeno_canto_map));
-		sbuf.append("</a>");
-		return sbuf.toString();
 	}
 
 	/*
