@@ -24,7 +24,7 @@
         android:icon="@drawable/ic_ornidroid"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity android:name="fr.ornidroid.ui.activity.HomeActivity_">
+        <activity android:name="fr.flore_de_poche.ui.activity.HomeActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,36 +33,36 @@
         </activity>
 
         <!-- The default activity of the app; displays search results. -->
-        <activity android:label="@string/app_name" android:name="fr.ornidroid.ui.activity.MainActivity_" />
+        <activity android:label="@string/app_name" android:name="fr.flore_de_poche.ui.activity.MainActivity_" />
 
 
         <!-- Preferences activity -->
         <activity
-            android:name="fr.ornidroid.ui.activity.ApplicationPreferenceActivity_"
+            android:name="fr.flore_de_poche.ui.activity.ApplicationPreferenceActivity_"
             android:label="@string/preferences"
             android:noHistory="true" />
         <!-- about activity -->
         <activity
-            android:name="fr.ornidroid.ui.activity.AboutActivity_"
+            android:name="fr.flore_de_poche.ui.activity.AboutActivity_"
             android:label="@string/about" />
         <activity
-            android:name="fr.ornidroid.ui.activity.HelpActivity_"
+            android:name="fr.flore_de_poche.ui.activity.HelpActivity_"
             android:label="@string/help" />
         <activity
-            android:name="fr.ornidroid.ui.activity.SubjectInfoActivity_"
+            android:name="fr.flore_de_poche.ui.activity.SubjectInfoActivity_"
             android:label="@string/bird_info" />
 
         <!-- full size image activity -->
         <activity
-            android:name="fr.ornidroid.ui.activity.ScrollableImageActivity_"
+            android:name="fr.flore_de_poche.ui.activity.ScrollableImageActivity_"
             android:label="@string/bird_image_big"
             android:noHistory="true" />
       
         <activity
-            android:name="fr.ornidroid.ui.activity.MultiCriteriaSearchActivity_"
+            android:name="fr.flore_de_poche.ui.activity.MultiCriteriaSearchActivity_"
             android:label="@string/menu_search_multi" />
         <activity
-            android:name="fr.ornidroid.ui.activity.AddCustomMediaActivity_"
+            android:name="fr.flore_de_poche.ui.activity.AddCustomMediaActivity_"
             android:label="@string/add_custom_media_title" />
     </application>
 

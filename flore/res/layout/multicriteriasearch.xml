@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_category_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                 custom:spinnerPrompt="@string/search_category_choose"
                 custom:text="@string/search_category" />
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_country_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 custom:spinnerPrompt="@string/search_country_choose"
                 custom:text="@string/search_country" />
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_habitat_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
                 custom:spinnerPrompt="@string/search_habitat_choose"
                 custom:text="@string/search_habitat" />
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_size_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                 custom:spinnerPrompt="@string/search_size_choose"
                 custom:text="@string/search_size" />
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_feather_colour_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                 custom:spinnerPrompt="@string/search_colour_choose"
                 custom:text="@string/search_feather_colour" />
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_beak_colour_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                 custom:spinnerPrompt="@string/search_colour_choose"
                 custom:text="@string/search_beak_colour" />
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_paw_colour_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 custom:spinnerPrompt="@string/search_colour_choose"
                 custom:text="@string/search_paw_colour" />
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_beak_form_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                 custom:spinnerPrompt="@string/search_beak_form_choose"
                 custom:text="@string/search_beak_form" />
 
-            <fr.ornidroid.ui.multicriteriasearch.MultiCriteriaSelectField
+            <fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField
                 android:id="@+id/search_remarkable_sign_field"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
