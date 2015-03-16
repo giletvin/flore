@@ -111,9 +111,9 @@ public class ServiceImpl implements IService {
 	private final Activity activity;
 
 	/** The beak forms list. */
-	private List<String> beakFormsList;
+	private List<String> leafTypesList;
 	/** The beak forms maps. */
-	private Map<String, Integer> beakFormsMaps;
+	private Map<String, Integer> leafTypesMap;
 
 	/** The categories list. */
 	private List<String> scientificFamiliesList;
@@ -139,25 +139,26 @@ public class ServiceImpl implements IService {
 	private final DatabaseOpenHelper dataBaseOpenHelper;
 
 	/** The habitats list. */
-	private List<String> habitatsList;
+	private List<String> aspectsList;
 
 	/** The habitats map. */
-	private Map<String, Integer> habitatsMap;
+	private Map<String, Integer> aspectsMap;
 
 	/** The ornidroid dao. */
 	private final IDAO ornidroidDAO;
 
 	/** The remarkable signs list. */
-	private List<String> remarkableSignsList;
+	private List<String> leafDispositions;
 
 	/** The remarkable signs map. */
-	private Map<String, Integer> remarkableSignsMap;
+	private Map<String, Integer> leafDispositionsMap;
 
-	/** The sizes list. */
-	private List<String> sizesList;
-
-	/** The sizes map. */
-	private Map<String, Integer> sizesMap;
+	private List<String> nbPetalesList;
+	private Map<String, Integer> nbPetalesMap;
+	private List<String> pilositeTigeList;
+	private Map<String, Integer> pilositeTigeMap;
+	private List<String> pilositeFeuilleList;
+	private Map<String, Integer> pilositeFeuilleMap;
 
 	/** The query result. */
 	private List<SimpleSubject> queryResult;
@@ -183,34 +184,22 @@ public class ServiceImpl implements IService {
 		this.dataBaseOpenHelper.createDbIfNecessary();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getBeakFormId(java.lang.String
-	 * )
-	 */
-	public Integer getBeakFormId(final String beakFormName) {
-		return this.beakFormsMaps != null ? this.beakFormsMaps
-				.get(beakFormName) : 0;
+	public Integer getLeafTypeId(final String leafTypeName) {
+		return this.leafTypesMap != null ? this.leafTypesMap.get(leafTypeName)
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidService#getBeakForms()
-	 */
-	public List<String> getBeakForms() {
-		if (this.beakFormsMaps == null) {
+	public List<String> getLeafTypes() {
+		if (this.leafTypesMap == null) {
 			// Find the names of the beak forms in the selected language
-			final Cursor cursorQueryHabitats = this.ornidroidDAO.getBeakForms();
+			final Cursor cursorQueryHabitats = this.ornidroidDAO.getLeafTypes();
 			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
 					cursorQueryHabitats, true);
-			this.beakFormsMaps = sfv.getMapNameId();
-			this.beakFormsList = sfv.getFieldsValues();
+			this.leafTypesMap = sfv.getMapNameId();
+			this.leafTypesList = sfv.getFieldsValues();
 
 		}
-		return this.beakFormsList;
+		return this.leafTypesList;
 	}
 
 	/*
@@ -254,7 +243,7 @@ public class ServiceImpl implements IService {
 	 */
 	public Integer getScientificFamilyId(final String categoryName) {
 		return this.scientificFamiliesMap != null ? this.scientificFamiliesMap
-				.get(categoryName) : 0;
+				.get(categoryName) : BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
 	/*
@@ -264,7 +253,8 @@ public class ServiceImpl implements IService {
 	 * fr.flore_de_poche.service.IOrnidroidService#getColourId(java.lang.String)
 	 */
 	public Integer getColourId(final String colourName) {
-		return this.coloursMap != null ? this.coloursMap.get(colourName) : 0;
+		return this.coloursMap != null ? this.coloursMap.get(colourName)
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
 	/*
@@ -306,7 +296,7 @@ public class ServiceImpl implements IService {
 	 */
 	public Integer getInflorescenceId(final String inflorescenceName) {
 		return this.inflorescencesMap != null ? this.inflorescencesMap
-				.get(inflorescenceName) : 0;
+				.get(inflorescenceName) : BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
 	/*
@@ -318,32 +308,21 @@ public class ServiceImpl implements IService {
 		return this.currentSubject;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getHabitatId(java.lang.String
-	 * )
-	 */
-	public Integer getHabitatId(final String habitatName) {
-		return this.habitatsMap != null ? this.habitatsMap.get(habitatName) : 0;
+	public Integer getAspectId(final String aspectName) {
+		return this.aspectsMap != null ? this.aspectsMap.get(aspectName)
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidService#getHabitats()
-	 */
-	public List<String> getHabitats() {
-		if (this.habitatsMap == null) {
-			final Cursor cursorQueryHabitats = this.ornidroidDAO.getHabitats();
+	public List<String> getAspects() {
+		if (this.aspectsMap == null) {
+			final Cursor cursorQueryHabitats = this.ornidroidDAO.getAspects();
 			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
 					cursorQueryHabitats, true);
-			this.habitatsMap = sfv.getMapNameId();
-			this.habitatsList = sfv.getFieldsValues();
+			this.aspectsMap = sfv.getMapNameId();
+			this.aspectsList = sfv.getFieldsValues();
 
 		}
-		return this.habitatsList;
+		return this.aspectsList;
 	}
 
 	/*
@@ -382,61 +361,74 @@ public class ServiceImpl implements IService {
 		return result;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getRemarkableSignId(java.
-	 * lang. String)
-	 */
-	public Integer getRemarkableSignId(final String remarkableSignName) {
-		return this.remarkableSignsMap != null ? this.remarkableSignsMap
-				.get(remarkableSignName) : 0;
+	public Integer getLeafDispositionId(final String leafDispositionName) {
+		return this.leafDispositionsMap != null ? this.leafDispositionsMap
+				.get(leafDispositionName) : BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidService#getRemarkableSigns()
-	 */
-	public List<String> getRemarkableSigns() {
-		if (this.remarkableSignsMap == null) {
+	public List<String> getLeafDispositions() {
+		if (this.leafDispositionsMap == null) {
 			final Cursor cursorQueryHabitats = this.ornidroidDAO
-					.getRemarkableSigns();
+					.getLeafDispositions();
 			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
 					cursorQueryHabitats, true);
-			this.remarkableSignsMap = sfv.getMapNameId();
-			this.remarkableSignsList = sfv.getFieldsValues();
+			this.leafDispositionsMap = sfv.getMapNameId();
+			this.leafDispositions = sfv.getFieldsValues();
 
 		}
-		return this.remarkableSignsList;
+		return this.leafDispositions;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getSizeId(java.lang.String)
-	 */
-	public Integer getSizeId(final String sizeName) {
-		return this.sizesMap != null ? this.sizesMap.get(sizeName) : 0;
+	public Integer getNbPetaleId(final String nbPetalesName) {
+		return this.nbPetalesMap != null ? this.nbPetalesMap.get(nbPetalesName)
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidService#getSizes()
-	 */
-	public List<String> getSizes() {
-		if (this.sizesMap == null) {
-			final Cursor cursorQuerySizes = this.ornidroidDAO.getSizes();
+	public List<String> getNbPetalesList() {
+		if (this.nbPetalesMap == null) {
+			final Cursor cursorQuerySizes = this.ornidroidDAO.getNbPetale();
 			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
 					cursorQuerySizes, true);
-			this.sizesMap = sfv.getMapNameId();
-			this.sizesList = sfv.getFieldsValues();
+			this.nbPetalesMap = sfv.getMapNameId();
+			this.nbPetalesList = sfv.getFieldsValues();
 
 		}
-		return this.sizesList;
+		return this.nbPetalesList;
+	}
+
+	public Integer getPilositeTigeId(final String pilositeTigeName) {
+		return this.pilositeTigeMap != null ? this.pilositeTigeMap
+				.get(pilositeTigeName) : BasicConstants.DEFAULT_EMPTY_VALUE;
+	}
+
+	public List<String> getPilositeTigeList() {
+		if (this.pilositeTigeMap == null) {
+			final Cursor cursorQuerySizes = this.ornidroidDAO.getPilositeTige();
+			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
+					cursorQuerySizes, true);
+			this.pilositeTigeMap = sfv.getMapNameId();
+			this.pilositeTigeList = sfv.getFieldsValues();
+
+		}
+		return this.pilositeTigeList;
+	}
+
+	public Integer getPilositeFeuilleId(final String pilositeFeuilleName) {
+		return this.pilositeFeuilleMap != null ? this.pilositeFeuilleMap
+				.get(pilositeFeuilleName) : BasicConstants.DEFAULT_EMPTY_VALUE;
+	}
+
+	public List<String> getPilositeFeuilleList() {
+		if (this.pilositeFeuilleMap == null) {
+			final Cursor cursorQuerySizes = this.ornidroidDAO
+					.getPilositeFeuille();
+			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
+					cursorQuerySizes, true);
+			this.pilositeFeuilleMap = sfv.getMapNameId();
+			this.pilositeFeuilleList = sfv.getFieldsValues();
+
+		}
+		return this.pilositeFeuilleList;
 	}
 
 	/*
@@ -532,7 +524,7 @@ public class ServiceImpl implements IService {
 		final Map<String, Integer> mapNameId = new HashMap<String, Integer>();
 		final Map<String, String> mapNameCode = new HashMap<String, String>();
 		// init the map and the list with "ALL" with id = 0
-		mapNameId.put(this.activity.getString(R.string.search_all), 0);
+		mapNameId.put(this.activity.getString(R.string.search_all), -1);
 		mapNameCode.put(this.activity.getString(R.string.search_all),
 				BasicConstants.EMPTY_STRING);
 

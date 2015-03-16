@@ -82,7 +82,7 @@ public class HomeActivity extends AbstractActivity {
 	 */
 	@Click(R.id.menu_search_multi)
 	void clickSearchMultiLink() {
-		// launchActivity(MultiCriteriaSearchActivity_.class);
+		launchActivity(MultiCriteriaSearchActivity_.class);
 	}
 
 	/**
@@ -141,9 +141,8 @@ public class HomeActivity extends AbstractActivity {
 	 */
 	private void checkOrnidroidHomeDirectory() {
 		try {
-			this.iOService.checkOrnidroidHome(myPrefs.ornidroidHome()
-					.getOr(Environment.getExternalStorageDirectory()
-							.getAbsolutePath()
+			this.iOService.checkOrnidroidHome(myPrefs.ornidroidHome().getOr(
+					Environment.getExternalStorageDirectory().getAbsolutePath()
 							+ File.separator
 							+ BasicConstants.APPLICATION_DIRECTORY));
 

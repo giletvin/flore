@@ -1,9 +1,9 @@
 package fr.flore_de_poche.ui.multicriteriasearch;
 
-import fr.flore_de_poche.ui.activity.MultiCriteriaSearchActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
+import fr.flore_de_poche.ui.activity.MultiCriteriaSearchActivity;
 
 /**
  * This class handles the clicks on the spinners items in the
@@ -46,39 +46,40 @@ public class OnSpinnersItemSelected implements OnItemSelectedListener {
 					this.activity.getOrnidroidService().getInflorescenceId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
-		case HABITAT:
-			this.activity.getFormBean().setHabitatId(
-					this.activity.getOrnidroidService().getHabitatId(
+		case ASPECT:
+			this.activity.getFormBean().setAspectId(
+					this.activity.getOrnidroidService().getAspectId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
-		case BEAK_FORM:
-			this.activity.getFormBean().setBeakFormId(
-					this.activity.getOrnidroidService().getBeakFormId(
+		case LEAF_TYPE:
+			this.activity.getFormBean().setLeafTypeId(
+					this.activity.getOrnidroidService().getLeafTypeId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
-		case SIZE:
-			this.activity.getFormBean().setSizeId(
-					this.activity.getOrnidroidService().getSizeId(
+		case NB_PETALE:
+			this.activity.getFormBean().setNbPetaleId(
+					this.activity.getOrnidroidService().getNbPetaleId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
-		case FEATHER_COLOUR:
-			this.activity.getFormBean().setFeatherColourId(
+		case PILOSITE_FEUILLE:
+			this.activity.getFormBean().setPilositeFeuilleId(
+					this.activity.getOrnidroidService().getPilositeFeuilleId(
+							parent.getItemAtPosition(pos).toString()));
+			break;
+		case PILOSITE_TIGE:
+			this.activity.getFormBean().setPilositeTigeId(
+					this.activity.getOrnidroidService().getPilositeTigeId(
+							parent.getItemAtPosition(pos).toString()));
+			break;
+		case COLOUR:
+			this.activity.getFormBean().setColourId(
 					this.activity.getOrnidroidService().getColourId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
-		case BEAK_COLOUR:
-			this.activity.getFormBean().setBeakColourId(
-					this.activity.getOrnidroidService().getColourId(
-							parent.getItemAtPosition(pos).toString()));
-			break;
-		case FEET_COLOUR:
-			this.activity.getFormBean().setPawColourId(
-					this.activity.getOrnidroidService().getColourId(
-							parent.getItemAtPosition(pos).toString()));
-			break;
-		case REMARKABLE_SIGN:
-			this.activity.getFormBean().setRemarkableSignId(
-					this.activity.getOrnidroidService().getRemarkableSignId(
+
+		case LEAF_DISPOSITION:
+			this.activity.getFormBean().setLeafDispositionId(
+					this.activity.getOrnidroidService().getLeafDispositionId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
 

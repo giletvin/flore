@@ -178,10 +178,10 @@ public class MultiCriteriaSelectField extends LinearLayout implements
 		case SCIENTIFIC_FAMILY:
 			helpEnabled = true;
 			break;
-		case HABITAT:
+		case ASPECT:
 			helpEnabled = true;
 			break;
-		case FEATHER_COLOUR:
+		case COLOUR:
 			helpEnabled = true;
 			break;
 		default:
@@ -258,22 +258,22 @@ public class MultiCriteriaSelectField extends LinearLayout implements
 							context.getResources().getString(
 									R.string.search_category_help));
 					break;
-				case HABITAT:
+				case ASPECT:
 					HelpDialog.showInfoDialog(
 							context,
 							context.getResources().getString(
-									R.string.search_habitat),
+									R.string.search_aspect),
 							context.getResources().getString(
-									R.string.search_habitat_help));
+									R.string.search_aspect_help));
 
 					break;
-				case FEATHER_COLOUR:
+				case COLOUR:
 					HelpDialog.showInfoDialog(
 							context,
 							context.getResources().getString(
-									R.string.search_feather_colour),
+									R.string.search_colour),
 							context.getResources().getString(
-									R.string.search_feather_colour_help));
+									R.string.search_colour_help));
 
 					break;
 				default:

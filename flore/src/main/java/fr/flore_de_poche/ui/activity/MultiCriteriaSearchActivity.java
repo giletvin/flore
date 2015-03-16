@@ -152,13 +152,13 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		}
 		initSelectField(MultiCriteriaSearchFieldType.SCIENTIFIC_FAMILY);
 		initSelectField(MultiCriteriaSearchFieldType.INFLORESCENCE);
-		initSelectField(MultiCriteriaSearchFieldType.SIZE);
-		initSelectField(MultiCriteriaSearchFieldType.FEATHER_COLOUR);
-		initSelectField(MultiCriteriaSearchFieldType.BEAK_COLOUR);
-		initSelectField(MultiCriteriaSearchFieldType.FEET_COLOUR);
-		initSelectField(MultiCriteriaSearchFieldType.HABITAT);
-		initSelectField(MultiCriteriaSearchFieldType.BEAK_FORM);
-		initSelectField(MultiCriteriaSearchFieldType.REMARKABLE_SIGN);
+		initSelectField(MultiCriteriaSearchFieldType.NB_PETALE);
+		initSelectField(MultiCriteriaSearchFieldType.COLOUR);
+		initSelectField(MultiCriteriaSearchFieldType.ASPECT);
+		initSelectField(MultiCriteriaSearchFieldType.LEAF_TYPE);
+		initSelectField(MultiCriteriaSearchFieldType.LEAF_DISPOSITION);
+		initSelectField(MultiCriteriaSearchFieldType.PILOSITE_TIGE);
+		initSelectField(MultiCriteriaSearchFieldType.PILOSITE_FEUILLE);
 		/*
 		 * updateSearchCountResults(this.ornidroidService
 		 * .getMultiSearchCriteriaCountResults(this.formBean));
@@ -216,61 +216,60 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		case INFLORESCENCE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_inflorescence_field);
 			field.setIconResource(R.drawable.ic_inflorescences);
-			// dataAdapter = new ArrayAdapter<String>(this,
-			// android.R.layout.simple_spinner_item,
-			// this.ornidroidService.getCountries());
+
 			dataAdapter = new MyCustomAdapter(this,
 					R.layout.row_spinner_icons_dropdown_list,
 					this.ornidroidService.getInflorescences(), selectFieldType);
 			break;
-		case SIZE:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_size_field);
+		case NB_PETALE:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_nb_petale_field);
 			field.setIconResource(R.drawable.ic_size);
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getSizes());
+					this.ornidroidService.getNbPetalesList());
+			break;
+		case PILOSITE_FEUILLE:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_pilosite_feuille_field);
+			field.setIconResource(R.drawable.ic_size);
+			dataAdapter = new ArrayAdapter<String>(this,
+					R.layout.row_spinner_without_icons,
+					this.ornidroidService.getPilositeFeuilleList());
+			break;
+		case PILOSITE_TIGE:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_pilosite_tige_field);
+			field.setIconResource(R.drawable.ic_size);
+			dataAdapter = new ArrayAdapter<String>(this,
+					R.layout.row_spinner_without_icons,
+					this.ornidroidService.getPilositeTigeList());
 			break;
 
-		case HABITAT:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_habitat_field);
+		case ASPECT:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_aspect_field);
 			field.setIconResource(R.drawable.ic_habitat);
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getHabitats());
+					this.ornidroidService.getAspects());
 			break;
-		case BEAK_FORM:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_beak_form_field);
+		case LEAF_TYPE:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_leaf_type_field);
 			field.setIconResource(R.drawable.ic_beak_type);
 			dataAdapter = new MyCustomAdapter(this, R.layout.row_spinner_icons,
-					this.ornidroidService.getBeakForms(), selectFieldType);
+					this.ornidroidService.getLeafTypes(), selectFieldType);
 			break;
-		case FEATHER_COLOUR:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_feather_colour_field);
+		case COLOUR:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_colour_field);
 			field.setIconResource(R.drawable.ic_feather_colour);
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
 					this.ornidroidService.getColours());
 			break;
-		case BEAK_COLOUR:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_beak_colour_field);
-			field.setIconResource(R.drawable.ic_beak_colour);
-			dataAdapter = new ArrayAdapter<String>(this,
-					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getColours());
-			break;
-		case FEET_COLOUR:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_paw_colour_field);
-			field.setIconResource(R.drawable.ic_feet_colour);
-			dataAdapter = new ArrayAdapter<String>(this,
-					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getColours());
-			break;
-		case REMARKABLE_SIGN:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_remarkable_sign_field);
+
+		case LEAF_DISPOSITION:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_leaf_disposition_field);
 			field.setIconResource(R.drawable.ic_remarkable_sign);
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getRemarkableSigns());
+					this.ornidroidService.getLeafDispositions());
 			break;
 
 		}

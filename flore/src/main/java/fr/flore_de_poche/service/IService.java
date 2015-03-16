@@ -21,24 +21,9 @@ public interface IService {
 	 */
 	void createDbIfNecessary() throws ApplicationException;
 
-	/**
-	 * Gets the beak form id.
-	 * 
-	 * @param string
-	 *            the string
-	 * @return the beak form id
-	 * @deprecated
-	 */
-	Integer getBeakFormId(String string);
+	Integer getLeafTypeId(String string);
 
-	/**
-	 * Gets the beak forms.
-	 * 
-	 * @return the beak forms
-	 * 
-	 * @deprecated
-	 */
-	List<String> getBeakForms();
+	List<String> getLeafTypes();
 
 	/**
 	 * Gets the matching subjects and store the results in the history result
@@ -120,22 +105,21 @@ public interface IService {
 	Subject getCurrentSubject();
 
 	/**
-	 * Gets the habitat id.
+	 * Gets the aspect id.
 	 * 
-	 * @param habitatName
-	 *            the habitatName
-	 * @return the habitat id
-	 * @deprecated
+	 * @param aspectName
+	 *            the aspect
+	 * @return the aspect id
+	 * 
 	 */
-	Integer getHabitatId(String habitatName);
+	Integer getAspectId(String aspectName);
 
 	/**
-	 * Gets the habitats.
+	 * Gets the aspects.
 	 * 
-	 * @return the habitats
-	 * @deprecated
+	 * @return the aspects
 	 */
-	List<String> getHabitats();
+	List<String> getAspects();
 
 	/**
 	 * Gets the multi search criteria count results.
@@ -155,41 +139,21 @@ public interface IService {
 	 */
 	List<Taxon> getNames(int id);
 
-	/**
-	 * Gets the remarkable sign id.
-	 * 
-	 * @param remarkableSignName
-	 *            the remarkable sign name
-	 * @return the remarkable sign id
-	 * @deprecated
-	 */
-	Integer getRemarkableSignId(String remarkableSignName);
+	Integer getLeafDispositionId(String leafDispositionName);
 
-	/**
-	 * Gets the remarkable signs.
-	 * 
-	 * @return the remarkable signs
-	 * @deprecated
-	 */
-	List<String> getRemarkableSigns();
+	List<String> getLeafDispositions();
 
-	/**
-	 * Gets the size id.
-	 * 
-	 * @param sizeName
-	 *            the size name
-	 * @return the size id
-	 * @deprecated
-	 */
-	Integer getSizeId(String sizeName);
+	Integer getNbPetaleId(String nbPetalesName);
 
-	/**
-	 * Gets the sizes.
-	 * 
-	 * @return the sizes
-	 * @deprecated
-	 */
-	List<String> getSizes();
+	List<String> getNbPetalesList();
+
+	Integer getPilositeTigeId(String pilositeTigeName);
+
+	List<String> getPilositeTigeList();
+
+	Integer getPilositeFeuilleId(String pilositeFeuilleName);
+
+	List<String> getPilositeFeuilleList();
 
 	/**
 	 * Gets the wikipedia link of the subject, using the gui language en, fr or

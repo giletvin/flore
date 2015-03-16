@@ -11,15 +11,17 @@ import fr.flore_de_poche.bo.SimpleSubject;
  */
 public interface IDAO {
 
-	/**
-	 * The Constant BEAK_FORM_TABLE.
-	 * 
-	 * @deprecated
-	 */
-	public static final String BEAK_FORM_TABLE = "beak_form";
+	public static final String LEAF_TYPE_TABLE = "type_feuille";
 
 	public static final String FLEUR_INFLORESCENCE_TABLE = "fleur_inflorescence";
-	/** The Constant SUBJECT_TABLE. */
+	public static final String FLEUR_ASPECT_TABLE = "fleur_aspect";
+	public static final String FLEUR_NB_PETALE_TABLE = "fleur_nb_petale";
+	public static final String FLEUR_LEAF_TYPE_TABLE = "fleur_type_feuille";
+	public static final String FLEUR_LEAF_DISPOSITION_TABLE = "fleur_disposition_feuille";
+	public static final String FLEUR_COLOUR_TABLE = "fleur_couleur";
+	public static final String FLEUR_PILOSITE_FEUILLE = "fleur_pilosite_feuille";
+	public static final String FLEUR_PILOSITE_TIGE = "fleur_pilosite_tige";
+
 	public static final String SUBJECT_TABLE = "fleur";
 
 	/**
@@ -28,7 +30,7 @@ public interface IDAO {
 	public static final String CATEGORY_COLUMN = "category";
 
 	/** The Constant COLOUR_TABLE. */
-	public static final String COLOUR_TABLE = "colour";
+	public static final String COLOUR_TABLE = "couleur";
 
 	/**
 	 * The Constant INFLORESCENCE_TABLE.
@@ -69,24 +71,12 @@ public interface IDAO {
 	/** The Constant NAME_FIELD_NAME. */
 	public static final String NAME_COLUMN_NAME = "name";
 
-	/**
-	 * The Constant OISEAUX_NET_COLUMN.
-	 * 
-	 * @deprecated
-	 */
-	public static final String OISEAUX_NET_COLUMN = "oiseaux_net_link";
-	/**
-	 * The Constant REMARKABLE_SIGN_TABLE.
-	 * 
-	 * @deprecated
-	 */
-	public static final String REMARKABLE_SIGN_TABLE = "remarkable_sign";
-	/** The Constant SCIENTIFIC_FAMILY_NAME_COLUMN. */
+	public static final String LEAF_DISPOSITION_TABLE = "disposition_feuille";
+
 	public static final String SCIENTIFIC_FAMILY_NAME_COLUMN = "scientific_family";
-	/** The Constant SCIENTIFIC_FAMILY_TABLE. */
+
 	public static final String SCIENTIFIC_FAMILY_TABLE = "scientific_family";
 
-	/** The Constant SCIENTIFIC_NAME. */
 	public static final String SCIENTIFIC_NAME = "scientific_name";
 
 	/**
@@ -95,12 +85,9 @@ public interface IDAO {
 	 */
 	public static final String SEARCHED_TAXON = "searched_taxon";
 
-	/**
-	 * The Constant SIZE_TABLE.
-	 * 
-	 * @deprecated
-	 */
-	public static final String SIZE_TABLE = "size_table";
+	public static final String NB_PETALE_TABLE = "nb_petale";
+	public static final String PILOSITE_TIGE_TABLE = "pilosite_tige";
+	public static final String PILOSITE_FEUILLE_TABLE = "pilosite_feuille";
 
 	/**
 	 * The Constant SIZE_VALUE_COLUMN.
@@ -112,13 +99,7 @@ public interface IDAO {
 	/** The Constant TAXON. */
 	public static final String TAXON = "taxon";
 
-	/**
-	 * Gets the beak forms.
-	 * 
-	 * @return the beak forms
-	 * @deprecated
-	 */
-	Cursor getBeakForms();
+	Cursor getLeafTypes();
 
 	/**
 	 * Returns a Cursor positioned at the subject specified by rowId.
@@ -165,21 +146,9 @@ public interface IDAO {
 	 */
 	Cursor getColours();
 
-	/**
-	 * Gets the inflorescences.
-	 * 
-	 * @return the inflorescences
-	 * 
-	 */
 	Cursor getInflorescences();
 
-	/**
-	 * Gets the habitats.
-	 * 
-	 * @return the habitats
-	 * @deprecated
-	 */
-	Cursor getHabitats();
+	Cursor getAspects();
 
 	/**
 	 * Gets the multi search criteria count results.
@@ -190,21 +159,13 @@ public interface IDAO {
 	 */
 	int getMultiSearchCriteriaCountResults(MultiCriteriaSearchFormBean formBean);
 
-	/**
-	 * Gets the remarkable signs.
-	 * 
-	 * @return the remarkable signs
-	 * @deprecated
-	 */
-	Cursor getRemarkableSigns();
+	Cursor getLeafDispositions();
 
-	/**
-	 * Gets the sizes.
-	 * 
-	 * @return the sizes
-	 * @deprecated
-	 */
-	Cursor getSizes();
+	Cursor getNbPetale();
+
+	Cursor getPilositeTige();
+
+	Cursor getPilositeFeuille();
 
 	/**
 	 * gets the countries where the bird can be seen

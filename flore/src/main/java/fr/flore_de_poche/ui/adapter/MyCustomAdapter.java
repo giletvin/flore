@@ -89,9 +89,9 @@ public class MyCustomAdapter extends ArrayAdapter<String> {
 
 		int idRes = 0;
 		switch (this.selectFieldType) {
-		case BEAK_FORM:
+		case LEAF_TYPE:
 			final int beakFormId = this.activity.getOrnidroidService()
-					.getBeakFormId(this.itemsList.get(position));
+					.getLeafTypeId(this.itemsList.get(position));
 			idRes = SpinnerIconSelector
 					.getIconResourceIdFromBeakFormId(beakFormId);
 			break;

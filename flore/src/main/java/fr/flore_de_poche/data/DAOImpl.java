@@ -84,12 +84,7 @@ public class DAOImpl implements IDAO {
 	/** The Constant FTS_VIRTUAL_TABLE_TAXONOMY. */
 	private static final String FTS_VIRTUAL_TABLE_TAXONOMY = "taxonomy";
 
-	/**
-	 * The Constant HABITAT_TABLE_NAME.
-	 * 
-	 * @deprecated
-	 */
-	private static final String HABITAT_TABLE_NAME = "habitat";
+	private static final String ASPECT_TABLE_NAME = "aspect";
 
 	/** The Constant INNER_JOIN. */
 	private static final String INNER_JOIN = " inner join ";
@@ -152,8 +147,8 @@ public class DAOImpl implements IDAO {
 		this.subjectFactory = new SubjectFactoryImpl();
 	}
 
-	public Cursor getBeakForms() {
-		return getCursorFromListTable(BEAK_FORM_TABLE, NAME_COLUMN_NAME,
+	public Cursor getLeafTypes() {
+		return getCursorFromListTable(LEAF_TYPE_TABLE, NAME_COLUMN_NAME,
 				I18nHelper.getLang());
 	}
 
@@ -294,8 +289,8 @@ public class DAOImpl implements IDAO {
 	 * 
 	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getHabitats()
 	 */
-	public Cursor getHabitats() {
-		return getCursorFromListTable(HABITAT_TABLE_NAME, NAME_COLUMN_NAME,
+	public Cursor getAspects() {
+		return getCursorFromListTable(ASPECT_TABLE_NAME, NAME_COLUMN_NAME,
 				I18nHelper.getLang());
 
 	}
@@ -327,18 +322,23 @@ public class DAOImpl implements IDAO {
 	 * 
 	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getRemarkableSigns()
 	 */
-	public Cursor getRemarkableSigns() {
-		return getCursorFromListTable(REMARKABLE_SIGN_TABLE, NAME_COLUMN_NAME,
+	public Cursor getLeafDispositions() {
+		return getCursorFromListTable(LEAF_DISPOSITION_TABLE, NAME_COLUMN_NAME,
 				I18nHelper.getLang());
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getSizes()
-	 */
-	public Cursor getSizes() {
-		return getCursorFromListTable(SIZE_TABLE, ID, I18nHelper.getLang());
+	public Cursor getNbPetale() {
+		return getCursorFromListTable(NB_PETALE_TABLE, ID, I18nHelper.getLang());
+	}
+
+	public Cursor getPilositeTige() {
+		return getCursorFromListTable(PILOSITE_TIGE_TABLE, ID,
+				I18nHelper.getLang());
+	}
+
+	public Cursor getPilositeFeuille() {
+		return getCursorFromListTable(PILOSITE_FEUILLE_TABLE, ID,
+				I18nHelper.getLang());
 	}
 
 	/**
@@ -412,48 +412,76 @@ public class DAOImpl implements IDAO {
 		final StringBuffer whereClauses = new StringBuffer();
 		final StringBuffer fromClauses = new StringBuffer();
 		whereClauses.append(WHERE).append("1=1");
-		if (formBean.getScientificFamilyId() != 0) {
+		if (formBean.getScientificFamilyId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
 			whereClauses.append(
 					" AND " + SUBJECT_TABLE + ".scientific_family_fk = ")
 					.append(formBean.getScientificFamilyId());
 		}
-		if (formBean.getRemarkableSignId() != 0) {
-			whereClauses.append(" AND bird.remarkable_sign_fk = ").append(
-					formBean.getRemarkableSignId());
+		if (formBean.getLeafDispositionId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
+			fromClauses
+					.append(INNER_JOIN)
+					.append(FLEUR_LEAF_DISPOSITION_TABLE)
+					.append(" on " + FLEUR_LEAF_DISPOSITION_TABLE
+							+ ".fleur_fk=fleur.id");
+			whereClauses.append(
+					" AND " + FLEUR_LEAF_DISPOSITION_TABLE
+							+ ".disposition_feuille_fk=").append(
+					formBean.getLeafDispositionId());
 		}
-		if (formBean.getHabitatId() != 0) {
-			whereClauses.append(" AND (bird.habitat1_fk = ")
-					.append(formBean.getHabitatId())
-					.append(" OR bird.habitat2_fk = ")
-					.append(formBean.getHabitatId()).append(")");
+		if (formBean.getAspectId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
+			fromClauses.append(INNER_JOIN).append(FLEUR_ASPECT_TABLE)
+					.append(" on " + FLEUR_ASPECT_TABLE + ".fleur_fk=fleur.id");
+			whereClauses.append(" AND " + FLEUR_ASPECT_TABLE + ".aspect_fk=")
+					.append(formBean.getAspectId());
+
 		}
-		if (formBean.getFeatherColourId() != 0) {
-			whereClauses.append(" AND (bird.feather_colour_fk = ")
-					.append(formBean.getFeatherColourId())
-					.append(" OR bird.feather_colour_2_fk = ")
-					.append(formBean.getFeatherColourId()).append(")");
+		if (formBean.getColourId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
+			fromClauses.append(INNER_JOIN).append(FLEUR_COLOUR_TABLE)
+					.append(" on " + FLEUR_COLOUR_TABLE + ".fleur_fk=fleur.id");
+			whereClauses.append(" AND " + FLEUR_COLOUR_TABLE + ".couleur_fk=")
+					.append(formBean.getColourId());
 		}
-		if (formBean.getBeakColourId() != 0) {
-			whereClauses.append(" AND (bird.beak_colour_fk = ")
-					.append(formBean.getBeakColourId())
-					.append(" OR bird.beak_colour_2_fk = ")
-					.append(formBean.getBeakColourId()).append(")");
+
+		if (formBean.getLeafTypeId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
+			fromClauses
+					.append(INNER_JOIN)
+					.append(FLEUR_LEAF_TYPE_TABLE)
+					.append(" on " + FLEUR_LEAF_TYPE_TABLE
+							+ ".fleur_fk=fleur.id");
+			whereClauses.append(
+					" AND " + FLEUR_LEAF_TYPE_TABLE + ".type_feuille_fk=")
+					.append(formBean.getLeafTypeId());
 		}
-		if (formBean.getPawColourId() != 0) {
-			whereClauses.append(" AND (bird.paw_colour_fk = ")
-					.append(formBean.getPawColourId())
-					.append(" OR bird.paw_colour_2_fk = ")
-					.append(formBean.getPawColourId()).append(")");
+		if (formBean.getNbPetaleId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
+			fromClauses
+					.append(INNER_JOIN)
+					.append(FLEUR_NB_PETALE_TABLE)
+					.append(" on " + FLEUR_NB_PETALE_TABLE
+							+ ".fleur_fk=fleur.id");
+			whereClauses.append(
+					" AND " + FLEUR_NB_PETALE_TABLE + ".nb_petale_fk=").append(
+					formBean.getNbPetaleId());
 		}
-		if (formBean.getBeakFormId() != 0) {
-			whereClauses.append(" AND bird.beak_form_fk = ").append(
-					formBean.getBeakFormId());
+		if (formBean.getPilositeFeuilleId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
+			fromClauses
+					.append(INNER_JOIN)
+					.append(FLEUR_PILOSITE_FEUILLE)
+					.append(" on " + FLEUR_PILOSITE_FEUILLE
+							+ ".fleur_fk=fleur.id");
+			whereClauses.append(
+					" AND " + FLEUR_PILOSITE_FEUILLE + ".pilosite_feuille_fk=")
+					.append(formBean.getPilositeFeuilleId());
 		}
-		if (formBean.getSizeId() != 0) {
-			whereClauses.append(" AND bird.size_fk = ").append(
-					formBean.getSizeId());
+		if (formBean.getPilositeTigeId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
+			fromClauses
+					.append(INNER_JOIN)
+					.append(FLEUR_PILOSITE_TIGE)
+					.append(" on " + FLEUR_PILOSITE_TIGE + ".fleur_fk=fleur.id");
+			whereClauses.append(
+					" AND " + FLEUR_PILOSITE_TIGE + ".pilosite_tige_fk=")
+					.append(formBean.getPilositeTigeId());
 		}
-		if (formBean.getInflorescenceId() != 0) {
+		if (formBean.getInflorescenceId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
 			// if (resultQuery) {
 			// // result query faster with this sql code with a subquery
 			// // and exists

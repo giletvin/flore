@@ -1,208 +1,115 @@
 package fr.flore_de_poche.bo;
 
+import fr.flore_de_poche.helper.BasicConstants;
+
 /**
  * The Class MultiCriteriaSearchFormBean. This class handles the values selected
  * by the user in the multi criteria search screen.
  */
 public class MultiCriteriaSearchFormBean {
 
-	/** The beak colour id. */
-	private Integer beakColourId;
+	private Integer leafTypeId;
 
-	/** The beak form id. */
-	private Integer beakFormId;
-
-	/** The category id. */
 	private Integer scientificFamilyId;
 
-	/** The country id. */
 	private Integer inflorescenceId;
 
-	/** The feather colour id. */
-	private Integer featherColourId;
+	private Integer colourId;
 
-	/** The habitat id. */
-	private Integer habitatId;
+	private Integer aspectId;
 
-	/** The paw colour id. */
-	private Integer pawColourId;
+	private Integer leafDispositionId;
 
-	/** The remarkable sign id. */
-	private Integer remarkableSignId;
+	private Integer nbPetaleId;
 
-	/** The size id. */
-	private Integer sizeId;
+	private Integer pilositeFeuilleId;
 
-	/**
-	 * Gets the beak colour id.
-	 * 
-	 * @return the beak colour id
-	 */
-	public Integer getBeakColourId() {
-		return this.beakColourId != null ? this.beakColourId : 0;
+	private Integer pilositeTigeId;
+
+	public Integer getPilositeFeuilleId() {
+		return this.pilositeFeuilleId != null ? this.pilositeFeuilleId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/**
-	 * Gets the beak form id.
-	 * 
-	 * @return the beak form id
-	 */
-	public Integer getBeakFormId() {
-		return this.beakFormId != null ? this.beakFormId : 0;
+	public Integer getPilositeTigeId() {
+		return this.pilositeTigeId != null ? this.pilositeTigeId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/**
-	 * Gets the scientificFamilyId id.
-	 * 
-	 * @return the scientificFamilyId id
-	 */
+	public Integer getLeafTypeId() {
+		return this.leafTypeId != null ? this.leafTypeId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
+	}
+
 	public Integer getScientificFamilyId() {
-		return this.scientificFamilyId != null ? this.scientificFamilyId : 0;
+		return this.scientificFamilyId != null ? this.scientificFamilyId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
 	public Integer getInflorescenceId() {
-		return this.inflorescenceId != null ? this.inflorescenceId : 0;
+		return this.inflorescenceId != null ? this.inflorescenceId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/**
-	 * Gets the feather colour id.
-	 * 
-	 * @return the feather colour id
-	 */
-	public Integer getFeatherColourId() {
-		return this.featherColourId != null ? this.featherColourId : 0;
+	public Integer getColourId() {
+		return this.colourId != null ? this.colourId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/**
-	 * Gets the habitat id.
-	 * 
-	 * @return the habitat id
-	 */
-	public Integer getHabitatId() {
-		return this.habitatId != null ? this.habitatId : 0;
+	public Integer getAspectId() {
+		return this.aspectId != null ? this.aspectId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/**
-	 * Gets the paw colour id.
-	 * 
-	 * @return the paw colour id
-	 */
-	public Integer getPawColourId() {
-		return this.pawColourId != null ? this.pawColourId : 0;
+	public Integer getLeafDispositionId() {
+
+		return this.leafDispositionId != null ? this.leafDispositionId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
 
 	}
 
-	/**
-	 * Gets the remarkable sign id.
-	 * 
-	 * @return the remarkable sign id
-	 */
-	public Integer getRemarkableSignId() {
+	public Integer getNbPetaleId() {
+		return this.nbPetaleId != null ? this.nbPetaleId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
+	}
 
-		return this.remarkableSignId != null ? this.remarkableSignId : 0;
+	public void setLeafTypeId(final Integer pLeafTypeId) {
+		this.leafTypeId = pLeafTypeId;
 
 	}
 
-	/**
-	 * Gets the size id.
-	 * 
-	 * @return the size id
-	 */
-	public Integer getSizeId() {
-		return this.sizeId != null ? this.sizeId : 0;
-	}
-
-	/**
-	 * Sets the beak colour id.
-	 * 
-	 * @param beakColourId
-	 *            the new beak colour id
-	 */
-	public void setBeakColourId(final Integer beakColourId) {
-		this.beakColourId = beakColourId;
-	}
-
-	/**
-	 * Sets the beak form id.
-	 * 
-	 * @param pBeakFormId
-	 *            the new beak form id
-	 */
-	public void setBeakFormId(final Integer pBeakFormId) {
-		this.beakFormId = pBeakFormId;
-
-	}
-
-	/**
-	 * Sets the pScientificFamilyId id.
-	 * 
-	 * @param pScientificFamilyId
-	 *            the new pScientificFamilyId id
-	 */
 	public void setScientificFamilyId(final Integer pScientificFamilyId) {
 		this.scientificFamilyId = pScientificFamilyId;
 
 	}
 
-	/**
-	 * Sets the INFLORESCENCE id.
-	 * 
-	 * @param pInflorescenceId
-	 *            the new INFLORESCENCE id
-	 */
 	public void setInflorescenceId(final Integer pInflorescenceId) {
 		this.inflorescenceId = pInflorescenceId;
 	}
 
-	/**
-	 * Sets the feather colour id.
-	 * 
-	 * @param featherColourId
-	 *            the new feather colour id
-	 */
-	public void setFeatherColourId(final Integer featherColourId) {
-		this.featherColourId = featherColourId;
+	public void setColourId(final Integer pColourId) {
+		this.colourId = pColourId;
 	}
 
-	/**
-	 * Sets the habitat id.
-	 * 
-	 * @param pHabitatId
-	 *            the new habitat id
-	 */
-	public void setHabitatId(final Integer pHabitatId) {
-		this.habitatId = pHabitatId;
+	public void setAspectId(final Integer pAspectId) {
+		this.aspectId = pAspectId;
 
 	}
 
-	/**
-	 * Sets the paw colour id.
-	 * 
-	 * @param pawColourId
-	 *            the new paw colour id
-	 */
-	public void setPawColourId(final Integer pawColourId) {
-		this.pawColourId = pawColourId;
+	public void setLeafDispositionId(final Integer pLeafDispositionId) {
+		this.leafDispositionId = pLeafDispositionId;
 	}
 
-	/**
-	 * Sets the remarkable sign id.
-	 * 
-	 * @param remarkableSignId
-	 *            the new remarkable sign id
-	 */
-	public void setRemarkableSignId(final Integer remarkableSignId) {
-		this.remarkableSignId = remarkableSignId;
+	public void setNbPetaleId(final Integer pNbPetaleId) {
+		this.nbPetaleId = pNbPetaleId;
 	}
 
-	/**
-	 * Sets the size id.
-	 * 
-	 * @param sizeId
-	 *            the new size id
-	 */
-	public void setSizeId(final Integer sizeId) {
-		this.sizeId = sizeId;
+	public void setPilositeFeuilleId(final Integer pPilositeFeuilleId) {
+		this.pilositeFeuilleId = pPilositeFeuilleId;
+	}
+
+	public void setPilositeTigeId(final Integer pPilositeTigeId) {
+		this.pilositeTigeId = pPilositeTigeId;
 	}
 
 }

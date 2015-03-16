@@ -6,6 +6,7 @@ import fr.flore_de_poche.bo.MediaFileType;
  * The Class BasicConstants.
  */
 public class BasicConstants {
+	public static final int DEFAULT_EMPTY_VALUE = -1;
 	// TODO : a mettre à jour ulterieuement
 	private static final int FILES_COUNT_WIKIPEDIA_PACKAGE = 1332;
 	// TODO : a mettre à jour ulterieuement
