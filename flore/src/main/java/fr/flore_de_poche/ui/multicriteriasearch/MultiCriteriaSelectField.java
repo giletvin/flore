@@ -175,7 +175,7 @@ public class MultiCriteriaSelectField extends LinearLayout implements
 		this.fieldType = fieldType;
 		boolean helpEnabled;
 		switch (this.fieldType) {
-		case CATEGORY:
+		case SCIENTIFIC_FAMILY:
 			helpEnabled = true;
 			break;
 		case HABITAT:
@@ -250,11 +250,11 @@ public class MultiCriteriaSelectField extends LinearLayout implements
 		this.helpIcon.setOnClickListener(new OnClickListener() {
 			public void onClick(final View v) {
 				switch (MultiCriteriaSelectField.this.fieldType) {
-				case CATEGORY:
+				case SCIENTIFIC_FAMILY:
 					HelpDialog.showInfoDialog(
 							context,
 							context.getResources().getString(
-									R.string.search_category),
+									R.string.search_scientific_family),
 							context.getResources().getString(
 									R.string.search_category_help));
 					break;

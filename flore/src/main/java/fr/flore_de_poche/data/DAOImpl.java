@@ -75,13 +75,6 @@ public class DAOImpl implements IDAO {
 	/** The Constant AS. */
 	private static final String AS = " as ";
 
-	/**
-	 * The Constant CATEGORY_TABLE_NAME.
-	 * 
-	 * @deprecated
-	 */
-	private static final String CATEGORY_TABLE_NAME = "category";
-
 	/** The Constant COUNT_STAR. */
 	private static final String COUNT_STAR = " count(*) ";
 
@@ -271,9 +264,9 @@ public class DAOImpl implements IDAO {
 	 * 
 	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getCategories()
 	 */
-	public Cursor getCategories() {
-		return getCursorFromListTable(CATEGORY_TABLE_NAME, NAME_COLUMN_NAME,
-				I18nHelper.getLang());
+	public Cursor getScientificFamilies() {
+		return getCursorFromListTable(SCIENTIFIC_FAMILY_TABLE,
+				NAME_COLUMN_NAME, I18nHelper.getLang());
 	}
 
 	/*
@@ -291,38 +284,9 @@ public class DAOImpl implements IDAO {
 	 * 
 	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getCountries()
 	 */
-	public Cursor getCountries() {
-		Cursor cursor = null;
-		try {
-			final String nameColumnWithLangSuffix = NAME_COLUMN_NAME + "_"
-					+ I18nHelper.getLang().getCode();
-			final SQLiteDatabase db = this.dataBaseOpenHelper
-					.getReadableDatabase();
-			final StringBuilder query = new StringBuilder();
-			query.append(SELECT);
-			query.append("code as id");
-			query.append(Constants.COMMA_STRING);
-			query.append(nameColumnWithLangSuffix);
-			query.append(AS);
-			query.append(NAME_COLUMN_NAME);
-			query.append(FROM);
-			query.append(COUNTRY_TABLE);
-			query.append(ORDER_BY);
-			query.append(NAME_COLUMN_NAME);
-			final String[] selectionArgs = null;
-			cursor = db.rawQuery(query.toString(), selectionArgs);
-			if (cursor == null) {
-				return null;
-			} else if (!cursor.moveToFirst()) {
-				cursor.close();
-			}
-		} catch (final SQLException e) {
-			Log.e(Constants.LOG_TAG, "Exception sql " + e);
-		} finally {
-			this.dataBaseOpenHelper.close();
-		}
-		return cursor;
-
+	public Cursor getInflorescences() {
+		return getCursorFromListTable(INFLORESCENCE_TABLE, NAME_COLUMN_NAME,
+				I18nHelper.getLang());
 	}
 
 	/*
@@ -448,9 +412,10 @@ public class DAOImpl implements IDAO {
 		final StringBuffer whereClauses = new StringBuffer();
 		final StringBuffer fromClauses = new StringBuffer();
 		whereClauses.append(WHERE).append("1=1");
-		if (formBean.getCategoryId() != 0) {
-			whereClauses.append(" AND bird.category_fk = ").append(
-					formBean.getCategoryId());
+		if (formBean.getScientificFamilyId() != 0) {
+			whereClauses.append(
+					" AND " + SUBJECT_TABLE + ".scientific_family_fk = ")
+					.append(formBean.getScientificFamilyId());
 		}
 		if (formBean.getRemarkableSignId() != 0) {
 			whereClauses.append(" AND bird.remarkable_sign_fk = ").append(
@@ -488,25 +453,27 @@ public class DAOImpl implements IDAO {
 			whereClauses.append(" AND bird.size_fk = ").append(
 					formBean.getSizeId());
 		}
-		if (StringHelper.isNotBlank(formBean.getCountryCode())) {
-			if (resultQuery) {
-				// result query faster with this sql code with a subquery
-				// and exists (select 1 from bird_country bc where
-				// bc.bird_fk=bird.id and bc.country_code MATCH 'DEU')
-				whereClauses
-						.append(" and exists (select 1 from ")
-						.append(BIRD_COUNTRY_TABLE)
-						.append(" bc where bc.bird_fk=bird.id and bc.country_code MATCH '")
-						.append(formBean.getCountryCode()).append("')");
-			} else {
-				// count query faster with this sql code
-				fromClauses.append(INNER_JOIN).append(BIRD_COUNTRY_TABLE)
-						.append(" on bird_country.bird_fk=bird.id");
-				whereClauses.append(" AND bird_country.country_code MATCH '")
-						.append(formBean.getCountryCode()).append("'")
-						.append(" AND bird_country.bird_fk=bird.id");
+		if (formBean.getInflorescenceId() != 0) {
+			// if (resultQuery) {
+			// // result query faster with this sql code with a subquery
+			// // and exists
+			// whereClauses
+			// .append(" and exists (select 1 from ")
+			// .append(FLEUR_INFLORESCENCE_TABLE)
+			// .append(" bc where bc.bird_fk=bird.id and bc.country_code MATCH '")
+			// .append(formBean.getInflorescenceId()).append("')");
+			// } else {
+			// count query faster with this sql code
+			fromClauses
+					.append(INNER_JOIN)
+					.append(FLEUR_INFLORESCENCE_TABLE)
+					.append(" on " + FLEUR_INFLORESCENCE_TABLE
+							+ ".fleur_fk=fleur.id");
+			whereClauses.append(
+					" AND " + FLEUR_INFLORESCENCE_TABLE + ".inflorescence_fk=")
+					.append(formBean.getInflorescenceId());
 
-			}
+			// }
 		}
 
 		return new SqlDynamicFragments(whereClauses.toString(),
@@ -654,9 +621,9 @@ public class DAOImpl implements IDAO {
 			query.append(AS);
 			query.append(NAME_COLUMN_NAME);
 			query.append(FROM);
-			query.append(COUNTRY_TABLE);
+			query.append(INFLORESCENCE_TABLE);
 			query.append(INNER_JOIN);
-			query.append(BIRD_COUNTRY_TABLE);
+			query.append(FLEUR_INFLORESCENCE_TABLE);
 			query.append(" on country_code=code");
 			query.append(WHERE);
 			query.append("bird_fk=");

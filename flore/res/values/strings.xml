@@ -105,11 +105,11 @@
     <string name="help_text">Contact : ornidroid@free.fr\n\nUser\'s guide : https://github.com/giletvin/ornidroid/wiki/Help\n\nHow-to download the full images and mp3 packages : https://github.com/giletvin/ornidroid/wiki/Installation-en\n\nTo change the search engine language : go to preferences (from the menu) and change OrnidroidSearchLang value</string>
     <!-- strings of the multi search -->
     <string name="search_please_wait">Searching. Please wait</string>
-    <string name="search_category_choose">Choose a category</string>
-    <string name="search_category">Category</string>
-    <string name="search_category_help">Examples\nPasserines : sparrows, swallows,&#8230;\nBirds of prey : eagles\nLong-legged wading birds: storks, herons,&#8230;\nWaders: woodcocks, plovers</string>
-    <string name="search_country">Country</string>
-    <string name="search_country_choose">Choose a country</string>
+    <string name="search_scientific_family_choose">Choose a scientific family</string>
+    <string name="search_scientific_family">Scientific family</string>
+    <string name="search_category_help"></string>
+    <string name="search_inflorescence">Inflorescence</string>
+    <string name="search_inflorescence_choose">Choose an inflorescence</string>
     <string name="search_habitat_choose">Choose a habitat</string>
     <string name="search_habitat">Habitat</string>
     <string name="search_habitat_help">A bird can have up to two habitats.\nExample : the blackbird is in "Cities, villages, gardens" and "Forests and moorlands" </string>

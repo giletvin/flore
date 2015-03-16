@@ -36,14 +36,14 @@ public class OnSpinnersItemSelected implements OnItemSelectedListener {
 		final MultiCriteriaSearchFieldType selectType = this.activity
 				.getSelectType(parent);
 		switch (selectType) {
-		case CATEGORY:
-			this.activity.getFormBean().setCategoryId(
-					this.activity.getOrnidroidService().getCategoryId(
+		case SCIENTIFIC_FAMILY:
+			this.activity.getFormBean().setScientificFamilyId(
+					this.activity.getOrnidroidService().getScientificFamilyId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
-		case COUNTRY:
-			this.activity.getFormBean().setCountryCode(
-					this.activity.getOrnidroidService().getCountryCode(
+		case INFLORESCENCE:
+			this.activity.getFormBean().setInflorescenceId(
+					this.activity.getOrnidroidService().getInflorescenceId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
 		case HABITAT:

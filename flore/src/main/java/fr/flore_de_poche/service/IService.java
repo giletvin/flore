@@ -60,22 +60,22 @@ public interface IService {
 	void getMatchesFromMultiSearchCriteria(MultiCriteriaSearchFormBean formBean);
 
 	/**
-	 * Gets the categories to load the select menu of the bird categories.
+	 * Gets the categories to load the select menu of the scientific families.
 	 * 
 	 * @return the categories
-	 * @deprecated
+	 * 
 	 */
-	List<String> getCategories();
+	List<String> getScientificFamilies();
 
 	/**
-	 * Gets the category id.
+	 * Gets the getScientificFamilyId.
 	 * 
-	 * @param categoryName
+	 * @param pScientifFamilyName
 	 *            the category name
-	 * @return the category id
-	 * @deprecated
+	 * @return the scientific family id
+	 * 
 	 */
-	Integer getCategoryId(String categoryName);
+	Integer getScientificFamilyId(String pScientifFamilyName);
 
 	/**
 	 * Gets the colour id.
@@ -94,22 +94,22 @@ public interface IService {
 	List<String> getColours();
 
 	/**
-	 * Gets the countries.
+	 * Gets the inflorescences.
 	 * 
-	 * @return the countries
-	 * @deprecated
+	 * @return the inflorescences
+	 * 
 	 */
-	List<String> getCountries();
+	List<String> getInflorescences();
 
 	/**
-	 * Gets the country code.
+	 * Gets the inflorescence id.
 	 * 
-	 * @param countryName
-	 *            the country name
-	 * @return the country code
-	 * @deprecated
+	 * @param inflorescenceName
+	 *            the inflorescence name
+	 * @return the inflorescence id
+	 * 
 	 */
-	String getCountryCode(String countryName);
+	Integer getInflorescenceId(String inflorescenceName);
 
 	/**
 	 * Gets the current subject. If a previous call to show subject detail was

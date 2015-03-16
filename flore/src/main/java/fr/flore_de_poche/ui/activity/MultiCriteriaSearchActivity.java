@@ -30,7 +30,6 @@ import fr.flore_de_poche.ui.adapter.MyCustomAdapter;
 import fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSearchFieldType;
 import fr.flore_de_poche.ui.multicriteriasearch.MultiCriteriaSelectField;
 import fr.flore_de_poche.ui.multicriteriasearch.OnSpinnersItemSelected;
-import fr.flore_de_poche.ui.activity.MainActivity_;
 
 /**
  * The Class MultiCriteriaSearchActivity.
@@ -48,8 +47,7 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 	TextView nbResultsTextView;
 
 	/** The ornidroid service. */
-	private final IService ornidroidService = ServiceFactory
-			.getService(this);
+	private final IService ornidroidService = ServiceFactory.getService(this);
 	@InstanceState
 	boolean queryRunning = false;
 
@@ -70,8 +68,7 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 	 */
 	@Background
 	public void findMatchingBirdsFromMCS() {
-		this.ornidroidService
-				.getMatchesFromMultiSearchCriteria(this.formBean);
+		this.ornidroidService.getMatchesFromMultiSearchCriteria(this.formBean);
 		// post the event in the EventBus
 		EventBus.getDefault().post(new GenericEvent(EventType.MC_SEARCH));
 	}
@@ -153,8 +150,8 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		if (queryRunning) {
 			pbarSearchMulti.setVisibility(View.VISIBLE);
 		}
-		initSelectField(MultiCriteriaSearchFieldType.CATEGORY);
-		initSelectField(MultiCriteriaSearchFieldType.COUNTRY);
+		initSelectField(MultiCriteriaSearchFieldType.SCIENTIFIC_FAMILY);
+		initSelectField(MultiCriteriaSearchFieldType.INFLORESCENCE);
 		initSelectField(MultiCriteriaSearchFieldType.SIZE);
 		initSelectField(MultiCriteriaSearchFieldType.FEATHER_COLOUR);
 		initSelectField(MultiCriteriaSearchFieldType.BEAK_COLOUR);
@@ -208,23 +205,23 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		ArrayAdapter<String> dataAdapter = null;
 		MultiCriteriaSelectField field = null;
 		switch (selectFieldType) {
-		case CATEGORY:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_category_field);
-			field.setIconResource(R.drawable.ic_categories);
+		case SCIENTIFIC_FAMILY:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_scientific_family_field);
+			field.setIconResource(R.drawable.ic_scientific_families);
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getCategories());
+					this.ornidroidService.getScientificFamilies());
 
 			break;
-		case COUNTRY:
-			field = (MultiCriteriaSelectField) findViewById(R.id.search_country_field);
-			field.setIconResource(R.drawable.ic_countries);
+		case INFLORESCENCE:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_inflorescence_field);
+			field.setIconResource(R.drawable.ic_inflorescences);
 			// dataAdapter = new ArrayAdapter<String>(this,
 			// android.R.layout.simple_spinner_item,
 			// this.ornidroidService.getCountries());
 			dataAdapter = new MyCustomAdapter(this,
 					R.layout.row_spinner_icons_dropdown_list,
-					this.ornidroidService.getCountries(), selectFieldType);
+					this.ornidroidService.getInflorescences(), selectFieldType);
 			break;
 		case SIZE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_size_field);

@@ -9,9 +9,9 @@ public enum MultiCriteriaSearchFieldType {
 	/** The beak form. */
 	BEAK_FORM,
 	/** The category. */
-	CATEGORY,
+	SCIENTIFIC_FAMILY,
 	/** The country. */
-	COUNTRY,
+	INFLORESCENCE,
 	/** The feather colour. */
 	FEATHER_COLOUR,
 	/** The paw colour. */

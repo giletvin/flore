@@ -18,10 +18,7 @@ public interface IDAO {
 	 */
 	public static final String BEAK_FORM_TABLE = "beak_form";
 
-	/**
-	 * The Constant BIRD_COUNTRY_TABLE. * @deprecated
-	 */
-	public static final String BIRD_COUNTRY_TABLE = "bird_country";
+	public static final String FLEUR_INFLORESCENCE_TABLE = "fleur_inflorescence";
 	/** The Constant SUBJECT_TABLE. */
 	public static final String SUBJECT_TABLE = "fleur";
 
@@ -34,11 +31,11 @@ public interface IDAO {
 	public static final String COLOUR_TABLE = "colour";
 
 	/**
-	 * The Constant COUNTRY_TABLE.
+	 * The Constant INFLORESCENCE_TABLE.
 	 * 
-	 * @deprecated
+	 * 
 	 */
-	public static final String COUNTRY_TABLE = "country";
+	public static final String INFLORESCENCE_TABLE = "inflorescence";
 	/**
 	 * The Constant DESCRIPTION_COLUMN.
 	 * 
@@ -157,9 +154,9 @@ public interface IDAO {
 	 * Gets the categories.
 	 * 
 	 * @return the categories
-	 * @deprecated
+	 * 
 	 */
-	Cursor getCategories();
+	Cursor getScientificFamilies();
 
 	/**
 	 * Gets the colours.
@@ -169,12 +166,12 @@ public interface IDAO {
 	Cursor getColours();
 
 	/**
-	 * Gets the countries.
+	 * Gets the inflorescences.
 	 * 
-	 * @return the countries
-	 * @deprecated
+	 * @return the inflorescences
+	 * 
 	 */
-	Cursor getCountries();
+	Cursor getInflorescences();
 
 	/**
 	 * Gets the habitats.

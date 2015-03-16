@@ -1,7 +1,5 @@
 package fr.flore_de_poche.bo;
 
-import fr.flore_de_poche.helper.BasicConstants;
-
 /**
  * The Class MultiCriteriaSearchFormBean. This class handles the values selected
  * by the user in the multi criteria search screen.
@@ -15,10 +13,10 @@ public class MultiCriteriaSearchFormBean {
 	private Integer beakFormId;
 
 	/** The category id. */
-	private Integer categoryId;
+	private Integer scientificFamilyId;
 
 	/** The country id. */
-	private String countryCode;
+	private Integer inflorescenceId;
 
 	/** The feather colour id. */
 	private Integer featherColourId;
@@ -54,22 +52,16 @@ public class MultiCriteriaSearchFormBean {
 	}
 
 	/**
-	 * Gets the category id.
+	 * Gets the scientificFamilyId id.
 	 * 
-	 * @return the category id
+	 * @return the scientificFamilyId id
 	 */
-	public Integer getCategoryId() {
-		return this.categoryId != null ? this.categoryId : 0;
+	public Integer getScientificFamilyId() {
+		return this.scientificFamilyId != null ? this.scientificFamilyId : 0;
 	}
 
-	/**
-	 * Gets the country code.
-	 * 
-	 * @return the country code
-	 */
-	public String getCountryCode() {
-		return this.countryCode != null ? this.countryCode
-				: BasicConstants.EMPTY_STRING;
+	public Integer getInflorescenceId() {
+		return this.inflorescenceId != null ? this.inflorescenceId : 0;
 	}
 
 	/**
@@ -142,24 +134,24 @@ public class MultiCriteriaSearchFormBean {
 	}
 
 	/**
-	 * Sets the category id.
+	 * Sets the pScientificFamilyId id.
 	 * 
-	 * @param pCategoryId
-	 *            the new category id
+	 * @param pScientificFamilyId
+	 *            the new pScientificFamilyId id
 	 */
-	public void setCategoryId(final Integer pCategoryId) {
-		this.categoryId = pCategoryId;
+	public void setScientificFamilyId(final Integer pScientificFamilyId) {
+		this.scientificFamilyId = pScientificFamilyId;
 
 	}
 
 	/**
-	 * Sets the country code.
+	 * Sets the INFLORESCENCE id.
 	 * 
-	 * @param pCountryCode
-	 *            the new country code
+	 * @param pInflorescenceId
+	 *            the new INFLORESCENCE id
 	 */
-	public void setCountryCode(final String pCountryCode) {
-		this.countryCode = pCountryCode;
+	public void setInflorescenceId(final Integer pInflorescenceId) {
+		this.inflorescenceId = pInflorescenceId;
 	}
 
 	/**

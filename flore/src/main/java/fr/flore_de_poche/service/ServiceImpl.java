@@ -116,10 +116,10 @@ public class ServiceImpl implements IService {
 	private Map<String, Integer> beakFormsMaps;
 
 	/** The categories list. */
-	private List<String> categoriesList;
+	private List<String> scientificFamiliesList;
 
 	/** The categories map. */
-	private Map<String, Integer> categoriesMap;
+	private Map<String, Integer> scientificFamiliesMap;
 
 	/** The colours list. */
 	private List<String> coloursList;
@@ -128,10 +128,9 @@ public class ServiceImpl implements IService {
 	private Map<String, Integer> coloursMap;
 
 	/** The countries list. */
-	private List<String> countriesList;
+	private List<String> inflorescencesList;
 
-	/** The countries map. France --> FRA */
-	private Map<String, String> countriesMap;
+	private Map<String, Integer> inflorescencesMap;
 
 	/** The current bird. */
 	private Subject currentSubject;
@@ -233,17 +232,17 @@ public class ServiceImpl implements IService {
 	 * 
 	 * @see fr.flore_de_poche.service.IOrnidroidService#getCategories()
 	 */
-	public List<String> getCategories() {
-		if (this.categoriesMap == null) {
+	public List<String> getScientificFamilies() {
+		if (this.scientificFamiliesMap == null) {
 			final Cursor cursorQueryHabitats = this.ornidroidDAO
-					.getCategories();
+					.getScientificFamilies();
 			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
 					cursorQueryHabitats, true);
-			this.categoriesMap = sfv.getMapNameId();
-			this.categoriesList = sfv.getFieldsValues();
+			this.scientificFamiliesMap = sfv.getMapNameId();
+			this.scientificFamiliesList = sfv.getFieldsValues();
 
 		}
-		return this.categoriesList;
+		return this.scientificFamiliesList;
 	}
 
 	/*
@@ -253,8 +252,8 @@ public class ServiceImpl implements IService {
 	 * fr.flore_de_poche.service.IOrnidroidService#getCategoryId(java.lang.String
 	 * )
 	 */
-	public Integer getCategoryId(final String categoryName) {
-		return this.categoriesMap != null ? this.categoriesMap
+	public Integer getScientificFamilyId(final String categoryName) {
+		return this.scientificFamiliesMap != null ? this.scientificFamiliesMap
 				.get(categoryName) : 0;
 	}
 
@@ -285,21 +284,17 @@ public class ServiceImpl implements IService {
 		return this.coloursList;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidService#getCountries()
-	 */
-	public List<String> getCountries() {
-		if (this.countriesMap == null) {
-			final Cursor cursorCountries = this.ornidroidDAO.getCountries();
+	public List<String> getInflorescences() {
+		if (this.inflorescencesMap == null) {
+			final Cursor cursorInflorescences = this.ornidroidDAO
+					.getInflorescences();
 			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
-					cursorCountries, false);
-			this.countriesMap = sfv.getMapNameCode();
-			this.countriesList = sfv.getFieldsValues();
+					cursorInflorescences, true);
+			this.inflorescencesMap = sfv.getMapNameId();
+			this.inflorescencesList = sfv.getFieldsValues();
 
 		}
-		return this.countriesList;
+		return this.inflorescencesList;
 	}
 
 	/*
@@ -309,9 +304,9 @@ public class ServiceImpl implements IService {
 	 * fr.flore_de_poche.service.IOrnidroidService#getCountryCode(java.lang.
 	 * String)
 	 */
-	public String getCountryCode(final String countryName) {
-		return this.countriesMap != null ? this.countriesMap.get(countryName)
-				: BasicConstants.EMPTY_STRING;
+	public Integer getInflorescenceId(final String inflorescenceName) {
+		return this.inflorescencesMap != null ? this.inflorescencesMap
+				.get(inflorescenceName) : 0;
 	}
 
 	/*

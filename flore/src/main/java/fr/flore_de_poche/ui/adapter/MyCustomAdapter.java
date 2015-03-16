@@ -95,11 +95,11 @@ public class MyCustomAdapter extends ArrayAdapter<String> {
 			idRes = SpinnerIconSelector
 					.getIconResourceIdFromBeakFormId(beakFormId);
 			break;
-		case COUNTRY:
-			final String countrycode = this.activity.getOrnidroidService()
-					.getCountryCode(this.itemsList.get(position));
+		case INFLORESCENCE:
+			final int inflorescenceId = this.activity.getOrnidroidService()
+					.getInflorescenceId(this.itemsList.get(position));
 			idRes = SpinnerIconSelector
-					.getIconResourceIdFromCountryCode(countrycode);
+					.getIconResourceIdFromInflorescenceId(inflorescenceId);
 			break;
 		default:
 			break;
