@@ -48,7 +48,7 @@
             android:paddingBottom="10sp"
             android:paddingLeft="10sp"
             android:paddingTop="10sp"
-            android:text="@string/download_birds_file" />
+            android:text="@string/download_subject_file" />
 
         <Button
             android:id="@+id/bt_download_all"

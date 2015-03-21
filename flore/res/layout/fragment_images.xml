@@ -46,7 +46,7 @@
             android:paddingBottom="10sp"
             android:paddingLeft="10sp"
             android:paddingTop="10sp"
-            android:text="@string/download_birds_file" />
+            android:text="@string/download_subject_file" />
 
         <Button
             android:id="@+id/bt_download_all"
@@ -183,7 +183,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/bird_image"
+                    android:contentDescription="@string/subject_image"
                     android:src="@drawable/ic_previous" />
 
                 <ImageView
@@ -191,7 +191,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/bird_image"
+                    android:contentDescription="@string/subject_image"
                     android:src="@drawable/ic_zoom" />
 
                 <ImageView
@@ -199,7 +199,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/bird_image"
+                    android:contentDescription="@string/subject_image"
                     android:src="@drawable/ic_next" />
             </LinearLayout>
 
@@ -207,7 +207,7 @@
                 android:id="@+id/picture"
                 android:layout_width="fill_parent"
                 android:layout_height="300sp"
-                android:contentDescription="@string/bird_image"
+                android:contentDescription="@string/subject_image"
                 android:scaleType="fitCenter"
                 android:src="@drawable/oiseauweb" />
         </LinearLayout>

@@ -50,12 +50,12 @@
             android:label="@string/help" />
         <activity
             android:name="fr.flore_de_poche.ui.activity.SubjectInfoActivity_"
-            android:label="@string/bird_info" />
+            android:label="@string/subject_info" />
 
         <!-- full size image activity -->
         <activity
             android:name="fr.flore_de_poche.ui.activity.ScrollableImageActivity_"
-            android:label="@string/bird_image_big"
+            android:label="@string/subject_image_big"
             android:noHistory="true" />
       
         <activity

@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     /* ** Copyright 2010, The Android Open Source Project ** ** Licensed 
-	under the Apache License, Version 2.0 (the "License"); ** you may not use 
-	this file except in compliance with the License. ** You may obtain a copy 
-	of the License at ** ** http://www.apache.org/licenses/LICENSE-2.0 ** ** 
-	Unless required by applicable law or agreed to in writing, software ** distributed 
-	under the License is distributed on an "AS IS" BASIS, ** WITHOUT WARRANTIES 
-	OR CONDITIONS OF ANY KIND, either express or implied. ** See the License 
-	for the specific language governing permissions and ** limitations under 
-	the License. */
--->
+
 <resources>
 
     <!-- The name of the application. -->
@@ -32,10 +22,10 @@
     <string name="about">A propos</string>
     <string name="help">Aide</string>
     <string name="sounds">Sons</string>
-    <string name="bird_info">Fiche oiseau</string>
-    <string name="bird_image">Images</string>
-    <string name="bird_image_big">Photo zoomée</string>
-    <string name="bird_names">Taxonomie</string>
+    <string name="subject_info">Fiche fleur</string>
+    <string name="subject_image">Images</string>
+    <string name="subject_image_big">Photo zoomée</string>
+    <string name="subject_names">Taxonomie</string>
     <string name="add_custom_media_title">Ajout de fichiers personnalisés</string>
 
     <!-- labels used in preferences -->
@@ -57,7 +47,7 @@
     <string name="add_custom_media_error">L\'opération a échoué</string>
     <string name="add_custom_media_success">Le fichier a été correctement ajouté</string>
     <string name="remove_custom_media_success">Le fichier a été correctement supprimé</string>
-    <string name="add_custom_media_go_back">Retour vers l\'oiseau</string>
+    <string name="add_custom_media_go_back">Retour vers la fiche</string>
 
     <!-- pictures info dialog box -->
     <string name="dialog_picture_title">Informations sur l\'image</string>
@@ -133,13 +123,12 @@
     <string name="expand_collapse_form">Ouvrir/Fermer le formulaire</string>
     <string name="search_leaf_disposition_choose">Choisir une disposition de feuilles</string>
     <string name="search_leaf_disposition">Disposition des feuilles</string>
-    <string name="xeno_canto_map">Carte de distribution (Xeno Canto)</string>
     <!-- labels for the updates -->
     <string name="updates_available">Mises à jour disponibles.\nTélécharger ?</string>
     <string name="updates_check_error">Echec de la vérification des mises à jour.\nMerci de vérifier votre connexion internet.</string>
     <string name="updates_none">Aucune mise à jour disponible.</string>
-    <string name="download_birds_file">Télécharger uniquement\npour cet oiseau</string>
-    <string name="download_zip_package">Télécharger le package complet\npour tous les oiseaux</string>
+    <string name="download_subject_file">Télécharger uniquement\npour cette fleur</string>
+    <string name="download_zip_package">Télécharger le package complet</string>
     <string name="download_package_in_progress">Téléchargement en cours</string>
     <string name="install_package_in_progress">Installation en cours</string>
     <string name="download_zip_package_warn_detail">Connexion Wifi recommandée. Le téchargement et l\'installation peuvent durer 5 à 10 min (en fonction de votre accès internet)</string>

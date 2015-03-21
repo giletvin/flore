@@ -540,7 +540,7 @@ public abstract class AbstractFragment extends Fragment {
 		String downloadErrorText = getErrorMessage((ApplicationException) exception);
 		Dialog dialog = new AlertDialog.Builder(this.getActivity())
 				.setIcon(android.R.drawable.ic_dialog_alert)
-				.setTitle(R.string.download_birds_file)
+				.setTitle(R.string.download_subject_file)
 				.setMessage(downloadErrorText)
 				.setPositiveButton(R.string.ok,
 						new DialogInterface.OnClickListener() {
