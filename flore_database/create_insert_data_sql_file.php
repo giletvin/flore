@@ -180,7 +180,8 @@ $array_disposition_feuille = array();
 $array_pilosite_tige = array();
 $array_pilosite_feuille = array();
 
-
+$repertoire_index=0;
+$doc_url_index=1;
 $nom_fr_1_index=2;
 $nom_fr_2_index=3;
 $nom_fr_3_index=4;
@@ -225,7 +226,7 @@ if (($handle = fopen("Fleurs.csv", "r")) !== FALSE) {
 			/*id integer,
 			directory_name,
 			scientific_family_fk*/
-			array_push($sql_queries,"insert into fleur (id,directory_name,scientific_name,scientific_family_fk) values (".$idFleur.",\"".nettoie_nom($data[$nom_scientifique_1_index])."\",\"".$data[$nom_scientifique_1_index]."\",".$indexes_scientific_family[0].");");
+			array_push($sql_queries,"insert into fleur (id,directory_name,scientific_name,scientific_family_fk,doc_url) values (".$idFleur.",\"".$data[$repertoire_index]."\",\"".$data[$nom_scientifique_1_index]."\",".$indexes_scientific_family[0].",\"".$data[$doc_url_index]."\");");
 			//langues
 			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values (\"fr\",\"".$data[$nom_fr_1_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_1_index]))."\",".$idFleur.");");
 			if ($data[$nom_fr_2_index]!=''){

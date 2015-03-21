@@ -24,7 +24,16 @@
             android:paddingTop="0sp"
             android:text="@string/home_stars" />
 
-       
+          <TextView
+            android:id="@+id/details_doc_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20sp"
+            android:paddingLeft="5sp"
+            android:paddingRight="5sp"
+            android:paddingTop="0sp"
+            android:text="@string/home_stars" />
+        
     </LinearLayout>
 
 </ScrollView>

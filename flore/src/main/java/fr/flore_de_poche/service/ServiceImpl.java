@@ -22,6 +22,7 @@ import fr.flore_de_poche.helper.ApplicationException;
 import fr.flore_de_poche.helper.BasicConstants;
 import fr.flore_de_poche.helper.Constants;
 import fr.flore_de_poche.helper.I18nHelper;
+import fr.flore_de_poche.helper.StringHelper;
 import fr.flore_de_poche.helper.SupportedLanguage;
 import fr.flore_de_poche.ui.picture.PictureHelper;
 
@@ -39,8 +40,6 @@ public class ServiceImpl implements IService {
 		/** The fields values. */
 		private final List<String> fieldsValues;
 
-		/** The map name code. */
-		private final Map<String, String> mapNameCode;
 		/** The map name id. */
 		private final Map<String, Integer> mapNameId;
 
@@ -59,16 +58,6 @@ public class ServiceImpl implements IService {
 				final List<String> pFieldValues) {
 			this.mapNameId = pMapNameId;
 			this.fieldsValues = pFieldValues;
-			this.mapNameCode = pMapNameCode;
-		}
-
-		/**
-		 * Gets the map name code.
-		 * 
-		 * @return the map name code
-		 */
-		public Map<String, String> getMapNameCode() {
-			return this.mapNameCode;
 		}
 
 		/**
@@ -452,6 +441,24 @@ public class ServiceImpl implements IService {
 		return sbuf.toString();
 	}
 
+	public String getDocUrlLink(final Subject currentSubject) {
+		if (StringHelper.isNotBlank(currentSubject.getDocUrl())) {
+
+			final StringBuffer sbuf = new StringBuffer();
+			sbuf.append("<a href=\"");
+
+			sbuf.append(currentSubject.getDocUrl());
+			sbuf.append("\">");
+			sbuf.append(Constants.getCONTEXT().getResources()
+					.getString(R.string.doc_url));
+			sbuf.append(currentSubject.getTaxon());
+			sbuf.append("</a>");
+			return sbuf.toString();
+		} else {
+			return BasicConstants.EMPTY_STRING;
+		}
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -493,13 +500,16 @@ public class ServiceImpl implements IService {
 
 			final int directoryNameIndex = cursor
 					.getColumnIndexOrThrow(IDAO.DIRECTORY_NAME_COLUMN);
+			final int urlDocIndex = cursor
+					.getColumnIndexOrThrow(IDAO.DOC_URL_COLUMN);
 
 			final SubjectFactoryImpl subjectFactory = new SubjectFactoryImpl();
 			this.currentSubject = subjectFactory.createSubject(
 					cursor.getInt(idIndex), cursor.getString(taxonIndex),
 					cursor.getString(scientificNameIndex),
 
-					cursor.getString(directoryNameIndex));
+					cursor.getString(directoryNameIndex),
+					cursor.getString(urlDocIndex));
 			// when a new subject arrives, clear the hashmap of stored bitmaps
 			PictureHelper.resetLoadedBitmaps();
 			cursor.close();

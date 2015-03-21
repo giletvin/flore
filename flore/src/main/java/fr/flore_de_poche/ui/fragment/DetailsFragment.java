@@ -26,9 +26,11 @@ public class DetailsFragment extends Fragment {
 	private IService mOrnidroidService = ServiceFactory
 			.getService(getActivity());
 
-	/** The wikipedia link. */
 	@ViewById(R.id.details_wikipedia)
 	TextView wikipediaLink;
+
+	@ViewById(R.id.details_doc_url)
+	TextView docUrlLink;
 
 	/*
 	 * (non-Javadoc)
@@ -64,6 +66,11 @@ public class DetailsFragment extends Fragment {
 
 		this.wikipediaLink.setText(Html.fromHtml(wikipedia));
 		this.wikipediaLink.setMovementMethod(LinkMovementMethod.getInstance());
+		final String docUrl = this.mOrnidroidService
+				.getDocUrlLink(this.mOrnidroidService.getCurrentSubject());
+
+		this.docUrlLink.setText(Html.fromHtml(docUrl));
+		this.docUrlLink.setMovementMethod(LinkMovementMethod.getInstance());
 
 	}
 }

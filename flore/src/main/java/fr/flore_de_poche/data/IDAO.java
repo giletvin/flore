@@ -99,6 +99,8 @@ public interface IDAO {
 	/** The Constant TAXON. */
 	public static final String TAXON = "taxon";
 
+	public static final String DOC_URL_COLUMN = "doc_url";
+
 	Cursor getLeafTypes();
 
 	/**

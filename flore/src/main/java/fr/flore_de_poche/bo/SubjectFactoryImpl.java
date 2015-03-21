@@ -13,30 +13,16 @@ public class SubjectFactoryImpl {
 
 	}
 
-	/**
-	 * Creates the bird.
-	 * 
-	 * @param id
-	 *            the id
-	 * @param taxon
-	 *            the taxon
-	 * @param scientificName
-	 *            the scientific name
-	 * 
-	 * @param directoryName
-	 *            the directory name
-	 * 
-	 * @return the bird
-	 */
 	public Subject createSubject(final Integer id, final String taxon,
-			final String scientificName, final String directoryName) {
-		final Subject bird = new Subject();
-		bird.setId(id);
-		bird.setTaxon(taxon);
-		bird.setScientificName(scientificName);
-		bird.setDirectoryName(directoryName);
-
-		return bird;
+			final String scientificName, final String directoryName,
+			String docUrl) {
+		final Subject subject = new Subject();
+		subject.setId(id);
+		subject.setTaxon(taxon);
+		subject.setScientificName(scientificName);
+		subject.setDirectoryName(directoryName);
+		subject.setDocUrl(docUrl);
+		return subject;
 	}
 
 	/**

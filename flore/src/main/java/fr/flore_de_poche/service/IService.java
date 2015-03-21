@@ -166,6 +166,8 @@ public interface IService {
 	 */
 	String getWikipediaLink(Subject currentBird);
 
+	String getDocUrlLink(Subject currentBird);
+
 	/**
 	 * Checks for history.
 	 * 

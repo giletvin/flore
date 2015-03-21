@@ -7,6 +7,7 @@ create table fleur(
 	directory_name,
 	scientific_name,
 	scientific_family_fk,
+	doc_url,
 	PRIMARY KEY(id)
 );
 

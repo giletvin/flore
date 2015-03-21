@@ -135,6 +135,7 @@
     <string name="add_comment">Add a comment</string>
     <string name="add_your_file">Add your file</string>
     <string name="wikipedia">Wikipedia: </string>
+    <string name="doc_url">Site abiris.snv.jussieu.fr: </string>
     <string name="xeno_canto_map">Distribution map (Xeno Canto)</string>
     <string name="oiseaux_net">Oiseaux.net: </string>
     <!-- labels for the updates -->

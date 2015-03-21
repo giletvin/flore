@@ -537,6 +537,8 @@ public class DAOImpl implements IDAO {
 			query.append(SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID);
 			query.append(Constants.COMMA_STRING);
 			query.append(DIRECTORY_NAME_COLUMN);
+			query.append(Constants.COMMA_STRING);
+			query.append(DOC_URL_COLUMN);
 			if (fullBirdInfo) {
 				// query.append(Constants.COMMA_STRING);
 				// query.append(DESCRIPTION_COLUMN);
