@@ -1,6 +1,6 @@
-ornidroid
+Flore de poche
 =========
 
-[[Wiki Ornidroid]] (https://github.com/giletvin/ornidroid/wiki)
+
 
 
