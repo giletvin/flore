@@ -173,6 +173,7 @@ function collectData(&$array_data,$data){
 $array_scientific_family = array();
 $array_inflorescence = array();
 $array_couleur = array();
+$array_particularite = array();
 $array_aspect = array();
 $array_nb_petales = array();
 $array_type_feuille = array();
@@ -192,6 +193,7 @@ $famille_index=8;
 $inflorescence_index=10;
 $couleur_1_index=12;
 $couleur_2_index=13;
+$particularite_index=15;
 $aspect_index=16;
 $nb_petale_index=17;
 $type_feuille_index=19;
@@ -211,6 +213,7 @@ if (($handle = fopen("Fleurs.csv", "r")) !== FALSE) {
 			$indexes_inflorescence=collectData($array_inflorescence,$data[$inflorescence_index]);
 			$indexes_couleur_1=collectData($array_couleur,$data[$couleur_1_index]);
 			$indexes_couleur_2=collectData($array_couleur,$data[$couleur_2_index]);
+			$indexes_particularite=collectData($array_particularite,$data[$particularite_index]);
 			//Attention : aspect, plusieurs valeurs dans la colonne	
 			$indexes_aspect=collectData($array_aspect,$data[$aspect_index]);
 			//Attention : nb petales, plusieurs valeurs dans la colonne	
@@ -254,6 +257,12 @@ if (($handle = fopen("Fleurs.csv", "r")) !== FALSE) {
 			}
 			if ($data[$couleur_2_index]!=''){
 				array_push($sql_queries,"insert into fleur_couleur (fleur_fk, couleur_fk) values (".$idFleur.",".$indexes_couleur_2[0].");");
+			}
+			//particularite
+			if ($data[$particularite_index]!=''){
+				foreach ($indexes_particularite as $key => $value){
+					array_push($sql_queries,"insert into fleur_particularite (fleur_fk, particularite_fk) values (".$idFleur.",".$value.");");
+				}
 			}
 			//aspect
 			if ($data[$aspect_index]!=''){
@@ -323,6 +332,12 @@ foreach ($array_inflorescence as $key => $value){
 foreach ($array_couleur as $key => $value){
 	//commandes
 	$sql_insert_query = "INSERT INTO couleur(id,name,lang) VALUES(".$key.",\"".$value."\",'fr');\n";
+	fwrite($handlerTableReferentiel, $sql_insert_query);
+}
+
+foreach ($array_particularite as $key => $value){
+	//commandes
+	$sql_insert_query = "INSERT INTO particularite(id,name,lang) VALUES(".$key.",\"".$value."\",'fr');\n";
 	fwrite($handlerTableReferentiel, $sql_insert_query);
 }
 

@@ -112,5 +112,21 @@ create table fleur_pilosite_feuille(
 	fleur_fk,
 	pilosite_feuille_fk
 );
+
+
+create table particularite(
+	id integer,
+	name,
+	lang,
+	PRIMARY KEY(id)
+);
+
+
+create table fleur_particularite(
+	fleur_fk,
+	particularite_fk
+);
+
+
 create table application_info(id integer,key,value,date,comments);
 insert into application_info(id,key,value,date,comments) VALUES(1,"flore_version","1.0.0","","");
