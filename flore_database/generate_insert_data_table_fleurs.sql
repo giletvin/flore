@@ -127,6 +127,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","crow 
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (61,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (61,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (61,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (61,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (61,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (61,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (61,3);
@@ -170,6 +171,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Berte
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","hoary alyssum","hoary alyssum",64);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (64,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (64,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (64,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (64,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (64,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (64,3);
@@ -198,6 +200,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Commo
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (66,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (66,2);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (66,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (66,2);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (66,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (66,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (66,0);
@@ -368,6 +371,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en"," Ital
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (78,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (78,3);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (78,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (78,3);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (78,5);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (78,6);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (78,3);
@@ -382,6 +386,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","wild 
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (79,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (79,4);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (79,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (79,3);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (79,5);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (79,6);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (79,3);
@@ -425,6 +430,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Liquo
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (82,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (82,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (82,5);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (82,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (82,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (82,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (82,0);
@@ -440,6 +446,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","black
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (83,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (83,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (83,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (83,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (83,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (83,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (83,2);
@@ -691,6 +698,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Erica
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","bell heather","bell heather",105);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (105,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (105,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (105,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (105,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (105,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (105,3);
@@ -741,6 +749,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Ajuga
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common bugle","common bugle",109);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (109,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (109,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (109,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (109,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (109,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (109,2);
@@ -767,6 +776,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Ononi
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common rest-harrow","common rest-harrow",111);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (111,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (111,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (111,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (111,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (111,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (111,0);
@@ -832,6 +842,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Campa
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Peach-leaved bellflower","peach-leaved bellflower",116);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (116,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (116,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (116,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (116,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (116,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (116,2);
@@ -844,6 +855,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("fr","Gante
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Campanula glomerata","campanula glomerata",117);
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Clustered bellflower","clustered bellflower",117);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (117,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (117,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (117,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (117,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (117,2);
@@ -857,6 +869,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Campa
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","nettle-leaved bellflower","nettle-leaved bellflower",118);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (118,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (118,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (118,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (118,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (118,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (118,2);
@@ -869,6 +882,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Campa
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","rampion bellflower","rampion bellflower",119);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (119,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (119,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (119,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (119,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (119,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (119,3);
@@ -881,6 +895,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("fr","Campa
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Campanula rapunculoides","campanula rapunculoides",120);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (120,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (120,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (120,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (120,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (120,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (120,2);
@@ -894,6 +909,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Capse
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","shepherd's-purse","shepherd's-purse",121);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (121,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (121,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (121,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (121,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (121,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (121,1);
@@ -989,6 +1005,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Cepha
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","White Helleborine","white helleborine",128);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (128,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (128,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (128,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (128,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (128,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (128,3);
@@ -1001,6 +1018,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Cepha
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Red Helleborine","red helleborine",129);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (129,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (129,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (129,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (129,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (129,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (129,3);
@@ -1013,6 +1031,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Ceras
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","sticky mouse-ear chickweed","sticky mouse-ear chickweed",130);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (130,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (130,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (130,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (130,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (130,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (130,3);
@@ -1026,6 +1045,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Ceras
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Mouse-ear chickweed","mouse-ear chickweed",131);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (131,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (131,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (131,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (131,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (131,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (131,3);
@@ -1038,6 +1058,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Ceras
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","field chickweed","field chickweed",132);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (132,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (132,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (132,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (132,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (132,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (132,3);
@@ -1066,6 +1087,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Chaer
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","rough chervil","rough chervil",134);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (134,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (134,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (134,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (134,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (134,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (134,0);
@@ -1295,6 +1317,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Clino
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Wild Basil","wild basil",151);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (151,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (151,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (151,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (151,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (151,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (151,3);
@@ -1361,6 +1384,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","crown
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (156,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (156,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (156,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (156,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (156,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (156,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (156,0);
@@ -1441,6 +1465,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Cucub
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Berry Catchfly","berry catchfly",162);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (162,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (162,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (162,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (162,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (162,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (162,3);
@@ -1471,6 +1496,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Conso
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","doubtful knight's spur","doubtful knight's spur",164);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (164,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (164,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (164,2);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (164,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (164,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (164,1);
@@ -1508,6 +1534,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Eroph
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common whitlowgrass","common whitlowgrass",167);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (167,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (167,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (167,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (167,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (167,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (167,3);
@@ -1533,6 +1560,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Stach
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","annual woundwort","annual woundwort",169);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (169,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (169,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (169,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (169,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (169,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (169,0);
@@ -1546,6 +1574,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Stach
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Marsh woundwort","marsh woundwort",170);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (170,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (170,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (170,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (170,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (170,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (170,0);
@@ -1561,6 +1590,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Stach
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Hedge woundwort","hedge woundwort",171);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (171,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (171,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (171,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (171,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (171,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (171,0);
@@ -1574,6 +1604,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Stach
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","yellow woundwort","yellow woundwort",172);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (172,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (172,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (172,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (172,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (172,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (172,0);
@@ -1603,6 +1634,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Epilo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Smallflower Hairy Willowherb","smallflower hairy willowherb",174);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (174,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (174,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (174,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (174,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (174,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (174,3);
@@ -1615,6 +1647,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Epilo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","square-stemmed willowherb","square-stemmed willowherb",175);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (175,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (175,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (175,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (175,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (175,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (175,2);
@@ -1629,6 +1662,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Epilo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","fringed willowherb","fringed willowherb",176);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (176,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (176,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (176,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (176,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (176,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (176,2);
@@ -1644,6 +1678,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","tall 
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (177,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (177,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (177,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (177,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (177,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (177,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (177,2);
@@ -1656,6 +1691,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Epilo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","broad-leaved willowherb","broad-leaved willowherb",178);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (178,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (178,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (178,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (178,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (178,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (178,2);
@@ -1668,6 +1704,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Epilo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","spear-leaved willowherb","spear-leaved willowherb",179);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (179,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (179,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (179,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (179,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (179,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (179,2);
@@ -1682,6 +1719,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Epilo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en"," great willowherb "," great willowherb ",180);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (180,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (180,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (180,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (180,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (180,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (180,2);
@@ -1768,6 +1806,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","drug 
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (186,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (186,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (186,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (186,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (186,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (186,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (186,2);
@@ -1781,6 +1820,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Falca
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","longleaf","longleaf",187);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (187,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (187,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (187,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (187,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (187,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (187,0);
@@ -1839,6 +1879,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en"," less
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (191,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (191,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (191,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (191,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (191,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (191,5);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (191,3);
@@ -1865,6 +1906,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","snake
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (193,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (193,2);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (193,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (193,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (193,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (193,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (193,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (193,3);
@@ -1877,6 +1920,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Fumar
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common ramping-fumitory","common ramping-fumitory",194);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (194,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (194,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (194,2);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (194,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (194,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (194,0);
@@ -1891,6 +1935,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","white
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (195,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (195,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (195,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (195,2);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (195,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (195,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (195,0);
@@ -1904,6 +1949,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Fumar
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common fumitory","common fumitory",196);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (196,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (196,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (196,2);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (196,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (196,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (196,0);
@@ -1992,6 +2038,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Galeo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","red hempnettle ","red hempnettle ",202);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (202,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (202,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (202,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (202,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (202,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (202,0);
@@ -2006,6 +2053,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","britt
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (203,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (203,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (203,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (203,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (203,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (203,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (203,0);
@@ -2047,6 +2095,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Hedge
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (206,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (206,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (206,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (206,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (206,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (206,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (206,1);
@@ -2059,6 +2108,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Geran
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Bloody crane's-bill","bloody crane's-bill",207);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (207,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (207,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (207,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (207,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (207,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (207,1);
@@ -2097,6 +2147,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Geran
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Cut-leave crane's-bill","cut-leave crane's-bill",210);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (210,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (210,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (210,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (210,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (210,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (210,1);
@@ -2134,6 +2185,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Geran
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","dove's foot crane's-bill","dove's foot crane's-bill",213);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (213,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (213,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (213,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (213,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (213,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (213,1);
@@ -2173,6 +2225,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lathy
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","perennial peavine","perennial peavine",216);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (216,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (216,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (216,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (216,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (216,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (216,0);
@@ -2187,6 +2240,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lathy
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","bitter vetch","bitter vetch",217);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (217,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (217,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (217,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (217,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (217,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (217,0);
@@ -2199,6 +2253,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lathy
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","meadow vetchling","meadow vetchling",218);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (218,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (218,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (218,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (218,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (218,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (218,0);
@@ -2214,6 +2269,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","hairy
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (219,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (219,2);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (219,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (219,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (219,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (219,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (219,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (219,0);
@@ -2226,6 +2283,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lathy
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","yellow pea","yellow pea",220);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (220,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (220,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (220,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (220,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (220,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (220,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (220,4);
@@ -2240,6 +2299,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Glech
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","ground-ivy","ground-ivy",221);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (221,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (221,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (221,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (221,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (221,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (221,2);
@@ -2335,6 +2395,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Tuber
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","spotted rockrose","spotted rockrose",228);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (228,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (228,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (228,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (228,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (228,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (228,3);
@@ -2445,6 +2506,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Hyaci
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common bluebell","common bluebell",236);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (236,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (236,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (236,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (236,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (236,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (236,3);
@@ -2591,6 +2653,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lamiu
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","henbit deadnettle","henbit deadnettle",247);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (247,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (247,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (247,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (247,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (247,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (247,2);
@@ -2617,6 +2680,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lamiu
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","yellow archangel","yellow archangel",249);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (249,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (249,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (249,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (249,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (249,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (249,2);
@@ -2632,6 +2696,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","red d
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (250,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (250,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (250,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (250,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (250,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (250,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (250,2);
@@ -2645,6 +2710,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lamiu
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","spotted white deadnettle","spotted white deadnettle",251);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (251,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (251,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (251,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (251,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (251,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (251,2);
@@ -2700,6 +2766,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Viole
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (255,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (255,2);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (255,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (255,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (255,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (255,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (255,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (255,4);
@@ -2725,6 +2793,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Linum
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","fairy flax","fairy flax",257);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (257,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (257,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (257,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (257,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (257,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (257,3);
@@ -2739,6 +2808,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","round
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (258,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (258,3);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (258,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (258,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (258,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (258,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (258,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (258,2);
@@ -2752,6 +2823,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Linar
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Common Toadflax","common toadflax",259);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (259,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (259,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (259,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (259,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (259,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (259,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (259,3);
@@ -2765,6 +2838,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Linar
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","lesser butter and eggs ","lesser butter and eggs ",260);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (260,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (260,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (260,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (260,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (260,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (260,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (260,3);
@@ -2780,6 +2855,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","ivy-l
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (261,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (261,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (261,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (261,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (261,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (261,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (261,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (261,3);
@@ -2795,6 +2872,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","sharp
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (262,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (262,3);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (262,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (262,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (262,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (262,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (262,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (262,2);
@@ -2810,6 +2889,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Small
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (263,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (263,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (263,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (263,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (263,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (263,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (263,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (263,3);
@@ -2825,6 +2906,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Pale 
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (264,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (264,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (264,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (264,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (264,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (264,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (264,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (264,3);
@@ -2841,6 +2924,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","field
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (265,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (265,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (265,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (265,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (265,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (265,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (265,3);
@@ -2868,6 +2952,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Liste
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","eggleaf twayblade ","eggleaf twayblade ",267);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (267,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (267,5);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (267,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (267,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (267,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (267,3);
@@ -2894,6 +2979,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lotus
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","bird's-foot trefoil","bird's-foot trefoil",269);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (269,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (269,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (269,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (269,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (269,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (269,0);
@@ -2908,6 +2994,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Medic
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","alfalfa","alfalfa",270);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (270,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (270,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (270,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (270,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (270,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (270,0);
@@ -2923,6 +3010,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Medic
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","black medick","black medick",271);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (271,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (271,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (271,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (271,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (271,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (271,0);
@@ -2936,6 +3024,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Medic
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","little bur-clover","little bur-clover",272);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (272,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (272,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (272,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (272,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (272,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (272,0);
@@ -2949,6 +3038,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Medic
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","spotted medick","spotted medick",273);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (273,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (273,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (273,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (273,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (273,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (273,0);
@@ -3125,6 +3215,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Commo
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (285,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (285,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (285,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (285,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (285,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (285,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (285,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (285,0);
@@ -3153,6 +3245,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Malva
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","High Mallow","high mallow",287);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (287,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (287,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (287,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (287,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (287,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (287,0);
@@ -3166,6 +3259,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Melam
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Crested Cow-wheat","crested cow-wheat",288);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (288,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (288,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (288,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (288,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (288,5);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (288,2);
@@ -3180,6 +3274,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Melam
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","field cow-wheat","field cow-wheat",289);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (289,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (289,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (289,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (289,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (289,5);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (289,2);
@@ -3195,6 +3290,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","commo
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (290,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (290,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (290,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (290,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (290,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (290,5);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (290,2);
@@ -3209,6 +3305,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Melil
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","sweet clover","sweet clover",291);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (291,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (291,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (291,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (291,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (291,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (291,0);
@@ -3223,6 +3320,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Melil
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","yellow sweet clover","yellow sweet clover",292);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (292,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (292,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (292,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (292,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (292,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (292,0);
@@ -3331,6 +3429,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Solan
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","bittersweet nightshade","bittersweet nightshade",300);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (300,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (300,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (300,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (300,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (300,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (300,3);
@@ -3360,6 +3459,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Anaga
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Poorman's Weatherglass","poorman's weatherglass",302);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (302,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (302,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (302,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (302,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (302,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (302,3);
@@ -3424,6 +3524,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Conva
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Lily of the valley","lily of the valley",307);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (307,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (307,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (307,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (307,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (307,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (307,3);
@@ -3451,6 +3552,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Musca
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Grape Hyacinth","grape hyacinth",309);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (309,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (309,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (309,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (309,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (309,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (309,3);
@@ -3465,6 +3567,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","chang
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (310,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (310,2);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (310,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (310,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (310,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (310,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (310,3);
@@ -3478,6 +3581,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Myoso
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Field Forget-me-not","field forget-me-not",311);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (311,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (311,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (311,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (311,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (311,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (311,3);
@@ -3491,6 +3595,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Myoso
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Water Forget-me-not","water forget-me-not",312);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (312,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (312,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (312,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (312,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (312,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (312,3);
@@ -3504,6 +3609,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Myoso
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Early Forget-me-not","early forget-me-not",313);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (313,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (313,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (313,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (313,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (313,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (313,3);
@@ -3516,6 +3622,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Neott
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Bird's-nest Orchid","bird's-nest orchid",314);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (314,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (314,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (314,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (314,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (314,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (314,4);
@@ -3543,6 +3650,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Diant
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Deptford Pink","deptford pink",316);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (316,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (316,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (316,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (316,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (316,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (316,3);
@@ -3569,6 +3677,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Petro
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","childing pink","childing pink",318);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (318,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (318,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (318,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (318,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (318,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (318,3);
@@ -3623,6 +3732,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Ophry
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","bee orchid","bee orchid",322);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (322,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (322,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (322,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (322,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (322,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (322,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (322,3);
@@ -3635,6 +3746,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Ophry
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Early Spider-orchid","early spider-orchid",323);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (323,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (323,5);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (323,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (323,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (323,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (323,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (323,3);
@@ -3648,6 +3761,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Fly O
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (324,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (324,5);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (324,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (324,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (324,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (324,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (324,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (324,3);
@@ -3662,6 +3777,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Himan
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","lizard orchid","lizard orchid",325);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (325,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (325,5);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (325,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (325,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (325,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (325,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (325,3);
@@ -3675,6 +3792,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Anaca
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","green-winged orchid","green-winged orchid",326);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (326,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (326,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (326,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (326,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (326,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (326,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (326,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (326,3);
@@ -3689,6 +3809,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","burnt
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (327,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (327,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (327,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (327,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (327,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (327,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (327,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (327,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (327,3);
@@ -3702,6 +3825,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","commo
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (328,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (328,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (328,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (328,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (328,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (328,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (328,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (328,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (328,3);
@@ -3715,6 +3841,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Man O
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (329,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (329,5);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (329,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (329,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (329,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (329,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (329,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (329,3);
@@ -3727,6 +3855,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Orchi
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","early-purple orchid","early-purple orchid",330);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (330,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (330,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (330,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (330,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (330,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (330,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (330,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (330,3);
@@ -3740,6 +3871,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Orchi
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","military orchid","military orchid",331);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (331,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (331,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (331,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (331,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (331,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (331,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (331,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (331,3);
@@ -3752,6 +3886,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Gymna
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","fragrant orchid","fragrant orchid",332);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (332,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (332,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (332,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (332,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (332,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (332,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (332,3);
@@ -3765,6 +3901,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","lady 
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (333,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (333,2);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (333,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (333,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (333,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (333,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (333,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (333,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (333,3);
@@ -3778,6 +3917,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Anaca
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","pyramidal orchid","pyramidal orchid",334);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (334,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (334,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (334,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (334,6);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (334,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (334,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (334,3);
@@ -3792,6 +3933,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","monke
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (335,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (335,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (335,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (335,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (335,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (335,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (335,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (335,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (335,3);
@@ -3805,6 +3949,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Dacty
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","heath spotted-orchid","heath spotted-orchid",336);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (336,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (336,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (336,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (336,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (336,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (336,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (336,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (336,3);
@@ -3819,6 +3966,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","frog 
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (337,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (337,5);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (337,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (337,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (337,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (337,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (337,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (337,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (337,3);
@@ -4006,6 +4156,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","opium
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (350,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (350,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (350,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (350,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (350,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (350,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (350,2);
@@ -4033,6 +4184,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","heart
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (352,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (352,2);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (352,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (352,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (352,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (352,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (352,2);
@@ -4045,6 +4197,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Galan
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","snowdrop","snowdrop",353);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (353,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (353,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (353,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (353,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (353,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (353,3);
@@ -4179,6 +4332,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Ornit
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","yellow serradella","yellow serradella",363);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (363,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (363,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (363,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (363,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (363,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (363,0);
@@ -4193,6 +4347,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","littl
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (364,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (364,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (364,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (364,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (364,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (364,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (364,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (364,0);
@@ -4249,6 +4405,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Plata
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","lesser butterfly-orchid","lesser butterfly-orchid",368);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (368,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (368,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (368,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (368,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (368,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (368,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (368,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (368,3);
@@ -4263,6 +4422,9 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Great
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (369,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (369,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (369,5);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (369,6);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (369,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (369,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (369,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (369,3);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (369,3);
@@ -4318,6 +4480,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Poten
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Hoeary Cinquefoil","hoeary cinquefoil",373);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (373,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (373,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (373,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (373,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (373,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (373,0);
@@ -4332,6 +4495,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Poten
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Barren Strawberry","barren strawberry",374);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (374,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (374,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (374,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (374,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (374,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (374,0);
@@ -4347,6 +4511,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Poten
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","spring cinquefoil","spring cinquefoil",375);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (375,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (375,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (375,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (375,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (375,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (375,0);
@@ -4360,6 +4525,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Poten
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","creeping cinquefoil","creeping cinquefoil",376);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (376,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (376,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (376,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (376,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (376,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (376,0);
@@ -4376,6 +4542,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Poten
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Tormentil","tormentil",377);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (377,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (377,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (377,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (377,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (377,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (377,0);
@@ -4390,6 +4557,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","primr
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (378,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (378,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (378,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (378,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (378,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (378,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (378,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (378,2);
@@ -4404,6 +4573,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Primu
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","oxlip","oxlip",379);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (379,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (379,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (379,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (379,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (379,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (379,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (379,2);
@@ -4418,6 +4589,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Primu
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","cowslip","cowslip",380);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (380,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (380,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (380,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (380,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (380,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (380,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (380,2);
@@ -4471,6 +4644,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","wild 
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (384,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (384,3);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (384,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (384,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (384,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (384,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (384,0);
@@ -4595,6 +4769,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Fallo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Japanese knotweed","japanese knotweed",393);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (393,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (393,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (393,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (393,0);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (393,6);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (393,0);
@@ -4669,6 +4844,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Rhina
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Greater Yellow Rattle","greater yellow rattle",398);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (398,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (398,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (398,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (398,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (398,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (398,2);
@@ -4741,6 +4917,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Onobr
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common sainfoin","common sainfoin",403);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (403,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (403,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (403,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (403,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (403,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (403,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (403,0);
@@ -4879,6 +5057,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Dog F
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (413,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (413,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (413,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (413,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (413,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (413,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (413,1);
@@ -4893,6 +5072,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Commo
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (414,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (414,5);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (414,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (414,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (414,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (414,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (414,2);
@@ -4961,6 +5141,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Silen
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","white campion","white campion",419);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (419,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (419,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (419,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (419,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (419,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (419,3);
@@ -4973,6 +5154,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Silen
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","sand catchfly","sand catchfly",420);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (420,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (420,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (420,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (420,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (420,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (420,3);
@@ -4986,6 +5168,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Silen
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","red campion","red campion",421);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (421,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (421,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (421,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (421,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (421,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (421,3);
@@ -4999,6 +5182,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Silen
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","bladder campion","bladder campion",422);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (422,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (422,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (422,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (422,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (422,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (422,3);
@@ -5013,6 +5197,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lychn
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Ragged Robin","ragged robin",423);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (423,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (423,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (423,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (423,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (423,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (423,3);
@@ -5039,6 +5224,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Silen
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Nottingham catchfly","nottingham catchfly",425);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (425,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (425,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (425,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (425,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (425,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (425,3);
@@ -5052,6 +5238,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Lychn
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Sticky Catchfly","sticky catchfly",426);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (426,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (426,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (426,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (426,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (426,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (426,3);
@@ -5133,6 +5320,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Stell
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","greater stitchwort","greater stitchwort",432);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (432,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (432,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (432,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (432,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (432,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (432,3);
@@ -5145,6 +5333,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Stell
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","chickweed","chickweed",433);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (433,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (433,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (433,1);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (433,0);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (433,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (433,3);
@@ -5213,6 +5402,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Thymu
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Wild thyme","wild thyme",438);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (438,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (438,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (438,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (438,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (438,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (438,0);
@@ -5229,6 +5419,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Trifo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","white clover","white clover",439);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (439,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (439,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (439,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (439,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (439,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (439,0);
@@ -5243,6 +5434,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","hares
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (440,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (440,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (440,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (440,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (440,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (440,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (440,0);
@@ -5257,6 +5449,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Trifo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","red clover","red clover",441);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (441,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (441,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (441,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (441,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (441,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (441,0);
@@ -5270,6 +5463,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Trifo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","subterranean clover","subterranean clover",442);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (442,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (442,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (442,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (442,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (442,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (442,0);
@@ -5283,6 +5477,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Trifo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","strawberry clover","strawberry clover",443);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (443,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (443,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (443,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (443,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (443,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (443,0);
@@ -5297,6 +5492,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Trifo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","crimson clover","crimson clover",444);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (444,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (444,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (444,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (444,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (444,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (444,0);
@@ -5309,6 +5505,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Trifo
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","knotted clover","knotted clover",445);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (445,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (445,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (445,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (445,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (445,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (445,0);
@@ -5374,6 +5571,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Veron
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","thyme-leaved speedwell","thyme-leaved speedwell",450);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (450,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (450,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (450,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (450,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (450,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (450,2);
@@ -5427,6 +5625,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Veron
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common field-speedwell","common field-speedwell",454);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (454,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (454,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (454,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (454,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (454,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (454,2);
@@ -5452,6 +5651,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Veron
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","mountain speedwell","mountain speedwell",456);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (456,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (456,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (456,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (456,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (456,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (456,2);
@@ -5477,6 +5677,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Veron
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","water speedwell","water speedwell",458);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (458,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (458,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (458,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (458,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (458,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (458,2);
@@ -5489,6 +5690,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Veron
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common speedwel","common speedwel",459);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (459,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (459,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (459,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (459,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (459,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (459,2);
@@ -5501,6 +5703,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Veron
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","germander speedwell","germander speedwell",460);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (460,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (460,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (460,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (460,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (460,2);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (460,2);
@@ -5531,6 +5734,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","tufte
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (462,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (462,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (462,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (462,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (462,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (462,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (462,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (462,0);
@@ -5545,6 +5750,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Vicia
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common vetch","common vetch",463);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (463,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (463,1);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (463,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (463,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (463,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (463,0);
@@ -5557,6 +5763,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Vicia
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Hungarian vetch","hungarian vetch",464);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (464,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (464,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (464,4);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (464,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (464,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (464,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (464,0);
@@ -5569,6 +5777,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Viola
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","white violet","white violet",465);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (465,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (465,0);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (465,2);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (465,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (465,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (465,2);
@@ -5582,6 +5791,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Viola
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","common dog-violet","common dog-violet",466);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (466,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (466,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (466,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (466,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (466,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (466,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (466,2);
@@ -5595,6 +5806,8 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Viola
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","wood violet","wood violet",467);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (467,1);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (467,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (467,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (467,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (467,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (467,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (467,2);
@@ -5607,6 +5820,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Echiu
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Viper's Bugloss","viper's bugloss",468);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (468,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (468,2);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (468,5);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (468,3);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (468,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (468,3);
@@ -5620,6 +5834,7 @@ insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("la","Anthy
 insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values ("en","Common kidneyvetch","common kidneyvetch",469);
 insert into fleur_inflorescence (fleur_fk, inflorescence_fk) values (469,0);
 insert into fleur_couleur (fleur_fk, couleur_fk) values (469,3);
+insert into fleur_particularite (fleur_fk, particularite_fk) values (469,4);
 insert into fleur_aspect (fleur_fk, aspect_fk) values (469,2);
 insert into fleur_nb_petale (fleur_fk, nb_petale_fk) values (469,0);
 insert into fleur_type_feuille (fleur_fk, type_feuille_fk) values (469,0);
