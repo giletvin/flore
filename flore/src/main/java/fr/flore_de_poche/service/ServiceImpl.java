@@ -96,50 +96,41 @@ public class ServiceImpl implements IService {
 		return serviceInstance;
 	}
 
-	/** The activity. */
 	private final Activity activity;
 
-	/** The beak forms list. */
 	private List<String> leafTypesList;
-	/** The beak forms maps. */
+
 	private Map<String, Integer> leafTypesMap;
 
-	/** The categories list. */
 	private List<String> scientificFamiliesList;
 
-	/** The categories map. */
 	private Map<String, Integer> scientificFamiliesMap;
 
-	/** The colours list. */
 	private List<String> coloursList;
 
-	/** The colours map. */
 	private Map<String, Integer> coloursMap;
 
-	/** The countries list. */
 	private List<String> inflorescencesList;
 
 	private Map<String, Integer> inflorescencesMap;
+	private List<String> particularitesList;
 
-	/** The current bird. */
+	private Map<String, Integer> particularitesMap;
+
 	private Subject currentSubject;
 
 	/** The data base open helper. */
 	private final DatabaseOpenHelper dataBaseOpenHelper;
 
-	/** The habitats list. */
 	private List<String> aspectsList;
 
-	/** The habitats map. */
 	private Map<String, Integer> aspectsMap;
 
 	/** The ornidroid dao. */
 	private final IDAO ornidroidDAO;
 
-	/** The remarkable signs list. */
 	private List<String> leafDispositions;
 
-	/** The remarkable signs map. */
 	private Map<String, Integer> leafDispositionsMap;
 
 	private List<String> nbPetalesList;
@@ -223,34 +214,16 @@ public class ServiceImpl implements IService {
 		return this.scientificFamiliesList;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getCategoryId(java.lang.String
-	 * )
-	 */
 	public Integer getScientificFamilyId(final String categoryName) {
 		return this.scientificFamiliesMap != null ? this.scientificFamiliesMap
 				.get(categoryName) : BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getColourId(java.lang.String)
-	 */
 	public Integer getColourId(final String colourName) {
 		return this.coloursMap != null ? this.coloursMap.get(colourName)
 				: BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidService#getColours()
-	 */
 	public List<String> getColours() {
 		if (this.coloursMap == null) {
 			final Cursor cursorQueryColours = this.ornidroidDAO.getColours();
@@ -276,23 +249,29 @@ public class ServiceImpl implements IService {
 		return this.inflorescencesList;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidService#getCountryCode(java.lang.
-	 * String)
-	 */
 	public Integer getInflorescenceId(final String inflorescenceName) {
 		return this.inflorescencesMap != null ? this.inflorescencesMap
 				.get(inflorescenceName) : BasicConstants.DEFAULT_EMPTY_VALUE;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidService#getCurrentBird()
-	 */
+	public List<String> getParticularites() {
+		if (this.particularitesMap == null) {
+			final Cursor cursorInflorescences = this.ornidroidDAO
+					.getParticularites();
+			final SelectFieldsValue sfv = loadSelectFieldsFromCursor(
+					cursorInflorescences, true);
+			this.particularitesMap = sfv.getMapNameId();
+			this.particularitesList = sfv.getFieldsValues();
+
+		}
+		return this.particularitesList;
+	}
+
+	public Integer getParticulariteId(final String particulariteName) {
+		return this.particularitesMap != null ? this.particularitesMap
+				.get(particulariteName) : BasicConstants.DEFAULT_EMPTY_VALUE;
+	}
+
 	public Subject getCurrentSubject() {
 		return this.currentSubject;
 	}

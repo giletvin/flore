@@ -78,23 +78,13 @@ public interface IService {
 	 */
 	List<String> getColours();
 
-	/**
-	 * Gets the inflorescences.
-	 * 
-	 * @return the inflorescences
-	 * 
-	 */
 	List<String> getInflorescences();
 
-	/**
-	 * Gets the inflorescence id.
-	 * 
-	 * @param inflorescenceName
-	 *            the inflorescence name
-	 * @return the inflorescence id
-	 * 
-	 */
 	Integer getInflorescenceId(String inflorescenceName);
+
+	List<String> getParticularites();
+
+	Integer getParticulariteId(String particulariteName);
 
 	/**
 	 * Gets the current subject. If a previous call to show subject detail was

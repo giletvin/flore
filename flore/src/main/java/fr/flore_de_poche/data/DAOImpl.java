@@ -435,6 +435,17 @@ public class DAOImpl implements IDAO {
 					.append(formBean.getAspectId());
 
 		}
+		if (formBean.getParticulariteId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
+			fromClauses
+					.append(INNER_JOIN)
+					.append(FLEUR_PARTICULARITE_TABLE)
+					.append(" on " + FLEUR_PARTICULARITE_TABLE
+							+ ".fleur_fk=fleur.id");
+			whereClauses.append(
+					" AND " + FLEUR_PARTICULARITE_TABLE + ".particularite_fk=")
+					.append(formBean.getParticulariteId());
+
+		}
 		if (formBean.getColourId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
 			fromClauses.append(INNER_JOIN).append(FLEUR_COLOUR_TABLE)
 					.append(" on " + FLEUR_COLOUR_TABLE + ".fleur_fk=fleur.id");
@@ -786,5 +797,11 @@ public class DAOImpl implements IDAO {
 			this.dataBaseOpenHelper.close();
 		}
 
+	}
+
+	@Override
+	public Cursor getParticularites() {
+		return getCursorFromListTable(PARTICULARITE_TABLE, ID,
+				I18nHelper.getLang());
 	}
 }

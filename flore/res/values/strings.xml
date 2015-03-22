@@ -103,6 +103,8 @@
     <string name="search_aspect_choose">Choose an aspect</string>
     <string name="search_aspect">Aspect</string>
     <string name="search_aspect_help"></string>
+    <string name="search_particularite_choose">Choose a particularity</string>
+    <string name="search_particularite">Particularity</string>
     <string name="search_leaf_type_choose">Choose a leaf type</string>
     <string name="search_leaf_type">Leaf type</string>
     <string name="search_all">All </string>

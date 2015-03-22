@@ -105,6 +105,8 @@
     <string name="search_aspect_choose">Choisir un aspect</string>
     <string name="search_aspect">Aspect</string>
     <string name="search_aspect_help"></string>
+    <string name="search_particularite_choose">Choisir une particularité</string>
+    <string name="search_particularite">Particularité</string>
     <string name="search_leaf_type_choose">Choisir un type de feuille</string>
     <string name="search_leaf_type">Type de feuille</string>
     <string name="search_all">Tous </string>

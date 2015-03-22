@@ -17,6 +17,16 @@ public class MultiCriteriaSearchFormBean {
 	private Integer colourId;
 
 	private Integer aspectId;
+	private Integer particulariteId;
+
+	public Integer getParticulariteId() {
+		return this.particulariteId != null ? this.particulariteId
+				: BasicConstants.DEFAULT_EMPTY_VALUE;
+	}
+
+	public void setParticulariteId(Integer pParticulariteId) {
+		this.particulariteId = pParticulariteId;
+	}
 
 	private Integer leafDispositionId;
 

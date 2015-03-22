@@ -21,6 +21,7 @@ public interface IDAO {
 	public static final String FLEUR_COLOUR_TABLE = "fleur_couleur";
 	public static final String FLEUR_PILOSITE_FEUILLE = "fleur_pilosite_feuille";
 	public static final String FLEUR_PILOSITE_TIGE = "fleur_pilosite_tige";
+	public static final String FLEUR_PARTICULARITE_TABLE = "fleur_particularite";
 
 	public static final String SUBJECT_TABLE = "fleur";
 
@@ -88,6 +89,7 @@ public interface IDAO {
 	public static final String NB_PETALE_TABLE = "nb_petale";
 	public static final String PILOSITE_TIGE_TABLE = "pilosite_tige";
 	public static final String PILOSITE_FEUILLE_TABLE = "pilosite_feuille";
+	public static final String PARTICULARITE_TABLE = "particularite";
 
 	/**
 	 * The Constant SIZE_VALUE_COLUMN.
@@ -195,5 +197,7 @@ public interface IDAO {
 	 * @return the release notes
 	 */
 	String getReleaseNotes();
+
+	Cursor getParticularites();
 
 }

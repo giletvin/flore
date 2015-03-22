@@ -51,6 +51,11 @@ public class OnSpinnersItemSelected implements OnItemSelectedListener {
 					this.activity.getOrnidroidService().getAspectId(
 							parent.getItemAtPosition(pos).toString()));
 			break;
+		case PARTICULARITE:
+			this.activity.getFormBean().setParticulariteId(
+					this.activity.getOrnidroidService().getParticulariteId(
+							parent.getItemAtPosition(pos).toString()));
+			break;
 		case LEAF_TYPE:
 			this.activity.getFormBean().setLeafTypeId(
 					this.activity.getOrnidroidService().getLeafTypeId(

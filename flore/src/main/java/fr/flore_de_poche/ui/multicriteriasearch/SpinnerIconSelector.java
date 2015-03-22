@@ -8,14 +8,6 @@ import fr.flore.R;
  */
 public class SpinnerIconSelector {
 
-	/**
-	 * Gets the icon resource id from beak form id. This is very dependant to
-	 * the sql data. Maps the beak form id to an icon.
-	 * 
-	 * @param beakFormId
-	 *            the beak form id
-	 * @return the icon resource name from beak form id
-	 */
 	public static int getIconResourceIdFromBeakFormId(final int beakFormId) {
 
 		// INSERT INTO beak_form(id,name,lang)
@@ -60,12 +52,20 @@ public class SpinnerIconSelector {
 			resourceId = R.drawable.bec_mouette;
 			break;
 		default:
-			resourceId = R.drawable.bec_tous;
+			resourceId = R.drawable.tous;
 			break;
 		}
 		return resourceId;
 	}
 
+	/**
+	 * Gets the icon resource id from inflorescenceid. This is very dependant to
+	 * the sql data. Maps the inflorescence id to an icon.
+	 * 
+	 * @param inflorescenceId
+	 *            the inflorescenceId
+	 * @return the icon resource name from inflorescenceId
+	 */
 	public static int getIconResourceIdFromInflorescenceId(
 			final int inflorescenceId) {
 
@@ -73,35 +73,33 @@ public class SpinnerIconSelector {
 		int resourceId = 0;
 
 		switch (inflorescenceId) {
+		case 0:
+			resourceId = R.drawable.ic_inflorescence_groupe;
+			break;
 		case 1:
-			resourceId = R.drawable.bec_autres_becs_droits;
-			break;
-		case 2:
-			resourceId = R.drawable.bec_epais;
-			break;
-		case 3:
-			resourceId = R.drawable.bec_autre;
-			break;
-		case 4:
-			resourceId = R.drawable.bec_courbe;
-			break;
-		case 5:
-			resourceId = R.drawable.bec_droit_long;
-			break;
-		case 6:
-			resourceId = R.drawable.bec_crochu;
-			break;
-		case 7:
-			resourceId = R.drawable.bec_fin_court;
-			break;
-		case 8:
-			resourceId = R.drawable.bec_canard;
-			break;
-		case 9:
-			resourceId = R.drawable.bec_mouette;
+			resourceId = R.drawable.inflorescence_solitaire;
 			break;
 		default:
-			resourceId = R.drawable.bec_tous;
+			resourceId = R.drawable.tous;
+			break;
+		}
+		return resourceId;
+	}
+
+	public static int getIconResourceIdFromAspectId(final int pAspectId) {
+
+		int resourceId = 0;
+
+		switch (pAspectId) {
+		case 3:
+			resourceId = R.drawable.ic_particularite_papillon;
+			break;
+		case 4:
+			resourceId = R.drawable.ic_fleur_clot;
+			break;
+
+		default:
+			resourceId = R.drawable.tous;
 			break;
 		}
 		return resourceId;

@@ -101,6 +101,11 @@ public class MyCustomAdapter extends ArrayAdapter<String> {
 			idRes = SpinnerIconSelector
 					.getIconResourceIdFromInflorescenceId(inflorescenceId);
 			break;
+		case ASPECT:
+			final int aspectId = this.activity.getOrnidroidService()
+					.getAspectId(this.itemsList.get(position));
+			idRes = SpinnerIconSelector.getIconResourceIdFromAspectId(aspectId);
+			break;
 		default:
 			break;
 

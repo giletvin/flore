@@ -5,9 +5,7 @@ package fr.flore_de_poche.ui.multicriteriasearch;
  */
 public enum MultiCriteriaSearchFieldType {
 
-	LEAF_TYPE,
-
-	SCIENTIFIC_FAMILY,
+	LEAF_TYPE, PARTICULARITE, SCIENTIFIC_FAMILY,
 
 	INFLORESCENCE,
 

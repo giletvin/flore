@@ -155,6 +155,7 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		initSelectField(MultiCriteriaSearchFieldType.NB_PETALE);
 		initSelectField(MultiCriteriaSearchFieldType.COLOUR);
 		initSelectField(MultiCriteriaSearchFieldType.ASPECT);
+		initSelectField(MultiCriteriaSearchFieldType.PARTICULARITE);
 		initSelectField(MultiCriteriaSearchFieldType.LEAF_TYPE);
 		initSelectField(MultiCriteriaSearchFieldType.LEAF_DISPOSITION);
 		initSelectField(MultiCriteriaSearchFieldType.PILOSITE_TIGE);
@@ -202,6 +203,7 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 	 */
 	private void initSelectField(
 			final MultiCriteriaSearchFieldType selectFieldType) {
+		// TODO : c'est ici qu'on customize les menus déroulants
 		ArrayAdapter<String> dataAdapter = null;
 		MultiCriteriaSelectField field = null;
 		switch (selectFieldType) {
@@ -246,9 +248,16 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		case ASPECT:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_aspect_field);
 			field.setIconResource(R.drawable.ic_habitat);
-			dataAdapter = new ArrayAdapter<String>(this,
-					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getAspects());
+			dataAdapter = new MyCustomAdapter(this,
+					R.layout.row_spinner_icons_dropdown_list,
+					this.ornidroidService.getAspects(), selectFieldType);
+			break;
+		case PARTICULARITE:
+			field = (MultiCriteriaSelectField) findViewById(R.id.search_particularite_field);
+			field.setIconResource(R.drawable.ic_habitat);
+			dataAdapter = new MyCustomAdapter(this,
+					R.layout.row_spinner_icons_dropdown_list,
+					this.ornidroidService.getParticularites(), selectFieldType);
 			break;
 		case LEAF_TYPE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_leaf_type_field);
