@@ -209,7 +209,7 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		switch (selectFieldType) {
 		case SCIENTIFIC_FAMILY:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_scientific_family_field);
-			field.setIconResource(R.drawable.ic_scientific_families);
+			// field.setIconResource(R.drawable.tous);
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
 					this.ornidroidService.getScientificFamilies());
@@ -217,7 +217,6 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 			break;
 		case INFLORESCENCE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_inflorescence_field);
-			field.setIconResource(R.drawable.ic_inflorescences);
 
 			dataAdapter = new MyCustomAdapter(this,
 					R.layout.row_spinner_icons_dropdown_list,
@@ -225,21 +224,21 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 			break;
 		case NB_PETALE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_nb_petale_field);
-			field.setIconResource(R.drawable.ic_size);
+
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
 					this.ornidroidService.getNbPetalesList());
 			break;
 		case PILOSITE_FEUILLE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_pilosite_feuille_field);
-			field.setIconResource(R.drawable.ic_size);
+
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
 					this.ornidroidService.getPilositeFeuilleList());
 			break;
 		case PILOSITE_TIGE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_pilosite_tige_field);
-			field.setIconResource(R.drawable.ic_size);
+
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
 					this.ornidroidService.getPilositeTigeList());
@@ -247,27 +246,27 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 
 		case ASPECT:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_aspect_field);
-			field.setIconResource(R.drawable.ic_habitat);
+
 			dataAdapter = new MyCustomAdapter(this,
 					R.layout.row_spinner_icons_dropdown_list,
 					this.ornidroidService.getAspects(), selectFieldType);
 			break;
 		case PARTICULARITE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_particularite_field);
-			field.setIconResource(R.drawable.ic_habitat);
+
 			dataAdapter = new MyCustomAdapter(this,
 					R.layout.row_spinner_icons_dropdown_list,
 					this.ornidroidService.getParticularites(), selectFieldType);
 			break;
 		case LEAF_TYPE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_leaf_type_field);
-			field.setIconResource(R.drawable.ic_beak_type);
+
 			dataAdapter = new MyCustomAdapter(this, R.layout.row_spinner_icons,
 					this.ornidroidService.getLeafTypes(), selectFieldType);
 			break;
 		case COLOUR:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_colour_field);
-			field.setIconResource(R.drawable.ic_feather_colour);
+
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
 					this.ornidroidService.getColours());
@@ -275,7 +274,7 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 
 		case LEAF_DISPOSITION:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_leaf_disposition_field);
-			field.setIconResource(R.drawable.ic_remarkable_sign);
+
 			dataAdapter = new ArrayAdapter<String>(this,
 					R.layout.row_spinner_without_icons,
 					this.ornidroidService.getLeafDispositions());

@@ -8,56 +8,6 @@ import fr.flore.R;
  */
 public class SpinnerIconSelector {
 
-	public static int getIconResourceIdFromBeakFormId(final int beakFormId) {
-
-		// INSERT INTO beak_form(id,name,lang)
-		// VALUES(1,"autres becs droits",'fr');
-		// INSERT INTO beak_form(id,name,lang) VALUES(2,"épais et court",'fr');
-		// INSERT INTO beak_form(id,name,lang) VALUES(3,"autre",'fr');
-		// INSERT INTO beak_form(id,name,lang) VALUES(4,"courbé",'fr');
-		// INSERT INTO beak_form(id,name,lang) VALUES(5,"droit et long",'fr');
-		// INSERT INTO beak_form(id,name,lang) VALUES(6,"crochu",'fr');
-		// INSERT INTO beak_form(id,name,lang) VALUES(7,"fin et court",'fr');
-		// INSERT INTO beak_form(id,name,lang) VALUES(8,"canard",'fr');
-		// INSERT INTO beak_form(id,name,lang) VALUES(9,"mouette",'fr');
-
-		int resourceId = 0;
-
-		switch (beakFormId) {
-		case 1:
-			resourceId = R.drawable.bec_autres_becs_droits;
-			break;
-		case 2:
-			resourceId = R.drawable.bec_epais;
-			break;
-		case 3:
-			resourceId = R.drawable.bec_autre;
-			break;
-		case 4:
-			resourceId = R.drawable.bec_courbe;
-			break;
-		case 5:
-			resourceId = R.drawable.bec_droit_long;
-			break;
-		case 6:
-			resourceId = R.drawable.bec_crochu;
-			break;
-		case 7:
-			resourceId = R.drawable.bec_fin_court;
-			break;
-		case 8:
-			resourceId = R.drawable.bec_canard;
-			break;
-		case 9:
-			resourceId = R.drawable.bec_mouette;
-			break;
-		default:
-			resourceId = R.drawable.tous;
-			break;
-		}
-		return resourceId;
-	}
-
 	/**
 	 * Gets the icon resource id from inflorescenceid. This is very dependant to
 	 * the sql data. Maps the inflorescence id to an icon.
@@ -96,6 +46,41 @@ public class SpinnerIconSelector {
 			break;
 		case 4:
 			resourceId = R.drawable.ic_fleur_clot;
+			break;
+
+		default:
+			resourceId = R.drawable.tous;
+			break;
+		}
+		return resourceId;
+	}
+
+	/**
+	 * INSERT INTO type_feuille(id,name,lang) VALUES(0,"Composée",'fr'); INSERT
+	 * INTO type_feuille(id,name,lang) VALUES(1,"Divisée",'fr'); INSERT INTO
+	 * type_feuille(id,name,lang) VALUES(2,"Simple dentée",'fr'); INSERT INTO
+	 * type_feuille(id,name,lang) VALUES(3,"Simple entière",'fr'); INSERT INTO
+	 * type_feuille(id,name,lang) VALUES(4,"Autre",'fr');
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public static int getIconResourceIdFromLeafTypeId(final int id) {
+
+		int resourceId = 0;
+
+		switch (id) {
+		case 0:
+			resourceId = R.drawable.type_feuille_composee;
+			break;
+		case 1:
+			resourceId = R.drawable.type_feuille_divisee;
+			break;
+		case 2:
+			resourceId = R.drawable.type_feuille_dentee;
+			break;
+		case 3:
+			resourceId = R.drawable.type_feuille_entiere;
 			break;
 
 		default:
