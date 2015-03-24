@@ -96,6 +96,12 @@ public class MyCustomAdapter extends ArrayAdapter<String> {
 			idRes = SpinnerIconSelector
 					.getIconResourceIdFromLeafTypeId(leafTypeId);
 			break;
+		case PILOSITE_FEUILLE:
+			final int pilositeFeuilleId = this.activity.getOrnidroidService()
+					.getPilositeFeuilleId(this.itemsList.get(position));
+			idRes = SpinnerIconSelector
+					.getIconResourceIdFromPilositeFeuilleId(pilositeFeuilleId);
+			break;
 		case INFLORESCENCE:
 			final int inflorescenceId = this.activity.getOrnidroidService()
 					.getInflorescenceId(this.itemsList.get(position));

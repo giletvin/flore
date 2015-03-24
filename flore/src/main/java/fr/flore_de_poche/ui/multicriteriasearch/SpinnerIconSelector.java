@@ -56,6 +56,37 @@ public class SpinnerIconSelector {
 	}
 
 	/**
+	 * INSERT INTO pilosite_feuille(id,name,lang) VALUES(0,"Glabre",'fr');
+	 * INSERT INTO pilosite_feuille(id,name,lang) VALUES(1,"Pubescente2",'fr');
+	 * INSERT INTO pilosite_feuille(id,name,lang) VALUES(2,"Pubescente1",'fr');
+	 * 
+	 * @param pPilositeFeuilleId
+	 * @return
+	 */
+	public static int getIconResourceIdFromPilositeFeuilleId(
+			final int pPilositeFeuilleId) {
+
+		int resourceId = 0;
+
+		switch (pPilositeFeuilleId) {
+		case 0:
+			resourceId = R.drawable.pilosite_feuille_glabre;
+			break;
+		case 1:
+			resourceId = R.drawable.pilosite_feuille_pubescent;
+			break;
+
+		case 2:
+			resourceId = R.drawable.pilosite_feuille_pubescent;
+			break;
+		default:
+			resourceId = R.drawable.tous;
+			break;
+		}
+		return resourceId;
+	}
+
+	/**
 	 * INSERT INTO type_feuille(id,name,lang) VALUES(0,"Composée",'fr'); INSERT
 	 * INTO type_feuille(id,name,lang) VALUES(1,"Divisée",'fr'); INSERT INTO
 	 * type_feuille(id,name,lang) VALUES(2,"Simple dentée",'fr'); INSERT INTO

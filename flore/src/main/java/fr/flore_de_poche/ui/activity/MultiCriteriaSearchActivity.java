@@ -232,9 +232,10 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		case PILOSITE_FEUILLE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_pilosite_feuille_field);
 
-			dataAdapter = new ArrayAdapter<String>(this,
-					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getPilositeFeuilleList());
+			dataAdapter = new MyCustomAdapter(this,
+					R.layout.row_spinner_icons_dropdown_list,
+					this.ornidroidService.getPilositeFeuilleList(),
+					selectFieldType);
 			break;
 		case PILOSITE_TIGE:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_pilosite_tige_field);
