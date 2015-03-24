@@ -36,16 +36,43 @@ public class SpinnerIconSelector {
 		return resourceId;
 	}
 
+	/**
+	 * INSERT INTO aspect(id,name,lang) VALUES(0,"Pser",'fr'); INSERT INTO
+	 * aspect(id,name,lang) VALUES(1,"Ctl",'fr'); INSERT INTO
+	 * aspect(id,name,lang) VALUES(2,"Psi",'fr'); INSERT INTO
+	 * aspect(id,name,lang) VALUES(3,"Psli",'fr'); INSERT INTO
+	 * aspect(id,name,lang) VALUES(4,"Clot",'fr'); INSERT INTO
+	 * aspect(id,name,lang) VALUES(5,"Autre",'fr'); INSERT INTO
+	 * aspect(id,name,lang) VALUES(6,"Psle",'fr');
+	 * 
+	 * @param pAspectId
+	 * @return
+	 */
 	public static int getIconResourceIdFromAspectId(final int pAspectId) {
 
 		int resourceId = 0;
 
 		switch (pAspectId) {
+		case 0:
+			resourceId = R.drawable.aspect_pser;
+			break;
+		case 1:
+			resourceId = R.drawable.aspect_ctl;
+			break;
+		case 2:
+			resourceId = R.drawable.aspect_psi;
+			break;
 		case 3:
-			resourceId = R.drawable.ic_particularite_papillon;
+			resourceId = R.drawable.aspect_psli;
 			break;
 		case 4:
-			resourceId = R.drawable.ic_fleur_clot;
+			resourceId = R.drawable.aspect_clot;
+			break;
+		case 5:
+			resourceId = R.drawable.tous;
+			break;
+		case 6:
+			resourceId = R.drawable.aspect_psle;
 			break;
 
 		default:
