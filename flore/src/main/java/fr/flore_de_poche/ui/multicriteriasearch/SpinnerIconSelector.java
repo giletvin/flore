@@ -10,7 +10,9 @@ public class SpinnerIconSelector {
 
 	/**
 	 * Gets the icon resource id from inflorescenceid. This is very dependant to
-	 * the sql data. Maps the inflorescence id to an icon.
+	 * the sql data. Maps the inflorescence id to an icon.<br>
+	 * INSERT INTO inflorescence(id,name,lang) VALUES(0,"Groupe",'fr'); <br>
+	 * INSERT INTO inflorescence(id,name,lang) VALUES(1,"Solitaire",'fr');
 	 * 
 	 * @param inflorescenceId
 	 *            the inflorescenceId
@@ -24,7 +26,7 @@ public class SpinnerIconSelector {
 
 		switch (inflorescenceId) {
 		case 0:
-			resourceId = R.drawable.ic_inflorescence_groupe;
+			resourceId = R.drawable.inflorescence_groupe;
 			break;
 		case 1:
 			resourceId = R.drawable.inflorescence_solitaire;
