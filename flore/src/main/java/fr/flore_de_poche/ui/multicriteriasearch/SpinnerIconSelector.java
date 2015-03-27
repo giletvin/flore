@@ -21,7 +21,6 @@ public class SpinnerIconSelector {
 	public static int getIconResourceIdFromInflorescenceId(
 			final int inflorescenceId) {
 
-		// TODO : là pour les icones d'inflorescences
 		int resourceId = 0;
 
 		switch (inflorescenceId) {
@@ -141,6 +140,42 @@ public class SpinnerIconSelector {
 			break;
 		case 3:
 			resourceId = R.drawable.type_feuille_entiere;
+			break;
+
+		default:
+			resourceId = R.drawable.tous;
+			break;
+		}
+		return resourceId;
+	}
+
+	/**
+	 * INSERT INTO disposition_feuille(id,name,lang) VALUES(0,"Alternes",'fr');
+	 * INSERT INTO disposition_feuille(id,name,lang) VALUES(1,"Opposées",'fr');
+	 * INSERT INTO disposition_feuille(id,name,lang)
+	 * VALUES(2,"Verticillées",'fr'); INSERT INTO
+	 * disposition_feuille(id,name,lang) VALUES(3,"à la base",'fr'); INSERT INTO
+	 * disposition_feuille(id,name,lang) VALUES(4,"Autre",'fr');
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public static int getIconResourceIdFromLeafDispositionId(final int id) {
+
+		int resourceId = 0;
+
+		switch (id) {
+		case 0:
+			resourceId = R.drawable.disposition_feuille_alterne;
+			break;
+		case 1:
+			resourceId = R.drawable.disposition_feuille_opposes;
+			break;
+		case 2:
+			resourceId = R.drawable.disposition_feuille_verticillee;
+			break;
+		case 3:
+			resourceId = R.drawable.disposition_feuille_base;
 			break;
 
 		default:

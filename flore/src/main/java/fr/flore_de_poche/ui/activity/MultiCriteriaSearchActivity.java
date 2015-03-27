@@ -276,9 +276,9 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		case LEAF_DISPOSITION:
 			field = (MultiCriteriaSelectField) findViewById(R.id.search_leaf_disposition_field);
 
-			dataAdapter = new ArrayAdapter<String>(this,
-					R.layout.row_spinner_without_icons,
-					this.ornidroidService.getLeafDispositions());
+			dataAdapter = new MyCustomAdapter(this, R.layout.row_spinner_icons,
+					this.ornidroidService.getLeafDispositions(),
+					selectFieldType);
 			break;
 
 		}
