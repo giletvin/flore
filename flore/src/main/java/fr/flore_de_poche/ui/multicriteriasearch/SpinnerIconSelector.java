@@ -184,4 +184,55 @@ public class SpinnerIconSelector {
 		}
 		return resourceId;
 	}
+
+	/**
+	 * INSERT INTO particularite(id,name,lang) VALUES(0,"Cloche",'fr'); INSERT
+	 * INTO particularite(id,name,lang) VALUES(1,"échancré",'fr'); INSERT INTO
+	 * particularite(id,name,lang) VALUES(2,"éperon",'fr'); INSERT INTO
+	 * particularite(id,name,lang) VALUES(3,"Spathe",'fr'); INSERT INTO
+	 * particularite(id,name,lang) VALUES(4,"Papillon",'fr'); INSERT INTO
+	 * particularite(id,name,lang) VALUES(5,"Tachetée",'fr'); INSERT INTO
+	 * particularite(id,name,lang) VALUES(6,"Orchidée",'fr');
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public static int getIconResourceIdFromParticulariteId(final int id) {
+
+		int resourceId = 0;
+
+		switch (id) {
+		case 0:
+			resourceId = R.drawable.particularite_cloche;
+			break;
+		case 1:
+			resourceId = R.drawable.particularite_echancree;
+			break;
+		case 2:
+			resourceId = R.drawable.particularite_eperon;
+			break;
+		case 3:
+			break;
+
+		case 4:
+			resourceId = R.drawable.particularite_papillon;
+
+			break;
+
+		case 5:
+			resourceId = R.drawable.particularite_tachetee;
+
+			break;
+
+		case 6:
+			resourceId = R.drawable.particularite_orchidee;
+
+			break;
+
+		default:
+			resourceId = R.drawable.tous;
+			break;
+		}
+		return resourceId;
+	}
 }
