@@ -8,6 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import fr.flore_de_poche.helper.BasicConstants;
+import fr.flore_de_poche.helper.StringHelper;
+
 /**
  * The Class OrnidroidFileFactoryImpl.
  */
@@ -116,27 +119,41 @@ public class MediaFileFactoryImpl {
 		final Map<String, String> ornidroidFileProperties = new HashMap<String, String>();
 		final Properties properties = loadPropertiesFile(file);
 		if (properties != null) {
-			final String description = properties.getProperty(
-					PictureFile.IMAGE_DESCRIPTION_PROPERTY
+			final String description = StringHelper.defaultStringIfEmpty(properties
+					.getProperty(PictureFile.IMAGE_DESCRIPTION_PROPERTY
 							+ MediaFile.LANGUAGE_SEPARATOR + lang,
-					DEFAULT_VALUE);
-			ornidroidFileProperties.put(
-					PictureFile.IMAGE_DESCRIPTION_PROPERTY,
+							DEFAULT_VALUE),
+					getDefaultCommentValueForImage(file));
+			ornidroidFileProperties.put(PictureFile.IMAGE_DESCRIPTION_PROPERTY,
 					description);
 			final String source = properties.getProperty(
 					PictureFile.IMAGE_SOURCE_PROPERTY, DEFAULT_VALUE);
-			ornidroidFileProperties.put(
-					PictureFile.IMAGE_SOURCE_PROPERTY, source);
+			ornidroidFileProperties.put(PictureFile.IMAGE_SOURCE_PROPERTY,
+					source);
 			final String author = properties.getProperty(
 					PictureFile.IMAGE_AUTHOR_PROPERTY, DEFAULT_VALUE);
-			ornidroidFileProperties.put(
-					PictureFile.IMAGE_AUTHOR_PROPERTY, author);
+			ornidroidFileProperties.put(PictureFile.IMAGE_AUTHOR_PROPERTY,
+					author);
 			final String licence = properties.getProperty(
 					PictureFile.IMAGE_LICENCE_PROPERTY, DEFAULT_VALUE);
-			ornidroidFileProperties.put(
-					PictureFile.IMAGE_LICENCE_PROPERTY, licence);
+			ornidroidFileProperties.put(PictureFile.IMAGE_LICENCE_PROPERTY,
+					licence);
 		}
 		return ornidroidFileProperties;
+	}
+
+	private String getDefaultCommentValueForImage(MediaFile file) {
+		String filename = file.getPath().substring(
+				file.getPath().lastIndexOf(BasicConstants.SLASH_STRING));
+		filename = filename
+				.replace(BasicConstants.SLASH_STRING,
+						BasicConstants.EMPTY_STRING)
+				.replace("1HR_", BasicConstants.EMPTY_STRING)
+				.replace("HR_", BasicConstants.EMPTY_STRING)
+				.replace(BasicConstants.UNDERSCORE_STRING,
+						BasicConstants.BLANK_STRING);
+
+		return filename;
 	}
 
 	/**

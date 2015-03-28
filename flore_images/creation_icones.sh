@@ -47,7 +47,10 @@ do
 		#copie de la photo dans le repertoire DESTINATION avec le nom du repertoire
 		iconpath=$DIR_OUTPUT/$repertoire.jpg
 		cp $picturefile $iconpath
-
+		#supprimer les exif du fichier 
+		exiftool -all= $iconpath
+		#suppression du fichier _original généré par la commande exiftool
+		rm ${iconpath}_original
 		hauteur=`exiv2 $iconpath 2>/dev/null | grep "Taille de l'image" | cut -d "x" -f 2 | tr -d " "`
 		largeur=`exiv2 $iconpath 2>/dev/null | grep "Taille de l'image" | cut -d "x" -f 1 | cut -d ":" -f 2 | tr -d " "`
 		if [[ "$hauteur" -gt "$largeur"  ]]; then

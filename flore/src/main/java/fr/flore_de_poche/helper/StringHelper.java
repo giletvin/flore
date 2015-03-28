@@ -44,6 +44,16 @@ public class StringHelper {
 		return str == null ? BasicConstants.EMPTY_STRING : str;
 	}
 
+	public static String defaultStringIfEmpty(final String str,
+			final String defaultString) {
+		if (isEmpty(str)) {
+			return defaultString;
+		} else {
+			return str;
+		}
+
+	}
+
 	// Equals
 	// -----------------------------------------------------------------------
 	/**

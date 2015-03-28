@@ -44,7 +44,7 @@ import fr.flore_de_poche.ui.activity.SubjectInfoActivity_;
 public class AddCustomMediaActivity extends ListActivity {
 
 	/** The bird directory. */
-	@Extra(Constants.BIRD_DIRECTORY_PARAMETER_NAME)
+	@Extra(Constants.DIRECTORY_PARAMETER_NAME)
 	String birdDirectory;
 
 	/** The file type. */

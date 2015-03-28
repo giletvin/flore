@@ -194,7 +194,7 @@ public abstract class AbstractFragment extends Fragment {
 				AddCustomMediaActivity_.class);
 		intent.putExtra(MediaFileType.FILE_TYPE_INTENT_PARAM_NAME,
 				getFileType());
-		intent.putExtra(Constants.BIRD_DIRECTORY_PARAMETER_NAME,
+		intent.putExtra(Constants.DIRECTORY_PARAMETER_NAME,
 				this.ornidroidService.getCurrentSubject().getDirectoryName());
 		startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 	}

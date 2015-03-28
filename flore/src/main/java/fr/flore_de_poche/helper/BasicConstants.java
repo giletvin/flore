@@ -12,12 +12,9 @@ public class BasicConstants {
 	// TODO : a mettre à jour ulterieuement
 	private static final int FILES_COUNT_PICTURE_PACKAGE = 1856;
 
-	/** The Constant BIRD_PARAMETER_NAME. */
-	public static final String BIRD_DIRECTORY_PARAMETER_NAME = "BIRD_DIRECTORY";
-	/** The Constant BIRD_ICONS_DIRECTORY. */
-	public static final String SUBJECT_ICONS_DIRECTORY = "subject_icons";
-	/** The Constant BIRD_ID_PARAMETER_NAME. */
-	public static final String BIRD_ID_PARAMETER_NAME = "BIRD_ID";
+	public static final String DIRECTORY_PARAMETER_NAME = "DIRECTORY";
+
+	public static final String ICONS_DIRECTORY = "icons";
 
 	/** The Constant BLANK_STRING. */
 	public static final String BLANK_STRING = " ";
