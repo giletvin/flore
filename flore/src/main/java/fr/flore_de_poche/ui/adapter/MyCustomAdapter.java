@@ -125,6 +125,12 @@ public class MyCustomAdapter extends ArrayAdapter<String> {
 			idRes = SpinnerIconSelector
 					.getIconResourceIdFromParticulariteId(particulariteId);
 			break;
+		case PILOSITE_TIGE:
+			final int pilositeTigeId = this.activity.getOrnidroidService()
+					.getPilositeTigeId(this.itemsList.get(position));
+			idRes = SpinnerIconSelector
+					.getIconResourceIdFromPilositeTigeId(pilositeTigeId);
+			break;
 		default:
 			break;
 

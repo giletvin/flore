@@ -235,4 +235,33 @@ public class SpinnerIconSelector {
 		}
 		return resourceId;
 	}
+
+	/**
+	 * INSERT INTO pilosite_tige(id,name,lang) VALUES(0,"Glabre",'fr'); INSERT
+	 * INTO pilosite_tige(id,name,lang) VALUES(1,"Pubescente",'fr'); INSERT INTO
+	 * pilosite_tige(id,name,lang) VALUES(2,"épine",'fr');
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public static int getIconResourceIdFromPilositeTigeId(final int id) {
+
+		int resourceId = 0;
+
+		switch (id) {
+		case 0:
+			resourceId = R.drawable.pilosite_tige_glabre;
+			break;
+		case 1:
+			resourceId = R.drawable.pilosite_tige_pubescent;
+			break;
+		case 2:
+			resourceId = R.drawable.pilosite_tige_epine;
+			break;
+		default:
+			resourceId = R.drawable.tous;
+			break;
+		}
+		return resourceId;
+	}
 }
