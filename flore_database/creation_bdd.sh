@@ -11,6 +11,7 @@ rm $DATABASE_NAME
 cat create_tables.sql | sqlite3 $DATABASE_NAME
 cat generate_insert_data_table_referentiel.sql | sqlite3 $DATABASE_NAME
 cat generate_insert_data_table_fleurs.sql | sqlite3 $DATABASE_NAME
+cat update_libelles.sql | sqlite3 $DATABASE_NAME
 
 
 sqlite3 $DATABASE_NAME 'VACUUM;'

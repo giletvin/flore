@@ -189,10 +189,9 @@ public class SpinnerIconSelector {
 	 * INSERT INTO particularite(id,name,lang) VALUES(0,"Cloche",'fr'); INSERT
 	 * INTO particularite(id,name,lang) VALUES(1,"échancré",'fr'); INSERT INTO
 	 * particularite(id,name,lang) VALUES(2,"éperon",'fr'); INSERT INTO
-	 * particularite(id,name,lang) VALUES(3,"Spathe",'fr'); INSERT INTO
-	 * particularite(id,name,lang) VALUES(4,"Papillon",'fr'); INSERT INTO
-	 * particularite(id,name,lang) VALUES(5,"Tachetée",'fr'); INSERT INTO
-	 * particularite(id,name,lang) VALUES(6,"Orchidée",'fr');
+	 * particularite(id,name,lang) VALUES(3,"Papillon",'fr'); INSERT INTO
+	 * particularite(id,name,lang) VALUES(4,"Tachetée",'fr'); INSERT INTO
+	 * particularite(id,name,lang) VALUES(5,"Orchidée",'fr');
 	 * 
 	 * @param id
 	 * @return
@@ -211,20 +210,18 @@ public class SpinnerIconSelector {
 		case 2:
 			resourceId = R.drawable.particularite_eperon;
 			break;
-		case 3:
-			break;
 
-		case 4:
+		case 3:
 			resourceId = R.drawable.particularite_papillon;
 
 			break;
 
-		case 5:
+		case 4:
 			resourceId = R.drawable.particularite_tachetee;
 
 			break;
 
-		case 6:
+		case 5:
 			resourceId = R.drawable.particularite_orchidee;
 
 			break;
