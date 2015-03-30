@@ -148,8 +148,7 @@ public class DAOImpl implements IDAO {
 	}
 
 	public Cursor getLeafTypes() {
-		return getCursorFromListTable(LEAF_TYPE_TABLE, NAME_COLUMN_NAME,
-				I18nHelper.getLang());
+		return getCursorFromListTable(LEAF_TYPE_TABLE, ID, I18nHelper.getLang());
 	}
 
 	/*
@@ -290,7 +289,7 @@ public class DAOImpl implements IDAO {
 	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getHabitats()
 	 */
 	public Cursor getAspects() {
-		return getCursorFromListTable(ASPECT_TABLE_NAME, NAME_COLUMN_NAME,
+		return getCursorFromListTable(ASPECT_TABLE_NAME, ID,
 				I18nHelper.getLang());
 
 	}
@@ -317,18 +316,14 @@ public class DAOImpl implements IDAO {
 		return countResults;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getRemarkableSigns()
-	 */
 	public Cursor getLeafDispositions() {
-		return getCursorFromListTable(LEAF_DISPOSITION_TABLE, NAME_COLUMN_NAME,
+		return getCursorFromListTable(LEAF_DISPOSITION_TABLE, ID,
 				I18nHelper.getLang());
 	}
 
 	public Cursor getNbPetale() {
-		return getCursorFromListTable(NB_PETALE_TABLE, ID, I18nHelper.getLang());
+		return getCursorFromListTable(NB_PETALE_TABLE, NAME_COLUMN_NAME,
+				I18nHelper.getLang());
 	}
 
 	public Cursor getPilositeTige() {
@@ -878,7 +873,7 @@ public class DAOImpl implements IDAO {
 
 	@Override
 	public Cursor getParticularites() {
-		return getCursorFromListTable(PARTICULARITE_TABLE, ID,
+		return getCursorFromListTable(PARTICULARITE_TABLE, NAME_COLUMN_NAME,
 				I18nHelper.getLang());
 	}
 }

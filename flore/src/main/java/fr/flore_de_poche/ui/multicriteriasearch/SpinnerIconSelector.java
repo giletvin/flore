@@ -101,7 +101,7 @@ public class SpinnerIconSelector {
 			resourceId = R.drawable.pilosite_feuille_glabre;
 			break;
 		case 1:
-			resourceId = R.drawable.pilosite_feuille_pubescent;
+			resourceId = R.drawable.pilosite_feuille_pubescent_2;
 			break;
 
 		case 2:
