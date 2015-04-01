@@ -231,19 +231,19 @@ if (($handle = fopen("Fleurs.csv", "r")) !== FALSE) {
 			scientific_family_fk*/
 			array_push($sql_queries,"insert into fleur (id,directory_name,scientific_name,scientific_family_fk,doc_url) values (".$idFleur.",\"".$data[$repertoire_index]."\",\"".$data[$nom_scientifique_1_index]."\",".$indexes_scientific_family[0].",\"".$data[$doc_url_index]."\");");
 			//langues
-			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values (\"fr\",\"".$data[$nom_fr_1_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_1_index]))."\",".$idFleur.");");
+			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".$data[$nom_fr_1_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_1_index]))."\",".$idFleur.",1);");
 			if ($data[$nom_fr_2_index]!=''){
-				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values (\"fr\",\"".$data[$nom_fr_2_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_2_index]))."\",".$idFleur.");");
+				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".$data[$nom_fr_2_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_2_index]))."\",".$idFleur.",0);");
 			}
 			if ($data[$nom_fr_3_index]!=''){
-				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values (\"fr\",\"".$data[$nom_fr_3_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_3_index]))."\",".$idFleur.");");
+				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".$data[$nom_fr_3_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_3_index]))."\",".$idFleur.",0);");
 			}
-			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values (\"la\",\"".$data[$nom_scientifique_1_index]."\",\"".strtolower(removeDiacritics($data[$nom_scientifique_1_index]))."\",".$idFleur.");");
+			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"la\",\"".$data[$nom_scientifique_1_index]."\",\"".strtolower(removeDiacritics($data[$nom_scientifique_1_index]))."\",".$idFleur.",1);");
 			if ($data[$nom_scientifique_2_index]!=''){
-				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values (\"la\",\"".$data[$nom_scientifique_2_index]."\",\"".strtolower(removeDiacritics($data[$nom_scientifique_2_index]))."\",".$idFleur.");");
+				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"la\",\"".$data[$nom_scientifique_2_index]."\",\"".strtolower(removeDiacritics($data[$nom_scientifique_2_index]))."\",".$idFleur.",0);");
 			}
 			if ($data[$nom_en_index]!=''){
-				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk) values (\"en\",\"".$data[$nom_en_index]."\",\"".strtolower(removeDiacritics($data[$nom_en_index]))."\",".$idFleur.");");
+				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"en\",\"".$data[$nom_en_index]."\",\"".strtolower(removeDiacritics($data[$nom_en_index]))."\",".$idFleur.",1);");
 			}
 			//inflorescence
 			if ($data[$inflorescence_index]!=''){

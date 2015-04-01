@@ -7,6 +7,7 @@ import fr.flore_de_poche.bo.SimpleSubject;
 import fr.flore_de_poche.bo.Subject;
 import fr.flore_de_poche.bo.Taxon;
 import fr.flore_de_poche.helper.ApplicationException;
+import fr.flore_de_poche.helper.SupportedLanguage;
 
 /**
  * The Interface IOrnidroidService.
@@ -154,7 +155,7 @@ public interface IService {
 	 * @return the wikipedia link
 	 * 
 	 */
-	String getWikipediaLink(Subject currentBird);
+	String getWikipediaLink(Subject currentBird, SupportedLanguage lang);
 
 	String getDocUrlLink(Subject currentBird);
 

@@ -11,7 +11,7 @@ create table fleur(
 	PRIMARY KEY(id)
 );
 
-CREATE VIRTUAL TABLE taxonomy USING fts3(lang, taxon, searched_taxon, fleur_fk);
+CREATE VIRTUAL TABLE taxonomy USING fts3(lang, taxon, searched_taxon, fleur_fk,taxon_usuel);
 
 create table scientific_family(
 		id,

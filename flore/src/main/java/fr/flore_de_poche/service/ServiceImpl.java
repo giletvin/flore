@@ -21,7 +21,6 @@ import fr.flore_de_poche.data.IDAO;
 import fr.flore_de_poche.helper.ApplicationException;
 import fr.flore_de_poche.helper.BasicConstants;
 import fr.flore_de_poche.helper.Constants;
-import fr.flore_de_poche.helper.I18nHelper;
 import fr.flore_de_poche.helper.StringHelper;
 import fr.flore_de_poche.helper.SupportedLanguage;
 import fr.flore_de_poche.ui.picture.PictureHelper;
@@ -405,8 +404,8 @@ public class ServiceImpl implements IService {
 	 * @see fr.flore_de_poche.service.IOrnidroidService#getWikipediaLink(fr.
 	 * flore_de_poche. bo.Bird)
 	 */
-	public String getWikipediaLink(final Subject currentSubject) {
-		final SupportedLanguage lang = I18nHelper.getLang();
+	public String getWikipediaLink(final Subject currentSubject,
+			final SupportedLanguage lang) {
 		final StringBuffer sbuf = new StringBuffer();
 		sbuf.append("<a href=\"http://");
 		sbuf.append(lang.getCode());

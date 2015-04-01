@@ -407,6 +407,13 @@ public class DAOImpl implements IDAO {
 		final StringBuffer whereClauses = new StringBuffer();
 		final StringBuffer fromClauses = new StringBuffer();
 		whereClauses.append(WHERE).append("1=1");
+
+		if (resultQuery) {
+			// elimine les doublons avec des noms différents ds les resultats de
+			// recherche mcs
+			whereClauses.append(AND).append("taxonomy.taxon_usuel=1");
+		}
+
 		if (formBean.getScientificFamilyId() != BasicConstants.DEFAULT_EMPTY_VALUE) {
 			whereClauses.append(
 					" AND " + SUBJECT_TABLE + ".scientific_family_fk = ")
@@ -622,38 +629,12 @@ public class DAOImpl implements IDAO {
 			query.append(DIRECTORY_NAME_COLUMN);
 			query.append(Constants.COMMA_STRING);
 			query.append(DOC_URL_COLUMN);
-			if (fullBirdInfo) {
-				// query.append(Constants.COMMA_STRING);
-				// query.append(DESCRIPTION_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append(DISTRIBUTION_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append("scientific_order.name as ");
-				// query.append(SCIENTIFIC_ORDER_NAME_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append("scientific_family.name as ");
-				// query.append(SCIENTIFIC_FAMILY_NAME_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append("h1.name as ");
-				// query.append(HABITAT_1_NAME_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append("h2.name as ");
-				// query.append(HABITAT_2_NAME_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append(SIZE_VALUE_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append("category.name as ");
-				// query.append(CATEGORY_COLUMN);
-				// query.append(Constants.COMMA_STRING);
-				// query.append(IOrnidroidDAO.OISEAUX_NET_COLUMN);
-			}
 			query.append(FROM);
 			query.append(FTS_VIRTUAL_TABLE_TAXONOMY);
-			query.append(" ,");
+			query.append(",");
 			query.append(SUBJECT_TABLE);
 			query.append(sqlDynamicFragments.getFromClause());
 			if (fullBirdInfo) {
-
 				// join on scientific family table
 				query.append(LEFT_OUTER_JOIN);
 				query.append(SCIENTIFIC_FAMILY_TABLE);
@@ -666,15 +647,12 @@ public class DAOImpl implements IDAO {
 				query.append(".lang=\"");
 				query.append(I18nHelper.getLang().getCode());
 				query.append("\"");
-
 			}
 			query.append(sqlDynamicFragments.getWhereClause());
 			query.append(" and fleur.id=taxonomy.fleur_fk");
 			query.append(handleSetOfLanguagesinSqlQuery(Constants
 					.getOrnidroidSearchLanguages()));
-			// query.append(" and taxonomy.lang=\"");
-			// query.append(Constants.getOrnidroidSearchLanguages());
-			// query.append("\"");
+
 			query.append(" order by searched_taxon");
 			// Log.d(Constants.LOG_TAG, "Perform SQL query " +
 			// query.toString());

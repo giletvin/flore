@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import fr.flore.R;
+import fr.flore_de_poche.helper.SupportedLanguage;
 import fr.flore_de_poche.service.IService;
 import fr.flore_de_poche.service.ServiceFactory;
 
@@ -26,8 +27,11 @@ public class DetailsFragment extends Fragment {
 	private IService mOrnidroidService = ServiceFactory
 			.getService(getActivity());
 
-	@ViewById(R.id.details_wikipedia)
-	TextView wikipediaLink;
+	@ViewById(R.id.details_fr_wikipedia)
+	TextView frenchWikipediaLink;
+
+	@ViewById(R.id.details_en_wikipedia)
+	TextView englishWikipediaLink;
 
 	@ViewById(R.id.details_doc_url)
 	TextView docUrlLink;
@@ -61,11 +65,21 @@ public class DetailsFragment extends Fragment {
 	 */
 	private void printHttpLinks() {
 
-		final String wikipedia = this.mOrnidroidService
-				.getWikipediaLink(this.mOrnidroidService.getCurrentSubject());
+		final String frenchWikipedia = this.mOrnidroidService.getWikipediaLink(
+				this.mOrnidroidService.getCurrentSubject(),
+				SupportedLanguage.FRENCH);
+		final String englishWikipedia = this.mOrnidroidService
+				.getWikipediaLink(this.mOrnidroidService.getCurrentSubject(),
+						SupportedLanguage.ENGLISH);
 
-		this.wikipediaLink.setText(Html.fromHtml(wikipedia));
-		this.wikipediaLink.setMovementMethod(LinkMovementMethod.getInstance());
+		this.frenchWikipediaLink.setText(Html.fromHtml(frenchWikipedia));
+		this.frenchWikipediaLink.setMovementMethod(LinkMovementMethod
+				.getInstance());
+
+		this.englishWikipediaLink.setText(Html.fromHtml(englishWikipedia));
+		this.englishWikipediaLink.setMovementMethod(LinkMovementMethod
+				.getInstance());
+
 		final String docUrl = this.mOrnidroidService
 				.getDocUrlLink(this.mOrnidroidService.getCurrentSubject());
 
