@@ -12,7 +12,7 @@ mkdir -p $WIKIPEDIA_ROOT_DIR_EN
 
 
 #echo 'select scientific_name from fleur;'|sqlite3 $DATABASE_NAME >names.txt
-echo 'Leucanthemum vulgare' > names.txt
+#echo 'Leucanthemum vulgare' > names.txt
 
 while read line
 do
