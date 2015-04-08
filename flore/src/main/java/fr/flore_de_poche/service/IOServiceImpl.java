@@ -38,7 +38,7 @@ public class IOServiceImpl implements IIOService {
 	private static final int MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE = 120;
 
 	/** The Constant MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE. */
-	private static final int MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE = 40;
+	private static final int MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE = 15;
 
 	/**
 	 * The Class OrnidroidFileFilter.
@@ -88,8 +88,8 @@ public class IOServiceImpl implements IIOService {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidIOService#addCustomMediaFile(java.lang
-	 * .String, fr.flore_de_poche.bo.OrnidroidFileType, java.lang.String,
+	 * fr.flore_de_poche.service.IOrnidroidIOService#addCustomMediaFile(java
+	 * .lang .String, fr.flore_de_poche.bo.OrnidroidFileType, java.lang.String,
 	 * java.io.File, java.lang.String)
 	 */
 	public void addCustomMediaFile(final String birdDirectory,
@@ -120,7 +120,8 @@ public class IOServiceImpl implements IIOService {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidIOService#checkAndCreateDirectory
+	 * @see
+	 * fr.flore_de_poche.service.IOrnidroidIOService#checkAndCreateDirectory
 	 * (java.io.File)
 	 */
 	public void checkAndCreateDirectory(final File fileDirectory)
@@ -170,8 +171,7 @@ public class IOServiceImpl implements IIOService {
 		switch (fileType) {
 		case PICTURE:
 			bird.setPictures(lookForOrnidroidFiles(mediaHomeDirectory,
-					bird.getDirectoryName(), MediaFileType.PICTURE,
-					true));
+					bird.getDirectoryName(), MediaFileType.PICTURE, true));
 			break;
 
 		case WIKIPEDIA_PAGE:
@@ -221,8 +221,8 @@ public class IOServiceImpl implements IIOService {
 			if (wikipediaFile.exists()) {
 				MediaFile wikipediaOrnidroidFile;
 				try {
-					wikipediaOrnidroidFile = MediaFileFactoryImpl
-							.getFactory().createOrnidroidFile(
+					wikipediaOrnidroidFile = MediaFileFactoryImpl.getFactory()
+							.createOrnidroidFile(
 									wikipediaFile.getAbsolutePath(),
 									MediaFileType.WIKIPEDIA_PAGE,
 									I18nHelper.getLang().getCode());
@@ -242,8 +242,9 @@ public class IOServiceImpl implements IIOService {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidIOService#areThereUpdates(java.lang.String
-	 * , fr.flore_de_poche.bo.Bird, fr.flore_de_poche.bo.OrnidroidFileType)
+	 * fr.flore_de_poche.service.IOrnidroidIOService#areThereUpdates(java.lang
+	 * .String , fr.flore_de_poche.bo.Bird,
+	 * fr.flore_de_poche.bo.OrnidroidFileType)
 	 */
 	public List<String> filesToUpdate(final String mediaHomeDirectory,
 			final Subject bird, final MediaFileType fileType)
@@ -274,8 +275,7 @@ public class IOServiceImpl implements IIOService {
 		switch (fileType) {
 		case PICTURE:
 			bird.setPictures(lookForOrnidroidFiles(fileDirectory,
-					bird.getDirectoryName(), MediaFileType.PICTURE,
-					false));
+					bird.getDirectoryName(), MediaFileType.PICTURE, false));
 			break;
 
 		case WIKIPEDIA_PAGE:
@@ -288,8 +288,8 @@ public class IOServiceImpl implements IIOService {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidIOService#removeCustomMediaFile(fr.ornidroid
-	 * .bo.AbstractOrnidroidFile)
+	 * fr.flore_de_poche.service.IOrnidroidIOService#removeCustomMediaFile(fr
+	 * .ornidroid .bo.AbstractOrnidroidFile)
 	 */
 	public void removeCustomMediaFile(final MediaFile ornidroidFile)
 			throws ApplicationException {
@@ -340,8 +340,8 @@ public class IOServiceImpl implements IIOService {
 			} catch (final IOException e1) {
 			}
 
-			throw new ApplicationException(ApplicationError.ADD_CUSTOM_MEDIA_ERROR,
-					e);
+			throw new ApplicationException(
+					ApplicationError.ADD_CUSTOM_MEDIA_ERROR, e);
 
 		}
 
@@ -524,8 +524,8 @@ public class IOServiceImpl implements IIOService {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidIOService#downloadZipPackage(java.lang
-	 * .String, java.lang.String)
+	 * fr.flore_de_poche.service.IOrnidroidIOService#downloadZipPackage(java
+	 * .lang .String, java.lang.String)
 	 */
 	public void downloadZipPackage(String zipname, String mediaHomeDirectory)
 			throws ApplicationException {
@@ -552,12 +552,13 @@ public class IOServiceImpl implements IIOService {
 			FileHelper.forceDelete(zipPackageFile);
 		} catch (IOException e) {
 			Log.e(BasicConstants.LOG_TAG, e.getMessage(), e);
-			exception = new ApplicationException(ApplicationError.UNZIP_PACKAGE, e);
+			exception = new ApplicationException(
+					ApplicationError.UNZIP_PACKAGE, e);
 		}
 
 		if (!success) {
-			exception = new ApplicationException(ApplicationError.UNZIP_PACKAGE,
-					null);
+			exception = new ApplicationException(
+					ApplicationError.UNZIP_PACKAGE, null);
 		}
 		if (exception != null) {
 			throw exception;
@@ -641,8 +642,9 @@ public class IOServiceImpl implements IIOService {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.flore_de_poche.service.IOrnidroidIOService#getZipname(fr.flore_de_poche.bo.
-	 * OrnidroidFileType)
+	 * @see
+	 * fr.flore_de_poche.service.IOrnidroidIOService#getZipname(fr.flore_de_poche
+	 * .bo. OrnidroidFileType)
 	 */
 	public String getZipname(MediaFileType fileType) {
 		String zipname = null;
@@ -690,8 +692,8 @@ public class IOServiceImpl implements IIOService {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.flore_de_poche.service.IOrnidroidIOService#getInstallProgressPercent(fr
-	 * .ornidroid.bo.OrnidroidFileType)
+	 * fr.flore_de_poche.service.IOrnidroidIOService#getInstallProgressPercent
+	 * (fr .ornidroid.bo.OrnidroidFileType)
 	 */
 	public int getInstallProgressPercent(MediaFileType fileType) {
 		File mediaHome = new File(Constants.getOrnidroidHomeMedia(fileType));

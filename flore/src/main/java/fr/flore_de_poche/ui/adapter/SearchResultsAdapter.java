@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -101,8 +102,8 @@ public class SearchResultsAdapter extends BaseAdapter {
 		ViewHolder viewHolder;
 
 		if (convertView == null) {
-			convertView = LayoutInflater.from(context).inflate(R.layout.row_result,
-					parent, false);
+			convertView = LayoutInflater.from(context).inflate(
+					R.layout.row_result, parent, false);
 
 			viewHolder = new ViewHolder();
 			viewHolder.birdScientificName = (TextView) convertView
@@ -132,6 +133,7 @@ public class SearchResultsAdapter extends BaseAdapter {
 			bMap = BitmapFactory.decodeStream(ins);
 
 		} catch (final IOException e) {
+			Log.e(BasicConstants.LOG_TAG, e.getMessage());
 			bMap = BitmapFactory.decodeResource(Constants.getCONTEXT()
 					.getResources(), R.drawable.ic_default_bird_icon);
 		}

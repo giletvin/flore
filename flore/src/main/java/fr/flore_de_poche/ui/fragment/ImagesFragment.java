@@ -72,14 +72,14 @@ public class ImagesFragment extends AbstractFragment {
 	 */
 	private void loadImage(int imagePosition) {
 		if (imagePosition < 0) {
-			imagePosition = this.ornidroidService.getCurrentSubject()
+			imagePosition = this.service.getCurrentSubject()
 					.getNumberOfPictures() - 1;
 		}
-		if (imagePosition >= this.ornidroidService.getCurrentSubject()
+		if (imagePosition >= this.service.getCurrentSubject()
 				.getNumberOfPictures()) {
 			imagePosition = 0;
 		}
-		MediaFile pictureFile = ornidroidService.getCurrentSubject()
+		MediaFile pictureFile = service.getCurrentSubject()
 				.getPicture(imagePosition);
 		if (pictureFile != null) {
 			this.mPictureDescription
@@ -111,7 +111,7 @@ public class ImagesFragment extends AbstractFragment {
 		if (commonAfterViews()) {
 			loadImage(0);
 		}
-		this.taxon.setText(ornidroidService.getCurrentSubject().getTaxon());
+		this.taxon.setText(service.getCurrentSubject().getTaxon());
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class ImagesFragment extends AbstractFragment {
 		final StringBuilder sb = new StringBuilder();
 		sb.append(this.displayedPictureId + 1);
 		sb.append(BasicConstants.SLASH_STRING);
-		sb.append(this.ornidroidService.getCurrentSubject().getNumberOfPictures());
+		sb.append(this.service.getCurrentSubject().getNumberOfPictures());
 
 		this.numberOfPicturesTextView.setText(sb.toString());
 
@@ -138,7 +138,7 @@ public class ImagesFragment extends AbstractFragment {
 	 */
 	public void setCurrentMediaFilePosition(int currentItem) {
 		this.displayedPictureId = currentItem;
-		final MediaFile picture = this.ornidroidService.getCurrentSubject()
+		final MediaFile picture = this.service.getCurrentSubject()
 				.getPicture(currentItem);
 		setCurrentMediaFile(picture);
 		updateNumberOfPicturesText();

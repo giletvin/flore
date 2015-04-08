@@ -22,7 +22,7 @@ public class WikipediaFragment extends AbstractFragment {
 	void afterViews() {
 
 		if (commonAfterViews()) {
-			MediaFile wikipediaPage = ornidroidService.getCurrentSubject()
+			MediaFile wikipediaPage = service.getCurrentSubject()
 					.getWikipediaPage();
 			wikipediaWebView.loadUrl("file:///" + wikipediaPage.getPath());
 		}

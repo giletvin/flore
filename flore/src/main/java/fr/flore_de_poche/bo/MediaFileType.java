@@ -2,20 +2,14 @@ package fr.flore_de_poche.bo;
 
 import fr.flore_de_poche.helper.BasicConstants;
 
-/**
- * The Enum OrnidroidFileType.
- */
 public enum MediaFileType {
 
-	/** The PICTURE. */
 	PICTURE,
 
-	/** The wikipedia page. */
 	WIKIPEDIA_PAGE;
 
-	/** The Constant FILE_TYPE_PARAM_NAME. */
 	public final static String FILE_TYPE_INTENT_PARAM_NAME = "FILE_TYPE";
-	/** The Constant PICTURE_EXTENSION. */
+
 	public final static String PICTURE_EXTENSION = ".jpg";
 
 	/**
@@ -34,7 +28,7 @@ public enum MediaFileType {
 				break;
 
 			case WIKIPEDIA_PAGE:
-				code = 3;
+				code = 2;
 				break;
 
 			}
@@ -42,13 +36,6 @@ public enum MediaFileType {
 		return code;
 	}
 
-	/**
-	 * Gets the extension.
-	 * 
-	 * @param type
-	 *            the type
-	 * @return the extension
-	 */
 	public static String getExtension(final MediaFileType type) {
 		String extension = null;
 		switch (type) {

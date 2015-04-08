@@ -38,9 +38,9 @@ import fr.flore_de_poche.service.IIOService;
 import fr.flore_de_poche.service.IOServiceImpl;
 import fr.flore_de_poche.service.IService;
 import fr.flore_de_poche.service.ServiceFactory;
-import fr.flore_de_poche.ui.activity.SubjectInfoActivity;
 import fr.flore_de_poche.ui.activity.AddCustomMediaActivity_;
 import fr.flore_de_poche.ui.activity.HomeActivity_;
+import fr.flore_de_poche.ui.activity.SubjectInfoActivity;
 import fr.flore_de_poche.ui.activity.SubjectInfoActivity_;
 
 /**
@@ -69,11 +69,9 @@ public abstract class AbstractFragment extends Fragment {
 	@ViewById(R.id.pb_download_all_in_progress)
 	ProgressBar pbDownloadAllInProgress;
 
-	/** The ornidroid service. */
-	IService ornidroidService = ServiceFactory.getService(getActivity());
+	IService service = ServiceFactory.getService(getActivity());
 
-	/** The ornidroid io service. */
-	IIOService ornidroidIOService = new IOServiceImpl();
+	IIOService iOService = new IOServiceImpl();
 
 	/** Layouts. */
 	@ViewById(R.id.fragment_main_content)
@@ -138,15 +136,14 @@ public abstract class AbstractFragment extends Fragment {
 	 *             the ornidroid exception
 	 */
 	public void loadMediaFilesLocally() throws ApplicationException {
-		if (this.ornidroidService.getCurrentSubject() != null) {
+		if (this.service.getCurrentSubject() != null) {
 			final File fileDirectory = new File(
 					Constants.getOrnidroidBirdHomeMedia(
-							this.ornidroidService.getCurrentSubject(),
-							getFileType()));
-			this.ornidroidIOService.checkAndCreateDirectory(fileDirectory);
+							this.service.getCurrentSubject(), getFileType()));
+			this.iOService.checkAndCreateDirectory(fileDirectory);
 
-			this.ornidroidIOService.loadMediaFiles(getMediaHomeDirectory(),
-					this.ornidroidService.getCurrentSubject(), getFileType());
+			this.iOService.loadMediaFiles(getMediaHomeDirectory(),
+					this.service.getCurrentSubject(), getFileType());
 		}
 	}
 
@@ -194,8 +191,8 @@ public abstract class AbstractFragment extends Fragment {
 				AddCustomMediaActivity_.class);
 		intent.putExtra(MediaFileType.FILE_TYPE_INTENT_PARAM_NAME,
 				getFileType());
-		intent.putExtra(Constants.DIRECTORY_PARAMETER_NAME,
-				this.ornidroidService.getCurrentSubject().getDirectoryName());
+		intent.putExtra(Constants.DIRECTORY_PARAMETER_NAME, this.service
+				.getCurrentSubject().getDirectoryName());
 		startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 	}
 
@@ -205,8 +202,7 @@ public abstract class AbstractFragment extends Fragment {
 	@Click(R.id.iv_remove_custom_media)
 	void removeCustomPictureClicked() {
 		try {
-			this.ornidroidIOService
-					.removeCustomMediaFile(this.currentMediaFile);
+			this.iOService.removeCustomMediaFile(this.currentMediaFile);
 			Toast.makeText(
 					getActivity(),
 					this.getResources().getString(
@@ -251,10 +247,10 @@ public abstract class AbstractFragment extends Fragment {
 
 			Exception exception = null;
 			try {
-				AbstractFragment.this.ornidroidIOService
-						.downloadMediaFiles(getMediaHomeDirectory(),
-								AbstractFragment.this.ornidroidService
-										.getCurrentSubject(), getFileType());
+				AbstractFragment.this.iOService.downloadMediaFiles(
+						getMediaHomeDirectory(),
+						AbstractFragment.this.service.getCurrentSubject(),
+						getFileType());
 			} catch (final ApplicationException e) {
 				exception = e;
 			} finally {
@@ -304,9 +300,9 @@ public abstract class AbstractFragment extends Fragment {
 			boolean updatesToDo = false;
 			List<String> filesToDownload;
 			try {
-				filesToDownload = this.ornidroidIOService.filesToUpdate(
-						getMediaHomeDirectory(),
-						ornidroidService.getCurrentSubject(), getFileType());
+				filesToDownload = this.iOService.filesToUpdate(
+						getMediaHomeDirectory(), service.getCurrentSubject(),
+						getFileType());
 				updatesToDo = (filesToDownload.size() > 0);
 
 			} catch (Exception e) {
@@ -345,15 +341,15 @@ public abstract class AbstractFragment extends Fragment {
 	void updateDownloadAllProgressBar() {
 		// TODO : il pourrait y avoir des NPE ici après un retournement
 		// d'écran ??
-		if (ornidroidIOService.getZipDownloadProgressPercent(getFileType()) < 100) {
+		if (iOService.getZipDownloadProgressPercent(getFileType()) < 100) {
 			noMediaMessage.setText(R.string.download_package_in_progress);
-			pbDownloadAllInProgress.setProgress(ornidroidIOService
+			pbDownloadAllInProgress.setProgress(iOService
 					.getZipDownloadProgressPercent(getFileType()));
 		} else {
 			noMediaMessage.setText(R.string.install_package_in_progress);
 			pbDownloadAllInProgress.setMax(BasicConstants
 					.getNbOfFilesInPackage(getFileType()));
-			pbDownloadAllInProgress.setProgress(ornidroidIOService
+			pbDownloadAllInProgress.setProgress(iOService
 					.getInstallProgressPercent(getFileType()));
 		}
 	}
@@ -368,17 +364,17 @@ public abstract class AbstractFragment extends Fragment {
 			resetScreenBeforeDownload();
 			boolean isEnoughFreeSpace = true;
 			try {
-				isEnoughFreeSpace = this.ornidroidIOService
+				isEnoughFreeSpace = this.iOService
 						.isEnoughFreeSpace(getFileType());
 				if (isEnoughFreeSpace) {
 					Exception exception = null;
 					try {
 						manageDownloadProgressBar();
 
-						String zipname = this.ornidroidIOService
+						String zipname = this.iOService
 								.getZipname(getFileType());
 						try {
-							this.ornidroidIOService.downloadZipPackage(zipname,
+							this.iOService.downloadZipPackage(zipname,
 									Constants.getOrnidroidHome());
 						} catch (ApplicationException e) {
 							exception = e;
@@ -681,7 +677,7 @@ public abstract class AbstractFragment extends Fragment {
 		} else {
 
 			boolean success = true;
-			if (this.ornidroidService.getCurrentSubject() == null) {
+			if (this.service.getCurrentSubject() == null) {
 				// Github : #118
 				final Intent intent = new Intent(getActivity(),
 						HomeActivity_.class);
@@ -697,12 +693,12 @@ public abstract class AbstractFragment extends Fragment {
 
 					switch (getFileType()) {
 					case PICTURE:
-						success = (ornidroidService.getCurrentSubject()
+						success = (service.getCurrentSubject()
 								.getNumberOfPictures() > 0);
 						break;
 
 					case WIKIPEDIA_PAGE:
-						success = (ornidroidService.getCurrentSubject()
+						success = (service.getCurrentSubject()
 								.getWikipediaPage() != null);
 						break;
 					}
@@ -720,7 +716,7 @@ public abstract class AbstractFragment extends Fragment {
 					Toast.makeText(
 							getActivity(),
 							"Error reading media files of bird "
-									+ this.ornidroidService.getCurrentSubject()
+									+ this.service.getCurrentSubject()
 											.getTaxon() + " e",
 							Toast.LENGTH_LONG).show();
 				}
