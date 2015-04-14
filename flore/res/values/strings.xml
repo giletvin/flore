@@ -98,10 +98,10 @@
     <string name="search_scientific_family_choose">Choose a scientific family</string>
     <string name="search_scientific_family">Scientific family</string>
     <string name="search_category_help"></string>
-    <string name="search_inflorescence">Inflorescence</string>
+    <string name="search_inflorescence">Inflorescence type</string>
     <string name="search_inflorescence_choose">Choose an inflorescence</string>
     <string name="search_aspect_choose">Choose an aspect</string>
-    <string name="search_aspect">Aspect</string>
+    <string name="search_aspect">Corolla aspect</string>
     <string name="search_aspect_help"></string>
     <string name="search_particularite_choose">Choose a particularity</string>
     <string name="search_particularite">Particularity</string>
@@ -109,8 +109,8 @@
     <string name="search_leaf_type">Leaf type</string>
     <string name="search_all">All </string>
     <string name="reset_form">Reset</string>
-    <string name="search_nb_petale_choose">Choose a nb of petals</string>
-    <string name="search_nb_petale">Nb petals</string>
+    <string name="search_nb_petale_choose">Choose a nb of petals, sepals or lobes</string>
+    <string name="search_nb_petale">Nb of petals, sepals or lobes</string>
     <string name="search_pilosite_feuille_choose">Choose a leaf pilosity</string>
     <string name="search_pilosite_feuille">Leaf pilosity</string>
     <string name="search_pilosite_tige_choose">Choose a stem pilosity</string>

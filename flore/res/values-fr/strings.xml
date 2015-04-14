@@ -100,10 +100,10 @@
     <string name="search_scientific_family_choose">Choisir une famille scientifique</string>
     <string name="search_scientific_family">Famille scientifique</string>
     <string name="search_category_help"></string>
-    <string name="search_inflorescence">Inflorescence</string>
+    <string name="search_inflorescence">Type d\'inflorescence</string>
     <string name="search_inflorescence_choose">Choisir une inflorescence</string>
     <string name="search_aspect_choose">Choisir un aspect</string>
-    <string name="search_aspect">Aspect</string>
+    <string name="search_aspect">Aspect de la corolle</string>
     <string name="search_aspect_help"></string>
     <string name="search_particularite_choose">Choisir une particularité</string>
     <string name="search_particularite">Particularité</string>
@@ -111,8 +111,8 @@
     <string name="search_leaf_type">Type de feuille</string>
     <string name="search_all">Tous </string>
     <string name="reset_form">Réinitialiser</string>
-    <string name="search_nb_petale_choose">Choisir une nb de pétales</string>
-    <string name="search_nb_petale">Nb de pétales</string>
+    <string name="search_nb_petale_choose">Choisir un nb de pétales, sépales ou lobes</string>
+    <string name="search_nb_petale">Nombre de pétales, sépales ou lobes</string>
     <string name="search_pilosite_feuille_choose">Choisir une pilosité de feuille</string>
     <string name="search_pilosite_feuille">Pilosité de feuille</string>
     <string name="search_pilosite_tige_choose">Choisir une pilosité de tige</string>
