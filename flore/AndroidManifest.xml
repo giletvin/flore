@@ -64,6 +64,9 @@
         <activity
             android:name="fr.flore_de_poche.ui.activity.AddCustomMediaActivity_"
             android:label="@string/add_custom_media_title" />
+        <activity
+            android:name="fr.flore_de_poche.ui.activity.HelpHtmlActivity_"
+            android:label="@string/help" />
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import fr.flore.R;
 import fr.flore_de_poche.helper.BasicConstants;
+import fr.flore_de_poche.ui.activity.HelpHtmlActivity_;
 import fr.flore_de_poche.ui.components.HelpDialog;
 
 /**
@@ -181,7 +182,13 @@ public class MultiCriteriaSelectField extends LinearLayout implements
 		case ASPECT:
 			helpEnabled = true;
 			break;
-		case COLOUR:
+		case NB_PETALE:
+			helpEnabled = true;
+			break;
+		case PARTICULARITE:
+			helpEnabled = true;
+			break;
+		case LEAF_TYPE:
 			helpEnabled = true;
 			break;
 		default:
@@ -251,29 +258,36 @@ public class MultiCriteriaSelectField extends LinearLayout implements
 			public void onClick(final View v) {
 				switch (MultiCriteriaSelectField.this.fieldType) {
 				case INFLORESCENCE:
-					HelpDialog.showInfoDialog(
-							context,
-							context.getResources().getString(
-									R.string.search_inflorescence),
-							context.getResources().getString(
-									R.string.search_inflorescence_help));
+					HelpHtmlActivity_
+							.intent(context)
+							.fieldType(
+									MultiCriteriaSearchFieldType.INFLORESCENCE)
+							.start();
 					break;
 				case ASPECT:
-					HelpDialog.showInfoDialog(
-							context,
-							context.getResources().getString(
-									R.string.search_aspect),
-							context.getResources().getString(
-									R.string.search_aspect_help));
+					HelpHtmlActivity_.intent(context)
+							.fieldType(MultiCriteriaSearchFieldType.ASPECT)
+							.start();
 
 					break;
-				case COLOUR:
-					HelpDialog.showInfoDialog(
-							context,
-							context.getResources().getString(
-									R.string.search_colour),
-							context.getResources().getString(
-									R.string.search_colour_help));
+				case PARTICULARITE:
+					HelpHtmlActivity_
+							.intent(context)
+							.fieldType(
+									MultiCriteriaSearchFieldType.PARTICULARITE)
+							.start();
+
+					break;
+				case NB_PETALE:
+					HelpHtmlActivity_.intent(context)
+							.fieldType(MultiCriteriaSearchFieldType.NB_PETALE)
+							.start();
+
+					break;
+				case LEAF_TYPE:
+					HelpHtmlActivity_.intent(context)
+							.fieldType(MultiCriteriaSearchFieldType.LEAF_TYPE)
+							.start();
 
 					break;
 				default:

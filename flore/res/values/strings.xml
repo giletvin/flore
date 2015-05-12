@@ -97,12 +97,10 @@
     <string name="search_please_wait">Searching. Please wait</string>
     <string name="search_scientific_family_choose">Choose a scientific family</string>
     <string name="search_scientific_family">Scientific family</string>
-    <string name="search_inflorescence_help"></string>
     <string name="search_inflorescence">Inflorescence type</string>
     <string name="search_inflorescence_choose">Choose an inflorescence</string>
     <string name="search_aspect_choose">Choose an aspect</string>
     <string name="search_aspect">Corolla aspect</string>
-    <string name="search_aspect_help"></string>
     <string name="search_particularite_choose">Choose a particularity</string>
     <string name="search_particularite">Particularity</string>
     <string name="search_leaf_type_choose">Choose a leaf type</string>
