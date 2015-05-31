@@ -3,6 +3,7 @@
 #script de compression d'images
 #ce script convertit à la volée l'encoding des fichiers de properties vers du ASCII avec la commande native2ascii
 #pre requis : gimp 2.6 et le script-fu compress.scm dans le répertoire ~/.gimp-2.6/scripts
+#sudo apt-get exiv2
 #@param 1 : repertoire source
 #@param 2 : repertoire destination : si ce répertoire existe, il est effacé pour être recréé en début de script
 
