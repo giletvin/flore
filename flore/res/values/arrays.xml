@@ -4,61 +4,21 @@
 <resources>
 
 	<string-array name="lang_labels">
-	    <item>bg - Bulgarian - Български</item>
-		<item>cz - Czech - Čeština</item>
-		<item>de - German - Deutsch</item>
-		<item>dk - Danish - Dansk</item>
+	   
 		<item>en - English</item>
-		<item>es - Spanish - Español</item>
-		<item>fi - Finnish - Suomi</item>
+		
 		<item>fr - French - Français</item>
-		<item>gr - Greek - ελληνικά</item>
-		<item>hu - Hungarian - Magyar</item>
-		<item>is - Icelandic - Íslenska</item>
-		<item>it - Italian - Italiano</item>
-		<item>jp - Japanisch - 日本語</item>
+		
 		<item>la - Latin</item>
-		<item>nl - Dutch - Nederlands</item>
-		<item>no - Norwegian - Norsk</item>
-		<item>po - Polish - Polski</item>
-		<item>pt - Portuguese - Português</item>
-		<item>ro - Romanian - Română</item>
-		<item>ru - Russian - Русский</item>
-		<item>se - Swedish - Svenska</item>
-		<item>sk - Slovak - Slovenčina</item>
-		<item>sl - Slovenian - Slovenščina</item>
-		<item>sr - Serbian - Srpski</item>
-		<item>tr - Turkish - Türkçe</item>
-		<item>zh - Chinese Mandarin - 普通话</item>
+		
 	</string-array>
 
 	<string-array name="lang_values">
-	    <item>bg</item>
-		<item>cz</item>
-		<item>de</item>
-		<item>dk</item>
+	    
 		<item>en</item>
-		<item>es</item>
-		<item>fi</item>
 		<item>fr</item>
-		<item>gr</item>
-		<item>hu</item>
-		<item>is</item>
-		<item>it</item>
-		<item>jp</item>
 		<item>la</item>
-		<item>nl</item>
-		<item>no</item>
-		<item>po</item>
-		<item>pt</item>
-		<item>ro</item>
-		<item>ru</item>
-		<item>se</item>
-		<item>sk</item>
-		<item>sl</item>
-		<item>sr</item>
-		<item>tr</item>
-		<item>zh</item>
+		
 	</string-array>
 
 	<string-array name="ornidroid_home_options">

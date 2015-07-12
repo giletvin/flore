@@ -3,7 +3,7 @@
     xmlns:custom="http://schemas.android.com/apk/res/fr.flore"
     android:title="@string/preferences" >
 
-    <fr.ornidroid.ui.preferences.ListPreferenceMultiSelect
+    <fr.flore_de_poche.ui.preferences.ListPreferenceMultiSelect
         android:defaultValue="fr"
         android:entries="@array/lang_labels"
         android:entryValues="@array/lang_values"
