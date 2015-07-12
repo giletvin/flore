@@ -21,11 +21,9 @@
     <string name="preferences">Preferences</string>
     <string name="about">About</string>
     <string name="help">Help</string>
-    <string name="sounds">Sounds</string>
     <string name="subject_info">Flower info</string>
     <string name="subject_image">Pictures</string>
     <string name="subject_image_big">Zoomed picture</string>
-    <string name="subject_names">Taxonomy</string>
     <string name="add_custom_media_title">Add custom files</string>
 
     <!-- labels used in preferences -->

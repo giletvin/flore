@@ -51,6 +51,7 @@ create table aspect(
 		id integer,
 		name,
 		lang,
+		ordre,
 	PRIMARY KEY(id)
 );
 

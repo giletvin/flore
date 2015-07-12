@@ -152,9 +152,9 @@ public class SpinnerIconSelector {
 	/**
 	 * INSERT INTO disposition_feuille(id,name,lang) VALUES(0,"Alternes",'fr');
 	 * INSERT INTO disposition_feuille(id,name,lang) VALUES(1,"Opposées",'fr');
+	 * INSERT INTO disposition_feuille(id,name,lang) VALUES(2,"à la base",'fr');
 	 * INSERT INTO disposition_feuille(id,name,lang)
-	 * VALUES(2,"Verticillées",'fr'); INSERT INTO
-	 * disposition_feuille(id,name,lang) VALUES(3,"à la base",'fr'); INSERT INTO
+	 * VALUES(3,"Verticillées",'fr'); INSERT INTO
 	 * disposition_feuille(id,name,lang) VALUES(4,"Autre",'fr');
 	 * 
 	 * @param id
@@ -172,10 +172,10 @@ public class SpinnerIconSelector {
 			resourceId = R.drawable.disposition_feuille_opposes;
 			break;
 		case 2:
-			resourceId = R.drawable.disposition_feuille_verticillee;
+			resourceId = R.drawable.disposition_feuille_base;
 			break;
 		case 3:
-			resourceId = R.drawable.disposition_feuille_base;
+			resourceId = R.drawable.disposition_feuille_verticillee;
 			break;
 
 		default:

@@ -1,19 +1,19 @@
---PSER : pétales séparés et égaux
---PSI : pétales séparés et inégaux
---PSLE : pétales soudés, lobes égaux
---PSLI : pétales soudés, lobes inégaux
---CLOT : composée de fleurs tubulées ou ligulées
---CTL : composée de fleurs tubulées et ligulées
+--1 PSER : pétales séparés et égaux
+--2 PSI : pétales séparés et inégaux
+--3 PSLI : pétales soudés, lobes inégaux
+--4 PSLE : pétales soudés, lobes égaux
+--5 CTL : composée de fleurs tubulées et ligulées
+--6 CLOT : composée de fleurs tubulées ou ligulées
+--7 Autre
 
-
-update aspect set name="Pétales séparés et égaux" where name="Pser" and lang="fr";
-update aspect set name="Pétales séparés et inégaux" where name="Psi" and lang="fr";
-update aspect set name="Pétales soudés, lobes égaux" where name="Psle" and lang="fr";
-update aspect set name="Pétales soudés, lobes inégaux" where name="Psli" and lang="fr";
-update aspect set name="Composée de fleurs tubulées ou ligulées" where name="Clot" and lang="fr";
-update aspect set name="Composée de fleurs tubulées et ligulées" where name="Ctl" and lang="fr";
+update aspect set name="Pétales séparés et égaux",ordre=1 where name="Pser" and lang="fr";
+update aspect set name="Pétales séparés et inégaux",ordre=2 where name="Psi" and lang="fr";
+update aspect set name="Pétales soudés, lobes égaux",ordre=4 where name="Psle" and lang="fr";
+update aspect set name="Pétales soudés, lobes inégaux",ordre=3 where name="Psli" and lang="fr";
+update aspect set name="Composée de fleurs tubulées ou ligulées",ordre=6 where name="Clot" and lang="fr";
+update aspect set name="Composée de fleurs tubulées et ligulées",ordre=5 where name="Ctl" and lang="fr";
 update fleur_aspect set aspect_fk=10 where aspect_fk=(select id from aspect where name="Autre");
-update aspect set id=10 where name="Autre";
+update aspect set id=10,ordre=7 where name="Autre";
 
 
 --corolle tâchetée, striée, bicolore

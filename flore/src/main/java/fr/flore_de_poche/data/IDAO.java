@@ -47,30 +47,14 @@ public interface IDAO {
 	public static final String DESCRIPTION_COLUMN = "description";
 	/** The Constant DIRECTORY_NAME_COLUMN. */
 	public static final String DIRECTORY_NAME_COLUMN = "directory_name";
-	/**
-	 * The Constant DISTRIBUTION_COLUMN.
-	 * 
-	 * @deprecated
-	 * */
-	public static final String DISTRIBUTION_COLUMN = "distribution";
-	/**
-	 * The Constant HABITAT_1_NAME_COLUMN.
-	 * 
-	 * @deprecated
-	 */
-	public static final String HABITAT_1_NAME_COLUMN = "habitat1";
-	/**
-	 * The Constant HABITAT_2_NAME_COLUMN.
-	 * 
-	 * @deprecated
-	 */
-	public static final String HABITAT_2_NAME_COLUMN = "habitat2";
+
 	/** The Constant ID. */
 	public static final String ID = "id";
 	/** The Constant LANG_COLUMN_NAME. */
 	public static final String LANG_COLUMN_NAME = "lang";
 	/** The Constant NAME_FIELD_NAME. */
 	public static final String NAME_COLUMN_NAME = "name";
+	public static final String ORDRE_COLUMN_NAME = "ordre";
 
 	public static final String LEAF_DISPOSITION_TABLE = "disposition_feuille";
 
@@ -90,13 +74,6 @@ public interface IDAO {
 	public static final String PILOSITE_TIGE_TABLE = "pilosite_tige";
 	public static final String PILOSITE_FEUILLE_TABLE = "pilosite_feuille";
 	public static final String PARTICULARITE_TABLE = "particularite";
-
-	/**
-	 * The Constant SIZE_VALUE_COLUMN.
-	 * 
-	 * @deprecated
-	 */
-	public static final String SIZE_VALUE_COLUMN = "size_value";
 
 	/** The Constant TAXON. */
 	public static final String TAXON = "taxon";

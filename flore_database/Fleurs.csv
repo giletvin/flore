@@ -215,7 +215,7 @@ Gesse_larges_feuilles|http://abiris.snv.jussieu.fr/flore/descriptions/Gesse_a_la
 Gesse_des_montagnes|http://abiris.snv.jussieu.fr/flore/descriptions/Gesse_des_montagnes.html|Gesse des montagnes||Gesse à feuilles de lin|Lathyrus linifolius||bitter vetch|Fabaceae|grappe|groupe||rose|||papillon|PSI|5||composée|alternes|glabre|glabre|
 Gesse_pres|http://abiris.snv.jussieu.fr/flore/descriptions/Gesse_des_pres.html|Gesse des prés|||Lathyrus pratensis||meadow vetchling|Fabaceae|grappe|groupe|avec|jaune||papillon|papillon|PSI|5|papillon|composée|alternes|pubescente|pubescente1|
 Gesse_hirsute|http://abiris.snv.jussieu.fr/flore/descriptions/Gesse_herissee.html|Gesse hérissée|Gesse velue|Gesse hirsute|Lathyrus hirsutus||hairy vetchling|Fabaceae|grappe|groupe|avec|bleu|rose|papillon|papillon, tachetée|PSI|5|irrégulière|composée|alternes|pubescente|glabre|
-Gesse_sans_feuille|http://abiris.snv.jussieu.fr/flore/descriptions/Gesse_sans_feuille.html|Gesse sans feuille|||Lathyrus aphaca||yellow pea|Fabaceae|grappe|groupe|avec|jaune||papillon|papillon, tachetée|PSI|5|irrégulière|autre, simples entières|autre, opposées|glabre|glabre|
+Gesse_sans_feuille|http://abiris.snv.jussieu.fr/flore/descriptions/Gesse_sans_feuille.html|Gesse sans feuille|||Lathyrus aphaca||yellow pea|Fabaceae|grappe|groupe|avec|jaune||papillon|papillon, tachetée|PSI|5|irrégulière|autre, simple entière|autre, opposées|glabre|glabre|
 Glechoma|http://abiris.snv.jussieu.fr/flore/descriptions/Glechoma_faux_lierre.html|Gléchoma faux lierre|Lierre terrestre|Gléchome lierre terrestre|Glechoma hederacea||ground-ivy|Lamiaceae|cyme|groupe|avec|bleu||tube|tachetée|PSLI|5, 6|irrégulière|simple dentée|opposées|pubescente|pubescente2|
 Gnaphale_jaunatre|http://abiris.snv.jussieu.fr/flore/descriptions/Gnaphale_jaunatre.html|Gnaphale jaunâtre|Cotonnière blanc-jaunâtre|Immortelle des marais|Laphangium luteoalbum|||Asteraceae|corymbe|groupe|avec|jaune|blanc|composée||CLOT|>10|irrégulière, régulière|simple dentée, simple entière|alternes|pubescente|pubescente2|
 Grande_camomille|http://abiris.snv.jussieu.fr/flore/descriptions/Grande_Camomille.html|Grande Camomille|||Tanacetum parthenium||feverfew|Asteraceae||groupe||blanc|jaune|||CTL|>10||divisée|alternes|glabre|pubescente2|
@@ -251,7 +251,7 @@ Lampourde_Italie|http://abiris.snv.jussieu.fr/flore/descriptions/Lampourde_d_Ita
 Lampsane_commune|http://abiris.snv.jussieu.fr/flore/descriptions/Lampsane_commune.html|Lampsane commune|||Lapsana communis||common nipplewort|Asteraceae|grappe|groupe|avec|jaune||composée||CLOT|>10|régulière, irrégulière|divisée, simple dentée|alternes|glabre, pubescente|pubescente2|
 Lierre|http://abiris.snv.jussieu.fr/flore/descriptions/Lierre.html|Lierre||Lierre grimpant|Hedera helix||English ivy |Araliaceae|ombelle|groupe|avec|vert|jaune|5 pétales||PSER|5|régulière|simple entière|alternes|glabre|glabre|
 Limodore|http://abiris.snv.jussieu.fr/flore/descriptions/Limodore_a_feuilles_avortees.html|Limodore à feuilles avortées||Limodore sans feuille|Limodorum abortivum||Violet Limodore|Orchidaceae|épi|groupe|avec|bleu|blanc|présence d'éperon|éperon, orchidée|PSI|6|irrégulière|autre|alternes|glabre|glabre|
-Lin_bisannuel|http://abiris.snv.jussieu.fr/flore/descriptions/Lin_bisannuel.html|Lin bisannuel||Lin à feuilles étroites|Linum bienne||pale flax |Linaceae|grappe|groupe|avec|rose||5 pétales||PSER|5|régulière|simple entière|alternes|glabre|glabre|
+Lin_bisannuel|http://abiris.snv.jussieu.fr/flore/descriptions/Lin_bisannuel.html|Lin bisannuel||Lin à feuilles étroites|Linum bienne||pale flax |Linaceae|grappe|groupe|avec|bleu||5 pétales||PSER|5|régulière|simple entière|alternes|glabre|glabre|
 Lin_purgatif|http://abiris.snv.jussieu.fr/flore/descriptions/Lin_purgatif.html|Lin purgatif|||Linum catharticum||fairy flax|Linaceae|cyme|groupe|avec|blanc||5 pétales|tachetée|PSER|5|régulière|simple entière|opposées|glabre|glabre|
 Linaire_batarde|http://abiris.snv.jussieu.fr/flore/descriptions/Linaire_batarde.html|Linaire bâtarde||Fausse velvote|Kickxia spuria||roundleaf cancerwort |Scrofulariaceae|isolée|groupe, solitaire|avec|jaune|marron|tube|éperon, tachetée|PSLI|5|irrégulière|simple dentée|alternes, opposées|pubescente|pubescente2|
 Linaire_commune|http://abiris.snv.jussieu.fr/flore/descriptions/Linaire_commune.html|Linaire commune|||Linaria vulgaris||Common Toadflax|Scrofulariaceae|grappe|groupe|avec|jaune||tube|éperon, tachetée|PSLI|5|irrégulière|simple entière|alternes|glabre|glabre|
@@ -472,3 +472,18 @@ Scille_a_deux_feuilles|http://www.tela-botanica.org/bdtfx-nn-61464-synthese|Scil
 Anemone_fausse_renoncule|http://www.tela-botanica.org/bdtfx-nn-74957-synthese|Anémone fausse renoncule||Sylvie jaune|Anemone ranunculoides||yellow anemone|Ranunculaceae||groupe, solitaire||jaune||||PSER|5||divisée|verticillées|pubescente|pubescente1, pubescente2|
 Euphorbe_petit_cypres|http://www.tela-botanica.org/bdtfx-nn-25823-synthese|Euphorbe petit-cyprès||Euphorbe faux-cyprès|Euphorbia cyparissias||cypress spurge|Euphorbiaceae|Euphorbiaceae|groupe||jaune|vert|||autre|0||simple entière|alternes, opposées|glabre|glabre|
 Fraisier_Indes|http://www.tela-botanica.org/bdtfx-nn-23328-synthese|Fraisier des Indes|Fraisier à fleurs jaunes|Fraisier de Duchesne|Duchesnea indica|Potentilla indica|Mock strawberry|Rosaceae||solitaire||jaune||||PSER|5||composée|alternes|pubescente|pubescente1, pubescente2|
+||Lunaire annuelle|Monnaie-du-pape|Herbe aux écus|Lunaria annua||annual honesty|Brassicaceae||groupe||rose||||PSER|4||simple dentée|alternes|pubescente|pubescente1, pubescente2|
+||Ajonc d'Europe|||||||||||||||||||||
+||Bartsie visqueuse|||||||||||||||||||||
+||Criste_marine|||||||||||||||||||||
+||Frankénie lisse|||||||||||||||||||||
+||Genet à balais|||||||||||||||||||||
+||Impatiens parviflora|||||||||||||||||||||
+||Inule fausse criste|||||||||||||||||||||
+||Matricaire maritime|||||||||||||||||||||
+||Nombril de Vénus|||||||||||||||||||||
+||Pavot cornu|||||||||||||||||||||
+||Petite centaurée maritime|||||||||||||||||||||
+||Phacélie à feuilles de tanaisie|||||||||||||||||||||
+||Pourpier de mer|||||||||||||||||||||
+||Silène maritime|||||||||||||||||||||

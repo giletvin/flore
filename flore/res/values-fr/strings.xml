@@ -71,6 +71,8 @@
     <string name="dialog_alert_connection_problem">Problème de connexion. Merci de vérifier vos paramètres réseau.</string>
 
     <!-- autres labels -->
+    <string name="zoom">Zoom image</string>
+    <string name="home_stars">****</string>
     <string name="scientific_name">Nom scientifique</string>
     <string name="description">Description</string>
     <string name="distribution">Habitat et comportement</string>

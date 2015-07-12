@@ -289,7 +289,7 @@ public class DAOImpl implements IDAO {
 	 * @see fr.flore_de_poche.data.IOrnidroidDAO#getHabitats()
 	 */
 	public Cursor getAspects() {
-		return getCursorFromListTable(ASPECT_TABLE_NAME, ID,
+		return getCursorFromListTable(ASPECT_TABLE_NAME, ORDRE_COLUMN_NAME,
 				I18nHelper.getLang());
 
 	}
