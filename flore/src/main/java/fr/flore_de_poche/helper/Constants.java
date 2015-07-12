@@ -37,7 +37,7 @@ public class Constants extends BasicConstants {
 	private static Context CONTEXT;
 
 	/** The Constant ORNIDROID_PREFERENCES_FILE_NAME. */
-	private static final String ORNIDROID_PREFERENCES_FILE_NAME = "fr.ornidroid_preferences";
+	private static final String ORNIDROID_PREFERENCES_FILE_NAME = "fr.flore_preferences";
 
 	/** The Constant ORNIDROID_SEARCH_LANG_DEFAULT_VALUE. */
 	private static final String ORNIDROID_SEARCH_LANG_DEFAULT_VALUE = SupportedLanguage.FRENCH

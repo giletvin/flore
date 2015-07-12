@@ -29,15 +29,12 @@
     <string name="add_custom_media_title">Ajout de fichiers personnalisés</string>
 
     <!-- labels used in preferences -->
-    <string name="preferences_lang_key">SearchLang</string>
     <string name="preferences_lang_title">Langues utilisées pour la recherche</string>
     <string name="preferences_lang_summary">3 langues disponibles. Recherche sur plusieurs langues différentes possible.</string>
-    <string name="preferences_ornidroid_home_key">dHome</string>
     <string name="preferences_ornidroid_home_title">Répertoire des données</string>
     <string name="preferences_ornidroid_home_summary">Choisir le répertoire où l\'application doit placer ses données. Pour les utilisateurs avertis seulement !</string>
     <string name="preferences_ornidroid_home_copying_files">Copie de fichiers en cours</string>
     <string name="preferences_ornidroid_home_saved">Modification du répertoire de données réussie</string>
-    <string name="preferences_automatic_update_check_key">AutomaticUpdateCheck</string>
     <string name="preferences_automatic_update_check_title">Vérification automatique de mise à jour</string>
     <string name="preferences_automatic_update_check_summary">Effectuer une vérification automatique pour savoir si de nouvelles ressources sont disponibles.</string>
     <string name="help_change_ornidroid_home_title">Modification du répertoire de données</string>
