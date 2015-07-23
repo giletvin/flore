@@ -293,7 +293,7 @@ public class IOServiceImpl implements IIOService {
 	 */
 	public void removeCustomMediaFile(final MediaFile ornidroidFile)
 			throws ApplicationException {
-		if (ornidroidFile.isCustomMediaFile()) {
+		if (null != ornidroidFile && ornidroidFile.isCustomMediaFile()) {
 			final File mediaFile = new File(ornidroidFile.getPath());
 			final File mediaPropertiesFile = new File(ornidroidFile.getPath()
 					+ MediaFile.PROPERTIES_SUFFIX);
