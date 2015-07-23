@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
 
     <!-- The name of the application. -->
@@ -21,20 +20,21 @@
     <string name="preferences">Préférences</string>
     <string name="about">A propos</string>
     <string name="help">Aide</string>
-    <string name="sounds">Sons</string>
     <string name="subject_info">Fiche fleur</string>
     <string name="subject_image">Images</string>
     <string name="subject_image_big">Photo zoomée</string>
-    <string name="subject_names">Taxonomie</string>
     <string name="add_custom_media_title">Ajout de fichiers personnalisés</string>
 
     <!-- labels used in preferences -->
+    <string name="preferences_lang_key">SearchLang</string>
     <string name="preferences_lang_title">Langues utilisées pour la recherche</string>
     <string name="preferences_lang_summary">3 langues disponibles. Recherche sur plusieurs langues différentes possible.</string>
+    <string name="preferences_ornidroid_home_key">Home</string>
     <string name="preferences_ornidroid_home_title">Répertoire des données</string>
     <string name="preferences_ornidroid_home_summary">Choisir le répertoire où l\'application doit placer ses données. Pour les utilisateurs avertis seulement !</string>
-    <string name="preferences_ornidroid_home_copying_files">Copie de fichiers en cours</string>
+    
     <string name="preferences_ornidroid_home_saved">Modification du répertoire de données réussie</string>
+    <string name="preferences_automatic_update_check_key">AutomaticUpdateCheck</string>
     <string name="preferences_automatic_update_check_title">Vérification automatique de mise à jour</string>
     <string name="preferences_automatic_update_check_summary">Effectuer une vérification automatique pour savoir si de nouvelles ressources sont disponibles.</string>
     <string name="help_change_ornidroid_home_title">Modification du répertoire de données</string>
@@ -61,32 +61,22 @@
 		l\'application</string>
     <string name="dialog_alert_ornidroid_database_not_found">La base de données est introuvable
 		dans le répertoire d\'installation. L\'application ne peut pas fonctionner.</string>
-    <string name="dialog_alert_download_error">La base de données est introuvable
-		dans le répertoire d\'installation et le téléchargement depuis
-		Internet a échoué. L\'application ne peut pas fonctionner.</string>
-    <string name="dialog_alert_database_not_found_online">Impossible de télécharger le fichier de base de données depuis le site web. L\'application ne peut pas fonctionner.</string>
+
     <string name="dialog_alert_connection_problem">Problème de connexion. Merci de vérifier vos paramètres réseau.</string>
 
     <!-- autres labels -->
     <string name="zoom">Zoom image</string>
     <string name="home_stars">****</string>
     <string name="scientific_name">Nom scientifique</string>
-    <string name="description">Description</string>
-    <string name="distribution">Habitat et comportement</string>
-    <string name="geographic_distribution">Distribution géographique</string>
-    <string name="scientific_order">Ordre</string>
-    <string name="scientific_family">Famille</string>
     <string name="credits">Crédits</string>
-    <string name="no_records">Pas d\'enregistrement. Vérifier et télécharger
-		depuis
-		Internet ?</string>
+
     <string name="no_pictures">Pas de photo. Vérifier et télécharger depuis
 		Internet ?</string>
     <string name="no_wiki">La fiche wikipedia n\'est pas sur votre appareil. Voulez-vous la télécharger ?</string>
     <string name="about_ornidroid">Cette application est sous
 		licence Creative Commons BY
 		NC\nhttp://creativecommons.org/licenses/by-nc/3.0/deed.fr</string>
-    <string name="download_in_progress">Téléchargement en cours</string>
+
     <string name="download_please_wait">Veuillez patienter pendant le téléchargement.
 		L\'écran va se rafraîchir automatiquement.</string>
     <string name="no_resources_online">Désolé, pas de fichier à télécharger depuis
@@ -95,15 +85,13 @@
     <!-- Help content -->
     <string name="help_text">Contact : ornidroid@free.fr\n\nGuide d\'utilisation : https://github.com/giletvin/ornidroid/wiki/Utilisation\n\nComment installer les packages complets d\'images et de sons : https://github.com/giletvin/ornidroid/wiki/Installation\n\nPour changer la langue du moteur de recherche : aller dans les préférences (accessibles par le menu) et modifier la valeur de SearchLang</string>
     <!-- strings of the multi search -->
-    <string name="search_please_wait">Recherche en cours.</string>
+
     <string name="search_scientific_family_choose">Choisir une famille scientifique</string>
     <string name="search_scientific_family">Famille scientifique</string>
-    
     <string name="search_inflorescence">Type d\'inflorescence</string>
     <string name="search_inflorescence_choose">Choisir une inflorescence</string>
     <string name="search_aspect_choose">Choisir un aspect</string>
     <string name="search_aspect">Aspect de la corolle</string>
-    
     <string name="search_particularite_choose">Choisir une particularité</string>
     <string name="search_particularite">Particularité</string>
     <string name="search_leaf_type_choose">Choisir un type de feuille</string>
@@ -118,10 +106,11 @@
     <string name="search_pilosite_tige">Pilosité de tige</string>
     <string name="search_colour_choose">Choisir une couleur</string>
     <string name="search_colour">Couleur</string>
-    <string name="search_colour_help"></string>
-    <string name="search_show_results">Afficher</string>
+    <string name="search_no_help">Pas d\'aide disponible</string>
+    <string name="wikipedia">Wikipedia: </string>
+    <string name="doc_url">Site abiris.snv.jussieu.fr: </string>
     <string name="search_results">résultats</string>
-    <string name="expand_collapse_form">Ouvrir/Fermer le formulaire</string>
+
     <string name="search_leaf_disposition_choose">Choisir une disposition de feuilles</string>
     <string name="search_leaf_disposition">Disposition des feuilles</string>
     <!-- labels for the updates -->
@@ -137,5 +126,6 @@
     <string name="download_zip_package_error_detail">Merci de vérifier vos paramètres de connexion.</string>
     <string name="download_manual">Il est aussi possible de télécharger et installer les packages depuis un ordinateur : https://github.com/giletvin/ornidroid/wiki/Installation</string>
     <string name="download_zip_not_enough_space">Espace insuffisant sur la mémoire de l\'appareil.\nAudio : 700 Mo nécessaires pendant l\'installation. \nImages : 120 Mo\nPages Wikipedia : 60 Mo.</string>
-
+    <string name="release_notes">Release notes</string>
+    
 </resources>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
 
     <!-- The name of the application. -->
-    <string name="app_name">Flore de poche</string>
+    <string name="app_name">Pocket flora</string>
 
     <!-- The hint text that appears in the search box. -->
     <string name="search_hint">Search</string>
@@ -33,13 +32,12 @@
     <string name="preferences_ornidroid_home_key">Home</string>
     <string name="preferences_ornidroid_home_title">Data Folder</string>
     <string name="preferences_ornidroid_home_summary">Choose the location where the application should put its data.</string>
-    <string name="preferences_ornidroid_home_copying_files">Copying files </string>
     <string name="preferences_ornidroid_home_saved">Home directory change successful</string>
     <string name="help_change_ornidroid_home_title">Modify Home directory</string>
     <string name="help_change_ornidroid_home_content">Starting in Android 4.4, access to memory is strictly restricted to specific directories.\nDefault Internal : %1$s\nSD CARD (External) : %2$s\nIf you change Home, all the data from the previous installation directory will be moved in the new directory and the previous directory will be deleted. This operation can last up to 10 minutes.</string>
     <string name="preferences_automatic_update_check_key">AutomaticUpdateCheck</string>
     <string name="preferences_automatic_update_check_title">Automatic Update Check</string>
-    <string name="preferences_automatic_update_check_summary">Performs automatically a check to let know if new pictures or sounds are available online.</string>
+    <string name="preferences_automatic_update_check_summary">Performs automatically a check to let know if new pictures are available online.</string>
 
     <!-- labels for add custom media -->
     <string name="add_custom_media_error">The operation failed</string>
@@ -59,10 +57,6 @@
 		or corrupt! Please set it in the application preferences.</string>
     <string name="dialog_alert_ornidroid_database_not_found">Unable to find the database in the
 		installation directory.</string>
-    <string name="dialog_alert_download_error">Unable to find the database in the
-		installation directory. The download from the website failed.</string>
-    <string name="dialog_alert_database_not_found_online">Unable to find the database on the
-		website. The app can\'t run.</string>
     <string name="dialog_alert_connection_problem">Connection problem. Please check your access to the
 		Internet.</string>
 
@@ -70,21 +64,12 @@
     <string name="zoom">Zoom image</string>
     <string name="home_stars">****</string>
     <string name="scientific_name">Scientific name</string>
-    <string name="description">Description</string>
-    <string name="distribution">Distribution and behaviour</string>
-    <string name="geographic_distribution">Geographic distribution</string>
-    <string name="cm">cm</string>
-    <string name="scientific_order">Order</string>
-    <string name="scientific_family">Family</string>
     <string name="credits">Credits</string>
-    <string name="no_records">No records. Do you want to check if records are
-		available on the website ? (Internet connection is required)</string>
     <string name="no_pictures">No pictures. Do you want to check if records are
 		available on the website ? (Internet connection is required)</string>
     <string name="no_wiki">Wikipedia page not found on your device. Do you want to download it (Internet connection is required)</string>
     <string name="about_ornidroid">Licence Creative Commons BY
 		NC\nhttp://creativecommons.org/licenses/by-nc/3.0/deed.en</string>
-    <string name="download_in_progress">Download in progress</string>
     <string name="download_please_wait">Please wait during download. The screen will
 		automatically refresh.</string>
     <string name="no_resources_online">Sorry, no files to download on the website.</string>
@@ -92,7 +77,7 @@
     <!-- Help content -->
     <string name="help_text">Contact : ornidroid@free.fr\n\nUser\'s guide : https://github.com/giletvin/ornidroid/wiki/Help\n\nHow-to download the full images and mp3 packages : https://github.com/giletvin/ornidroid/wiki/Installation-en\n\nTo change the search engine language : go to preferences (from the menu) and change OrnidroidSearchLang value</string>
     <!-- strings of the multi search -->
-    <string name="search_please_wait">Searching. Please wait</string>
+
     <string name="search_scientific_family_choose">Choose a scientific family</string>
     <string name="search_scientific_family">Scientific family</string>
     <string name="search_inflorescence">Inflorescence type</string>
@@ -113,15 +98,10 @@
     <string name="search_pilosite_tige">Steam pilosity</string>
     <string name="search_colour_choose">Choose a colour</string>
     <string name="search_colour">Colour</string>
-    <string name="search_colour_help"></string>
     <string name="search_results">results</string>
-    <string name="search_show_results">Show</string>
-    <string name="expand_collapse_form">Expand/collapse form</string>
     <string name="search_leaf_disposition_choose">Choose a leaf disposition</string>
     <string name="search_leaf_disposition">Leaf disposition</string>
     <string name="search_no_help">No help</string>
-    <string name="add_comment">Add a comment</string>
-    <string name="add_your_file">Add your file</string>
     <string name="wikipedia">Wikipedia: </string>
     <string name="doc_url">Site abiris.snv.jussieu.fr: </string>
     <!-- labels for the updates -->
