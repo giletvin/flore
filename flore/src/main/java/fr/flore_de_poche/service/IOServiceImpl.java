@@ -33,11 +33,10 @@ import fr.flore_de_poche.helper.SupportedLanguage;
  */
 public class IOServiceImpl implements IIOService {
 
-	/** The Constant MIN_SIZE_REQUIRED_TO_DOWNLOAD_ZIP_PACKAGES. */
-	// TODO : a mettre à jour ulterieurement
-	private static final int MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE = 120;
+	private static final int WIKIPEDIA_PAGE_NOT_AVAILABLE_FILE_SIZE = 48;
 
-	/** The Constant MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE. */
+	private static final int MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE = 400;
+
 	private static final int MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE = 15;
 
 	/**
@@ -190,17 +189,24 @@ public class IOServiceImpl implements IIOService {
 	 * @return the local wikipedia page or download it
 	 */
 	private MediaFile downloadWikipediaPage(Subject bird) {
-		// cherche s'il existe une page wiki locale
-
+		// telechargement de la version fr et en en même temps
 		try {
 			downloadHelper.downloadFile(
-					downloadHelper.getBaseUrl(I18nHelper.getLang().getCode(),
+					downloadHelper.getBaseUrl(I18nHelper.ENGLISH,
 							MediaFileType.WIKIPEDIA_PAGE),
 					bird.getScientificName().replace(
 							BasicConstants.BLANK_STRING,
 							BasicConstants.UNDERSCORE_STRING),
 					Constants.getOrnidroidHomeWikipedia() + File.separator
-							+ I18nHelper.getLang().getCode());
+							+ I18nHelper.ENGLISH);
+			downloadHelper.downloadFile(
+					downloadHelper.getBaseUrl(I18nHelper.FRENCH,
+							MediaFileType.WIKIPEDIA_PAGE),
+					bird.getScientificName().replace(
+							BasicConstants.BLANK_STRING,
+							BasicConstants.UNDERSCORE_STRING),
+					Constants.getOrnidroidHomeWikipedia() + File.separator
+							+ I18nHelper.FRENCH);
 			return getLocalWikipediaPage(bird);
 		} catch (ApplicationException e) {
 			return null;
@@ -217,7 +223,7 @@ public class IOServiceImpl implements IIOService {
 	private MediaFile getLocalWikipediaPage(Subject bird) {
 		// cherche s'il existe une page wiki locale
 		try {
-			File wikipediaFile = new File(getWikipediaPage(bird));
+			File wikipediaFile = getWikipediaPage(bird);
 			if (wikipediaFile.exists()) {
 				MediaFile wikipediaOrnidroidFile;
 				try {
@@ -504,20 +510,37 @@ public class IOServiceImpl implements IIOService {
 	}
 
 	/**
-	 * Gets the wikipedia page local path.
+	 * Gets the wikipedia page local path. if lang = fr, looks for french page.
+	 * If french page doesnt exist, try to load the english page instead
 	 * 
 	 * @param currentBird
 	 *            the current bird
-	 * @return the local path of the wikipedia page
+	 * @return the wikipage to load
 	 */
-	private String getWikipediaPage(Subject currentBird) {
-		return Constants.getOrnidroidHomeWikipedia()
+	private File getWikipediaPage(Subject currentBird) {
+		String defaultPath = Constants.getOrnidroidHomeWikipedia()
 				+ File.separator
 				+ I18nHelper.getLang().getCode()
 				+ File.separator
 				+ currentBird.getScientificName().replace(
 						BasicConstants.BLANK_STRING,
 						BasicConstants.UNDERSCORE_STRING);
+
+		File defaultWikipediaFile = new File(defaultPath);
+		if (!I18nHelper.ENGLISH.equals(I18nHelper.getLang().getCode())) {
+			if (!defaultWikipediaFile.exists()
+					|| defaultWikipediaFile.length() <= WIKIPEDIA_PAGE_NOT_AVAILABLE_FILE_SIZE) {
+				String englishPath = Constants.getOrnidroidHomeWikipedia()
+						+ File.separator
+						+ I18nHelper.ENGLISH
+						+ File.separator
+						+ currentBird.getScientificName().replace(
+								BasicConstants.BLANK_STRING,
+								BasicConstants.UNDERSCORE_STRING);
+				defaultWikipediaFile = new File(englishPath);
+			}
+		}
+		return defaultWikipediaFile;
 	}
 
 	/*

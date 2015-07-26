@@ -7,9 +7,9 @@ import java.util.Locale;
  */
 public class I18nHelper {
 
-	/** The Constant FRENCH. */
 	public static final String FRENCH = "fr";
-	/** The singleton. */
+	public static final String ENGLISH = "en";
+
 	private static I18nHelper SINGLETON;
 
 	/**
