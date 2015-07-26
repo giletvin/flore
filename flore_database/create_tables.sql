@@ -16,16 +16,14 @@ CREATE VIRTUAL TABLE taxonomy USING fts3(lang, taxon, searched_taxon, fleur_fk,t
 create table scientific_family(
 		id,
 		name,
-		lang,
-		PRIMARY KEY(id)
+		lang
 );
 
 
 create table inflorescence(
 	id integer,
 	name,
-	lang,
-	PRIMARY KEY(id)
+	lang
 );
 
 
@@ -37,8 +35,7 @@ create table fleur_inflorescence(
 create table couleur(
 		id integer,
 		name,
-		lang,
-	PRIMARY KEY(id)
+		lang
 );
 
 
@@ -51,8 +48,7 @@ create table aspect(
 		id integer,
 		name,
 		lang,
-		ordre,
-	PRIMARY KEY(id)
+		ordre
 );
 
 create table fleur_aspect(
@@ -63,8 +59,7 @@ create table fleur_aspect(
 create table nb_petale(
 		id integer,
 		name,
-		lang,
-	PRIMARY KEY(id)
+		lang
 );
 
 create table fleur_nb_petale(
@@ -75,8 +70,7 @@ create table fleur_nb_petale(
 create table type_feuille(
 		id integer,
 		name,
-		lang,
-	PRIMARY KEY(id)
+		lang
 );
 create table fleur_type_feuille(
 	fleur_fk,
@@ -85,8 +79,7 @@ create table fleur_type_feuille(
 create table disposition_feuille(
 		id integer,
 		name,
-		lang,
-	PRIMARY KEY(id)
+		lang
 );
 
 create table fleur_disposition_feuille(
@@ -96,8 +89,7 @@ create table fleur_disposition_feuille(
 create table pilosite_tige(
 		id integer,
 		name,
-		lang,
-	PRIMARY KEY(id)
+		lang
 );
 create table fleur_pilosite_tige(
 	fleur_fk,
@@ -106,8 +98,7 @@ create table fleur_pilosite_tige(
 create table pilosite_feuille(
 		id integer,
 		name,
-		lang,
-	PRIMARY KEY(id)
+		lang
 );
 create table fleur_pilosite_feuille(
 	fleur_fk,
@@ -118,8 +109,7 @@ create table fleur_pilosite_feuille(
 create table particularite(
 	id integer,
 	name,
-	lang,
-	PRIMARY KEY(id)
+	lang
 );
 
 
