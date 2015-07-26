@@ -83,7 +83,7 @@
 		Internet.</string>
     <string name="unknown_error">Désolé, une erreur inattendue est survenue.</string>
     <!-- Help content -->
-    <string name="help_text">Contact : ornidroid@free.fr\n\nGuide d\'utilisation : https://github.com/giletvin/ornidroid/wiki/Utilisation\n\nComment installer les packages complets d\'images et de sons : https://github.com/giletvin/ornidroid/wiki/Installation\n\nPour changer la langue du moteur de recherche : aller dans les préférences (accessibles par le menu) et modifier la valeur de SearchLang</string>
+    <string name="help_text">Contact : ornidroid@free.fr\n\nComment installer les packages complets d\'images et de sons : https://github.com/giletvin/flore/wiki/Installation\n\nPour changer la langue du moteur de recherche : aller dans les préférences (accessibles par le menu) et modifier la valeur de SearchLang</string>
     <!-- strings of the multi search -->
 
     <string name="search_scientific_family_choose">Choisir une famille scientifique</string>
@@ -124,8 +124,8 @@
     <string name="download_zip_package_warn_detail">Connexion Wifi recommandée. Le téchargement et l\'installation peuvent durer 5 à 10 min (en fonction de votre accès internet)</string>
     <string name="download_zip_package_error">Problème dans le téléchargement.</string>
     <string name="download_zip_package_error_detail">Merci de vérifier vos paramètres de connexion.</string>
-    <string name="download_manual">Il est aussi possible de télécharger et installer les packages depuis un ordinateur : https://github.com/giletvin/ornidroid/wiki/Installation</string>
-    <string name="download_zip_not_enough_space">Espace insuffisant sur la mémoire de l\'appareil.\nAudio : 700 Mo nécessaires pendant l\'installation. \nImages : 120 Mo\nPages Wikipedia : 60 Mo.</string>
+    <string name="download_manual">Il est aussi possible de télécharger et installer les packages depuis un ordinateur : https://github.com/giletvin/flore/wiki/Installation</string>
+    <string name="download_zip_not_enough_space">Espace insuffisant sur la mémoire de l\'appareil. \nImages : 400 Mo\nPages Wikipedia : 15 Mo.</string>
     <string name="release_notes">Release notes</string>
     
 </resources>

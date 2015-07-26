@@ -75,7 +75,7 @@
     <string name="no_resources_online">Sorry, no files to download on the website.</string>
     <string name="unknown_error">Sorry, an unexpected error has occurred.</string>
     <!-- Help content -->
-    <string name="help_text">Contact : ornidroid@free.fr\n\nUser\'s guide : https://github.com/giletvin/ornidroid/wiki/Help\n\nHow-to download the full images and mp3 packages : https://github.com/giletvin/ornidroid/wiki/Installation-en\n\nTo change the search engine language : go to preferences (from the menu) and change OrnidroidSearchLang value</string>
+    <string name="help_text">Contact : ornidroid@free.fr\n\nHow-to download the full images and wikipedia packages : https://github.com/giletvin/flore/wiki/Installation-en\n\nTo change the search engine language : go to preferences (from the menu) and change OrnidroidSearchLang value</string>
     <!-- strings of the multi search -->
 
     <string name="search_scientific_family_choose">Choose a scientific family</string>
@@ -115,8 +115,8 @@
     <string name="download_zip_package_warn_detail">Wifi connection is highly recommanded. Downloading and installing a package can last up to 5 to 10 min (depending on your internet connection)</string>
     <string name="download_zip_package_error">Download zip package went wrong.</string>
     <string name="download_zip_package_error_detail">Please check your Internet connection.</string>
-    <string name="download_zip_not_enough_space">You don\'t have enough free space on your device to download and install the package.\nAudio : 700 Mb required during installation. \nImages : 120 Mb\nWikipedia files : 40 Mb.</string>
-    <string name="download_manual">You can also download the full package manually from a computer : https://github.com/giletvin/ornidroid/wiki/Installation-en</string>
+    <string name="download_zip_not_enough_space">You don\'t have enough free space on your device to download and install the package.\nImages : 400 Mb\nWikipedia files : 15 Mb.</string>
+    <string name="download_manual">You can also download the full package manually from a computer : https://github.com/giletvin/flore/wiki/Installation-en</string>
     <string name="release_notes">Release notes</string>
 
 </resources>
