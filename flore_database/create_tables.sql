@@ -121,3 +121,15 @@ create table fleur_particularite(
 
 create table application_info(id integer,key,value,date,comments);
 insert into application_info(id,key,value,date,comments) VALUES(1,"flore_version","1.0.0","","");
+
+
+create table release_notes(id integer,version_code integer,date,comments_de,comments_en,comments_fr,read integer);
+
+-- release 1.0.0 version 1
+insert into release_notes(id,version_code,date,comments_en,comments_de,comments_fr,read) VALUES(1,1,"27/07/2015","","","",0);
+update release_notes set comments_fr=" * Version 1.0.0 (27/07/2015)
+Première version !
+" where version_code=1;
+update release_notes set comments_en=" * Version 1.0.0 (07/27/2015)
+First release!
+" where version_code=1;

@@ -64,7 +64,7 @@ do
 		if [[ -f ${picturefile}.properties ]] ; then
 			echo "fichier de properties deja present"
 		else
-			cp template.image.properties ${picturefile}.properties
+			cp template.image.FLORE.properties ${picturefile}.properties
 		fi
 		#conversion en ascii du fichier de properties associé
 		native2ascii ${picturefile}.properties ${picturefile}.properties
