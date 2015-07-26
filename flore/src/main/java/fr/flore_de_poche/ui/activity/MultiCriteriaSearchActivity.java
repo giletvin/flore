@@ -150,16 +150,17 @@ public class MultiCriteriaSearchActivity extends AbstractActivity {
 		if (queryRunning) {
 			pbarSearchMulti.setVisibility(View.VISIBLE);
 		}
-		initSelectField(MultiCriteriaSearchFieldType.SCIENTIFIC_FAMILY);
-		initSelectField(MultiCriteriaSearchFieldType.INFLORESCENCE);
-		initSelectField(MultiCriteriaSearchFieldType.NB_PETALE);
+
 		initSelectField(MultiCriteriaSearchFieldType.COLOUR);
-		initSelectField(MultiCriteriaSearchFieldType.ASPECT);
+		initSelectField(MultiCriteriaSearchFieldType.NB_PETALE);
 		initSelectField(MultiCriteriaSearchFieldType.PARTICULARITE);
+		initSelectField(MultiCriteriaSearchFieldType.ASPECT);
 		initSelectField(MultiCriteriaSearchFieldType.LEAF_TYPE);
 		initSelectField(MultiCriteriaSearchFieldType.LEAF_DISPOSITION);
 		initSelectField(MultiCriteriaSearchFieldType.PILOSITE_TIGE);
 		initSelectField(MultiCriteriaSearchFieldType.PILOSITE_FEUILLE);
+		initSelectField(MultiCriteriaSearchFieldType.INFLORESCENCE);
+		initSelectField(MultiCriteriaSearchFieldType.SCIENTIFIC_FAMILY);
 		/*
 		 * updateSearchCountResults(this.ornidroidService
 		 * .getMultiSearchCriteriaCountResults(this.formBean));

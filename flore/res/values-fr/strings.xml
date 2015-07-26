@@ -100,10 +100,10 @@
     <string name="reset_form">Réinitialiser</string>
     <string name="search_nb_petale_choose">Choisir un nb de pétales, sépales ou lobes</string>
     <string name="search_nb_petale">Nombre de pétales, sépales ou lobes</string>
-    <string name="search_pilosite_feuille_choose">Choisir une pilosité de feuille</string>
-    <string name="search_pilosite_feuille">Pilosité de feuille</string>
-    <string name="search_pilosite_tige_choose">Choisir une pilosité de tige</string>
-    <string name="search_pilosite_tige">Pilosité de tige</string>
+    <string name="search_pilosite_feuille_choose">Choisir une pilosité des feuille</string>
+    <string name="search_pilosite_feuille">Pilosité des feuille</string>
+    <string name="search_pilosite_tige_choose">Choisir une pilosité de la tige</string>
+    <string name="search_pilosite_tige">Pilosité de la tige</string>
     <string name="search_colour_choose">Choisir une couleur</string>
     <string name="search_colour">Couleur</string>
     <string name="search_no_help">Pas d\'aide disponible</string>
