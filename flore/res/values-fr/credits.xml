@@ -5,8 +5,7 @@
 
         <!-- Every item contains 4 fields, separed by "|" : Title|Author|URL|Licence -->
 
-        <item>Photos|La source de chaque image est accessible en
-			cliquant sur le bouton d\'info. La majorité des photos provient du site de Pierre Goujon : http://abiris.snv.jussieu.fr/flore/herbier.php. Merci à lui !||Creative Commons</item>
+        <item>Photos|La source de chaque image est accessible en cliquant sur le bouton d\'info. La plupart des images sont la propriété de Pierre Goujon (http://abiris.snv.jussieu.fr/flore/herbier.php) et ont été utilisées avec l\'aimable autorisation de celui-ci.||Creative Commons</item>
         <item>Icônes|Christian
 			Burprich|http://chrfb.deviantart.com/|Creative
 			Commons 3.0 Share
@@ -17,3 +16,5 @@
     </string-array>
 
 </resources>
+
+
