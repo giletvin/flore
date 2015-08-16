@@ -10,7 +10,7 @@ rm *.tmp
 mkdir -p $WIKIPEDIA_ROOT_DIR_FR
 mkdir -p $WIKIPEDIA_ROOT_DIR_EN
 
-echo 'Ulex europaeus'> names.txt
+#echo 'Ulex europaeus'> names.txt
 #echo 'Trifolium subterraneum' >> names.txt
 #echo 'select scientific_name from fleur;'|sqlite3 $DATABASE_NAME >names.txt
 

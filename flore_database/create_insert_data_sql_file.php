@@ -121,16 +121,7 @@ function removeDiacritics($str) {
 	), $str);
 }
 
-/**
-* nettoyage du nom français de l'oiseau pour créer le répertoire correspondant.
-* le répertoire de l'oiseau est le nom francais sans les caractères accentués, sans apostrophe et sans espace, remplacés par des _
-*/
-function nettoie_nom($string){
-	return trim(strtolower(str_replace(array (
-		" ",
-		"'"),array("_","_"),removeDiacritics($string))));
 
-}
 
 /*
 * renvoie une string en minuscule avec la premier lettre en maj
@@ -229,21 +220,21 @@ if (($handle = fopen("Fleurs.csv", "r")) !== FALSE) {
 			/*id integer,
 			directory_name,
 			scientific_family_fk*/
-			array_push($sql_queries,"insert into fleur (id,directory_name,scientific_name,scientific_family_fk,doc_url) values (".$idFleur.",\"".$data[$repertoire_index]."\",\"".$data[$nom_scientifique_1_index]."\",".$indexes_scientific_family[0].",\"".$data[$doc_url_index]."\");");
+			array_push($sql_queries,"insert into fleur (id,directory_name,scientific_name,scientific_family_fk,doc_url) values (".$idFleur.",\"".trim($data[$repertoire_index])."\",\"".trim($data[$nom_scientifique_1_index])."\",".$indexes_scientific_family[0].",\"".trim($data[$doc_url_index])."\");");
 			//langues
-			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".$data[$nom_fr_1_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_1_index]))."\",".$idFleur.",1);");
+			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".trim($data[$nom_fr_1_index])."\",\"".strtolower(removeDiacritics(trim($data[$nom_fr_1_index])))."\",".$idFleur.",1);");
 			if ($data[$nom_fr_2_index]!=''){
-				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".$data[$nom_fr_2_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_2_index]))."\",".$idFleur.",0);");
+				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".trim($data[$nom_fr_2_index])."\",\"".strtolower(removeDiacritics(trim($data[$nom_fr_2_index])))."\",".$idFleur.",0);");
 			}
 			if ($data[$nom_fr_3_index]!=''){
-				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".$data[$nom_fr_3_index]."\",\"".strtolower(removeDiacritics($data[$nom_fr_3_index]))."\",".$idFleur.",0);");
+				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"fr\",\"".trim($data[$nom_fr_3_index])."\",\"".strtolower(removeDiacritics(trim($data[$nom_fr_3_index])))."\",".$idFleur.",0);");
 			}
-			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"la\",\"".$data[$nom_scientifique_1_index]."\",\"".strtolower(removeDiacritics($data[$nom_scientifique_1_index]))."\",".$idFleur.",1);");
+			array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"la\",\"".trim($data[$nom_scientifique_1_index])."\",\"".strtolower(removeDiacritics(trim($data[$nom_scientifique_1_index])))."\",".$idFleur.",1);");
 			if ($data[$nom_scientifique_2_index]!=''){
-				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"la\",\"".$data[$nom_scientifique_2_index]."\",\"".strtolower(removeDiacritics($data[$nom_scientifique_2_index]))."\",".$idFleur.",0);");
+				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"la\",\"".trim($data[$nom_scientifique_2_index])."\",\"".strtolower(removeDiacritics(trim($data[$nom_scientifique_2_index])))."\",".$idFleur.",0);");
 			}
 			if ($data[$nom_en_index]!=''){
-				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"en\",\"".$data[$nom_en_index]."\",\"".strtolower(removeDiacritics($data[$nom_en_index]))."\",".$idFleur.",1);");
+				array_push($sql_queries,"insert into taxonomy (lang, taxon, searched_taxon, fleur_fk, taxon_usuel) values (\"en\",\"".trim($data[$nom_en_index])."\",\"".strtolower(removeDiacritics(trim($data[$nom_en_index])))."\",".$idFleur.",1);");
 			}
 			//inflorescence
 			if ($data[$inflorescence_index]!=''){
