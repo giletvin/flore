@@ -3,6 +3,7 @@ package fr.flore_de_poche.ui.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import fr.flore_de_poche.helper.BasicConstants;
 import fr.flore_de_poche.ui.fragment.DetailsFragment_;
 import fr.flore_de_poche.ui.fragment.ImagesFragment_;
 import fr.flore_de_poche.ui.fragment.NamesFragment_;
@@ -12,18 +13,6 @@ import fr.flore_de_poche.ui.fragment.WikipediaFragment_;
  * The Class BirdActivityTabsPagerAdapter.
  */
 public class SubjectActivityTabsPagerAdapter extends FragmentPagerAdapter {
-
-	/** The Constant PICTURE_TAB. */
-	public final static int PICTURE_TAB = 0;
-
-	/** The Constant DETAILS_TAB. */
-	public final static int DETAILS_TAB = 1;
-
-	/** The Constant WIKIPEDIA_TAB. */
-	public final static int WIKIPEDIA_TAB = 2;
-
-	/** The Constant NAMES_TAB. */
-	public final static int NAMES_TAB = 3;
 
 	/**
 	 * Instantiates a new tabs pager adapter.
@@ -45,17 +34,17 @@ public class SubjectActivityTabsPagerAdapter extends FragmentPagerAdapter {
 	public Fragment getItem(int index) {
 
 		switch (index) {
-		case PICTURE_TAB:
+		case BasicConstants.PICTURE_TAB:
 			// images fragment
 			return new ImagesFragment_();
 
-		case DETAILS_TAB:
+		case BasicConstants.DETAILS_TAB:
 			// Details fragment activity
 			return new DetailsFragment_();
-		case WIKIPEDIA_TAB:
+		case BasicConstants.WIKIPEDIA_TAB:
 			// Wikipedia Fragment
 			return new WikipediaFragment_();
-		case NAMES_TAB:
+		case BasicConstants.NAMES_TAB:
 			// Names
 			return new NamesFragment_();
 		}

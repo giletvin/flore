@@ -414,6 +414,7 @@ public class ServiceImpl implements IService {
 		sbuf.append("\">");
 		sbuf.append(Constants.getCONTEXT().getResources()
 				.getString(R.string.wikipedia));
+		sbuf.append(" (").append(lang.getCode()).append(") ");
 		sbuf.append(currentSubject.getTaxon());
 		sbuf.append("</a>");
 		return sbuf.toString();

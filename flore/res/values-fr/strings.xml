@@ -83,7 +83,7 @@
 		Internet.</string>
     <string name="unknown_error">Désolé, une erreur inattendue est survenue.</string>
     <!-- Help content -->
-    <string name="help_text">Contact : ornidroid@free.fr\n\nComment installer les packages complets d\'images et de sons : https://github.com/giletvin/flore/wiki/Installation\n\nPour changer la langue du moteur de recherche : aller dans les préférences (accessibles par le menu) et modifier la valeur de SearchLang</string>
+    <string name="help_text">Contact : ornidroid@free.fr\n\nComment installer les packages complets d\'images et de fiches Wikipedia : https://github.com/giletvin/flore/wiki/Installation\n\nPour changer la langue du moteur de recherche : aller dans les préférences (accessibles par le menu) et modifier la valeur de SearchLang</string>
     <!-- strings of the multi search -->
 
     <string name="search_scientific_family_choose">Choisir une famille scientifique</string>
@@ -107,7 +107,7 @@
     <string name="search_colour_choose">Choisir une couleur</string>
     <string name="search_colour">Couleur</string>
     <string name="search_no_help">Pas d\'aide disponible</string>
-    <string name="wikipedia">Wikipedia: </string>
+    <string name="wikipedia">Wikipedia </string>
     <string name="doc_url">Site abiris.snv.jussieu.fr: </string>
     <string name="search_results">résultats</string>
 

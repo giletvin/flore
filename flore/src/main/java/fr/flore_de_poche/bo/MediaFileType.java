@@ -24,11 +24,11 @@ public enum MediaFileType {
 		if (null != type) {
 			switch (type) {
 			case PICTURE:
-				code = 0;
+				code = BasicConstants.PICTURE_TAB;
 				break;
 
 			case WIKIPEDIA_PAGE:
-				code = 2;
+				code = BasicConstants.WIKIPEDIA_TAB;
 				break;
 
 			}

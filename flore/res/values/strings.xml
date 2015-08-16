@@ -102,7 +102,7 @@
     <string name="search_leaf_disposition_choose">Choose leaves arrangement</string>
     <string name="search_leaf_disposition">Leaves arrangement</string>
     <string name="search_no_help">No help</string>
-    <string name="wikipedia">Wikipedia: </string>
+    <string name="wikipedia">Wikipedia </string>
     <string name="doc_url">Site abiris.snv.jussieu.fr: </string>
     <!-- labels for the updates -->
     <string name="updates_available">Updates available. Download ?</string>

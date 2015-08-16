@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.ViewById;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -12,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import fr.flore.R;
 import fr.flore_de_poche.bo.Taxon;
 import fr.flore_de_poche.service.IService;
@@ -27,10 +25,6 @@ public class NamesFragment extends ListFragment {
 	/** The m ornidroid service. */
 	private IService mOrnidroidService = ServiceFactory
 			.getService(getActivity());
-
-	/** The scientific name. */
-	@ViewById(R.id.names_scientific_name)
-	TextView scientificName;
 
 	/*
 	 * (non-Javadoc)
@@ -53,11 +47,6 @@ public class NamesFragment extends ListFragment {
 	@AfterViews
 	void afterViews() {
 		if (null != mOrnidroidService.getCurrentSubject()) {
-			final StringBuilder sb = new StringBuilder();
-
-			sb.append(getActivity().getText(R.string.scientific_name));
-
-			this.scientificName.setText(sb.toString());
 			printBirdNames();
 		}
 	}
