@@ -18,10 +18,10 @@ public class BasicConstants {
 	/** The Constant NAMES_TAB. */
 	public final static int NAMES_TAB = 2;
 	public static final int DEFAULT_EMPTY_VALUE = -1;
-	// TODO : a mettre à jour ulterieuement
-	private static final int FILES_COUNT_WIKIPEDIA_PACKAGE = 1332;
-	// TODO : a mettre à jour ulterieuement
-	private static final int FILES_COUNT_PICTURE_PACKAGE = 1856;
+
+	private static final int FILES_COUNT_WIKIPEDIA_PACKAGE = 911;
+
+	private static final int FILES_COUNT_PICTURE_PACKAGE = 9548;
 
 	public static final String DIRECTORY_PARAMETER_NAME = "DIRECTORY";
 

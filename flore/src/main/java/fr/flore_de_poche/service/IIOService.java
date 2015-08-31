@@ -6,6 +6,7 @@ import java.util.List;
 import fr.flore_de_poche.bo.MediaFile;
 import fr.flore_de_poche.bo.MediaFileType;
 import fr.flore_de_poche.bo.Subject;
+import fr.flore_de_poche.bo.ZipPackage;
 import fr.flore_de_poche.helper.ApplicationException;
 
 /**
@@ -30,8 +31,8 @@ public interface IIOService {
 	 *             the ornidroid exception
 	 */
 	public void addCustomMediaFile(String birdDirectory,
-			MediaFileType fileType, String selectedFileName,
-			File selectedFile, String comment) throws ApplicationException;
+			MediaFileType fileType, String selectedFileName, File selectedFile,
+			String comment) throws ApplicationException;
 
 	/**
 	 * Check and create directory if necessary.
@@ -139,16 +140,19 @@ public interface IIOService {
 	 * 
 	 * @param fileType
 	 *            the file type
-	 * @return the zipname (images.zip or wikipedia.zip)
+	 * @return the ZipPackage
 	 */
-	public String getZipname(MediaFileType fileType);
+	public ZipPackage getZipname(MediaFileType fileType);
 
 	/**
 	 * Gets the download progress in percent of the zip package downloading.
 	 * 
+	 * @param fileType
+	 * @param folderSizeBeforeDownload
 	 * @return the zip download progress percent
 	 */
-	public int getZipDownloadProgressPercent(MediaFileType fileType);
+	public int getZipDownloadProgressPercent(MediaFileType fileType,
+			int folderSizeBeforeDownload);
 
 	/**
 	 * Gets the install progress percent.

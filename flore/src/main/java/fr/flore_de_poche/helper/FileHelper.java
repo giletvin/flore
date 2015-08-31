@@ -47,6 +47,29 @@ public class FileHelper {
 	}
 
 	/**
+	 * Get the directory size
+	 * 
+	 * @param directory
+	 * @param recursive
+	 * @return
+	 */
+	public static int folderSize(File directory, boolean recursive) {
+
+		long length = 0;
+		for (File file : directory.listFiles()) {
+			if (file.isFile()) {
+				length += file.length();
+			} else {
+				if (recursive) {
+					length += folderSize(file, recursive);
+				}
+			}
+		}
+		long directorzySize = length / (1024 * 1024);
+		return (int) directorzySize;
+	}
+
+	/**
 	 * Internal copy file method.
 	 * 
 	 * @param srcFile

@@ -15,6 +15,7 @@ import fr.flore_de_poche.bo.MediaFileFactoryImpl;
 import fr.flore_de_poche.bo.MediaFileType;
 import fr.flore_de_poche.bo.PictureFile;
 import fr.flore_de_poche.bo.Subject;
+import fr.flore_de_poche.bo.ZipPackage;
 import fr.flore_de_poche.download.DefaultDownloadable;
 import fr.flore_de_poche.download.DownloadConstants;
 import fr.flore_de_poche.download.DownloadHelperImpl;
@@ -38,6 +39,11 @@ public class IOServiceImpl implements IIOService {
 	private static final int MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE = 400;
 
 	private static final int MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE = 15;
+	private static final int WIKIPEDIA_PACKAGE_SIZE = 6;
+	private static final int WIKIPEDIA_PACKAGE_NUMBER_OF_FILES = 1;
+
+	private static final int IMAGES_PACKAGE_NUMBER_OF_FILES = 5;
+	private static final int IMAGE_PACKAGE_SIZE = 200;
 
 	/**
 	 * The Class OrnidroidFileFilter.
@@ -662,6 +668,20 @@ public class IOServiceImpl implements IIOService {
 		return requiredSpace;
 	}
 
+	private int getPackageSize(MediaFileType fileType) {
+		int requiredSpace = 0;
+		switch (fileType) {
+		case WIKIPEDIA_PAGE:
+			requiredSpace = WIKIPEDIA_PACKAGE_SIZE;
+			break;
+
+		case PICTURE:
+			requiredSpace = IMAGE_PACKAGE_SIZE;
+			break;
+		}
+		return requiredSpace;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -669,18 +689,20 @@ public class IOServiceImpl implements IIOService {
 	 * fr.flore_de_poche.service.IOrnidroidIOService#getZipname(fr.flore_de_poche
 	 * .bo. OrnidroidFileType)
 	 */
-	public String getZipname(MediaFileType fileType) {
-		String zipname = null;
+	public ZipPackage getZipname(MediaFileType fileType) {
+		ZipPackage zipPackage = null;
 		switch (fileType) {
 
 		case PICTURE:
-			zipname = "images.zip";
+			zipPackage = new ZipPackage(IMAGES_PACKAGE_NUMBER_OF_FILES,
+					"images");
 			break;
 		case WIKIPEDIA_PAGE:
-			zipname = "wikipedia.zip";
+			zipPackage = new ZipPackage(WIKIPEDIA_PACKAGE_NUMBER_OF_FILES,
+					"wikipedia");
 			break;
 		}
-		return zipname;
+		return zipPackage;
 
 	}
 
@@ -691,24 +713,14 @@ public class IOServiceImpl implements IIOService {
 	 *            the file type
 	 * @return the zip download progress percent
 	 */
-	public int getZipDownloadProgressPercent(MediaFileType fileType) {
-		File downloadedFile = new File(Constants.getOrnidroidHome()
-				+ File.separator + getZipname(fileType)
-				+ DefaultDownloadable.SUFFIX_DOWNLOAD);
-		if (downloadedFile.exists()) {
-			int megaBytesDownloaded = FileHelper
-					.getFileSizeInMb(downloadedFile);
-			int result = ((megaBytesDownloaded * 200) / getRequiredSpaceToDownloadZip(fileType));
-			return result;
-		} else {
-			downloadedFile = new File(Constants.getOrnidroidHome()
-					+ File.separator + getZipname(fileType));
-			if (downloadedFile.exists()) {
-				return 100;
-			} else {
-				return 0;
-			}
-		}
+	public int getZipDownloadProgressPercent(MediaFileType fileType,
+			int folderSizeBeforeDownload) {
+		File ornidroidHome = new File(Constants.getOrnidroidHome());
+		int currentFolderSize = FileHelper.folderSize(ornidroidHome, false);
+		int megaBytesDownloaded = currentFolderSize - folderSizeBeforeDownload;
+		int result = ((megaBytesDownloaded * 200) / getPackageSize(fileType));
+		return result;
+
 	}
 
 	/*
