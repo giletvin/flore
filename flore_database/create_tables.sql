@@ -125,6 +125,19 @@ insert into application_info(id,key,value,date,comments) VALUES(1,"flore_version
 
 create table release_notes(id integer,version_code integer,date,comments_de,comments_en,comments_fr,read integer);
 
+
+-- release 1.0.1 version 2
+insert into release_notes(id,version_code,date,comments_en,comments_de,comments_fr,read) VALUES(2,2,"20/12/2015","","","",0);
+update release_notes set comments_fr=" * Version 1.0.1 (21/12/2015)
+ * quelques ajouts dans la base de données
+" where version_code=2;
+update release_notes set comments_en=" * Version 1.0.1 (12/21/2015)
+ * new entries in the database
+" where version_code=2;
+update release_notes set comments_de=" * Version 1.0.1 (12/21/2015)
+ * new entries in the database
+" where version_code=2
+
 -- release 1.0.0 version 1
 insert into release_notes(id,version_code,date,comments_en,comments_de,comments_fr,read) VALUES(1,1,"27/07/2015","","","",0);
 update release_notes set comments_fr=" * Version 1.0.0 (27/07/2015)
