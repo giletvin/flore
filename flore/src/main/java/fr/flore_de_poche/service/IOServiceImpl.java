@@ -36,14 +36,14 @@ public class IOServiceImpl implements IIOService {
 
 	private static final int WIKIPEDIA_PAGE_NOT_AVAILABLE_FILE_SIZE = 48;
 
-	private static final int MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE = 400;
+	private static final int MIN_SPACE_TO_DOWNLOAD_IMAGE_PACKAGE = 550;
 
 	private static final int MIN_SPACE_TO_DOWNLOAD_WIKIPEDIA_PACKAGE = 15;
 	private static final int WIKIPEDIA_PACKAGE_SIZE = 6;
 	private static final int WIKIPEDIA_PACKAGE_NUMBER_OF_FILES = 1;
 
 	private static final int IMAGES_PACKAGE_NUMBER_OF_FILES = 5;
-	private static final int IMAGE_PACKAGE_SIZE = 200;
+	private static final int IMAGE_PACKAGE_SIZE = 270;
 
 	/**
 	 * The Class OrnidroidFileFilter.

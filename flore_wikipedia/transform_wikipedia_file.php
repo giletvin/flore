@@ -12,7 +12,7 @@ $wikipediaContent = file_get_contents($fileName);
 $content = preg_replace("/<img[^>]+\>/i", "", $wikipediaContent);
 $content = preg_replace("/<link[^>]+\>/i", "", $content);
 //$content = preg_replace("/<script[^>]+script\>/i", "", $content);
-$content = preg_replace('/<script>[^>]+<\/script>/eis',"",$content);
+$content = preg_replace('/<script>[^>]+<\/script>/is',"",$content);
 if ($lang=='fr'){
 	$content = preg_replace("/>modifier</i", "><", $content);  
 	$content = preg_replace("/>modifier le code</i", "><", $content);  
