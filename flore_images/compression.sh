@@ -47,8 +47,9 @@ do
 	do
 		echo "### " "$picturefile"
 		#3 compression du fichier si necessaire
-		hauteur=`exiv2 $picturefile 2>/dev/null | grep "Taille de l'image" | cut -d "x" -f 2 | tr -d " "`
-		largeur=`exiv2 $picturefile 2>/dev/null | grep "Taille de l'image" | cut -d "x" -f 1 | cut -d ":" -f 2 | tr -d " "`
+		hauteur=`identify -verbose  $picturefile | grep "ImageLength" | tr -d " " | cut -d ":" -f 3 | tail -n 1`
+		largeur=`identify -verbose  $picturefile | grep "ImageWidth" | tr -d " " | cut -d ":" -f 3 | tail -n 1`
+
 		if [[ "$hauteur" -gt "$MAX_RESOLUTION"  ||  "$largeur" -gt "$MAX_RESOLUTION" ]]; then
 			echo "compression et reduction de resolution!"
 			mogrify -resize ${MAX_RESOLUTION}x${MAX_RESOLUTION} $picturefile
@@ -56,9 +57,9 @@ do
 			echo "compression uniquement!"
 		fi
 		#supprimer les exif du fichier 
-		exiftool -all= $picturefile
+		#exiftool -all= $picturefile
 		#suppression du fichier _original généré par la commande exiftool
-		rm ${picturefile}_original
+		#rm ${picturefile}_original
 
 		compression_gimp $picturefile $QUALITY_GIMP
 		if [[ -f ${picturefile}.properties ]] ; then
