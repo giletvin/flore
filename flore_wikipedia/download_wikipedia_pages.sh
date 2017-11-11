@@ -16,6 +16,7 @@ mkdir -p $WIKIPEDIA_ROOT_DIR_EN
 
 while read line
 do
+	echo 'traitement de '$line
 	#recherche du 2e nom latin au cas ou
 	scientific_name_2=`echo "select taxon from taxonomy where lang='la' and taxon!='$line' and fleur_fk=(select fleur_fk from taxonomy where taxon='$line');"|sqlite3 $DATABASE_NAME`
 
